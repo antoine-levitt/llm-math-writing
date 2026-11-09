@@ -1,0 +1,79 @@
+{
+  "root_thread_id": "01a1a154-24cd-7c83-97b8-536766a1cd26",
+  "method": "Sum token_usage_record.payload.usage once per unique upstream response_id; attribute by payload.thread_id.",
+  "duplicate_response_records_ignored": 0,
+  "total_usage": {
+    "input_tokens": 696599,
+    "cached_input_tokens": 625408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7610,
+    "reasoning_output_tokens": 4052,
+    "total_tokens": 704209
+  },
+  "reviewer_thread_count": 0,
+  "threads": [
+    {
+      "thread_id": "01a1a154-24cd-7c83-97b8-536766a1cd26",
+      "parent_thread_id": null,
+      "agent_path": null,
+      "kind": "root",
+      "history_mode": "paginated",
+      "history_start_ordinal": null,
+      "trace_files": [
+        "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/readability-blind/isolated/native/sessions/2026/11/03/rollout-2026-11-03T13-13-28-01a1a154-24cd-7c83-97b8-536766a1cd26.jsonl"
+      ],
+      "model_effort_pairs": [
+        [
+          "gpt-6-astra",
+          "max"
+        ]
+      ],
+      "responses": 14,
+      "usage": {
+        "input_tokens": 696599,
+        "cached_input_tokens": 625408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7610,
+        "reasoning_output_tokens": 4052,
+        "total_tokens": 704209
+      },
+      "last_thread_usage_counter": {
+        "input_tokens": 696599,
+        "cached_input_tokens": 625408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7610,
+        "reasoning_output_tokens": 4052,
+        "total_tokens": 704209
+      },
+      "token_count_snapshot_for_comparison_only": {
+        "input_tokens": 696599,
+        "cached_input_tokens": 625408,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 7610,
+        "reasoning_output_tokens": 4052,
+        "total_tokens": 704209
+      },
+      "completed_turns": [
+        {
+          "turn_id": "01a1a154-27d1-7a93-8c13-31b8d66a0f89",
+          "started_at": 1793708009,
+          "completed_at": 1793708318,
+          "duration_ms": 309378,
+          "time_to_first_token_ms": 2831
+        }
+      ],
+      "summed_turn_duration_ms": 309378,
+      "aborted_turn_ids": [],
+      "own_response_item_types": {
+        "additional_tools": 1,
+        "message": 12,
+        "custom_tool_call": 13,
+        "custom_tool_call_output": 13,
+        "reasoning": 15
+      }
+    }
+  ],
+  "warnings": [],
+  "timing_note": "Agent turn durations include tools/waits and can overlap. Measure launch-to-exit wall time separately; these records do not expose GPU compute time.",
+  "token_note": "Cached input is part of input_tokens; reasoning output is part of output_tokens. Do not add either subset to its total again."
+}

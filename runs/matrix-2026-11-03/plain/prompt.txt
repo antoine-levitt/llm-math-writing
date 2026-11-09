@@ -1,0 +1,1 @@
+Write a paper stating and proving the theorem in these notes. Do not look up anything online, just rely on your knowledge. You can look up and cite standard results from Reed-Simon (available in this directory). 

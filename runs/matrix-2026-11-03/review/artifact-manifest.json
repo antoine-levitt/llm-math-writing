@@ -1,0 +1,54 @@
+{
+  "archived_at": "2026-11-03T10:24:02.099333+00:00",
+  "inputs_unchanged": {
+    "graphene_statement.tex": true,
+    "graphene_statement.pdf": true,
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": true,
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": true
+  },
+  "output_hashes": {
+    "graphene_conductivity.pdf": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+    "README.md": "4683c38691d81c5a001d8f6ea6688446f07f8fade1c2c14ce76c2d23bf938bd1",
+    "graphene_conductivity.tex": "f1a17015725ee7fa7a230cb474c0dccb4761b537adc01e1a2db1449ef561cd78",
+    "build/final_page11.png": "b74b507ed069c397e5e309f2750351041ca690b1092d7c8d3fa5ee042cbed50e",
+    "build/final_page5.png": "841591a9f9eedb2ba0678f4301b742f9bb3c1d7674e57d05284cfac1f95e49bc",
+    "build/page11.png": "233cb4faec268238e09947a8780976a5c76b44e736eecd7bb8d968eab8c74a5b",
+    "build/page7.png": "7ffecba994e3ac691e4db08a397b7c0fd6132aab56d703adad2780ba69c4992c",
+    "build/page1.png": "567aff9bfbc5d45f8a9815f5c48da6d8d3ac110563fd8d0caa10ec0a1c517da5",
+    "build/manuscript_layout.txt": "55d5aafa5a3ab9d1c119a1a6357503972b3ec24a9570dd97632ce9c559c1ca61",
+    "build/compile.log": "4fa25f5c989db8d0b13dbe90e75b6b35ac8f4bace775332a8fe877130f6b34e4",
+    "build/graphene_conductivity.pdf": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+    "build/graphene_conductivity.out": "92750892c9d35a96aab14f181b25f07826b37c24de2296e1177c206fe5438628",
+    "build/graphene_conductivity.aux": "c29bf514a4986c94ffc912d36e7d4849bc26beb0afb66fbd7bc1d68bde73bfa1",
+    "build/graphene_conductivity.log": "97b0cc95d861366b081c5da50f5793f6651e018e71c4dadf9198c4d457d79a04",
+    "reviews/review_response.md": "e4e52ebaed4b1e75bb67ebb69c371957733228926a728be5dc4308fb4b15deac",
+    "reviews/review_cones.md": "d512d1ed1a12c394d4243eaf48dc8b1d00650664ec12c07fdd707d8989188515",
+    "reviews/review_foundations.md": "f0ff82889f658481806e260fdb3a1a0d2fe2b7d679a12ed638f32eb1e45f5172",
+    "reviews/review_round1_foundations.md": "2c13935e3299c6674e79bfc29f702211e81cf0392c16e8709e2bbb47db7a3259",
+    "reviews/review_round1_cones_editorial.md": "e3259de4c70cd95ab0c528a75096c123685401e5ff83165b91a0ae5c5a255aa2",
+    "reviews/review_round1_response.md": "149d0aadc5f1b81972053589a86debcf17f49caa291b52034e152a16f45e5af4",
+    "reviews/review_round2_foundations.md": "c41ae5ba01453654e29cf3fcfac4cb73924ad495e9cdddff193fd2f82187b487",
+    "reviews/review_round2_response.md": "36b974db79c8e8ce1a3630d6cf734bca7d190f0ef197a28314a6b660382260ed",
+    "reviews/review_round2_cones_editorial.md": "69c17ae6c4d4724dc38d335d74adb5d8040c74d3f9236e74da2d793a5f4717f9",
+    "reviews/README.md": "2edc8018d1bd0aa5e6a6f349975d503e20318a48e02ba23f10cf546b5c9a3fda",
+    "reference_text/reed_simon_ii.txt": "072e5dbc57a71163bfff31761dbbf96e4f0fbf74913772bb53554c713d27388a",
+    "reference_text/reed_simon_i.txt": "778bc8f58bd79c2618de30324bc010fa82357b96387b8618f6e5a43a3ab518b3",
+    "reference_text/reed_simon_iii.txt": "ca0e6bb4f7973e9e4143df2231cb02f577c423cbf48d180bdf4cf931df0b7f2e",
+    "reference_text/reed_simon_iv.txt": "4c1af53adbe6a649f77cda49b9fa6cd3b5baadcfcccaaf9d37ed589d56c143a5"
+  },
+  "root_thread_ids": [
+    "01a1a0dc-8a27-7ec2-b427-16e931f77ec1"
+  ],
+  "cli_turn_usage": [
+    {
+      "input_tokens": 4530776,
+      "cached_input_tokens": 4431232,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 42915,
+      "reasoning_output_tokens": 19107
+    }
+  ],
+  "parent_edited_output": false
+}

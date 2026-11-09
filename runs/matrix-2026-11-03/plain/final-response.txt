@@ -1,0 +1,3 @@
+Completed a 10-page paper stating and proving the theorem, with Reed–Simon citations checked locally. No online sources were used.
+
+[Read the PDF](/tmp/graphene-run-1boxls7r/work/graphene_conductivity.pdf) · [LaTeX source](/tmp/graphene-run-1boxls7r/work/graphene_conductivity.tex)

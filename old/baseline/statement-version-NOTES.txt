@@ -1,0 +1,98 @@
+Provenance and scope
+====================
+
+This is a further adaptation of baseline/main.tex, not a newly original
+proof. Its argument and much of its wording come from “Coherent electronic
+transport in periodic crystals”, by Eric Cancès, Clotilde Fermanian
+Kammerer, Antoine Levitt and Sami Siraj-Dine:
+  https://arxiv.org/abs/2002.01990v2
+  https://doi.org/10.1007/s00023-021-01026-3
+
+The extraction used the authors' local revised paper.tex dated 7 November
+2020, copied unchanged to baseline/original/paper.tex. Its SHA-256 is
+b5965da8774027e83323d6b1a93d56c81fa9f7843b27274c2263553f07cd129c.
+The parent baseline/main.tex has SHA-256
+59a7412db6d1e73dd3309b2a4d390ce4973bd86d060e44008c00a44b16ff5381.
+Both remain unchanged. baseline/NOTES.txt and source-map.txt give the
+original extraction's dependencies and corrections.
+
+The new version responds directly to graphene_statement.tex and the
+current prompt. At the user's request, statement-version/ is a grading
+bundle containing only main.tex, main.pdf, refs.bib and build.sh. It has
+no author block, provenance comments, adaptation notes or source-specific
+metadata. This external note preserves attribution. The retained wording
+may still be recognizable; the absence of explicit cues is not a claim
+that the source cannot be identified.
+
+Substantive changes from the parent baseline
+============================================
+
+• The physical definitions are exactly Hε=H−εx·eβ and J=p·eα. Directions
+  eα,eβ are fixed arbitrary vectors throughout, including zero vectors.
+  Redundant direction parameters on H,U,γ,j,σ and I are removed. Directional
+  derivatives remain distinct. The scalar |eβ|² terms and transformations
+  of both directions by Q are retained.
+• The temporal gauge is G_{−εteβ}, its Hamiltonian is H_{k+εteβ}, and the
+  current fiber trace has positive sign. The response expansion is
+  +∂αF+εt∂α∂βF−iεTr[∂αH(e^{−itL}−1)L⁺∂βP], F=Tr(HP).
+  The equilibrium term changes sign from the parent convention; the
+  first-order secular and oscillatory terms do not. The inward boundary
+  normals and cancelling outer/inner coefficients are retained.
+• Dimension two, scalar real V, occupied rank N off the crossings, and
+  node count M are used directly. λ₀,ₖ=−∞ and P₀,ₖ=0 cover N=1. The theorem
+  has the supplied iterated-limit order, with ε→0+ inside the time integral.
+• Time reversal follows from real V. The equilibrium-current proof now
+  uses oddness directly. The scalar Kato–Rellich theorem verifies the
+  confining comparison operator in the retained Faris–Lavine criterion;
+  no magnetic self-adjointness theorem is needed. Magnetic-potential terms
+  and the original charge-convention discussion are removed.
+• The original proof order and the already-authorized linear-response
+  replacement away from the nodes are retained. The gap-independent
+  remainder is explicitly restricted to εt≤1, which suffices for ε→0
+  first; that restriction is propagated through the conductivity proof.
+• The general current well-posedness proof sums over the occupied index
+  set, rather than invoking the later fixed-rank semimetal hypothesis.
+  The spatial commutator uses eβ·∇V, distinguished from k derivatives.
+  P(0) replaces an undefined P₀ in the Dyson calculation, and the proof
+  outline's Dirac matrix includes its velocity factor v.
+• Only Reed–Simon II and IV are cited or included in refs.bib. Bloch and
+  perturbation results use IV; the propagator uses II, Theorem X.70.
+  The SU(2)–SO(3) reference is replaced by the explicit axis-angle unitary
+  and its Pauli-matrix identity. The response expansion is proved in full.
+  Unused editing macros and stale adiabatic labels are removed.
+
+No model-generated benchmark paper, session, trace or matrix output was
+read to prepare this version, and no online lookup was used for it.
+
+Uniformity in the two-band reduction
+====================================
+
+As in the parent extraction, main.tex retains the source's brief assertion
+Iᴿ(δ,t)=Iᑫ(δ,t)+O(δ). The bound must be uniform in t. A direct Taylor
+expansion of exp(itΔ) would not prove it. The following justification is
+kept outside the grading bundle to avoid broadly rewriting the proof.
+
+Write k=rω(θ), Δ=λ₊−λ₋=2vr+O(r²), and ∂rΔ=2v+O(r). Analyticity of the
+reduced Hamiltonian makes these estimates uniform in θ. For the velocity
+product z, the leading Dirac product a₀(θ) is real, so Re z=a₀+O(r) and
+Im z=O(r). The radial integrand, after subtracting its complex conjugate, is
+  2i[sin(tΔ) Re z+(cos(tΔ)−1) Im z] r/Δ².
+The second term is O(δ) uniformly in t. Set ρ=Δ/(2v) in the first term.
+Then
+  (Re z) r dr/Δ²=[a₀/(4v²ρ)+O(1)] dρ,
+with endpoint ρ(δ,θ)=δ+O(δ²). The O(1) remainder integrates to O(δ), and
+changing the endpoint back to δ costs O(δ²)/δ=O(δ), uniformly in t.
+The remaining integral is the linear Dirac integral.
+
+Build and validation
+====================
+
+Run bash statement-version/build.sh from this directory, or run bash
+build.sh inside statement-version/. It uses pdflatex and bibtex with
+55-second timeouts and writes scratch files to statement-version-build/.
+Only the resulting main.pdf is copied into the grading bundle.
+
+The final PDF has 19 pages. Equation/section/theorem references and both
+bibliography entries resolve; no duplicate labels or overfull boxes were
+reported. The PDF author, title, subject and keywords metadata are empty.
+The old baseline and original source hashes were checked unchanged.

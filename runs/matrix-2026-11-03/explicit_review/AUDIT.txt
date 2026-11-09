@@ -1,0 +1,32 @@
+Execution audit: combined-instructions condition
+
+Completed with exit code 0 in 1399.1 seconds (23.3 minutes). The unedited
+deliverable is output/dirac_conductivity.tex and its ten-page PDF. Its final
+LaTeX log contains no warnings or errors, and the delivered PDF matches the
+final build. Initial inputs are unchanged.
+
+The root and all three subagents used GPT-6-Astra/max. The traces show an
+initial round of proof work and two subsequent manuscript-review rounds.
+Every started turn completed. There were no detected online-access calls,
+CLI failure events, or usage-accounting discrepancies. Citations and the
+bibliography contain only Reed–Simon II and IV.
+
+Aggregate usage, including all subagents: 7,891,159 input tokens, of which
+7,551,872 cached; 100,067 output tokens, of which 52,911 reasoning tokens.
+There are 137 unique response-level usage records. Cached and reasoning
+counts are subsets, not additional tokens.
+
+Seven tool calls had failure indicators. One file patch failed to match its
+context; a corrected patch succeeded and the revised manuscript compiled.
+A reviewer looked for a PDF in the root before it had been copied there,
+then compiled its own copy. Another used an incorrect reference-text path
+before reading the correct Reed–Simon extract. The other failures were
+searches that found no instruction files or no build warnings. The final
+artifact and completed review turns establish recovery; all failed calls
+are preserved in audit.json and the native traces.
+
+No supervisor advice or edits were supplied to the tested session. Its
+temporary authentication copy was removed after archival. This audit checks
+execution and artifacts; it is not an independent mathematical referee
+report. Detailed evidence is in audit.json, usage.json, events*.jsonl,
+stderr.log, native/, output/review*.md and output/paper_work/.

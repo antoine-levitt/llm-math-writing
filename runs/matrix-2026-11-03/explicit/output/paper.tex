@@ -1,0 +1,780 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={Residual conductivity from isotropic Dirac crossings},
+  pdfsubject={A proof of the residual conductivity theorem for periodic Schrodinger operators}}
+\crefname{section}{Section}{Sections}
+\crefname{subsection}{Section}{Sections}
+\crefname{appendix}{Appendix}{Appendices}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{proposition}{Proposition}{Propositions}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\BZ}{\mathcal B}
+\newcommand{\lat}{\mathcal R}
+\newcommand{\trv}{\underline{\operatorname{Tr}}}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\ii}{\mathrm i}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\dist}{dist}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlength{\parskip}{0.25em}
+\setlength{\emergencystretch}{2em}
+
+\title{Residual conductivity from isotropic Dirac crossings}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+\begin{abstract}
+We consider independent, spinless electrons in a two-dimensional periodic
+Schr\"odinger potential. Suppose that the Fermi energy meets the spectrum
+only at finitely many isolated, isotropic crossings of two bands.
+We prove that each crossing contributes $1/16$ to the longitudinal
+conductivity, in atomic units, when a constant electric field is switched
+on, linear response is taken first, and the resulting current is averaged
+over long times. The proof separates three mechanisms: cancellation of
+the acceleration term by the filled bands, determination of the leading
+transition currents from the conical energies alone, and concentration
+of the averaged response near the crossings. In particular, the cone
+velocities cancel from the answer. Operator domains, local traces, and
+the passage to linear response are justified for real periodic
+$H^1$ potentials.
+\end{abstract}
+
+\section{The result and its mechanism}
+\label{sec:result}
+
+A completely filled collection of bands cannot sustain a net acceleration
+current: translating the crystal momentum merely rearranges the occupied
+states. At a band crossing, however, an arbitrarily weak field can couple
+occupied and unoccupied states with arbitrarily small energy separation.
+The theorem below quantifies the current that survives this competition.
+It is conditional on the band geometry; no particular lattice symmetry
+is required once that geometry is assumed.
+
+Let $\lat\subset\R^2$ be a full-rank lattice, with a fundamental cell
+$\Omega$, and let $\BZ$ be a fundamental cell of
+\[
+ \lat^*=\{K\in\R^2:K\cdot R\in2\pi\Z\text{ for all }R\in\lat\}.
+\]
+Thus $|\Omega|\,|\BZ|=(2\pi)^2$. We use atomic units and omit spin.
+For a real potential $V\in H^1_{\mathrm{per}}(\Omega)$, set
+\begin{equation}
+ H=\tfrac12p^2+V,\qquad
+ H_k=\tfrac12(p+k)^2+V,\qquad p=-\ii\nabla.
+ \label{eq:hamiltonians}
+\end{equation}
+The first operator acts on $L^2(\R^2)$; the fibers act on
+$L^2_{\mathrm{per}}(\Omega)$ with common domain
+$H^2_{\mathrm{per}}(\Omega)$. Write their eigenvalues, with multiplicity, as
+$\lambda_1(k)\leq\lambda_2(k)\leq\cdots$, and put $\lambda_0=-\infty$.
+
+Fix a Fermi energy $\mu_{\mathrm F}$ and an integer $N\geq1$.
+Our assumptions are that there are distinct points
+$k_1,\ldots,k_M$ on the momentum torus $\R^2/\lat^*$ such that
+\begin{equation}
+ \lambda_N(k)<\mu_{\mathrm F}<\lambda_{N+1}(k)
+ \quad\text{away from }k_1,\ldots,k_M,
+ \label{eq:semimetal}
+\end{equation}
+and, at every $k_i$,
+\begin{equation}
+ \lambda_{N-1}(k_i)<\lambda_N(k_i)=\mu_{\mathrm F}
+ =\lambda_{N+1}(k_i)<\lambda_{N+2}(k_i).
+ \label{eq:isolation}
+\end{equation}
+Each crossing is isotropic and untilted: for some $v_i>0$,
+\begin{equation}
+ \begin{split}
+ \lambda_N(k_i+q)&=\mu_{\mathrm F}-v_i|q|+O(|q|^2),\\
+ \lambda_{N+1}(k_i+q)&=\mu_{\mathrm F}+v_i|q|+O(|q|^2).
+ \end{split}
+ \label{eq:cones}
+\end{equation}
+The remainders here are uniform in the direction of $q$.
+
+Let $e_\beta,e_\alpha\in\R^2$ specify the field and current directions;
+they need not be unit vectors. A field of strength $\varepsilon\geq0$
+is switched on at time zero. The initial density matrix and its evolution
+are
+\begin{equation}
+ \begin{gathered}
+ \gamma_0=\ind_{(-\infty,\mu_{\mathrm F}]}(H),\qquad
+ H_\varepsilon=H-\varepsilon x\cdot e_\beta,\\
+ \gamma_\varepsilon(t)
+ =e^{-\ii tH_\varepsilon}\gamma_0e^{\ii tH_\varepsilon},\qquad
+ j_\varepsilon(t)=\trv\bigl((p\cdot e_\alpha)
+                                  \gamma_\varepsilon(t)\bigr).
+ \end{gathered}
+ \label{eq:current}
+\end{equation}
+Here $H_\varepsilon$ is the self-adjoint closure of its restriction to
+$C_c^\infty(\R^2)$, and the trace per unit area of a periodic, locally
+trace-class operator is
+\begin{equation}
+ \trv(A)=\frac1{|\Omega|}\Tr(\ind_\Omega A\ind_\Omega).
+ \label{eq:trace-per-area}
+\end{equation}
+Although the field Hamiltonian is not periodic, its density matrix is:
+a lattice translation changes $H_\varepsilon$ only by a scalar.
+
+\begin{theorem}\label{thm:main}
+Under \eqref{eq:semimetal}--\eqref{eq:cones}, the current in
+\eqref{eq:current} is well defined. For every fixed $t\geq0$, the
+linear response
+\[
+ \sigma_{\alpha\beta}(t)
+ :=\lim_{\varepsilon\to0^+}\frac{j_\varepsilon(t)}{\varepsilon}
+\]
+exists, and
+\begin{equation}
+ \lim_{T\to\infty}\frac1T\int_0^T\sigma_{\alpha\beta}(t)\dd t
+ =\frac{M}{16}\,e_\alpha\cdot e_\beta.
+ \label{eq:theorem}
+\end{equation}
+\end{theorem}
+
+The order of operations matters: this is a statement about the long-time
+average of the linear response, with the field strength sent to zero at
+each fixed time. It does not assert a long-time limit at a fixed nonzero
+field. For two crossings the spinless coefficient is $1/8$; two identical
+spin species would double it.
+
+The proof follows the physical separation described above.
+In \cref{sec:response}, we derive the response and show that the apparent
+term proportional to $t$ cancels after integration over the filled bands.
+The remaining time average contains the nonnegative scalar kernel
+\[
+ \frac{1-\cos(T\Delta)}{T\Delta^3},
+\]
+where $\Delta$ is an occupied-to-unoccupied energy gap. Gaps bounded away
+from zero contribute $O(T^{-1})$. Near a crossing, the relevant momenta
+have size $T^{-1}$. The only additional information needed there is the
+transition current, which \cref{sec:cone} derives from the conical
+energies themselves. A rescaling then gives the universal constant in
+\cref{sec:limit}. The analytic foundations are collected in
+\cref{app:analysis} so that they do not obscure these mechanisms.
+
+\section{From the switched field to interband transitions}
+\label{sec:response}
+
+Let
+\[
+ P(k)=\ind_{(-\infty,\mu_{\mathrm F}]}(H_k),\qquad
+ J_\eta(k)=(p+k)\cdot e_\eta\quad(\eta=\alpha,\beta).
+\]
+Away from the crossings, $P(k)$ has rank $N$ and is a smooth spectral
+projection. Its values at the finitely many crossings do not affect any
+direct integral. Throughout the proof, statements involving its rank or
+an occupied-to-unoccupied gap are understood away from those points.
+
+Choose a measurable orthonormal eigenbasis $u_n(k)$ of $H_k$ and set, for
+$n\leq N<m$,
+\begin{equation}
+ \begin{split}
+ \Delta_{mn}(k)&=\lambda_m(k)-\lambda_n(k),\\
+ Z_{nm}(k)&=
+ \langle u_n(k),J_\alpha(k)u_m(k)\rangle
+ \langle u_m(k),J_\beta(k)u_n(k)\rangle.
+ \end{split}
+ \label{eq:transition-data}
+\end{equation}
+Inner products are antilinear in the first argument. No differentiable
+choice of eigenvectors is needed. Every sum below is unchanged by a
+change of basis within a degenerate eigenspace.
+
+We will repeatedly use one uniform bound. The occupied eigenvalues are
+bounded on the momentum torus, and the fiber graph norms are uniformly
+equivalent to the $H^2$ norm. Consequently
+\begin{equation}
+ \sum_{n\leq N}\|J_\eta(k)u_n(k)\|^2\leq C_\eta,
+ \qquad
+ \sum_{n\leq N<m}|Z_{nm}(k)|\leq C.
+ \label{eq:current-bound}
+\end{equation}
+The second inequality is Cauchy--Schwarz and completeness of the
+eigenbasis. These bounds control the infinitely many unoccupied bands.
+The domain and graph-norm assertions used here are justified in
+\cref{app:domains}.
+
+\begin{proposition}[Interband response]\label[proposition]{prop:response}
+The equilibrium current is zero. The fixed-time response is
+\begin{equation}
+ \sigma_{\alpha\beta}(t)
+ =2\int_\BZ\sum_{n\leq N<m}
+       \Rea Z_{nm}(k)\,
+       \frac{\sin(t\Delta_{mn}(k))}{\Delta_{mn}(k)^2}
+       \frac{\dd k}{(2\pi)^2}.
+ \label{eq:response}
+\end{equation}
+Its time average is therefore
+\begin{equation}
+ \overline\sigma_{\alpha\beta}(T)
+ :=\frac1T\int_0^T\sigma_{\alpha\beta}(t)\dd t
+ =2\int_\BZ\sum_{n\leq N<m}
+       \Rea Z_{nm}(k)\,
+       \frac{1-\cos(T\Delta_{mn}(k))}
+            {T\Delta_{mn}(k)^3}
+       \frac{\dd k}{(2\pi)^2}.
+ \label{eq:averaged-response}
+\end{equation}
+Both integrals are absolutely convergent for finite $t$ and $T>0$.
+\end{proposition}
+
+\subsection{An accelerating gauge}
+
+Multiplication by $G_\varepsilon(t)=e^{\ii\varepsilon t x\cdot e_\beta}$
+removes the linear potential. In this gauge the Bloch fibers evolve under
+$H_{k+\varepsilon t e_\beta}$. More precisely, let
+\begin{equation}
+ \ii\partial_t U_\varepsilon(k,t)
+ =H_{k+\varepsilon t e_\beta}U_\varepsilon(k,t),\qquad
+ U_\varepsilon(k,0)=I,
+ \label{eq:propagator}
+\end{equation}
+and write $R_\varepsilon(k,t)=U_\varepsilon(k,t)P(k)
+U_\varepsilon(k,t)^*$. The current becomes
+\begin{equation}
+ j_\varepsilon(t)
+ =\int_\BZ\Tr\left[
+    \bigl(J_\alpha(k)+\varepsilon t\,e_\alpha\cdot e_\beta\bigr)
+    R_\varepsilon(k,t)\right]\frac{\dd k}{(2\pi)^2}.
+ \label{eq:gauge-current}
+\end{equation}
+The term proportional to $\varepsilon t$ is the explicit acceleration
+of the current observable. The change in $R_\varepsilon$ will cancel its
+secular contribution.
+
+Since
+\[
+ H_{k+\varepsilon s e_\beta}
+ =H_k+\varepsilon sJ_\beta(k)
+       +\tfrac12\varepsilon^2s^2|e_\beta|^2,
+\]
+Duhamel's formula gives the first variation of the density matrix as
+\begin{equation}
+ D(k,t)=-\ii\int_0^t s\,
+ e^{-\ii(t-s)H_k}[J_\beta(k),P(k)]e^{\ii(t-s)H_k}\dd s.
+ \label{eq:density-variation}
+\end{equation}
+For fixed time, differentiating \eqref{eq:gauge-current} is legitimate
+uniformly in $k$; see \cref{app:differentiation}. Denote the resulting
+derivative at $\varepsilon=0$ temporarily by $L_{\alpha\beta}(t)$.
+Evaluating \eqref{eq:density-variation} in the eigenbasis gives
+\begin{equation}
+ \begin{split}
+ L_{\alpha\beta}(t)
+ =\int_\BZ\Biggl\{&tN\,e_\alpha\cdot e_\beta\\
+ &+2\sum_{n\leq N<m}\left[
+  \Rea Z_{nm}\left(\frac{\sin(t\Delta_{mn})}{\Delta_{mn}^2}
+                         -\frac{t}{\Delta_{mn}}\right)
+  +\Ima Z_{nm}\frac{1-\cos(t\Delta_{mn})}{\Delta_{mn}^2}
+ \right]\Biggr\}\frac{\dd k}{(2\pi)^2}.
+ \end{split}
+ \label{eq:uncancelled-response}
+\end{equation}
+For example, the sine term follows from
+$\int_0^t s\sin((t-s)\Delta)\dd s=t/\Delta-\sin(t\Delta)/\Delta^2$.
+Only occupied-to-unoccupied matrix elements occur, because of the
+commutator with $P$.
+
+\subsection{Why the filled bands cancel the acceleration term}
+
+Consider the total occupied energy at a fixed momentum,
+\[
+ E(k)=\sum_{n=1}^N\lambda_n(k).
+\]
+This is continuous and periodic everywhere, and equals $\Tr(H_kP(k))$
+away from the crossings. There it is smooth even if occupied bands
+cross one another. Differentiating the spectral projection gives
+\begin{equation}
+ \partial_\alpha E=\Tr(PJ_\alpha),\qquad
+ \partial_\beta\partial_\alpha E
+ =N\,e_\alpha\cdot e_\beta
+       -2\sum_{n\leq N<m}\frac{\Rea Z_{nm}}{\Delta_{mn}},
+ \label{eq:energy-hessian}
+\end{equation}
+where $\partial_\eta=e_\eta\cdot\nabla_k$.
+Indeed, $P(\partial_\beta P)P=(1-P)(\partial_\beta P)(1-P)=0$,
+and differentiating $[H_k,P(k)]=0$ yields
+\[
+ \langle u_m,\partial_\beta P\,u_n\rangle
+ =-\frac{\langle u_m,J_\beta u_n\rangle}{\Delta_{mn}}
+ \quad(n\leq N<m).
+\]
+This proves \eqref{eq:energy-hessian} without assumptions on degeneracies
+inside the occupied or unoccupied groups.
+
+There is no boundary term hidden at a conical crossing.
+By \eqref{eq:current-bound}, $\nabla E$ is bounded off the crossings.
+The smallest occupied-to-unoccupied gap is bounded below by
+$c|k-k_i|$ near $k_i$, so the right-hand side of
+\eqref{eq:energy-hessian} is locally integrable in two dimensions.
+Integrate on the momentum torus with disks of radius $\rho$ removed.
+Each circular boundary has length $O(\rho)$ and carries a bounded
+gradient; its flux tends to zero. We obtain the filled-band sum rule
+\begin{equation}
+ \int_\BZ N\,e_\alpha\cdot e_\beta\dd k
+ =2\int_\BZ\sum_{n\leq N<m}
+                  \frac{\Rea Z_{nm}(k)}{\Delta_{mn}(k)}\dd k.
+ \label{eq:sum-rule}
+\end{equation}
+Thus the coefficient of $t$ in \eqref{eq:uncancelled-response} vanishes.
+This is precisely where the absence of a Fermi curve enters: isolated
+points leave no flux in this integration by parts.
+
+The same argument applied to $E$ itself gives
+$\int_\BZ\partial_\alpha E\dd k=0$ and hence $j_0=0$.
+Here $E$ is bounded and continuous at the crossings, so its boundary
+integrals also vanish. Consequently $L_{\alpha\beta}(t)$ is the
+linear response $\sigma_{\alpha\beta}(t)$ in the theorem.
+
+\subsection{Time reversal removes the antisymmetric term}
+
+Complex conjugation $\mathcal C$ satisfies
+\[
+ \mathcal C H_k\mathcal C=H_{-k},\qquad
+ \mathcal C J_\eta(k)\mathcal C=-J_\eta(-k),
+\]
+because $V$ is real. Time-reversed eigenbases therefore have the same
+gaps and conjugate transition products:
+\[
+ \Delta_{mn}(-k)=\Delta_{mn}(k),\qquad
+ Z_{nm}(-k)=\overline{Z_{nm}(k)}.
+\]
+These identities may equivalently be read after summing over degenerate
+eigenspaces. The term containing $\Ima Z_{nm}$ in
+\eqref{eq:uncancelled-response} integrates to zero on the momentum torus.
+Together with \eqref{eq:sum-rule}, this proves \eqref{eq:response}.
+
+For completeness, the estimates
+\[
+ \frac{|\sin(t\Delta)|}{\Delta^2}\leq\frac{t}{\Delta},
+ \qquad
+ \frac{1-\cos(T\Delta)}{T\Delta^3}\leq\frac{T}{2\Delta}
+\]
+and \eqref{eq:current-bound} show absolute integrability: the only
+possible singularity is $|k-k_i|^{-1}$. They also justify the time
+integration in \eqref{eq:averaged-response}, completing the proof of
+\cref{prop:response}.
+
+\section{What an isotropic cone says about current}
+\label{sec:cone}
+
+The hypotheses describe energies, whereas the response also involves
+matrix elements of current. The bridge between them is the linear part
+of the Hamiltonian on the two-dimensional crossing subspace. Isotropy
+forces its two directional derivatives to satisfy fixed algebraic
+relations. These determine the transition strength without choosing
+phases for the two eigenvectors.
+
+\begin{proposition}[Transition current at a cone]\label[proposition]{prop:cone}
+Fix a crossing $k_i$, write $v=v_i$, and let $q=r\omega$ with
+$r>0$ and $\omega\in S^1$. As $r\to0$,
+\begin{equation}
+ \Rea Z_{N,N+1}(k_i+r\omega)
+ =v^2\left[e_\alpha\cdot e_\beta
+       -(e_\alpha\cdot\omega)(e_\beta\cdot\omega)\right]+O(r),
+ \label{eq:cone-current}
+\end{equation}
+uniformly in $\omega$.
+\end{proposition}
+
+\begin{proof}
+Let $Q(q)$ be the spectral projection onto the two bands near
+$\mu_{\mathrm F}$. The separation from the remaining spectrum in
+\eqref{eq:isolation} makes its contour-resolvent formula real analytic
+across $q=0$, also as a map from $L^2$ to $H^2$;
+see \cite[Section XII.2]{RS4}. Projecting a fixed basis of $\Ran Q(0)$
+and orthonormalizing gives an analytic frame
+$U(q):\C^2\to\Ran Q(q)$ with values in $H^2_{\mathrm{per}}$.
+The reduced Hamiltonian $h(q)=U(q)^*H_{k_i+q}U(q)$ is an analytic
+Hermitian $2\times2$ matrix, with expansion
+\begin{equation}
+ h(q)=\mu_{\mathrm F}I+A_q+O(|q|^2),\qquad
+ A_\eta=\eta_1A_1+\eta_2A_2\quad(\eta\in\R^2).
+ \label{eq:linear-cone}
+\end{equation}
+Writing $U_0=U(0)$ and differentiating at the crossing gives
+\begin{equation}
+ A_\eta=U_0^*\bigl((p+k_i)\cdot\eta\bigr)U_0.
+ \label{eq:compressed-current}
+\end{equation}
+The derivatives of the frame cancel here because
+$H_{k_i}U_0=\mu_{\mathrm F}U_0$ and $U(q)^*U(q)=I$.
+
+For every $\eta$, the two eigenvalues of $A_\eta$ are
+$\pm v|\eta|$, by \eqref{eq:cones} and \eqref{eq:linear-cone}.
+Consequently $\tr A_\eta=0$ and $A_\eta^2=v^2|\eta|^2I$.
+Polarization yields the decisive relation
+\begin{equation}
+ A_\eta A_\zeta+A_\zeta A_\eta
+ =2v^2(\eta\cdot\zeta)I
+ \qquad(\eta,\zeta\in\R^2).
+ \label{eq:anticommutation}
+\end{equation}
+Thus the energy slopes already fix the symmetric products of the
+leading current matrices.
+
+Let $p_\pm(q)$ be the two eigenprojections of $h(q)$.
+The gap is $2vr+O(r^2)$, so \eqref{eq:linear-cone} gives
+\begin{equation}
+ p_\pm(r\omega)=\pi_\pm(\omega)+O(r),\qquad
+ \pi_\pm(\omega)=\tfrac12(I\pm A_\omega/v),
+ \label{eq:cone-projectors}
+\end{equation}
+uniformly in $\omega$. For example, this follows directly by dividing
+$h(q)-\tfrac12\tr(h(q))I$ by half its eigenvalue gap.
+Also,
+\[
+ U(q)^*J_\eta(k_i+q)U(q)=A_{e_\eta}+O(r)
+ \quad(\eta=\alpha,\beta).
+\]
+The transition product in \eqref{eq:transition-data} is therefore
+\[
+ Z_{N,N+1}(k_i+r\omega)
+ =\tr\bigl(\pi_-(\omega)A_{e_\alpha}
+                 \pi_+(\omega)A_{e_\beta}\bigr)+O(r).
+\]
+To evaluate its real part, use that $\pi_-$ has rank one and that
+\eqref{eq:anticommutation} implies
+\[
+ \Rea\tr(\pi_-A_{e_\alpha}A_{e_\beta})
+       =v^2 e_\alpha\cdot e_\beta,
+ \qquad
+ \tr(\pi_-A_{e_\eta})=-v\,e_\eta\cdot\omega.
+\]
+Substituting $\pi_+=I-\pi_-$ now gives
+\eqref{eq:cone-current}.
+\end{proof}
+
+In particular, for a single direction $e$, the leading transition
+strength is $v^2(|e|^2-(e\cdot\omega)^2)$. It is the part of the current
+transverse to the radial momentum that couples the two bands. This
+geometric factor will become isotropic after angular integration.
+
+\section{Long-time averaging selects the crossings}
+\label{sec:limit}
+
+We now prove \cref{thm:main}. Choose disjoint disks of a fixed small
+radius $\rho$ around the crossings on the momentum torus.
+Every occupied-to-unoccupied gap has a uniform positive lower bound,
+except for the pair $n=N$, $m=N+1$ inside these disks. This follows
+from compactness outside the disks and from \eqref{eq:isolation} inside.
+
+It follows from \eqref{eq:current-bound} and $|1-\cos s|\leq2$ that
+all these transitions together contribute $O(T^{-1})$ to
+\eqref{eq:averaged-response}. Only the crossing pair in each disk
+remains. Fix one disk and abbreviate
+\[
+ \Delta(q)=\lambda_{N+1}(k_i+q)-\lambda_N(k_i+q),\qquad
+ Z(q)=Z_{N,N+1}(k_i+q),\qquad v=v_i.
+\]
+Its contribution is
+\begin{equation}
+ I_i(T)=\frac{2}{(2\pi)^2}
+ \int_{|q|<\rho}\Rea Z(q)
+       \frac{1-\cos(T\Delta(q))}{T\Delta(q)^3}\dd q.
+ \label{eq:one-cone}
+\end{equation}
+
+The substitution $y=Tq$ identifies the surviving scale:
+\begin{equation}
+ I_i(T)=\frac{2}{(2\pi)^2}
+ \int_{|y|<T\rho}\Rea Z(y/T)
+       \frac{1-\cos(T\Delta(y/T))}{(T\Delta(y/T))^3}\dd y.
+ \label{eq:rescaling}
+\end{equation}
+For every $y\ne0$,
+\[
+ T\Delta(y/T)\longrightarrow2v|y|,
+ \qquad
+ \Rea Z(y/T)\longrightarrow
+ v^2\left[e_\alpha\cdot e_\beta
+       -(e_\alpha\cdot\widehat y)(e_\beta\cdot\widehat y)\right],
+ \quad \widehat y=\frac y{|y|}.
+\]
+These pointwise limits also determine the limit of the integral.
+Indeed, $\Delta(q)$ is bounded above and below by positive multiples
+of $|q|$, and $Z(q)$ is bounded. Extending the integrand by zero
+outside its disk, its absolute value is bounded by
+\begin{equation}
+ C\min\{|y|^{-1},|y|^{-3}\},
+ \label{eq:domination}
+\end{equation}
+using $1-\cos s\leq\min\{s^2/2,2\}$. This bound is integrable on
+$\R^2$, both at the origin and at infinity. Dominated convergence,
+followed by polar coordinates $y=r\omega$, gives
+\begin{equation}
+ \begin{split}
+ \lim_{T\to\infty}I_i(T)
+ =\frac{2}{(2\pi)^2}
+ &\int_{S^1}\left[e_\alpha\cdot e_\beta
+       -(e_\alpha\cdot\omega)(e_\beta\cdot\omega)\right]\dd\omega\\
+ {}\times&\int_0^\infty
+       \frac{v^2r(1-\cos(2vr))}{(2vr)^3}\dd r.
+ \end{split}
+ \label{eq:cone-integral}
+\end{equation}
+The angular integral is $\pi e_\alpha\cdot e_\beta$. In the radial
+integral, the change of variable $s=2vr$ cancels the velocity entirely:
+\begin{equation}
+ \int_0^\infty\frac{v^2r(1-\cos(2vr))}{(2vr)^3}\dd r
+ =\frac14\int_0^\infty\frac{1-\cos s}{s^2}\dd s
+ =\frac\pi8.
+ \label{eq:radial-integral}
+\end{equation}
+One direct evaluation of the last integral uses
+$s^{-2}=\int_0^\infty a e^{-as}\dd a$: Tonelli's theorem gives
+\[
+ \int_0^\infty\frac{1-\cos s}{s^2}\dd s
+ =\int_0^\infty a\left(\frac1a-\frac a{a^2+1}\right)\dd a
+ =\frac\pi2.
+\]
+Combining \eqref{eq:cone-integral} and \eqref{eq:radial-integral},
+\[
+ \lim_{T\to\infty}I_i(T)
+ =\frac{2}{(2\pi)^2}\,\pi e_\alpha\cdot e_\beta\,\frac\pi8
+ =\frac1{16}\,e_\alpha\cdot e_\beta.
+\]
+Summing over the $M$ crossings, with the $O(T^{-1})$ remainder already
+estimated, proves \eqref{eq:theorem}.\qed
+
+\clearpage
+\appendix
+\section{Analytic foundations}
+\label[appendix]{app:analysis}
+
+This appendix justifies the operator statements used in the proof,
+including the fixed-time differentiation before any gap estimates are
+invoked. The latter point is useful: the closing gap does not obstruct
+linear response at a fixed time.
+
+\subsection{Domains and time evolution}
+\label{app:domains}
+
+In two dimensions a periodic $H^1$ potential is uniformly locally
+$L^p$ for every finite $p$. Local Sobolev estimates and a partition
+into enlarged lattice cells give, for every $a>0$,
+\begin{equation}
+ \|Vf\|_2\leq a\|\Delta f\|_2+C_a\|f\|_2,
+ \qquad
+ |\langle f,Vf\rangle|
+       \leq a\|\nabla f\|_2^2+C_a\|f\|_2^2.
+ \label{eq:potential-bounds}
+\end{equation}
+The first inequality is also the uniformly local perturbation bound
+of \cite[Theorem XIII.96]{RS4}. Both hold on $\R^2$ and on the
+periodic cell. By the Kato--Rellich theorem
+\cite[Theorem X.12]{RS2}, $H$ and $H_k$ are self-adjoint on their
+$H^2$ domains. Their form domains are $H^1$, and their graph norms
+are equivalent to $H^2$, uniformly for $k$ in a bounded set.
+The fiber resolvents are compact, and $k\mapsto H_k$ is analytic on
+the common domain. These observations also justify the smooth
+spectral projections used in the main text.
+
+For the Stark operator, use the comparison operator
+\[
+ \mathcal N=H+|x|^2+c,
+\]
+with $c$ sufficiently large. The harmonic-oscillator graph estimate
+and \eqref{eq:potential-bounds} show that $\mathcal N$ is self-adjoint
+on $H^2(\R^2)\cap\{f:|x|^2f\in L^2\}$, with core
+$C_c^\infty(\R^2)$. Increasing $c$ if necessary gives
+\[
+ \mathcal N\geq1,\qquad
+ \langle f,\mathcal Nf\rangle
+ \geq c_0\bigl(\|pf\|^2+\|xf\|^2+\|f\|^2\bigr).
+\]
+Its graph norm controls $\|H_\varepsilon f\|$.
+On the core, the potential drops out of the commutator, and in the
+quadratic-form sense
+\[
+ \ii[H_\varepsilon,\mathcal N]
+ =p\cdot x+x\cdot p+\varepsilon p\cdot e_\beta.
+\]
+Thus
+\[
+ \|H_\varepsilon f\|\leq C_\varepsilon\|\mathcal Nf\|,
+ \qquad
+ |\langle H_\varepsilon f,\mathcal Nf\rangle
+       -\langle\mathcal Nf,H_\varepsilon f\rangle|
+ \leq C_\varepsilon\langle f,\mathcal Nf\rangle.
+\]
+The commutator theorem \cite[Theorem X.37]{RS2} proves essential
+self-adjointness of $H_\varepsilon$ on $C_c^\infty$.
+
+The time-dependent operators $H_{k+\varepsilon t e_\beta}$ have the
+same domain $H^2_{\mathrm{per}}$, and their dependence on time is
+continuously differentiable as maps from that domain to $L^2$.
+The common-domain propagator theorem \cite[Theorem X.70]{RS2}
+therefore supplies \eqref{eq:propagator}, with preservation of $H^2$.
+Its graph-norm bound is uniform on compact time intervals, for $k$
+in a fundamental cell and $\varepsilon$ in a bounded interval.
+The same theorem applies to $\tfrac12(p+\varepsilon t e_\beta)^2+V$
+on $L^2(\R^2)$; its propagator is the direct integral of the fiber
+propagators. Multiplying it by $G_\varepsilon(t)$ gives
+$e^{-\ii tH_\varepsilon}$. This identity can be verified in the
+Schr\"odinger equation against $C_c^\infty$ test functions and then
+extended by uniqueness for the self-adjoint generator. No domain
+assumption on $x\gamma_0$ is involved.
+
+\subsection{Local traces and normalization}
+\label{app:traces}
+
+Use the Bloch transform
+\[
+ (\mathcal Uf)(k,x)
+ =\sum_{R\in\lat}e^{-\ii k\cdot(x+R)}f(x+R),\qquad x\in\Omega,
+\]
+with direct-integral measure $\dd k/|\BZ|$ and the usual $L^2(\Omega)$
+inner product in each fiber. It is unitary and transforms $p$ into
+$p+k$ and $H$ into $H_k$; see
+\cite[Theorems XIII.97--XIII.99]{RS4}.
+
+Here is the trace identity in the form needed above. For a periodic
+operator $B$ with square-integrable Hilbert--Schmidt fiber norms,
+Parseval's identity in the lattice variable gives
+\begin{equation}
+ \|\ind_\Omega B\|_{\mathrm{HS}}^2
+ =\frac1{|\BZ|}\int_\BZ\|B(k)\|_{\mathrm{HS}}^2\dd k.
+ \label{eq:local-hs}
+\end{equation}
+The corresponding right-localized identity follows by taking
+adjoints. If $R$ is a periodic orthogonal projection with finite-rank
+fibers and finite fiber kinetic energy, both $R\ind_\Omega$ and
+$\ind_\Omega(p\cdot e_\alpha)R$ are Hilbert--Schmidt.
+Their product
+\[
+ \ind_\Omega(p\cdot e_\alpha)R\ind_\Omega
+ =\bigl(\ind_\Omega(p\cdot e_\alpha)R\bigr)
+       \bigl(R\ind_\Omega\bigr)
+\]
+is trace class. The Hilbert--Schmidt pairing, or polarization of
+\eqref{eq:local-hs}, yields
+\begin{equation}
+ \frac1{|\Omega|}
+ \Tr\bigl(\ind_\Omega(p\cdot e_\alpha)R\ind_\Omega\bigr)
+ =\int_\BZ\Tr(J_\alpha(k)R(k))\frac{\dd k}{(2\pi)^2}.
+ \label{eq:bloch-trace}
+\end{equation}
+We use only the standard Hilbert--Schmidt and trace-class identities
+here; see \cite[Section VI.6]{RS1}.
+
+For $R_\varepsilon(t)$ in the accelerating gauge, the fiber ranks
+are $N$ almost everywhere. The $H^2$ propagator bounds and the
+uniform $H^2$ bounds on occupied eigenvectors give finite fiber
+kinetic energy, uniformly on bounded time intervals.
+Moreover, $G_\varepsilon(t)$ commutes with $\ind_\Omega$ and
+\[
+ G_\varepsilon(t)^*(p\cdot e_\alpha)G_\varepsilon(t)
+ =p\cdot e_\alpha+\varepsilon t\,e_\alpha\cdot e_\beta.
+\]
+Thus the same factorization proves local trace class for the physical
+current and gives exactly \eqref{eq:gauge-current}.
+
+\subsection{Differentiating the current at fixed time}
+\label{app:differentiation}
+
+Fix $t_0<\infty$ and $0\leq\varepsilon\leq1$.
+All estimates in this subsection are uniform in $k\in\BZ$ and
+$0\leq t\leq t_0$. For $u\in H^2_{\mathrm{per}}$, write
+\[
+ \psi_\varepsilon(t)=U_\varepsilon(k,t)u,\qquad
+ \psi_0(t)=e^{-\ii tH_k}u.
+\]
+The propagator bounds give
+$\sup_t\|\psi_\varepsilon(t)\|_{H^2}\leq C_{t_0}\|u\|_{H^2}$.
+Duhamel's formula reads
+\begin{equation}
+ \psi_\varepsilon(t)-\psi_0(t)
+ =-\ii\int_0^t e^{-\ii(t-s)H_k}
+       \left(\varepsilon sJ_\beta(k)
+            +\tfrac12\varepsilon^2s^2|e_\beta|^2\right)
+       \psi_\varepsilon(s)\dd s.
+ \label{eq:duhamel-appendix}
+\end{equation}
+It follows that the difference is $O(\varepsilon)$ in $L^2$.
+Interpolating with its uniform $H^2$ bound shows that it tends to
+zero in $H^1$. Dividing \eqref{eq:duhamel-appendix} by $\varepsilon$
+therefore gives convergence in $L^2$ to the first variation
+\begin{equation}
+ \psi^{(1)}(t)=-\ii\int_0^t s\,
+       e^{-\ii(t-s)H_k}J_\beta(k)e^{-\ii sH_k}u\dd s.
+ \label{eq:wave-variation}
+\end{equation}
+The convergence and its bounds are uniform for $u$ in a bounded
+subset of $H^2$. In particular, they are uniform for all normalized
+occupied eigenvectors.
+
+This is sufficient to differentiate a current expectation, despite
+the unbounded observable. Put
+$d_\varepsilon=\psi_\varepsilon-\psi_0$. Then
+\begin{equation}
+ \begin{split}
+ \frac{\langle\psi_\varepsilon,J_\alpha\psi_\varepsilon\rangle
+            -\langle\psi_0,J_\alpha\psi_0\rangle}{\varepsilon}
+ ={}&2\Rea\left\langle\frac{d_\varepsilon}{\varepsilon},
+                                  J_\alpha\psi_0\right\rangle\\
+ &+\left\langle\frac{d_\varepsilon}{\varepsilon},
+                                  J_\alpha d_\varepsilon\right\rangle.
+ \end{split}
+ \label{eq:current-difference}
+\end{equation}
+The last term tends to zero because
+$d_\varepsilon/\varepsilon$ is bounded in $L^2$ and
+$d_\varepsilon\to0$ in $H^1$. The first term converges by
+\eqref{eq:wave-variation}. Summing over the $N$ occupied vectors and
+using the uniform bounds permits differentiation under the Bloch
+integral in \eqref{eq:gauge-current}.
+
+Finally, the group $e^{-\ii sH_k}$ preserves $H^1$, its form domain,
+uniformly for $k$ in the cell. Since $J_\beta u\in H^1$ for
+$u\in H^2$, the first variations above also belong to $H^1$.
+Thus their current pairings agree with the trace expression
+\eqref{eq:density-variation}. Expansion in an eigenbasis is justified
+by \eqref{eq:current-bound}; the subsequent separation of terms
+containing inverse gaps is justified by the integrable conical
+bound used in \cref{sec:response}. This proves all the fixed-time
+claims without imposing a uniform spectral gap.
+
+\begin{thebibliography}{9}
+
+\bibitem{RS1}
+M.~Reed and B.~Simon,
+\emph{Methods of Modern Mathematical Physics, I: Functional Analysis},
+revised and enlarged edition, Academic Press, 1980.
+
+\bibitem{RS2}
+M.~Reed and B.~Simon,
+\emph{Methods of Modern Mathematical Physics, II: Fourier Analysis,
+Self-Adjointness}, Academic Press, 1975.
+
+\bibitem{RS4}
+M.~Reed and B.~Simon,
+\emph{Methods of Modern Mathematical Physics, IV: Analysis of Operators},
+Academic Press, 1978.
+
+\end{thebibliography}
+\end{document}

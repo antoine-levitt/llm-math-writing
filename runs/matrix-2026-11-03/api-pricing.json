@@ -1,0 +1,173 @@
+{
+  "checked_at": "2026-11-05T16:37:10.727700+00:00",
+  "model": "gpt-6-astra",
+  "basis": "Counterfactual Standard API token cost at published rates checked on 2026-11-05; runs used a ChatGPT subscription, not an API invoice. The served pricing tier is not recorded in the usage records.",
+  "pricing_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-6-astra",
+    "https://developers.openai.com/api/docs/pricing"
+  ],
+  "rates_usd_per_million_tokens": {
+    "uncached_input": "10",
+    "cached_input": "1",
+    "cache_write_input": "12.5",
+    "output": "50"
+  },
+  "accounting": "Sum each unique response once across root and descendant threads. Cached input is included in input_tokens, and reasoning output is included in output_tokens. No explicit cache writes were reported. No request exceeded 272000 input tokens, so no long-context uplift applies. All tools were local; these estimates exclude local machine costs and separately commissioned baseline/grading work.",
+  "runs": [
+    {
+      "condition": "plain",
+      "usage": {
+        "input_tokens": 786494,
+        "cached_input_tokens": 718464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 31487,
+        "reasoning_output_tokens": 14214,
+        "total_tokens": 817981
+      },
+      "uncached_input_tokens": 68030,
+      "unique_responses": 14,
+      "max_request_input_tokens": 97190,
+      "thread_count": 1,
+      "elapsed_wall_seconds": 809.0015179710463,
+      "rounded_runtime": "13m 29s",
+      "summed_turn_duration_ms": 807605,
+      "cost_components_usd": {
+        "uncached_input": "0.6803",
+        "cached_input": "0.718464",
+        "cache_write_input": "0",
+        "output": "1.57435"
+      },
+      "total_usd": "2.973114",
+      "rounded_usd": "2.97",
+      "inputs_sha256": {
+        "plain/usage.json": "1f1643ad9f2c230f00aa58497d4a819873121be9bb369436df159700086939ec",
+        "plain/timing.json": "e1365d521cbe95d0806b60cb4fc9f07f146984a3f1541a845fc20dffd0c3e7b5"
+      }
+    },
+    {
+      "condition": "explicit",
+      "usage": {
+        "input_tokens": 638929,
+        "cached_input_tokens": 589696,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 34521,
+        "reasoning_output_tokens": 18781,
+        "total_tokens": 673450
+      },
+      "uncached_input_tokens": 49233,
+      "unique_responses": 13,
+      "max_request_input_tokens": 89316,
+      "thread_count": 1,
+      "elapsed_wall_seconds": 1026.8159643490799,
+      "rounded_runtime": "17m 07s",
+      "summed_turn_duration_ms": 1024754,
+      "cost_components_usd": {
+        "uncached_input": "0.49233",
+        "cached_input": "0.589696",
+        "cache_write_input": "0",
+        "output": "1.72605"
+      },
+      "total_usd": "2.808076",
+      "rounded_usd": "2.81",
+      "inputs_sha256": {
+        "explicit/usage.json": "50c5dcaa25cdec6b27237522ac459c82c0db532e4e284013bbe2355c9cd706f4",
+        "explicit/timing.json": "b4ceeb421db545e12140fe0591f8d7e0bdd152b3be0bdbc632493c1ddb7f014f"
+      }
+    },
+    {
+      "condition": "review",
+      "usage": {
+        "input_tokens": 8759984,
+        "cached_input_tokens": 8457600,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 109001,
+        "reasoning_output_tokens": 51497,
+        "total_tokens": 8868985
+      },
+      "uncached_input_tokens": 302384,
+      "unique_responses": 144,
+      "max_request_input_tokens": 123095,
+      "thread_count": 4,
+      "elapsed_wall_seconds": 1271.8376445800532,
+      "rounded_runtime": "21m 12s",
+      "summed_turn_duration_ms": 3383904,
+      "cost_components_usd": {
+        "uncached_input": "3.02384",
+        "cached_input": "8.4576",
+        "cache_write_input": "0",
+        "output": "5.45005"
+      },
+      "total_usd": "16.93149",
+      "rounded_usd": "16.93",
+      "inputs_sha256": {
+        "review/usage.json": "c7e20dffb1c620e524ef127339193c9642335284eb567a69cf615fa0202b26c6",
+        "review/timing.json": "06119e66edb6312e0e67f28b3993d78b8e9356cc359074a4143f91cd99621d65"
+      }
+    },
+    {
+      "condition": "explicit_review",
+      "usage": {
+        "input_tokens": 7891159,
+        "cached_input_tokens": 7551872,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 100067,
+        "reasoning_output_tokens": 52911,
+        "total_tokens": 7991226
+      },
+      "uncached_input_tokens": 339287,
+      "unique_responses": 137,
+      "max_request_input_tokens": 121435,
+      "thread_count": 4,
+      "elapsed_wall_seconds": 1399.0734341330826,
+      "rounded_runtime": "23m 19s",
+      "summed_turn_duration_ms": 3420168,
+      "cost_components_usd": {
+        "uncached_input": "3.39287",
+        "cached_input": "7.551872",
+        "cache_write_input": "0",
+        "output": "5.00335"
+      },
+      "total_usd": "15.948092",
+      "rounded_usd": "15.95",
+      "inputs_sha256": {
+        "explicit_review/usage.json": "eb953f38fdc4b6735ddb1c02ee6e907509a5417c8f57fd64fab86c66ba95a057",
+        "explicit_review/timing.json": "aefcb95c8a639fef301bd9e390e9ddfe5d18220214312afe2ff503f781b4e028"
+      }
+    }
+  ],
+  "totals": {
+    "unique_responses": 308,
+    "usage": {
+      "input_tokens": 18076566,
+      "cached_input_tokens": 17317632,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 275076,
+      "reasoning_output_tokens": 137403,
+      "total_tokens": 18351642
+    },
+    "standard_usd": "38.660772",
+    "rounded_usd": "38.66",
+    "summed_agent_turn_hours": "2.399008611111111111111111111"
+  },
+  "electricity_scenario": {
+    "status": "Illustrative assumptions, not measured electricity consumption. Agent-turn durations include tools and waits and do not measure GPU compute time. No actual power or datacenter location is recorded.",
+    "assumed_average_kw_per_agent_turn": "1",
+    "energy_kwh": "2.399008611111111111111111111",
+    "assumed_usd_per_kwh": "0.20",
+    "electricity_usd": "0.4798017222222222222222222222",
+    "us_2024_generation_emissions_lbs_co2_per_mwh": "785",
+    "us_2024_generation_emissions_kg_co2_per_kwh": "0.35607001045",
+    "us_emissions_source": "https://www.eia.gov/electricity/state/unitedstates/index.php",
+    "scenario_kg_co2": "0.8542150212279733194444444444",
+    "france_2025_annual_footprint_tonnes_co2e_per_person": "8.3",
+    "france_footprint_source": "https://www.statistiques.developpement-durable.gouv.fr/empreinte-carbone-2",
+    "france_daily_footprint_kg_co2e_per_person": "22.73972602739726027397260274",
+    "fraction_of_daily_french_footprint": "0.03756487743954340501171352075",
+    "scope_note": "This electricity-generation CO2 scenario is not a lifecycle footprint, while the French comparison covers consumption-related greenhouse gases in CO2 equivalents."
+  },
+  "todoai_profitability_check": {
+    "original_link": "https://thezvi.substack.com/p/anthropic-files-its-s-1?r=67wny",
+    "primary_source": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+    "finding": "The linked analysis supports a narrower claim about Anthropic. Its S-1 reports Q2 2026 GAAP operating income of USD 974 million (p. 161) and H1 2026 operating cash flow of USD 3929 million (p. 169), but H1 GAAP operating loss of USD 693 million and net loss of USD 80748 million. This does not establish profitability across AI companies, profit on every API request, or an electricity-cost upper bound for these OpenAI runs."
+  }
+}

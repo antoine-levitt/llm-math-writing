@@ -1,0 +1,51 @@
+Four-condition mathematical-writing experiment, 3 November 2026
+
+Conditions: original prompt; explicit editorial instructions; iterative
+subagent review; both additions. Prompt bytes are copied unchanged from the
+four user files and hashed in experiment.json. The pilot is excluded.
+
+All four runs use the same installed Codex 0.166.0 binary and frozen model
+catalogue, GPT-6-Astra with max reasoning, the same default model/effort for
+reviewers, three concurrent subagent slots, and identical tools and permissions.
+They run sequentially in the recorded shuffled order. No token or time cap
+is added. Each starts in its own neutral /tmp/graphene-run-*/work directory,
+with independent copied inputs, temporary files, authentication/state, and logs.
+The only initial task content is the exact selected prompt, the theorem
+statement (TeX and PDF), and the four Reed–Simon DjVu volumes.
+An identical common input snapshot is retained in inputs/, with hashes and
+sizes in inputs-manifest.json, so reproduction does not depend on /tmp.
+
+Personal/project instructions, memories, skills, plugins, browser/web tools,
+network access for agent commands, and hooks are disabled in every condition.
+Standard Codex runtime instructions remain. Offline preflights show matching
+startup contexts after removing the selected prompt, transient metadata,
+neutral run paths, and random tool-dispatch path suffixes. They also verify
+that references and the installed TeX cache are accessible and that other
+runs, the benchmark directory, original article, and credentials are blocked.
+The actual runtime paths and original startup dumps are preserved per case.
+
+No mathematical advice, review feedback, or supplementary instructions are
+supplied by the supervising session. Failures and deviations are retained,
+not silently replaced with better samples. The model can revise its own work;
+the supervisor archives its output without edits. Recovered tool errors are
+recorded separately from invalid setup or incomplete runs.
+
+Evidence: exact arguments/configuration, timestamped CLI events, native root
+and descendant rollouts, consistent local SQLite backups, stderr/runtime logs,
+final messages, output hashes, and temporary work/review/build artifacts.
+Authentication files are excluded and removed after use. Native traces and
+logs can contain draft text and internal process details; they are retained
+locally for the requested audit, not published.
+
+Token accounting sums unique response-level usage records across the root
+and all descendants. Copied parent history is deduplicated by response ID.
+Cached input is a subset of input tokens; reasoning is a subset of output.
+Timing is measured monotonic elapsed wall time from CLI launch to exit,
+excluding preparation and archival. Local CPU is diagnostic only; provider
+GPU/compute time is unavailable. Agent durations may overlap and include
+waiting and tools, so they are not summed as end-to-end elapsed time.
+
+Configuration references used during setup:
+https://learn.chatgpt.com/docs/config-file/config-reference
+https://learn.chatgpt.com/docs/agent-configuration/subagents
+https://learn.chatgpt.com/docs/non-interactive-mode

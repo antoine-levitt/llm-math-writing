@@ -1,0 +1,54 @@
+Scope
+=====
+
+At the user's request on 5 November 2026, reassess only manuscript B,
+using baseline/comparison-version/main.pdf (14 pages). Preserve the
+existing grades and reviews of A, C, D and E. The original five-way
+grading and its artifacts remain unchanged.
+
+Use the same pinned Codex CLI 0.166.0, GPT-6-Astra with max reasoning,
+model catalog, isolated neutral workspace, disabled project instructions,
+disabled memories and disabled online tools as the primary isolated pass
+in the parent readability-blind directory. The grader may not delegate.
+Check the startup context and sandbox restrictions before launching,
+then inspect the actual native trace after completion. Save exact inputs,
+prompt, configuration, events, native traces, outputs, usage and wall time.
+
+The reader profile, five readability criteria, warning against equating
+shortness with quality, distinction from correctness auditing, and coarse
+score anchors (8/6/4) are unchanged. The output still asks for a score,
+one-sentence reason, strongest feature, main obstacle, two located examples,
+and confidence. The sole scope change is to assess B alone, rather than
+read and rank all five. The word limit is scaled from about 1,000 words
+for five papers to about 400 words for one. prompt-changes.diff records
+these adaptations exactly.
+
+Only B and the unchanged theorem statement, each as a PDF and a faithful
+pdftotext -layout extract, are supplied to the grader. It is not told that
+B has changed or which production condition B represents. Neither the old
+B nor any previous scores, reviews, mapping, source files or adaptation
+notes are available in the neutral workspace. No reference manuscripts
+or calibration scores from the first grading are supplied.
+
+Consequently an updated score table combines one new standalone judgment
+with four preserved judgments from the earlier comparative pass; it is
+not a new simultaneous five-way ranking. Any change in B's score also
+includes ordinary grader variation and the effect of assessing it alone.
+
+Implementation and provenance
+=============================
+
+run_isolated.py is a copy of the previous launcher with only the record
+location, B-only sandbox probe, forbidden-path checks and unconditional
+credential cleanup adapted. runner-changes.diff records the differences.
+The temporary authentication file is used solely by the CLI to connect
+to the model, is blocked from grader tools, and is never archived.
+
+private-mapping.json identifies B's source and hash. The problem files
+are copied byte-for-byte from the previous anonymous inputs.
+previous-artifact-hashes.json records all original grading artifacts
+before this update, excluding disposable Python bytecode caches.
+
+The blind grader's raw report is retained without editing. Any combined
+report or table is explicitly identified as an assembly of the old
+A/C/D/E assessments and this new B assessment.

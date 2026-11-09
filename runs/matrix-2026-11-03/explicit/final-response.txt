@@ -1,0 +1,3 @@
+Completed the nine-page paper: [PDF](/tmp/graphene-run-y4ogwbm3/work/paper.pdf) · [LaTeX source](/tmp/graphene-run-y4ogwbm3/work/paper.tex).
+
+The proof emphasizes the cancellation, cone geometry, and universal coefficient, with analytic details in an appendix. Reed–Simon citations were checked locally; no online sources were used.

@@ -1,0 +1,30 @@
+{
+  "bundle": "/tmp/manuscripts-fe9zkh8f",
+  "mapping": {
+    "A": {
+      "condition": "both",
+      "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.pdf",
+      "sha256": "53ca3b4c5488ee5a5819f25599a8233e69bd35935dff8a07b3db35615de09671"
+    },
+    "B": {
+      "condition": "baseline",
+      "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/baseline/statement-version/main.pdf",
+      "sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf"
+    },
+    "C": {
+      "condition": "iterative_review",
+      "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/review/output/graphene_conductivity.pdf",
+      "sha256": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe"
+    },
+    "D": {
+      "condition": "original",
+      "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/plain/output/graphene_conductivity.pdf",
+      "sha256": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be"
+    },
+    "E": {
+      "condition": "explicit_writing",
+      "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/explicit/output/paper.pdf",
+      "sha256": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba"
+    }
+  }
+}

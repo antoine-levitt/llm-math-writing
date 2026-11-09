@@ -1,0 +1,22 @@
+Execution audit: original-prompt condition
+
+Completed with exit code 0 in 809.0 seconds (13.5 minutes). The unedited
+deliverable is output/graphene_conductivity.tex and its 10-page PDF. The
+final LaTeX log contains no warnings or errors. Initial inputs are unchanged.
+
+The root used GPT-6-Astra/max and chose not to spawn subagents, although the
+same subagent tools and settings were available as in the other conditions.
+Its turn completed normally. There were no detected online-access calls,
+CLI failure events, stderr errors, or usage-accounting discrepancies.
+
+Usage: 786,494 input tokens, of which 718,464 cached; 31,487 output tokens,
+of which 14,214 reasoning tokens. There are 14 unique response-level usage
+records. Cached and reasoning counts are subsets, not additional tokens.
+
+The only tool call with a nonzero exit code was an initial search for local
+AGENTS.md/SKILL.md files that found no matches. It did not impede the run.
+
+No supervisor advice or edits were supplied to the tested session. This
+audit checks execution and artifacts; it is not an independent mathematical
+referee report. Detailed evidence is in audit.json, usage.json, events*.jsonl,
+stderr.log, native/, and output/.paper_work/.

@@ -1,0 +1,42 @@
+{
+  "archived_at": "2026-11-03T10:37:31.157746+00:00",
+  "inputs_unchanged": {
+    "graphene_statement.tex": true,
+    "graphene_statement.pdf": true,
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": true,
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": true
+  },
+  "output_hashes": {
+    "graphene_conductivity.pdf": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+    "graphene_conductivity.tex": "8867378c07f93cb0559799cf90b409af0f30a36dde0d287e5d507870e1af064c",
+    ".paper_work/compile-pass-5.txt": "987dcfd0fb4c36e81be7a83ab7bccd9a4c6949d0fdc7542eaf47d167e2035889",
+    ".paper_work/compile-pass-4.txt": "43fc90aec01702ec035f4b7cd6a944925217b398c6f983b8ce44e1c17bd6c3d1",
+    ".paper_work/page-9.png": "4e6118245f0663054555977d544ed110030f4f97d1ae5c453e2c696638faec44",
+    ".paper_work/page-1.png": "c29093f1e2074421510483206557a8d70fc53ae9182745319400cc3ef22f4ac6",
+    ".paper_work/graphene_conductivity.txt": "fcc014d0f970bcd666e0857e84ba37e85dc0423619c745a48cdd300d7c0f331b",
+    ".paper_work/compile-pass-3.txt": "041e44c574f20f52c18f88d16e53d0f4acbbc5b680cf6b24d10fdfb61a84a9d3",
+    ".paper_work/compile-pass-2.txt": "041e44c574f20f52c18f88d16e53d0f4acbbc5b680cf6b24d10fdfb61a84a9d3",
+    ".paper_work/graphene_conductivity.pdf": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+    ".paper_work/graphene_conductivity.out": "ba4bd7b6f9a879d4a7c135a0e6aa693bf9c2753e509b89ce43daedb78e8a4064",
+    ".paper_work/graphene_conductivity.aux": "ef004f1611d4e8f74fd3598c64d4f072ed7a2b1dd9043d7298cb9e1c7a72d0eb",
+    ".paper_work/graphene_conductivity.log": "62f8dc0cbe8eb936adece9dca80c70286833347cbcecf7a259c04358e5f12f47",
+    ".paper_work/reed_simon_IV.txt": "4c1af53adbe6a649f77cda49b9fa6cd3b5baadcfcccaaf9d37ed589d56c143a5",
+    ".paper_work/reed_simon_II.txt": "072e5dbc57a71163bfff31761dbbf96e4f0fbf74913772bb53554c713d27388a",
+    ".paper_work/reed_simon_I.txt": "778bc8f58bd79c2618de30324bc010fa82357b96387b8618f6e5a43a3ab518b3"
+  },
+  "root_thread_ids": [
+    "01a1a0ef-f2be-7723-887f-4fffd7568fe7"
+  ],
+  "cli_turn_usage": [
+    {
+      "input_tokens": 786494,
+      "cached_input_tokens": 718464,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31487,
+      "reasoning_output_tokens": 14214
+    }
+  ],
+  "parent_edited_output": false
+}

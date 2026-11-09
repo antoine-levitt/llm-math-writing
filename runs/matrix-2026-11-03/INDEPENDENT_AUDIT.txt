@@ -1,0 +1,36 @@
+Independent execution/accounting cross-check
+===========================================
+
+A separate read-only audit found no consequential execution or accounting
+discrepancy. It did not run a model experiment or edit any manuscript.
+
+Condition          Wall seconds   Root total tokens   Subagent total tokens
+-----------------  ------------   -----------------   ---------------------
+plain                    809.0             817,981                       0
+explicit                1026.8             673,450                       0
+review                  1271.8           4,573,691               4,295,294
+explicit_review         1399.1           3,689,119               4,302,107
+
+These are input-plus-output token totals; cached input is already included.
+All 308 unique upstream responses agree with the reported totals, native
+cumulative counters, SQLite totals and root CLI usage. Inherited copies
+were excluded; no conflicting usage or cross-run response IDs were found.
+
+All ten responding threads used Astra/max. Each review condition had three
+subagents completing three turns apiece before root completion. No aborted
+turns, unfinished reviewer turns or unanswered tool calls were found.
+
+Prompt bytes, input hashes and archived output hashes match. Common
+configuration, the pinned executable/catalogue, and actual initial
+instructions match after removing isolated paths and transient metadata.
+Roots are fresh executions with exactly the environment user message and
+supplied prompt; memories were disabled and memory databases are empty.
+
+All four processes exited successfully and produced readable PDFs. The
+errors found were the documented recovered editing/build errors and file
+or optional-tool probes. No transport, authentication, quota or sandbox
+failure was found in the measured sessions.
+
+The native logging databases contain no rows; stderr and native rollout
+traces supply the error evidence. Times are elapsed wall time, not provider
+GPU compute time. Mathematical correctness was outside this audit.

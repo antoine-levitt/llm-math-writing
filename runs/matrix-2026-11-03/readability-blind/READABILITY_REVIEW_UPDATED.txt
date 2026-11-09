@@ -1,0 +1,66 @@
+Updated readability assessment — only B reassessed
+=================================================
+
+This report assembles four unchanged assessments from 3 November with
+B's fresh blind assessment on 5 November. It is not a new five-way
+comparison. B's new grader saw only B and the theorem statement, using
+the same reader profile, criteria, score anchors and isolated Astra/max
+setup. It saw neither previous scores nor information about B's origin.
+
+Manuscript  Score / 10  Assessment
+----------  ----------  ---------------------------------------
+A               9      Preserved from 3 November
+B               8      Fresh B-only pass on 5 November (was 6)
+C               8      Preserved from 3 November
+D               7      Preserved from 3 November
+E               9      Preserved from 3 November
+
+A, C, D and E below are copied verbatim from the original blind report.
+B is copied verbatim from the new blind report. The original comparative
+conclusion is left in the archived original report rather than presented
+as a conclusion about this updated set.
+
+
+A
+
+Strongest feature: the proof strategy is explained causally, including why the current is controlled by variation of the occupied subspace and why cone velocities disappear. The prose repeatedly explains what an estimate accomplishes. Main obstacle: following the differentiation of the current in full requires moving between the main argument and a fairly technical weighted trace-norm appendix.
+
+1. Section 1.2, p. 2, displays the averaged kernel, identifies the scale |q| approximately (v_i T)^(-1), and explains the cancellation of velocity factors before the calculations begin. This gives the reader a concrete destination for subsequent estimates.
+2. Section 2.2, p. 4, explains the exact transport identity (2.10) as shifting the occupied subspace and propagating its change. However, the passage to (2.11) depends on the weighted version of Proposition 2.1 and Appendix A.3, pp. 9–10. The references are precise, but checking this central passage entails appreciable page switching.
+
+B
+
+B: 8/10. B is very clear overall for the intended graduate reader: its main reductions and limiting mechanism are explained, although the local matrix comparison requires concentrated attention.
+
+B's strongest readability feature is its visible proof strategy. The introduction motivates time averaging with a forced oscillator and explains how the gauge change enables Bloch decomposition. The contents, descriptive subsection titles, and opening roadmap of Section 5 make the progression from well-defined current to linear response to conductivity easy to navigate. Most estimates come with an explanation of their purpose.
+
+B's main obstacle is the accumulated notation in the local two-band argument. Readers must track changing bases, eigenvector phases, matrix dimensions, and several related Hamiltonians. The balance of detail is generally helpful, including the justification of differentiation with an unbounded current observable, but the substantial preliminary operator setup contrasts with compressed explanations of some local perturbation steps.
+
+Two concrete examples:
+
+1. PDF pp. 10–11, Sections 5.1–5.2, and p. 13, equation (51): B explains the cancellation of the term linear in time, introduces the averaged kernel K_T, and explicitly identifies why gapped transitions vanish and momenta of size T^{-1} matter. The later substitution k=q/T and displayed integrable majorant make the central limiting argument understandable. This is useful technical detail that supports the mechanism rather than interrupting it.
+
+2. PDF pp. 11–13, Sections 5.3–5.4: Q begins as a 3-by-2 matrix, becomes a 2-by-2 matrix after a unitary rotation, and is subsequently used as an orthogonal change of momentum coordinates. Meanwhile H^R, H^Q, and H^D and their eigenvectors enter in close succession. The heading “Reduction to H^D” initially introduces H^Q. A brief explanation of these three models' roles, and an explicit reminder that the redefined Q is orthogonal, would reduce backtracking. The eigenvector comparison attributed to “standard results of perturbation theory” would also benefit from one sentence connecting the quadratic remainder and linear gap to the stated error.
+
+Confidence is reasonably high for a coarse readability assessment: all of B was read against the supplied theorem, with the densest final pages checked in the PDF. These concerns identify expository compression, not verified mathematical errors; this was not a correctness audit.
+
+C
+
+Strongest feature: it carefully explains how identities remain valid at conical crossings and internal band degeneracies. Technical qualifications generally appear where they become relevant. Main obstacle: the reader carries several bounds and response terms before seeing the final scale selection, which is less prominently previewed than the cancellations.
+
+1. Section 3, p. 5, derives the integrated band-energy identity by removing small disks, bounding their boundary contributions by O(rho), and then explaining the absence of a point-supported correction. The subsequent time-reversal paragraph also distinguishes real integrated response from potentially complex individual matrix elements. These are useful explanations of delicate steps.
+2. Sections 2.1–2.2, pp. 3–4, establish the band-sum bounds and present the three-part response (2.12). The reader must retain these contributions through their cancellation in Section 3; the inverse-time rescaling and explicit velocity cancellation arrive in Section 5, pp. 7–8. The organization is logical, but requires more sustained bookkeeping.
+
+D
+
+Strongest feature: a systematic progression with explicit analytic justifications makes the dependencies easy to check. Main obstacle: the main narrative gives preliminary operator facts substantial space before demonstrating their payoff, and the abstract supplies more strategic guidance than the opening sections.
+
+1. Sections 2.1–2.2, pp. 2–5, develop the oscillator comparison operator, commutator argument, temporal gauge, and localized Hilbert–Schmidt factorization before the response formula. These details support the theorem, but their uninterrupted placement makes the opening demanding for someone seeking the transport mechanism.
+2. Section 6, p. 9, is especially effective: q = z/T is followed by the explicit |z|^(-1)/|z|^(-3) integrable bound and an explanation that dominated convergence handles the nonlinear gap inside the oscillatory factor. This connects the estimate directly to the limiting argument it enables.
+
+E
+
+Strongest feature: physical interpretation and mathematical steps remain closely connected, with useful technical detail placed in an appendix. Main obstacle: a few passages compress algebra and introduce several temporary symbols in quick succession; the difficulty is localized.
+
+1. Section 2.2, p. 4, explains the filled-band cancellation through bounded gradients and shrinking boundary circles, then explicitly connects the vanishing flux to the absence of a Fermi curve. The heading and explanation make the sum rule feel motivated.
+2. Section 2.1, p. 3, introduces R_epsilon, D(k,t), and the temporary response name L_alpha,beta before displaying (2.8). Only one sample time integral accompanies the eigenbasis expansion. This is the densest local stretch and asks the reader to reconstruct some algebra before the next subsections explain the cancellations.

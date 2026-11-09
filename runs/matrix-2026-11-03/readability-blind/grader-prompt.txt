@@ -1,0 +1,19 @@
+Assess the readability of five mathematical manuscripts, labelled A–E, proving the theorem supplied in Problem.pdf/Problem.txt.
+
+All permitted input is in /tmp/manuscripts-fe9zkh8f. Use this exact directory as the workdir for every shell command. Read only its Manuscript_A.pdf through Manuscript_E.pdf, corresponding .txt files, and Problem.pdf/Problem.txt. The text files are faithful pdftotext -layout extracts; consult the PDFs if layout or an extraction artifact matters. Do not inspect other directories, project instructions, saved memories, source files, PDF metadata, provenance, or online sources. You have no information about the manuscripts' authors or production conditions. Do not try to infer those. Do not spawn other agents.
+
+Make one rough comparative readability pass, not a full mathematical correctness audit. Assume a reader comfortable with graduate functional/spectral analysis but not already expert in this particular transport argument. Judge:
+- visible proof strategy, motivation, and explanation of the central mechanism;
+- structure and navigation;
+- notation and working-memory burden;
+- balance of essential ideas, technical justification, and routine detail;
+- precision and flow of the prose.
+
+Do not equate shortness with quality: reward useful detail and penalize unnecessary detours or compression that obstructs understanding. Assess each paper as a standalone explanation of the supplied theorem. Read all five before fixing your ranking. Distinguish apparent expository gaps from mathematical errors that you have not verified.
+
+Write /tmp/manuscripts-fe9zkh8f/READABILITY_REVIEW.txt, at most about 1,000 words:
+1. A table ranking A–E by readability, with coarse integer scores out of 10 (ties allowed), and a one-sentence reason for each. Use the same standard throughout; roughly 8 = very clear, 6 = readable with appreciable effort, 4 = repeatedly hard to follow. Do not force score separation.
+2. For each manuscript, its strongest readability feature, its main obstacle, and two concrete examples located by PDF page and/or named section. Prefer specific passages or structural choices to generic advice.
+3. A short comparative conclusion explaining the main differences and how confident you are in the ordering.
+
+Keep labels A–E throughout. Do not edit the manuscripts. In your final response, give the ranking, a short explanation, and the report path.

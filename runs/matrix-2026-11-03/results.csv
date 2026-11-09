@@ -1,0 +1,5 @@
+condition,explicit_instruction,review_instruction,elapsed_seconds,reviewers,input_tokens,cached_input_tokens,uncached_input_tokens,output_tokens,reasoning_output_tokens,total_tokens,exit_code
+plain,False,False,809.002,0,786494,718464,68030,31487,14214,817981,0
+explicit,True,False,1026.816,0,638929,589696,49233,34521,18781,673450,0
+review,False,True,1271.838,3,8759984,8457600,302384,109001,51497,8868985,0
+explicit_review,True,True,1399.073,3,7891159,7551872,339287,100067,52911,7991226,0

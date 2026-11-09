@@ -1,0 +1,106 @@
+Provenance and purpose
+======================
+
+This is a narrowly retargeted version of statement-version/main.tex,
+prepared at the user's request on 3 November 2026. Its argument and most
+of its wording come from “Coherent electronic transport in periodic
+crystals”, by Eric Cancès, Clotilde Fermanian Kammerer, Antoine Levitt
+and Sami Siraj-Dine:
+  https://arxiv.org/abs/2002.01990v2
+  https://doi.org/10.1007/s00023-021-01026-3
+
+The original source is preserved in original/paper.tex. The original
+extraction and the first statement adaptation are preserved in main.tex
+and statement-version/main.tex respectively. Their provenance and earlier
+changes are documented in NOTES.txt and statement-version-NOTES.txt.
+The previous sources and PDFs were hashed before this adaptation; the
+snapshot is in prompt-version-parent-hashes.json.
+
+The user requested minimal changes to fit the theorem's scope while
+keeping the prose style and exposition. This is an AI-assisted adaptation
+of the published proof, not an untouched human manuscript. It was prepared
+after the initial readability comparison and discussion of its fairness;
+that timing should be retained in any account of the benchmark. No new
+readability grade was requested or obtained for this version. No model
+paper was opened while making these changes. The mathematical reviewer
+worked from the two baseline sources without reading model papers or
+grading reports.
+
+prompt-version/ is a clean reading bundle: main.tex, main.pdf, refs.bib
+and build.sh. Attribution, editorial notes, the source diff and build
+scratch files are kept outside that directory, as in statement-version/.
+Removing explicit provenance does not make the retained prose unrecognizable.
+
+Changes relative to statement-version/
+=======================================
+
+1. The Liouvillian discussion is specialized to the Bloch fibers and the
+   occupied/unoccupied splitting actually used in the proof. The general
+   bounded-operator and finite-dimensional introductions, arbitrary
+   spectral interval notation, and unused contour formula for the inverse
+   are removed. The commutator interpretation and eigenbasis explanation
+   are retained.
+
+2. The propagation argument now estimates the form energy on a fixed time
+   interval. The explicit full graph-norm/exponential bound and its
+   interpolation step are replaced by a short Grönwall argument. The
+   common-domain propagator construction and its appendix remain.
+
+3. The original two-step Dyson expansion and its first-order integration
+   by parts are retained. The stronger remainder C ε²t³(1+t³), for εt≤1,
+   is replaced by C_T ε² on 0≤t≤T and 0≤ε≤1. The proof still controls the
+   unbounded current, uniformly in k and independently of the band gap.
+   The explicit ν₀, ν₁, ν₂, λ and η bookkeeping disappears. The four
+   weighted operator bounds actually used are justified directly, including
+   the commutator requiring V∈H¹. The unbounded Dyson identities are
+   explicitly interpreted on D(h₀²), which contains the occupied states.
+
+4. The limit ε→0 is taken once at the start of the conductivity proof,
+   using the uniform finite-time estimates. All later calculations concern
+   jᴸᴿ. The split into regions away from and near crossings, cancellation
+   of boundary terms, reduction to two bands, and explicit Dirac integral
+   are unchanged in substance. Repeated expansions and ε-remainders are
+   removed. The limiting theorem and its order of limits are unchanged.
+
+5. The short assertion Iᴿ(δ,t)=Iᑫ(δ,t)+O(δ) now includes its necessary
+   uniform-in-time justification. This is the radial-energy substitution
+   already recorded outside the previous reading bundle in
+   statement-version-NOTES.txt. The oscillatory phase is handled exactly
+   by ρ=Δ/(2v), rather than by a Taylor expansion in t.
+
+6. Small local justifications accompany the retargeting: the puncture
+   boundary in Stokes' formula is O(r); sums of occupied eigenvalues are
+   differentiated as a trace, allowing internal band crossings; transition
+   sums converge absolutely by Cauchy–Schwarz; regions are understood on
+   the reciprocal torus. The phrase expanding “close to t=0” is corrected
+   to “close to ε=0”.
+
+The introduction, oscillator example, main statement, physical sign
+convention, gauge transform, fixed arbitrary directions, proof order,
+local two-band construction, explicit Dirac calculation, and both
+technical appendices are retained. Only Reed–Simon is cited. The changes
+do not attempt to match the length or structure of a generated paper.
+
+The complete source comparison is in prompt-version-changes.diff.
+
+Build and verification
+=======================
+
+Run bash baseline/prompt-version/build.sh from the project directory,
+or bash build.sh inside prompt-version/. Scratch files are written to
+prompt-version-build/, outside the reading bundle. The resulting PDF is
+copied into prompt-version/.
+
+The PDF has 18 pages (the previous version has 19). LaTeX and BibTeX
+complete successfully; all source references resolve, with no duplicate
+labels or overfull boxes. The inherited epstopdf warning only notes that
+shell escape is disabled. PDF author, title, subject and keywords metadata
+are empty. Previous baseline sources and PDFs are unchanged.
+
+A separate mathematical review of the changed arguments found no new
+defect or missing dependency. It checked the partial inverse, form-energy
+estimate, Dyson domains and weighted remainder, limit interchanges,
+puncture cancellation and uniform radial-energy substitution. The
+surviving factors −i/(4π²) and iπ²/4 still give +1/16 per node, with the
+same factors from the arbitrary fixed directions. Rendered pages containing
+the revised remainder proof and Dirac approximation were also inspected.

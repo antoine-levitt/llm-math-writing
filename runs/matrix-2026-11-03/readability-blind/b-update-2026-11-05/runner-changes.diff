@@ -1,0 +1,51 @@
+--- previous/run_isolated.py
++++ B-only/run_isolated.py
+@@ -13,7 +13,7 @@
+ import time
+ 
+ HERE = Path(__file__).resolve().parent
+-MATRIX = HERE.parent
++MATRIX = HERE.parent.parent
+ sys.path.insert(0, str(MATRIX))
+ from experiment import toml
+ from summarize_traces import summarize
+@@ -31,7 +31,7 @@
+     return datetime.now(timezone.utc).isoformat()
+ 
+ 
+-def main():
++def run():
+     record = HERE / "isolated"
+     record.mkdir()  # Refuse to overwrite a previous attempt.
+     scratch = Path(tempfile.mkdtemp(prefix="manuscript-grader-"))
+@@ -95,9 +95,12 @@
+                       "private-mapping", "explicit_review", "iterative_review"]:
+         assert forbidden not in preview.stdout, forbidden
+     denied = [str(HERE / "private-mapping.json"),
+-              str(HERE / "subagent-pass/READABILITY_REVIEW.txt"),
++              str(HERE.parent / "private-mapping.json"),
++              str(HERE.parent / "READABILITY_REVIEW_BLIND.txt"),
++              str(HERE.parent / "anonymous-inputs/Manuscript_B.pdf"),
++              str(MATRIX.parent.parent / "baseline/comparison-version/main.tex"),
+               str(state / "auth.json")]
+-    probe = "from pathlib import Path\nassert Path('Manuscript_A.txt').read_text()\n"
++    probe = "from pathlib import Path\nassert Path('Manuscript_B.txt').read_text()\n"
+     probe += "for name in " + repr(denied) + ":\n"
+     probe += "    try: Path(name).read_bytes()\n    except (PermissionError, FileNotFoundError): pass\n    else: raise RuntimeError('Readable forbidden input: '+name)\n"
+     probe += "print('PASS: anonymous inputs readable; mapping, prior review, and credentials blocked.')\n"
+@@ -158,5 +161,15 @@
+     raise SystemExit(code)
+ 
+ 
++def main():
++    try:
++        run()
++    finally:
++        runtime_path = HERE / "isolated/runtime.json"
++        if runtime_path.exists():
++            state = Path(json.loads(runtime_path.read_text())["state"])
++            (state / "auth.json").unlink(missing_ok=True)
++
++
+ if __name__ == "__main__":
+     main()

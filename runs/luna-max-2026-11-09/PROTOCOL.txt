@@ -1,0 +1,60 @@
+Luna/max basic-prompt extension, 9 November 2026
+================================================
+
+One new sample using the unchanged basic prompt from ../../prompt. This
+extends ../matrix-2026-11-03/; it does not replace any earlier result.
+
+The frozen Codex 0.166.0 binary, model catalogue, theorem statement (TeX and
+PDF), four Reed-Simon DjVu volumes, permissions, tool settings, and launch,
+archival and token-accounting code are reused from the original experiment.
+The model and default reviewer model are changed from gpt-6-astra to
+gpt-6-luna; both retain max reasoning. Three concurrent subagent slots
+remain available under the original runtime's delegation rules. No extra
+editorial or reviewer instruction is supplied. No time or token cap is added.
+
+Luna's native runtime instructions differ from Astra's, including their
+writing guidance. To hold the instructions constant, model_instructions_file
+loads the exact runtime instruction text recorded in the original Astra
+plain run. Preflight requires identical startup contexts after normalizing
+neutral paths, the date, and terminal whitespace (the file-loading option
+trims one final newline). The native Luna preflight is also retained under
+plain/setup-attempts/. No model request was made during setup attempts.
+
+The new session has its own neutral /tmp/graphene-run-*/work directory and
+private state. Only the exact prompt and original input files are supplied.
+Personal/project instructions, memories, skills, plugins, hooks and web
+tools are disabled. Agent commands have no network access. Preflights check
+access to references and TeX resources and denial of access to credentials,
+earlier manuscripts, the baseline, and the article. Configuration and
+startup comparisons against the original plain run are retained.
+
+The old temporary DjVu binaries had disappeared. The same utilities are
+restored from Ubuntu's djvulibre-bin 3.5.29-1 package, verified against the
+package-index SHA-256. The package and executable hashes are retained here
+so future runs can restore them. Historical executable hashes were not
+recorded, so byte-for-byte identity with those utilities cannot be verified.
+The standard system tools and execution date may also differ from 3 November.
+
+The supervisor supplies no mathematical hints or feedback and does not edit
+the model's manuscript. Failures are retained, not replaced with better
+samples. Exact inputs, prompt, configuration, arguments, startup context,
+timestamped CLI events, native traces, database snapshots, final response,
+outputs and hashes are saved. Temporary authentication copies are removed.
+Trace archives are local evidence, not material intended for publication.
+
+Elapsed time is monotonic wall time from model CLI launch to exit, excluding
+preparation and archival. Token accounting sums unique response-level usage
+across the root and any descendants, deduplicated by response ID. Cached
+input and reasoning output are subsets of their respective totals. Provider
+GPU time is unavailable. The audit checks execution and provenance; it does
+not assign a mathematical correctness or readability score.
+
+Commands from the post directory:
+  python3 runs/luna-max-2026-11-09/run.py prepare
+  python3 runs/luna-max-2026-11-09/run.py preflight
+  python3 runs/luna-max-2026-11-09/run.py run
+  python3 runs/luna-max-2026-11-09/run.py audit
+
+Preparation and launch refuse to overwrite an existing attempt. The CLI
+needs network access for inference while enforcing its own offline sandbox
+for agent commands, as in the original protocol.

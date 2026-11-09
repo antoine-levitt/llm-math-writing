@@ -1,0 +1,69 @@
+{
+  "prepared_at": "2026-11-09T08:51:04.138984+00:00",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "max",
+  "cli": "/home/antoine/.codex/packages/standalone/releases/0.166.0-x86_64-unknown-linux-musl/bin/codex",
+  "cli_sha256": "b8a11fedf24b2dfb59a70c9e52b030f9a508dcd49cd2dd0d41956f4c785156b8",
+  "cli_version": "0.166.0",
+  "catalog_sha256": "1f4aca0d670135f9280f841b95c72243dc878d726d57aaa68373e549061dc4d5",
+  "execution": "single additional condition",
+  "order": [
+    "plain"
+  ],
+  "input_source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/inputs",
+  "inputs": {
+    "graphene_statement.tex": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+    "graphene_statement.pdf": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": "a9eb38970c669d4c315cba20580bc996eb024623af036c6c6d51bab1fdba9e36",
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": "2df55972e909cf69623a23b0d5759b7aec9faac518d940d1f7605ae7fbb00f5d",
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": "47e47a11d12b6baadfba7c7c78389513ecafedf3af361934ae9dbcab04e45d1c",
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": "f62435c15f171971f74a8ccae13cdec64d18c57c652215d093d9f1adb44edf69"
+  },
+  "shared_tools": "/tmp/graphene-tools-z0jl1lji",
+  "conditions": {
+    "plain": {
+      "prompt_file": "prompt",
+      "prompt_sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "explicit_instruction": false,
+      "review_instruction": false,
+      "workspace": "/tmp/graphene-run-vsmhnohu/work"
+    }
+  },
+  "protocol_source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/PROTOCOL.txt",
+  "original_experiment_sha256": "28d265284597830c87b05053b8da07df1aeb36085a056efc0a7abd3e23aaddfc",
+  "launcher_sha256": "29c7cc23659a3c5194b8cccda84f705964f02bfabb4376558b52be4ae41280c0",
+  "reused_launcher_sha256": "c8cdf7bd09716c71bfcb896252ca139faa94656b1f359ab474ced5c6f2a4e6a3",
+  "usage_parser_sha256": "c486507c33ca08a24d4b2687f11c058f33e1114dfd7a83635815b4c3f332a585",
+  "intentional_config_changes": {
+    "model": "gpt-6-luna",
+    "agents.default_subagent_model": "gpt-6-luna",
+    "model_instructions_file": "Original Astra runtime instructions held constant."
+  },
+  "tool_package": {
+    "file": "support/djvulibre-bin_3.5.29-1_amd64.deb",
+    "sha256": "877174dd762401862dc91dd40ef790f31d3df6130e17628403cde25331fa3705",
+    "version": "3.5.29-1",
+    "note": "Restored missing /tmp tools from Ubuntu package; historical binaries were not retained."
+  },
+  "tool_hashes": {
+    "usr/bin/any2djvu": "25a08dc8b05093c5f361054bae0c17df1773934661834a124fa30fd9de270b05",
+    "usr/bin/bzz": "0d17ac7338716a264d4ccd09f7128f09575bc0dd88324bd0a66e8c2674baf37e",
+    "usr/bin/c44": "f120c401d5924d93911362fb1ce1f8948f39dd023e20402989eeff8d63f99b79",
+    "usr/bin/cjb2": "f2bda9e4d9423c1652805e201a14838b31872ee8eb327c7909c677fb2c7c5066",
+    "usr/bin/cpaldjvu": "3073184f66b73aff3b7b315558981c56a8490ae1e342e3891d97b7ae2464e5ff",
+    "usr/bin/csepdjvu": "9037c96845a2eb7f317485463aab126fd3aad351d2918403f220a9b96b2d55e0",
+    "usr/bin/ddjvu": "bf3b8d4066234f1e0e5b34e093363b3cc8fcc51480b5bc85c9a68351fb370f27",
+    "usr/bin/djvm": "43f514e1585313410b59874090e4c4fd2ec66df81fbe4145e56b6a1eebfe4d8e",
+    "usr/bin/djvmcvt": "913b32d529f0faaae36faab354c8a12f27df4a32d5aa82150aaa6a9d5e02a544",
+    "usr/bin/djvudigital": "7a2ae1057747afe36d84326a6b51cd85fe0d55a4e6c327216501b57049081737",
+    "usr/bin/djvudump": "c0f2a77e55acb20f30307e3995c57ca2066085558a4339a7ddddca85bebf20ad",
+    "usr/bin/djvuextract": "170685c65028297ffbb31b4192e3e3a4cae8dc4d0abb78a5c80c1ca47b63477c",
+    "usr/bin/djvumake": "852d3e0aefb180a804b0dbbc4d107398754e4e4601fb27bd911a84eb0d249c26",
+    "usr/bin/djvups": "5110b47b62fbcd920b1abe80b667f95f868e6c294f9f59882caa97098dbbd3a4",
+    "usr/bin/djvused": "4c031e2f0353fed4c16d373e9eb7707f5c26ea4fef77912d4dd3d548516bcb27",
+    "usr/bin/djvutoxml": "9c40660caafea1a9b3c41b67d75eb8cade12bc315df519aa5c979c1153cbdd12",
+    "usr/bin/djvutxt": "75751989307ff2f21bbc279fd69cc37cf904f03de6c7f258efcd6b5b54484f28",
+    "usr/bin/djvuxmlparser": "2386e25428fa6ced2318a5eaa56cc0509e4643342ce03fc6cc3face4b7abe197"
+  },
+  "model_instructions_sha256": "c6f44973b69b7f9bf1af1c9b6e19b1cdc5e4b0baed7709cb47e4e535bbda2739"
+}

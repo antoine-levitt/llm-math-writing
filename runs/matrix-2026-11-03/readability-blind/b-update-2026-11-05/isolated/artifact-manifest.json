@@ -1,0 +1,12 @@
+{
+  "root_thread_id": "01a1abc7-96ef-7872-921d-d396b16904f7",
+  "inputs_unchanged": {
+    "Manuscript_B.txt": true,
+    "Problem.pdf": true,
+    "Manuscript_B.pdf": true,
+    "Problem.txt": true
+  },
+  "output_hashes": {
+    "READABILITY_REVIEW.txt": "731ccabacd4cefe7c8145688a8e673ac51b16cea305214628bbdc342bd792d78"
+  }
+}

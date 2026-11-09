@@ -1,0 +1,23 @@
+{
+  "baseline/comparison-version/main.tex": "f4c8103367ea6a7c63e32288c6212223ebc5b76030fe4f68746dd81929c74557",
+  "baseline/comparison-version/refs.bib": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+  "baseline/comparison-version/build.sh": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+  "baseline/comparison-version/main.pdf": "d51a7eacd5279740fa251bb0827d1cb12fbe5c8c29bd2f9e499ac8fb32b0ae82",
+  "baseline/comparison-version-NOTES.txt": "2c231819d5916ca108ee50d9fcbff75da4bc80d072c58b0ad23dc760542e9853",
+  "baseline/comparison-version-changes.diff": "666fc78b95a85b64052bee891e8f0d183cfc385215a0e9d1febf1df71d98271a",
+  "baseline/main.tex": "59a7412db6d1e73dd3309b2a4d390ce4973bd86d060e44008c00a44b16ff5381",
+  "baseline/main.pdf": "658e271d9dd8c13f357d8af6a481552c33ce2b838868d5477d849416c96b1655",
+  "baseline/original/paper.tex": "b5965da8774027e83323d6b1a93d56c81fa9f7843b27274c2263553f07cd129c",
+  "baseline/statement-version/main.tex": "8f3145892e36a00ed3489442f7ba44e2bf03868769ea504d728ca258a45ecd69",
+  "baseline/statement-version/refs.bib": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+  "baseline/statement-version/build.sh": "021fefbc5c96f0e2d12b45ca819e5ecc9f4ea632583ea2a0c0a8df8bea77cf92",
+  "baseline/statement-version/main.pdf": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+  "baseline/prompt-version/main.tex": "23fa85e7e71d4203b892bfc74929bdc525350d5cd34e07364f54127867c2da41",
+  "baseline/prompt-version/refs.bib": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+  "baseline/prompt-version/build.sh": "348095877d9ca142d0f807070705aeb89c1a7abab92c05d62c17cfe0eea20202",
+  "baseline/prompt-version/main.pdf": "660f3880819e1c79d0810b86e1380b9166a7b3a270a77c887695416a8d0da97a",
+  "runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex": "8867378c07f93cb0559799cf90b409af0f30a36dde0d287e5d507870e1af064c",
+  "runs/matrix-2026-11-03/explicit/output/paper.tex": "aa5c5e944d283c3479a8c391877ace07cdaf41f8fdc318f2deb717e7b911c9c9",
+  "runs/matrix-2026-11-03/review/output/graphene_conductivity.tex": "f1a17015725ee7fa7a230cb474c0dccb4761b537adc01e1a2db1449ef561cd78",
+  "runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.tex": "2d9c900ff802b14d068f88b5ab4827a481d9d38df3c68ab0cb1db2b44d6f3159"
+}

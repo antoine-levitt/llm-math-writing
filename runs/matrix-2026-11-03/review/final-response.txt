@@ -1,0 +1,5 @@
+Completed the 11-page paper, with two rounds of mathematical and editorial review by three subagents.
+
+[PDF](/tmp/graphene-run-45est42r/work/graphene_conductivity.pdf) · [LaTeX source](/tmp/graphene-run-45est42r/work/graphene_conductivity.tex) · [Review record](/tmp/graphene-run-45est42r/work/reviews/README.md)
+
+Reed–Simon citations were verified locally. No online sources were used.

@@ -1,0 +1,69 @@
+GPT-6-Luna/max — basic-prompt result, 9 November 2026
+====================================================
+
+Completed one fresh run with the exact original basic prompt and original
+input snapshot. The manuscript is preserved exactly as delivered.
+
+Manuscript:
+  plain/output/graphene_conductivity_paper.pdf (5 pages)
+  plain/output/graphene_conductivity_paper.tex
+
+                         Luna/max          Astra/max (original plain)
+Elapsed wall time        15m 42s            13m 29s
+Pages                    5                 10
+Subagents                0                 0
+Input tokens             2,454,323         786,494
+Cached input tokens      2,348,928         718,464
+Uncached input tokens    105,395           68,030
+Output tokens            45,230            31,487
+Reasoning output tokens  34,597            14,214
+
+Cached input and reasoning output are subsets of their respective totals.
+Luna's measured wall time was 942.453 seconds, excluding preparation,
+archival and verification. No token or time cap was imposed. These are
+single samples; no readability or mathematical correctness score is assigned.
+
+Protocol
+--------
+The original Codex 0.166.0 binary, model catalogue, prompt, theorem statement
+and Reed-Simon inputs were reused. Luna used max reasoning. The same three
+subagent slots were available; it chose not to use them.
+
+Luna's native runtime instructions contain different writing guidance.
+The original Astra runtime instructions were therefore loaded verbatim
+through model_instructions_file. The resulting startup context matches
+Astra's after normalizing neutral paths, the date, and a final newline.
+The actual native trace also confirms the preserved instructions and
+GPT-6-Luna/max. Only the model was intentionally changed for the task.
+
+The temporary DjVu utilities from the old run had disappeared. They were
+restored from Ubuntu djvulibre-bin 3.5.29-1; the verified package is retained
+in support/. Historical binary hashes were unavailable. PROTOCOL.txt records
+this reproducibility limitation and the complete procedure.
+
+Verification
+------------
+The root turn completed, with no aborted or unfinished turns, online-access
+calls, generated memories, or accounting discrepancies. The input files
+were unchanged. SQLite consistency checks passed; temporary credentials
+were removed. No supervisor hints, feedback or manuscript edits were supplied.
+
+The model fixed three initial LaTeX compilation errors. Other recorded
+command failures concern a temporary-path lookup, Git status outside a
+repository, a no-match diagnostic search, and scratch-file cleanup. These
+were retained in the audit rather than counted as new samples. A rejected
+rm -f cleanup command was replaced by unlink operations.
+
+The model removed its build logs during cleanup, so the final source was
+rebuilt separately for verification. Both compilation passes succeeded,
+and extracted text matches the delivered PDF exactly. There were no document
+warnings; the verification build's disabled shell escape produced only an
+expected epstopdf notice. Delivered TeX/PDF hashes remain unchanged.
+
+Evidence
+--------
+plain/ contains the prompt, configuration, startup contexts, CLI arguments,
+timestamped events, native traces, SQLite snapshots, final response, timing,
+usage, audit and output hashes. Setup attempts are retained separately;
+none sent a model request. verification/ contains the independent rebuild
+logs. These archives are local and are not published by the blog.

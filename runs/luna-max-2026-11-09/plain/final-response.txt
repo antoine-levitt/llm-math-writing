@@ -1,0 +1,6 @@
+I wrote the paper and compiled its five-page PDF:
+
+- [LaTeX source](</tmp/graphene-run-vsmhnohu/work/graphene_conductivity_paper.tex>)
+- [PDF](</tmp/graphene-run-vsmhnohu/work/graphene_conductivity_paper.pdf>)
+
+It proves the result using Bloch-space linear response, time-reversal cancellation, and the local two-band analysis at each crossing. It cites Reed–Simon Vol. II, Theorem X.12, and Vol. IV, Theorems XII.5 and XII.12–13. The PDF compiled cleanly with `pdflatex`.

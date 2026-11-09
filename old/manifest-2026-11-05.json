@@ -1,0 +1,799 @@
+{
+  "created_at": "2026-11-05T16:24:44.986343+00:00",
+  "operation": "Move only; preserve file contents and all successful benchmark/grading evidence",
+  "items": [
+    {
+      "from": "baseline/NOTES.txt",
+      "to": "old/baseline/NOTES.txt",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/bibtex.log",
+      "to": "old/baseline/bibtex.log",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/build.sh",
+      "to": "old/baseline/build.sh",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa",
+      "to": "old/baseline/comparison-version-before-fa",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa-NOTES.txt",
+      "to": "old/baseline/comparison-version-before-fa-NOTES.txt",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build",
+      "to": "old/baseline/comparison-version-build",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/compile.log",
+      "to": "old/baseline/compile.log",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/extract.py",
+      "to": "old/baseline/extract.py",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/linear_response_bridge.tex",
+      "to": "old/baseline/linear_response_bridge.tex",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.aux",
+      "to": "old/baseline/main.aux",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.bbl",
+      "to": "old/baseline/main.bbl",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.blg",
+      "to": "old/baseline/main.blg",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.log",
+      "to": "old/baseline/main.log",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.out",
+      "to": "old/baseline/main.out",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.pdf",
+      "to": "old/baseline/main.pdf",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.tex",
+      "to": "old/baseline/main.tex",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.toc",
+      "to": "old/baseline/main.toc",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/original",
+      "to": "old/baseline/original",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version",
+      "to": "old/baseline/prompt-version",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-NOTES.txt",
+      "to": "old/baseline/prompt-version-NOTES.txt",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build",
+      "to": "old/baseline/prompt-version-build",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-changes.diff",
+      "to": "old/baseline/prompt-version-changes.diff",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-parent-hashes.json",
+      "to": "old/baseline/prompt-version-parent-hashes.json",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/refs.bib",
+      "to": "old/baseline/refs.bib",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/source-map.txt",
+      "to": "old/baseline/source-map.txt",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version",
+      "to": "old/baseline/statement-version",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-NOTES.txt",
+      "to": "old/baseline/statement-version-NOTES.txt",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build",
+      "to": "old/baseline/statement-version-build",
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "llm_math_exposition_findings.md",
+      "to": "old/llm_math_exposition_findings.md",
+      "reason": "Preparatory literature notes; current article is main.md"
+    },
+    {
+      "from": "runs/matrix-support",
+      "to": "old/runs/matrix-support",
+      "reason": "Superseded runner support; active accounting code and notes are in the matrix directory"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/__pycache__",
+      "to": "old/runs/matrix-2026-11-03/__pycache__",
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/__pycache__",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/__pycache__",
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/subagent-pass",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/subagent-pass",
+      "reason": "Discarded preliminary grading attempt; successful isolated passes remain active"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/session.json",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/session.json",
+      "reason": "Session metadata for the discarded preliminary grading attempt"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/native-trace-locations.json",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/native-trace-locations.json",
+      "reason": "Trace location record for the discarded preliminary grading attempt"
+    },
+    {
+      "from": "baseline/comparison-version-NOTES.txt",
+      "to": "baseline/provenance/comparison-version-NOTES.txt",
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-changes.diff",
+      "to": "baseline/provenance/comparison-version-changes.diff",
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-fa-changes.diff",
+      "to": "baseline/provenance/comparison-version-fa-changes.diff",
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-fa-parent-hashes.json",
+      "to": "baseline/provenance/comparison-version-fa-parent-hashes.json",
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-parent-hashes.json",
+      "to": "baseline/provenance/comparison-version-parent-hashes.json",
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    }
+  ],
+  "files": [
+    {
+      "from": "baseline/NOTES.txt",
+      "to": "old/baseline/NOTES.txt",
+      "sha256": "cde8fa752c567f5aa1c5f3e26a83bb65884df1feab98ca5ecc4bb64dc64c2834",
+      "bytes": 9359,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/bibtex.log",
+      "to": "old/baseline/bibtex.log",
+      "sha256": "bc5af4be65dd407d9d13ae8d38a7856360e3b6f5aeb0eaf6adba5e9afc95f985",
+      "bytes": 145,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/build.sh",
+      "to": "old/baseline/build.sh",
+      "sha256": "77717a8be05e0be3c5d89688a538ea1127fcc4d5fece466c89911d6fd9d3a787",
+      "bytes": 518,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa/build.sh",
+      "to": "old/baseline/comparison-version-before-fa/build.sh",
+      "sha256": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+      "bytes": 844,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa/main.pdf",
+      "to": "old/baseline/comparison-version-before-fa/main.pdf",
+      "sha256": "d51a7eacd5279740fa251bb0827d1cb12fbe5c8c29bd2f9e499ac8fb32b0ae82",
+      "bytes": 304995,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa/main.tex",
+      "to": "old/baseline/comparison-version-before-fa/main.tex",
+      "sha256": "f4c8103367ea6a7c63e32288c6212223ebc5b76030fe4f68746dd81929c74557",
+      "bytes": 51213,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa/refs.bib",
+      "to": "old/baseline/comparison-version-before-fa/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-before-fa-NOTES.txt",
+      "to": "old/baseline/comparison-version-before-fa-NOTES.txt",
+      "sha256": "2c231819d5916ca108ee50d9fcbff75da4bc80d072c58b0ad23dc760542e9853",
+      "bytes": 7442,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/bibtex.log",
+      "to": "old/baseline/comparison-version-build/bibtex.log",
+      "sha256": "bc5af4be65dd407d9d13ae8d38a7856360e3b6f5aeb0eaf6adba5e9afc95f985",
+      "bytes": 145,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/compile.log",
+      "to": "old/baseline/comparison-version-build/compile.log",
+      "sha256": "3734e77fb56b149b9fa64c113430e895950428951dad97aa6775d3ec34c2f1ae",
+      "bytes": 12795,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.aux",
+      "to": "old/baseline/comparison-version-build/main.aux",
+      "sha256": "eafc6efaf24737b0ff2b2aa8095ad2ba12909db0f2facfa06fc3b74e178457c1",
+      "bytes": 8507,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.bbl",
+      "to": "old/baseline/comparison-version-build/main.bbl",
+      "sha256": "6edff026a630eeb905433a5c6df0da4c62f1e1f0eceac933236786a7da101c2e",
+      "bytes": 447,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.blg",
+      "to": "old/baseline/comparison-version-build/main.blg",
+      "sha256": "a8a91137ffa3f61d9ac0b1387bc30ccb6912b672f72735bd8c774a91b336b269",
+      "bytes": 868,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.log",
+      "to": "old/baseline/comparison-version-build/main.log",
+      "sha256": "b351c7a0e955def123c5cc2cdc56f1acdad6dc45b9d6de084f03c20eeab0aa64",
+      "bytes": 31402,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.out",
+      "to": "old/baseline/comparison-version-build/main.out",
+      "sha256": "5d0372dd9431b08e12453da2593ac7c6e84cbe6be08109673cfcd1002addedc0",
+      "bytes": 3286,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.pdf",
+      "to": "old/baseline/comparison-version-build/main.pdf",
+      "sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274",
+      "bytes": 292989,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/comparison-version-build/main.toc",
+      "to": "old/baseline/comparison-version-build/main.toc",
+      "sha256": "ea3b43e88e33ebf6f71f01393f92e12525939b0750381256f991b2db5bff9a8e",
+      "bytes": 1730,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/compile.log",
+      "to": "old/baseline/compile.log",
+      "sha256": "6d0cdff70bb5368eeae750d8b7f3eb94339b7d856c69e48b82b42c2c247dfd83",
+      "bytes": 14455,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/extract.py",
+      "to": "old/baseline/extract.py",
+      "sha256": "b403107991cd99cbb10ed7675c9efcf4c1527e743e7db96817c841adda0e482b",
+      "bytes": 18902,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/linear_response_bridge.tex",
+      "to": "old/baseline/linear_response_bridge.tex",
+      "sha256": "798459c1cca7e9d69d03f6ba9d1e9149a04f7f6b09b1cdc0cefd15f363f16290",
+      "bytes": 2493,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.aux",
+      "to": "old/baseline/main.aux",
+      "sha256": "8362f7ae76803e64ec3aab18ed1ce82b3306d5a62a3f30a1d78041974b7a4360",
+      "bytes": 11420,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.bbl",
+      "to": "old/baseline/main.bbl",
+      "sha256": "7e0d836ef205b1c9b7ca551e4d15b5a4d1d3d4f927f0977bb5d09a5c7d203753",
+      "bytes": 2856,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.blg",
+      "to": "old/baseline/main.blg",
+      "sha256": "d5556501b677697453f2593601a6391fc78c90a99ba5146ac5f0704182316f4b",
+      "bytes": 892,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.log",
+      "to": "old/baseline/main.log",
+      "sha256": "09ab35df9af745fcfd67e4b83ad9f03acc6c3b21197903d9809c1b99d4506ebe",
+      "bytes": 35230,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.out",
+      "to": "old/baseline/main.out",
+      "sha256": "8f3544b44b2ad3b5569a1ba2542f8810cc2492e5788171def0d32f4e51cbb4a2",
+      "bytes": 4123,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.pdf",
+      "to": "old/baseline/main.pdf",
+      "sha256": "658e271d9dd8c13f357d8af6a481552c33ce2b838868d5477d849416c96b1655",
+      "bytes": 428699,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.tex",
+      "to": "old/baseline/main.tex",
+      "sha256": "59a7412db6d1e73dd3309b2a4d390ce4973bd86d060e44008c00a44b16ff5381",
+      "bytes": 80232,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/main.toc",
+      "to": "old/baseline/main.toc",
+      "sha256": "0750cd8c25568f96c680a25b81e1c1701fafc5f7e9d9c03d0e2203182207150a",
+      "bytes": 2137,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/original/paper.tex",
+      "to": "old/baseline/original/paper.tex",
+      "sha256": "b5965da8774027e83323d6b1a93d56c81fa9f7843b27274c2263553f07cd129c",
+      "bytes": 152626,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/original/refs.bib",
+      "to": "old/baseline/original/refs.bib",
+      "sha256": "b29e1503324c52c3ae05ebff4477ba39bb580a7f8e1cfdd61e87d424fe90f7b7",
+      "bytes": 14665,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version/build.sh",
+      "to": "old/baseline/prompt-version/build.sh",
+      "sha256": "348095877d9ca142d0f807070705aeb89c1a7abab92c05d62c17cfe0eea20202",
+      "bytes": 840,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version/main.pdf",
+      "to": "old/baseline/prompt-version/main.pdf",
+      "sha256": "660f3880819e1c79d0810b86e1380b9166a7b3a270a77c887695416a8d0da97a",
+      "bytes": 326235,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version/main.tex",
+      "to": "old/baseline/prompt-version/main.tex",
+      "sha256": "23fa85e7e71d4203b892bfc74929bdc525350d5cd34e07364f54127867c2da41",
+      "bytes": 59139,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version/refs.bib",
+      "to": "old/baseline/prompt-version/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-NOTES.txt",
+      "to": "old/baseline/prompt-version-NOTES.txt",
+      "sha256": "8da78cbffa0c9f2d9a1e7806d988600b4c8637ff87c226cc380474701eb8f082",
+      "bytes": 5830,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/bibtex.log",
+      "to": "old/baseline/prompt-version-build/bibtex.log",
+      "sha256": "bc5af4be65dd407d9d13ae8d38a7856360e3b6f5aeb0eaf6adba5e9afc95f985",
+      "bytes": 145,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/compile.log",
+      "to": "old/baseline/prompt-version-build/compile.log",
+      "sha256": "9173ee09144b8b994d5b46e8decf83c5a28c0d2a776c8c5ef4a42cbd38df418d",
+      "bytes": 12814,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.aux",
+      "to": "old/baseline/prompt-version-build/main.aux",
+      "sha256": "0eebee6b5b5de4f46f499cdf5d183cc815c180149693007979f3e9917b992221",
+      "bytes": 9223,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.bbl",
+      "to": "old/baseline/prompt-version-build/main.bbl",
+      "sha256": "6edff026a630eeb905433a5c6df0da4c62f1e1f0eceac933236786a7da101c2e",
+      "bytes": 447,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.blg",
+      "to": "old/baseline/prompt-version-build/main.blg",
+      "sha256": "a8a91137ffa3f61d9ac0b1387bc30ccb6912b672f72735bd8c774a91b336b269",
+      "bytes": 868,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.log",
+      "to": "old/baseline/prompt-version-build/main.log",
+      "sha256": "a82ba277411069293609d47e76e192d84c622b39edfb4a3f2c97a279bcbdc81e",
+      "bytes": 31430,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.out",
+      "to": "old/baseline/prompt-version-build/main.out",
+      "sha256": "e62f6f2d38a75369204f2a0b584fc74ac64b7763c84f2c1c5d81e26340b6b834",
+      "bytes": 4124,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.pdf",
+      "to": "old/baseline/prompt-version-build/main.pdf",
+      "sha256": "660f3880819e1c79d0810b86e1380b9166a7b3a270a77c887695416a8d0da97a",
+      "bytes": 326235,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-build/main.toc",
+      "to": "old/baseline/prompt-version-build/main.toc",
+      "sha256": "e4be2214918c490b2dca7fb7bf1f0087360d055a07d16978c880cfa15b95354c",
+      "bytes": 2091,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-changes.diff",
+      "to": "old/baseline/prompt-version-changes.diff",
+      "sha256": "22049602679c6d83582aff5b8bfd8cf555513c986ba9dd64d2bfac58a0235e6d",
+      "bytes": 37083,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/prompt-version-parent-hashes.json",
+      "to": "old/baseline/prompt-version-parent-hashes.json",
+      "sha256": "d473ae1b226ec04aa3bef68b423554005f8800ef049bd27542ea22a1e0f40392",
+      "bytes": 722,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/refs.bib",
+      "to": "old/baseline/refs.bib",
+      "sha256": "3eb8cf828243ff40c294919bdfe54579ecf22a3241fb05a0f4ad634fa683a8ac",
+      "bytes": 4787,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/source-map.txt",
+      "to": "old/baseline/source-map.txt",
+      "sha256": "12ec522054e38a1f9fb30e0002f70090eebc36338246de8818acc23c90c36f1d",
+      "bytes": 1236,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version/build.sh",
+      "to": "old/baseline/statement-version/build.sh",
+      "sha256": "021fefbc5c96f0e2d12b45ca819e5ecc9f4ea632583ea2a0c0a8df8bea77cf92",
+      "bytes": 843,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version/main.pdf",
+      "to": "old/baseline/statement-version/main.pdf",
+      "sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "bytes": 337835,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version/main.tex",
+      "to": "old/baseline/statement-version/main.tex",
+      "sha256": "8f3145892e36a00ed3489442f7ba44e2bf03868769ea504d728ca258a45ecd69",
+      "bytes": 65332,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version/refs.bib",
+      "to": "old/baseline/statement-version/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-NOTES.txt",
+      "to": "old/baseline/statement-version-NOTES.txt",
+      "sha256": "9b3fc249819b9c6041a3031a856ae832637f496ef81650e2f52e321619211dc2",
+      "bytes": 5585,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/bibtex.log",
+      "to": "old/baseline/statement-version-build/bibtex.log",
+      "sha256": "bc5af4be65dd407d9d13ae8d38a7856360e3b6f5aeb0eaf6adba5e9afc95f985",
+      "bytes": 145,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/compile.log",
+      "to": "old/baseline/statement-version-build/compile.log",
+      "sha256": "213275a67255f39db22001b075e80a7b44f250f4401132e76a2ba40ee2bdc5a2",
+      "bytes": 12868,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.aux",
+      "to": "old/baseline/statement-version-build/main.aux",
+      "sha256": "9042401c571983f51b73c1404bedfc7e99eaebf61267f015b96d8c7b5c45cf90",
+      "bytes": 9430,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.bbl",
+      "to": "old/baseline/statement-version-build/main.bbl",
+      "sha256": "6edff026a630eeb905433a5c6df0da4c62f1e1f0eceac933236786a7da101c2e",
+      "bytes": 447,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.blg",
+      "to": "old/baseline/statement-version-build/main.blg",
+      "sha256": "a8a91137ffa3f61d9ac0b1387bc30ccb6912b672f72735bd8c774a91b336b269",
+      "bytes": 868,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.log",
+      "to": "old/baseline/statement-version-build/main.log",
+      "sha256": "91ad53c34157c920d9188dcb6a98dc32fbdd874e54a74448c76cf05114836bd1",
+      "bytes": 31478,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.out",
+      "to": "old/baseline/statement-version-build/main.out",
+      "sha256": "e62f6f2d38a75369204f2a0b584fc74ac64b7763c84f2c1c5d81e26340b6b834",
+      "bytes": 4124,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.pdf",
+      "to": "old/baseline/statement-version-build/main.pdf",
+      "sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "bytes": 337835,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.toc",
+      "to": "old/baseline/statement-version-build/main.toc",
+      "sha256": "1f2a7e5fe9edabaedd64145b8efd084ff7f95db71159e8d3e60b3f4418cc3bef",
+      "bytes": 2092,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/main.txt",
+      "to": "old/baseline/statement-version-build/main.txt",
+      "sha256": "53513e760349699926e8a366fac7a6237784003a503b53ffd61e961fa5936586",
+      "bytes": 81676,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "baseline/statement-version-build/page1.png",
+      "to": "old/baseline/statement-version-build/page1.png",
+      "sha256": "719bf15ac7f69660ed32b5824fd77ed3ec6c1fb60d1cd0b2394dd08a766b8939",
+      "bytes": 116372,
+      "reason": "Superseded baseline version, source-extraction material, or generated LaTeX build output"
+    },
+    {
+      "from": "llm_math_exposition_findings.md",
+      "to": "old/llm_math_exposition_findings.md",
+      "sha256": "845a72bd42feff1b367e7827d3a3a309d5692cdceeb7004b4106de57d49eb33b",
+      "bytes": 16689,
+      "reason": "Preparatory literature notes; current article is main.md"
+    },
+    {
+      "from": "runs/matrix-support/TRACE_ACCOUNTING.txt",
+      "to": "old/runs/matrix-support/TRACE_ACCOUNTING.txt",
+      "sha256": "7adbe03667e6f7804f393bcf22df3aa9bf9c44765a4b5b4a94799f1ff8f8f48a",
+      "bytes": 4248,
+      "reason": "Superseded runner support; active accounting code and notes are in the matrix directory"
+    },
+    {
+      "from": "runs/matrix-support/schema/v2/RawResponseCompletedNotification.json",
+      "to": "old/runs/matrix-support/schema/v2/RawResponseCompletedNotification.json",
+      "sha256": "aba140e87952c900f96e0308a8849d3e313d985de1f1aa2b77f193884a76357c",
+      "bytes": 1998,
+      "reason": "Superseded runner support; active accounting code and notes are in the matrix directory"
+    },
+    {
+      "from": "runs/matrix-support/schema/v2/ThreadTokenUsageUpdatedNotification.json",
+      "to": "old/runs/matrix-support/schema/v2/ThreadTokenUsageUpdatedNotification.json",
+      "sha256": "aba4f6c7e4a19b2b842c08ee793b57000c07dafd57b922ad0d8e7c76609108c2",
+      "bytes": 1727,
+      "reason": "Superseded runner support; active accounting code and notes are in the matrix directory"
+    },
+    {
+      "from": "runs/matrix-support/summarize_traces.py",
+      "to": "old/runs/matrix-support/summarize_traces.py",
+      "sha256": "c486507c33ca08a24d4b2687f11c058f33e1114dfd7a83635815b4c3f332a585",
+      "bytes": 8335,
+      "reason": "Superseded runner support; active accounting code and notes are in the matrix directory"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/__pycache__/audit.cpython-314.pyc",
+      "to": "old/runs/matrix-2026-11-03/__pycache__/audit.cpython-314.pyc",
+      "sha256": "cd6f62392e36a3bf70bc72038b6811140068b837b9dd363e78ee3c938d966ecd",
+      "bytes": 21537,
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/__pycache__/experiment.cpython-314.pyc",
+      "to": "old/runs/matrix-2026-11-03/__pycache__/experiment.cpython-314.pyc",
+      "sha256": "7b717ec04ffe170021ba691999cd2e605020f52c57d490b05a21ffc7b423b091",
+      "bytes": 31678,
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/__pycache__/summarize_traces.cpython-314.pyc",
+      "to": "old/runs/matrix-2026-11-03/__pycache__/summarize_traces.cpython-314.pyc",
+      "sha256": "8beacf03fcc6731fc0cfdb0fefc23ec79a66ba1773597d752a2fdcef6ec4d54d",
+      "bytes": 12519,
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/__pycache__/run_isolated.cpython-314.pyc",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/__pycache__/run_isolated.cpython-314.pyc",
+      "sha256": "4125065e4702e7880f637934586d5528cdd4b30943a4a1a1ab4d2c9e373cdefb",
+      "bytes": 15391,
+      "reason": "Generated Python bytecode"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/subagent-pass/CONTEXT_NOTE.txt",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/subagent-pass/CONTEXT_NOTE.txt",
+      "sha256": "ad6429c21ba9007ffa42b46199d653acf419a480f2fcc1a8cf0daa52fbdb04dd",
+      "bytes": 415,
+      "reason": "Discarded preliminary grading attempt; successful isolated passes remain active"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/subagent-pass/READABILITY_REVIEW.txt",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/subagent-pass/READABILITY_REVIEW.txt",
+      "sha256": "d0403f32f7a3c7bdf036feda8b15fde47df745aec7a8edb4757d7fc0c3222590",
+      "bytes": 6238,
+      "reason": "Discarded preliminary grading attempt; successful isolated passes remain active"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/subagent-pass/rollout-2026-11-03T13-02-38-01a1a14a-3a91-7b53-a2ba-609594ae1adb.jsonl",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/subagent-pass/rollout-2026-11-03T13-02-38-01a1a14a-3a91-7b53-a2ba-609594ae1adb.jsonl",
+      "sha256": "d306d205d2d23c63dffb68a3589ef6cdb5c21e45ded0e5996180b897f1c9f3a9",
+      "bytes": 849388,
+      "reason": "Discarded preliminary grading attempt; successful isolated passes remain active"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/session.json",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/session.json",
+      "sha256": "dadf08abf47d4d8921ed30b61cb8cb185c0fc48bfe43c973504b54e4292a57f9",
+      "bytes": 421,
+      "reason": "Session metadata for the discarded preliminary grading attempt"
+    },
+    {
+      "from": "runs/matrix-2026-11-03/readability-blind/native-trace-locations.json",
+      "to": "old/runs/matrix-2026-11-03/readability-blind/native-trace-locations.json",
+      "sha256": "a3dcf979db03349fd2d8a2bea381153a6b212cdf606b53e814e57cc2000c5a16",
+      "bytes": 120,
+      "reason": "Trace location record for the discarded preliminary grading attempt"
+    },
+    {
+      "from": "baseline/comparison-version-NOTES.txt",
+      "to": "baseline/provenance/comparison-version-NOTES.txt",
+      "sha256": "79a1393b1f9b1875eb71cacaf1fe26dc471a29c9da884014b8a77dc90a3387eb",
+      "bytes": 10132,
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-changes.diff",
+      "to": "baseline/provenance/comparison-version-changes.diff",
+      "sha256": "3556161e952505a971c65984358bdcd262bd4c62602fc6453e9d2a498f99fd2a",
+      "bytes": 46779,
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-fa-changes.diff",
+      "to": "baseline/provenance/comparison-version-fa-changes.diff",
+      "sha256": "56d78abe72060d29743656da0f8077f5a8c91b09650d002d83447c6337ba3a68",
+      "bytes": 14308,
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-fa-parent-hashes.json",
+      "to": "baseline/provenance/comparison-version-fa-parent-hashes.json",
+      "sha256": "8e1dced34c4936689d362e163ba0f21a5d0ddce50f3cd9357be1b0b4a0e0205c",
+      "bytes": 2346,
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    },
+    {
+      "from": "baseline/comparison-version-parent-hashes.json",
+      "to": "baseline/provenance/comparison-version-parent-hashes.json",
+      "sha256": "11656ca49887b7630d12967bf37a52b6adf776eaeaa1da4c1f48be5fec8bb0d0",
+      "bytes": 1681,
+      "reason": "Group current baseline provenance outside the clean reading bundle"
+    }
+  ],
+  "verification": {
+    "status": "passed",
+    "preexisting_files_verified": 499,
+    "archived_files": 78,
+    "archived_bytes": 4297720,
+    "current_provenance_files_grouped": 5,
+    "unchanged_files_left_in_place": 416,
+    "content_changes": 0,
+    "deleted_files": 0
+  }
+}

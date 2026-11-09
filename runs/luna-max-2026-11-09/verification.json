@@ -1,0 +1,29 @@
+{
+  "verification_directory": "/tmp/luna-paper-verification-kfth_4mk",
+  "compile_passes": [
+    {
+      "pass": 1,
+      "exit_code": 0
+    },
+    {
+      "pass": 2,
+      "exit_code": 0
+    }
+  ],
+  "final_tex_warnings": [
+    "Package epstopdf Warning: Shell escape feature is not enabled."
+  ],
+  "rebuilt_pdf_text_matches_delivered_pdf": true,
+  "output_hashes_unchanged": {
+    "graphene_conductivity_paper.pdf": true,
+    "graphene_conductivity_paper.tex": true
+  },
+  "actual_runtime_instructions_match_frozen_astra": true,
+  "temporary_auth_removed": true,
+  "supervisor_edited_manuscript": false,
+  "expected_verification_environment_notices": [
+    "Package epstopdf Warning: Shell escape feature is not enabled."
+  ],
+  "document_warnings": [],
+  "passed": true
+}

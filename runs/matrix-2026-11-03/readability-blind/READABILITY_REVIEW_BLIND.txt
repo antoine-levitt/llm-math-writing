@@ -1,0 +1,46 @@
+This is a rough comparative readability assessment for a reader comfortable with graduate functional/spectral analysis but new to this transport argument. All five manuscripts were read before ranking. Scores concern exposition, not verified mathematical correctness; page references are PDF pages.
+
+| Rank | Manuscript | Score / 10 | Reason |
+|------|------------|------------|--------|
+| =1 | A | 9 | A quantitative opening roadmap connects momentum transport, projection regularity, and cone scaling, while separating the operator foundations. |
+| =1 | E | 9 | Explanatory headings and well-chosen detail keep the cancellations, transition geometry, and universal constant continuously in view. |
+| 3 | C | 8 | Carefully explained identities and convergence estimates make the proof very clear, with somewhat more bookkeeping before the limiting mechanism emerges. |
+| 4 | D | 7 | The progression is explicit and dependable, but substantial preliminary operator analysis delays engagement with the conductivity mechanism. |
+| 5 | B | 6 | Useful physical motivation and navigation coexist with a heavy notation burden and uneven detail at the decisive reduction. |
+
+A
+
+Strongest feature: the proof strategy is explained causally, including why the current is controlled by variation of the occupied subspace and why cone velocities disappear. The prose repeatedly explains what an estimate accomplishes. Main obstacle: following the differentiation of the current in full requires moving between the main argument and a fairly technical weighted trace-norm appendix.
+
+1. Section 1.2, p. 2, displays the averaged kernel, identifies the scale |q| approximately (v_i T)^(-1), and explains the cancellation of velocity factors before the calculations begin. This gives the reader a concrete destination for subsequent estimates.
+2. Section 2.2, p. 4, explains the exact transport identity (2.10) as shifting the occupied subspace and propagating its change. However, the passage to (2.11) depends on the weighted version of Proposition 2.1 and Appendix A.3, pp. 9–10. The references are precise, but checking this central passage entails appreciable page switching.
+
+B
+
+Strongest feature: substantial physical context, a contents page, and explicit stages of reduction help orient the reader. Main obstacle: general formalism and detailed remainder estimates occupy considerable attention, while a crucial approximation receives much less explanation. The difficulty comes from this allocation of detail and the accumulation of symbols, rather than length alone.
+
+1. The forced-oscillator example in the introduction, p. 2, concretely explains why a step response may require time averaging. It makes the specified order of operations meaningful before introducing the full proof.
+2. Section 4.3, pp. 12–13, tracks Dyson terms and constants nu_0, nu_1, nu_2, lambda through lengthy estimates. By comparison, Section 5.4, p. 17, moves from eigenvalue/eigenvector approximations to I^R = I^Q + O(delta) with “It follows.” How the oscillatory phase error is controlled as time grows needs explanation. This is an apparent expository gap; this pass has not established a mathematical error.
+
+C
+
+Strongest feature: it carefully explains how identities remain valid at conical crossings and internal band degeneracies. Technical qualifications generally appear where they become relevant. Main obstacle: the reader carries several bounds and response terms before seeing the final scale selection, which is less prominently previewed than the cancellations.
+
+1. Section 3, p. 5, derives the integrated band-energy identity by removing small disks, bounding their boundary contributions by O(rho), and then explaining the absence of a point-supported correction. The subsequent time-reversal paragraph also distinguishes real integrated response from potentially complex individual matrix elements. These are useful explanations of delicate steps.
+2. Sections 2.1–2.2, pp. 3–4, establish the band-sum bounds and present the three-part response (2.12). The reader must retain these contributions through their cancellation in Section 3; the inverse-time rescaling and explicit velocity cancellation arrive in Section 5, pp. 7–8. The organization is logical, but requires more sustained bookkeeping.
+
+D
+
+Strongest feature: a systematic progression with explicit analytic justifications makes the dependencies easy to check. Main obstacle: the main narrative gives preliminary operator facts substantial space before demonstrating their payoff, and the abstract supplies more strategic guidance than the opening sections.
+
+1. Sections 2.1–2.2, pp. 2–5, develop the oscillator comparison operator, commutator argument, temporal gauge, and localized Hilbert–Schmidt factorization before the response formula. These details support the theorem, but their uninterrupted placement makes the opening demanding for someone seeking the transport mechanism.
+2. Section 6, p. 9, is especially effective: q = z/T is followed by the explicit |z|^(-1)/|z|^(-3) integrable bound and an explanation that dominated convergence handles the nonlinear gap inside the oscillatory factor. This connects the estimate directly to the limiting argument it enables.
+
+E
+
+Strongest feature: physical interpretation and mathematical steps remain closely connected, with useful technical detail placed in an appendix. Main obstacle: a few passages compress algebra and introduce several temporary symbols in quick succession; the difficulty is localized.
+
+1. Section 2.2, p. 4, explains the filled-band cancellation through bounded gradients and shrinking boundary circles, then explicitly connects the vanishing flux to the absence of a Fermi curve. The heading and explanation make the sum rule feel motivated.
+2. Section 2.1, p. 3, introduces R_epsilon, D(k,t), and the temporary response name L_alpha,beta before displaying (2.8). Only one sample time integral accompanies the eigenbasis expansion. This is the densest local stretch and asks the reader to reconstruct some algebra before the next subsections explain the cancellations.
+
+A and E are effectively tied: A particularly clarifies momentum transport, while E particularly clarifies the filled-band cancellation. C offers a careful, somewhat more elaborate route; D places more foundational material directly in that route. B provides helpful context but makes the reader manage more machinery and supply more explanation at a central approximation. Confidence is moderate overall: the leading pair and B's greater reading burden are clear, while C versus D is more sensitive to a reader's preference for preliminary technical detail.

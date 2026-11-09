@@ -1,0 +1,94 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=25mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\DeclareMathOperator{\Tr}{Tr}
+\newcommand{\trv}{\underline{\Tr}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\ind}{\mathbf{1}}
+\newtheorem*{theorem}{Theorem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+
+\begin{document}
+\begin{center}
+  {\Large\bfseries Graphene conductivity}
+\end{center}
+The goal is to establish the residual conductivity of graphene, within
+linear response, in a non-interacting model.
+
+\textbf{Setting.}
+Spinless electrons, atomic units.
+Let $\mathcal R\subset\R^2$ be a lattice, $\Omega$ a unit cell, and
+$\mathcal B$ a unit cell of
+\[
+  \mathcal R^*=\{K\in\R^2:K\cdot R\in2\pi\mathbb Z
+  \text{ for every }R\in\mathcal R\}.
+\]
+For real $V\in H^1_{\mathrm{per}}(\Omega)$, set
+\[
+  H=-\tfrac12\Delta+V\quad\text{on }L^2(\R^2;\C),
+  \qquad
+  H_k=\tfrac12(-i\nabla+k)^2+V
+  \quad\text{on }L^2_{\mathrm{per}}(\Omega;\C).
+\]
+$H_k$ is self-adjoint with domain
+$H^2_{\mathrm{per}}(\Omega;\C)$. Write its eigenvalues, with multiplicities, as
+$\lambda_1(k)\leq\lambda_2(k)\leq\cdots$, and set
+$\lambda_0(k)=-\infty$.
+
+\textbf{Band assumptions.}
+Fix $\mu_{\mathrm F}\in\R$, and assume that the system is semi-metallic: there are
+distinct points
+$k_1,\ldots,k_M$ modulo $\mathcal R^*$ and a number of bands $N$ such that
+\[
+  \lambda_N(k)<\mu_{\mathrm F}<\lambda_{N+1}(k)
+  \qquad(k\notin\{k_1,\ldots,k_M\}\bmod\mathcal R^*),
+\]
+and, for each $i=1,\ldots,M$,
+\[
+  \lambda_{N-1}(k_i)<\lambda_N(k_i)=\mu_{\mathrm F}
+  =\lambda_{N+1}(k_i)<\lambda_{N+2}(k_i).
+\]
+There are $v_i>0$ such that, as $q\to0$,
+\[
+  \lambda_N(k_i+q)=\mu_{\mathrm F}-v_i|q|+O(|q|^2),
+  \qquad
+  \lambda_{N+1}(k_i+q)=\mu_{\mathrm F}+v_i|q|+O(|q|^2).
+\]
+
+\textbf{Current.}
+Fix $e_{\beta},e_{\alpha}\in\R^2$, with $e_{\beta}$ the field direction
+and $e_{\alpha}$ the current direction.
+For all $\varepsilon\geq0$ and $t\geq0$, define
+\begin{gather*}
+  \gamma_0=\ind_{(-\infty,\mu_{\mathrm F}]}(H),
+  \qquad H_\varepsilon=H-\varepsilon x\cdot e_{\beta},
+  \qquad J_{\alpha}=(-i\nabla)\cdot e_{\alpha},\\
+  \gamma_\varepsilon(t)
+  =e^{-itH_\varepsilon}\gamma_0e^{itH_\varepsilon},
+  \qquad
+  j_\varepsilon(t)
+  =\trv\bigl(J_{\alpha}\gamma_\varepsilon(t)\bigr),
+\end{gather*}
+where $H_\varepsilon$ denotes the self-adjoint closure of its
+restriction to $C_c^\infty(\R^2;\C)$, and
+\[
+  \trv(A)=\frac1{|\Omega|}\Tr(\ind_\Omega A\ind_\Omega)
+\]
+for locally trace-class periodic $A$.
+
+\begin{theorem}
+Under the above assumptions, the iterated limit exists and
+\[
+\lim_{T\to+\infty}\frac1T\int_0^T
+  \left(\lim_{\varepsilon\to0^+}
+  \frac{j_\varepsilon(t)}{\varepsilon}\right)\,dt
+  =\frac{M}{16}\,e_{\alpha}\cdot e_{\beta}.
+\]
+\end{theorem}
+\end{document}

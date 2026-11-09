@@ -1,0 +1,79 @@
+Codex 0.166.0 trace accounting
+=============================
+
+Observed locally on 3 November 2026. No model requests were launched for this
+investigation. Only native metadata, usage records and generated protocol
+schemas were inspected; unrelated conversation text was not extracted.
+
+Preserve before removing each isolated runtime
+--------------------------------------------
+
+* CODEX_HOME/sessions/ and archived_sessions/ if present, including every child
+  rollout. Fresh non-ephemeral exec runs persist these native JSONL files.
+* A consistent SQLite backup of state_5.sqlite. The threads table identifies
+  rollout paths, model, reasoning_effort, agent_path and history_mode. The
+  thread_spawn_edges table links parent_thread_id to child_thread_id.
+* The CLI --json stream, stderr, launcher timestamps, exact argv/settings and
+  input/output hashes. Do not rely on the CLI main stream as the child archive.
+* Runtime logs and their SQLite database if retained for diagnosing transport
+  failures. Never copy auth.json or credentials into the experiment archive.
+
+Use sqlite3.Connection.backup() to copy a live WAL database consistently, or
+wait for all processes to finish before copying database files. A plain copy of
+only the main .sqlite file while it is live can omit its WAL contents.
+
+Usage algorithm
+---------------
+
+The decisive record is type=token_usage_record. Its payload contains:
+  thread_id, turn_id, session_id, root_turn_id, response_id,
+  usage, turn_token_usage, thread_token_usage.
+
+usage is the usage of ONE upstream response. Sum it once for each unique
+response_id, grouping by payload.thread_id. Then add the root and its actual
+descendants. The root's own thread_token_usage excludes reviewer inference:
+this was checked against the sum of its root-only response records. Reviewers'
+answers later appearing in the root context legitimately cost additional input
+tokens to the root, but do not replace the reviewers' own inference usage.
+
+Do not sum cumulative token_count.info.total_token_usage snapshots. Do not add
+last_token_usage to total_token_usage. Do not add cached_input_tokens to
+input_tokens or reasoning_output_tokens to output_tokens: they are subsets.
+
+Prefer response records to the UI thread total/threads.tokens_used: in an
+existing compacted root trace the latter differed from the complete response
+record sum, while response records summed exactly to thread_token_usage.
+
+Full-history child rollouts contain copied parent session_meta, turn_context,
+task_started and task_complete records. Choose the session_meta matching the
+file's thread ID (the UUID suffix of its filename or the SQLite row), then use
+subagent_history_start_ordinal to ignore inherited records. Attribute each
+token_usage_record by its own thread_id and deduplicate response IDs globally.
+
+summarize_traces.py implements this accounting and reports missing/contradictory
+records rather than silently treating missing usage as zero. Example:
+
+  python3 summarize_traces.py /path/to/private-codex-state --root-thread UUID
+
+The report prints metadata/counts only, never conversation or reasoning text.
+Audit that model_effort_pairs is gpt-6-astra/max for the root and every working
+reviewer. A guardian is categorized separately; with approval_policy=never no
+approval-review inference should normally be needed.
+
+Timing
+------
+
+Record launch-to-exit elapsed time using a monotonic clock in the launcher,
+with UTC start/end timestamps for reproducibility. Record local process CPU
+time separately if desired; it is not the remote model's compute time.
+
+Native task_complete events contain turn_id, started_at, completed_at,
+duration_ms, and sometimes time_to_first_token_ms. Filter out inherited parent
+turns before using these. Root and child durations include tools and waiting;
+they overlap and should not be added to obtain end-to-end wall time. No exact
+GPU inference time was found in the native records/protocol schema examined.
+
+The generated v2/RawResponseCompletedNotification.json describes responseId,
+threadId, turnId and per-response usage, confirming the response-level unit.
+For this CLI experiment the persisted token_usage_record is available without
+needing an app-server RPC listener or a separate API key.

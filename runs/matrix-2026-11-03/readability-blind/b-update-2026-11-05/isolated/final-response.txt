@@ -1,0 +1,3 @@
+B: **8/10**. The proof strategy and limiting mechanism are clearly explained; the local two-band comparison creates the main notation burden.
+
+[Read the report](/tmp/manuscript-grader-9ftbd90c/work/READABILITY_REVIEW.txt).

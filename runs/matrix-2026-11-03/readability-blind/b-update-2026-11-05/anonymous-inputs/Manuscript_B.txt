@@ -1,0 +1,889 @@
+                            Conductivity at conical crossings
+
+
+
+                                                 Abstract
+         We consider independent electrons in a periodic crystal in their ground state, and turn on a
+      uniform electric field at some prescribed time. We rigorously define the current per unit area and
+      study the static conductivity of a two-dimensional semimetal. The conductivity tensor is isotropic
+                                                    1
+      and each conical intersection contributes as 16 to the total conductivity.
+
+
+Contents
+1 Introduction                                                                                              1
+
+2 Main results: electrical current in periodic materials                                                    3
+  2.1 Notation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      3
+  2.2 The Bloch theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         5
+  2.3 Definition of the current . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+  2.4 Semimetals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        6
+  2.5 Conductivity . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        6
+
+3 Bloch decomposition and regularity of the current                                                         7
+
+4 Linear response                                                                                           8
+  4.1 The Liouvillian and its partial inverse . . . . . . . . . . . . . . . . . . . . . . . . . . .         8
+  4.2 Spectral derivatives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      8
+  4.3 Linear response . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       9
+
+5 Proof of the conductivity formula                                                                        10
+  5.1 Cancellation of the term linear in time . . . . . . . . . . . . . . . . . . . . . . . . . . .        10
+  5.2 Time averaging and reduction to two bands . . . . . . . . . . . . . . . . . . . . . . . .            10
+  5.3 The local two-band model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         11
+  5.4 Reduction to the Dirac Hamiltonian . . . . . . . . . . . . . . . . . . . . . . . . . . . .           12
+
+
+1    Introduction
+We consider a two-dimensional perfect crystal with periodic lattice R ⊂ R2 . We use atomic units and
+a spinless model, with Hamiltonian
+                                          1
+                                      H =− ∆+V            on L2 (R2 ; C),                                  (1)
+                                          2
+            1 (Ω; R) and Ω is a unit cell of R. At zero temperature, the ground-state density matrix
+where V ∈ Hper
+is given by
+                                          γ0 = 1(H ≤ µF ),                                       (2)
+where µF ∈ R is the Fermi level.
+   The purpose of this article is to analyze mathematically the behavior of the current appearing in
+the crystal when a uniform external field is turned on instantaneously at the initial time t = 0. Fix
+
+
+
+
+                                                      1
+eβ , eα ∈ R2 once and for all, for the field and observation directions respectively. They need not be
+normalized, linearly independent, or orthogonal. Put xβ = x · eβ and p = −i∇. For ε ≥ 0,
+                                             Hε = H − εxβ ,                                            (3)
+where Hε denotes the self-adjoint closure of its restriction to Cc∞ (R2 ; C) (see Proposition 2.2). The
+state at t ≥ 0 is
+                                       γε (t) = e−itHε γ0 eitHε .                                    (4)
+The current is defined as
+                                           jε (t) = Tr(Jγε (t)),                                       (5)
+where Tr is the trace per unit area, defined in Section 2.1, and
+                                                J = p · eα .                                           (6)
+   For time-reversible 2D semimetals such as graphene, the time-averaged conductivity
+                                              ˆ
+                                            1 t       jε (t′ ) ′
+                                   σ = lim        lim         dt                                       (7)
+                                       t→∞ t 0 ε→0+      ε
+                            1
+has a finite value equal to 16 eα · eβ times the number of Dirac points in the Brillouin zone.
+   Note that our results use an averaging in time, and we are unable to conclude anything about
+what would be the naive definition of the conductivity
+                                                      jε (t)
+                                             lim lim         .                                        (8)
+                                            t→∞ ε→0+ ε
+
+A form of averaging of time fluctuations is always necessary to infer zero-frequency behavior from step
+responses in non-dissipative systems, even in the linear case. The easiest way to see this is by the very
+simple model for the relationship between an input I(t) and an output O(t):
+                                          iȮ(t) = ωO(t) + I(t).                                       (9)
+This simplified model describes a forced oscillator with eigenfrequency ω, and arises from the linear
+response of the time-dependent Schrödinger equation of a two-level system. For a constant input I0 ,
+there is a steady state solution O0 = R    b0 I0 , where Rb0 = − 1 is the zero-frequency transfer function
+                                                                 ω
+of the system. However, since this system is oscillatory, this steady state may never be reached:
+if I is brutally switched on at time 0 with I(t) = O(t) = 0, if t ≤ 0, I(t) = I0 if t > 0, then
+O(t) = O0 (1 − e−iωt ) = R
+                         b0 I0 (1 − e−iωt ) and we cannot define R   b0 as the limit of O(t)/I0 when t goes
+to infinity. However, by averaging we obtain
+                                                   ˆ
+                                                1 t O(t′ ) ′
+                                         lim                dt = R
+                                                                 b0 .
+                                        t→∞ t 0        I0
+   In our results in the linear response regime, we consider the quantity
+                                                             jε (t)
+                                          j LR (t) = lim            .
+                                                     ε→0+      ε
+and then compute the conductivity in the limit t → ∞. This order of limits is necessary to ensure
+that the electronic state never deviates significantly from its equilibrium. Considering the opposite
+limit, i.e. the infinite-time dynamics of jε (t) at ε fixed, is an extremely hard problem, as it is for any
+dynamics of non-dissipative systems. Our method of proof is based on the standard gauge change
+ψ(x, t) = e−iεtxβ ψ(x, t) that transforms the constant in time but non-spatially-periodic Hamiltonian
+ e
+Hε into the time-dependent Hamiltonian H       e ε (t) = 1 (p + εteβ )2 + V . This Hamiltonian is spatially
+                                                         2
+periodic, and the study of its dynamics can be reduced via Bloch–Floquet theory to that of its fibers
+Hk+εteβ acting on periodic functions (Section 3). Fiber by fiber, this time-dependent Hamiltonian can
+then be treated using the tools of time-dependent perturbation theory (Section 4). For each fixed t,
+we use linear response to expand jε (t) to first order in ε (Proposition 4.1).
+    The structure of the paper is as follows. We describe our results in Section 2: we define the
+current in Proposition 2.2, and state Theorem 2.4. We devote Section 3 to preliminaries about the
+regularity and Bloch decomposition of the current. Section 4 states and proves the linear response
+result. Section 5 is devoted to the proof of the conductivity formula.
+
+                                                     2
+2     Main results: electrical current in periodic materials
+2.1    Notation
+We denote by R∗ the dual lattice
+
+                             R∗ = {K ∈ R2 : K · R ∈ 2πZ for all R ∈ R},
+
+by Ω a unit cell in physical space, and by B a unit cell in reciprocal space, called the Brillouin zone.
+We write ∂α = eα · ∇k and ∂β = eβ · ∇k for the two fixed directional derivatives.
+   The R-periodic Lebesgue and Sobolev spaces are denoted by
+
+                               Lpper := u ∈ Lploc (R2 ; C) | u R-periodic ,
+                                       
+
+                                 s             s
+                                                  (R2 ; C) | u R-periodic .
+                                       
+                              Hper   := u ∈ Hloc
+
+The space of bounded linear operators on a Hilbert space H is denoted by L(H), and the Schatten class
+of bounded operators A ∈ L(H) such that Tr(|A|p ) < ∞ by Sp (H). For R ∈ R, we denote by τR the
+translation operator formally defined by τR ϕ = ϕ(· − R). Depending on the context, τR will be seen as
+a unitary operator on L2 (R2 ; C), or as a linear operator on some R-translation invariant subspace of
+D′ (R2 ; C). A bounded operator on L2 (R2 ; C) is called R-periodic if it commutes with τR for all R ∈ R.
+An unbounded self-adjoint operator on L2 (R2 ; C) is called R-periodic if its resolvent is R-periodic. A
+bounded R-periodic operator A ∈ L(L2 (R2 ; C)) is called locally trace-class if χAχ ∈ S1 (L2 (R2 ; C))
+for any compactly supported function χ ∈ L∞ (R2 ; C). For p ≥ 1, we denote by Sp,per the space of
+R-periodic operators A ∈ L(L2 (R2 ; C)) such that |A|p is locally trace class. Any operator A ∈ S1,per
+has a density ρA ∈ L1per characterized by
+                                                                ˆ
+                                        ∞     2
+                                ∀χ ∈ Cc (R ; C), Tr(Aχ) =           ρA χ.
+                                                                               R2
+
+The trace per unit area of an operator A ∈ S1,per is defined as
+
+                                        1
+                               Tr(A) =     Tr 2 2 (1Ω A1Ω ) =        ρA ,
+                                       |Ω| L (R ;C)                Ω
+                                                               ffl                             1
+                                                                                                  ´
+where 1Ω is the characteristic function of the unit cell Ω, and Ω is a shorthand notation for |Ω|  Ω.
+This formula is independent of the choice of the unit cell Ω.
+    Since we are dealing here with periodic materials, we will use the Bloch transform (also called
+Bloch-Floquet transform) [2]. For K ∈ R∗ , let TK be the unitary multiplication operator on L2per
+defined by
+                       ∀v ∈ L2per , (TK v)(x) = e−iK·x v(x) for a.a. x ∈ R2 ,
+and
+
+    L2qp (L2per )
+                           ˆ                                                               
+             2        2            2                                       ∗              2
+    := R ∋ k 7→ uk ∈ Lper |   ∥uk ∥L2per dk < ∞, uk+K = TK uk for all K ∈ R and a.a. k ∈ R ,
+                               B
+
+the Hilbert space of R∗ -quasi-periodic L2per -valued functions on R2 endowed with the inner product
+
+                                   ⟨u, v⟩L2qp (L2per ) =           ⟨uk , vk ⟩L2per dk.
+                                                               B
+
+Here and below, the subscript qp refers to the quasi-periodicity property. The Bloch transform then
+is the unitary map from L2 (R2 ; C) to L2qp (L2per ) defined for u ∈ Cc∞ (R2 ; C) by
+                                                                     X
+                       ∀k ∈ R2 ,   ∀x ∈ R2 ,      uk (x) =                u(x + R) e−ik·(x+R) .     (10)
+                                                                    R∈R
+
+
+                                                           3
+Its inverse is given by
+                                       eik·x uk (x) dk, for a.a. x ∈ R2 .
+                                  u(x) =                                                     (11)
+                                   B
+Any R-periodic operator A ∈ L(L2 (R2 ; C)) is decomposed by the Bloch transform in the sense that
+there exists a function k 7→ Ak in L∞        2                           2  2                         2
+                                    qp (L(Lper )) such that for any u ∈ L (R ; C) and almost all k ∈ R ,
+(Au)k = Ak uk , and
+                                          ∗
+                         Ak+K = TK Ak TK    ,   for all K ∈ R∗ and a.a. k ∈ R2 .                    (12)
+The Ak ’s are called the fibers of the operator A. If A ∈ S1,per , then the function k 7→ Ak is in
+L1qp (S1 (L2per )), the function k 7→ Tr(Ak ) is in L1loc (R2 ), R∗ -periodic, and we have
+                                                            ˆ
+                                                        −2
+                                        Tr(A) = (2π)            Tr(Ak ) dk.
+                                                              B
+
+The Bloch decomposition theorem can be extended to unbounded R-periodic self-adjoint operators
+using the resolvent [2].
+     In the case of the periodic Hamiltonian operator H given by (1), we have
+                                                  1
+                                              Hk = (−i∇ + k)2 + V.                                  (13)
+                                                  2
+For each k ∈ R2 , Hk is a bounded below self-adjoint operator on L2per with domain Hper
+                                                                                     2 and compact
+
+resolvent. Let (λn,k )n∈N∗ be the non-decreasing sequence of eigenvalues of Hk counting multiplicities
+
+                                 λ1,k ≤ λ2,k ≤ λ3,k ≤ · · · ,     lim λn,k = +∞,
+                                                                  n→∞
+                                                                                         ∗
+                                                                  2 )N an L2 -orthonormal basis
+and we use the convention λ0,k = −∞. We denote by (un,k )n∈N∗ ∈ (Hper      per
+of associated eigenfunctions:
+
+                                 Hk un,k = λn,k un,k ,    ⟨um,k , un,k ⟩L2per = δm,n .
+
+For n ≥ 1 and k ∈ R2 , set
+                                      Pn,k = 1(Hk ≤ λn,k ),          P0,k = 0.
+Whenever λn,k < λn+1,k , Pn,k is the spectral projector associated with the lowest n eigenvalues,
+counting multiplicities:
+                                           X n
+                                    Pn,k =     |um,k ⟩⟨um,k |.                               (14)
+                                                    m=1
+   Since Hk is quasi-periodic, so is Pn,k , and the eigenvalues λn,k are R∗ -periodic functions of k. By
+a min-max argument (see e.g. [2]), there exists C1 , C1 ∈ R, and C2 , C2 > 0 such that
+
+                                         C1 + C2 n ≤ λn,k ≤ C1 + C2 n.                              (15)
+
+The ground-state density matrix γ0 has Bloch fibers
+
+                                                Pk = 1(Hk ≤ µF ).                                   (16)
+
+Their ranks are uniformly bounded by the eigenvalue estimate above. The current operator J is also
+R-periodic, with fibers
+                                   Jk = (p + k) · eα = ∂α Hk .
+     Lastly, for each q ∈ R2 , we denote by Gq the unitary multiplication operator on L2 (R2 ; C) defined
+by
+                          ∀u ∈ L2 (R2 ; C),    (Gq u)(x) = eiq·x u(x)      for a.a. x ∈ R2 .        (17)
+The operator Gq is not R-periodic, except when q ∈ R∗ (in which case Gq is fibered, with Gq,k = T−q
+for all k). However, for any R-periodic operator A ∈ L(L2 (R2 ; C)) and any q ∈ R2 , the operator
+Gq AG∗q is R-periodic and its Bloch decomposition is given by
+
+                                    (Gq AG∗q )k = Ak−q ,        for a.a. k ∈ R2 .                   (18)
+
+                                                          4
+2.2   The Bloch theorem
+Before attacking the well-posedness of the current jε (t) = Tr(Jγε (t)) for ε, t ̸= 0, we first study an
+easier special case.
+Proposition 2.1 (Bloch theorem). The current satisfies
+                   j0 (t) = 0,     ∀t ≥ 0 (no current in the absence of external field),
+                   jε (0) = 0,     ∀ε ≥ 0 (continuity of the current at t = 0).
+Proof. We have                                                ˆ
+                                                      1
+                                    j0 (t) = jε (0) = 2           Tr(∂α Hk Pk ) dk.
+                                                     4π       B
+Since V is real, H−k = Hk and P−k = Pk , where the bar denotes complex conjugation. Moreover,
+∂α H−k = −∂α Hk . Thus the real-valued, R∗ -periodic function k 7→ Tr(∂α Hk Pk ) is odd, and its integral
+vanishes.
+
+2.3   Definition of the current
+For ε > 0, the operator Hε = H − εxβ is not R-periodic, and we would naively expect that the density
+matrix γε (t) is not either. Yet, this operator is in fact R-periodic. Physically, this is due to the fact
+that although −εx · eβ is not periodic, its negative gradient is constant, hence periodic. The proof
+relies on the standard gauge transform
+                                   e t) = G−εte ψ(x, t) = e−iεtxβ ψ(x, t),
+                                   ψ(x,                                                              (19)
+                                               β
+
+where Gq was defined in (17), and the gauge-transformed operators
+                                                                    ′
+                                     Uε (t, t′ ) = G−εteβ e−i(t−t )Hε G∗−εt′ eβ ,                    (20)
+and
+                                 eε (t) = G−εteβ γε (t)G∗−εteβ = Uε (t)γ0 Uε (t)∗ ,
+                                 γ                                                                   (21)
+where Uε (t) = Uε (t, 0). Through this change of gauge, the dynamics induced by Hε is equivalent to
+that induced by the time-dependent periodic Hamiltonian
+
+                          He ε (t) = G−εte Hε G∗−εte + εxβ = 1 (p + εteβ )2 + V.               (22)
+                                            β         β
+                                                                  2
+Its Bloch fibers are
+                                 e ε,k (t) = 1 (p + k + εteβ )2 + V = Hk+εte .
+                                 H                                                             (23)
+                                                                            β
+                                             2
+We sum up these arguments in the proposition below, together with elements that we shall use for
+defining the current.
+                          1 (Ω; R).
+Proposition 2.2. Let V ∈ Hper
+  1. For every ε ∈ R, Hε is essentially self-adjoint on Cc∞ (R2 ; C) and therefore generates a unitary
+     group on L2 (R2 ; C).
+  2. The operator H   e ε (t) is self-adjoint with domain H 2 (R2 ; C) and R-periodic. The propagator
+     Uε (t, t ) is R-periodic, with fibers Uε,k (t, t′ ) solving
+             ′
+
+                             i∂t Uε,k (t, t′ ) = Hk+εteβ Uε,k (t, t′ ),      Uε,k (t′ , t′ ) = Id.   (24)
+
+  3. For t ≥ 0, Jγε (t) ∈ S1,per , and
+                                            ˆ
+                                          1                         
+                                 jε (t) = 2   Tr ∂α Hk+εteβ γ
+                                                            eε,k (t) dk                              (25)
+                                         4π B
+                                            ˆ
+                                          1
+                                              Tr ∂α Hk+εteβ Uε,k (t)Pk Uε,k (t)∗ dk.
+                                                                                
+                                        = 2
+                                         4π B
+   The results of Proposition 2.2 are proved in Section 3 for completeness. The situation can be
+summed up in the commutative diagrams of Figure 1.
+
+                                                          5
+                                                    e−itHε
+                                          γ0                     γε (t)
+
+                                               Id                   G−εteβ
+
+                                                    Uε (t)
+                                          γ0                     γ
+                                                                 eε (t)
+
+                                      {Pk }k                     {γε,k (t)}k
+
+                                          Id                              k7→k+εteβ
+
+                                                {Uε,k (t)}k
+                                      {Pk }k                     {e
+                                                                  γε,k (t)}k
+
+Figure 1: Relations between the density matrices and their Bloch fibers. An arrow labelled by a
+unitary U denotes conjugation by U . The right lower arrow means γ
+                                                                 eε,k (t) = γε,k+εteβ (t).
+
+
+2.4   Semimetals
+The position of the Fermi level in the band diagram is key to determining the electronic properties of
+the medium. We assume the following.
+
+Assumption 2.3 (semimetal). There are N, M ≥ 1 and distinct points k1 , . . . , kM modulo R∗ such
+that
+                    λN,k < µF < λN +1,k      / {k1 , . . . , kM } mod R∗ ).
+                                          (k ∈
+For each i = 1, . . . , M , the two bands meet at an isolated conical crossing:
+
+                               λN −1,ki < λN,ki = µF = λN +1,ki < λN +2,ki ,                         (26)
+                                                                                      2
+                                     λN,k = µF − vi |k − ki | + O(|k − ki | ),                       (27)
+                                  λN +1,k = µF + vi |k − ki | + O(|k − ki |2 ),                      (28)
+
+where vi > 0.
+
+   The Fermi surface is the finite set
+
+                                       S = {k1 , . . . , kM } mod R∗ .                               (29)
+
+For k ∈ / S, Pk = PN,k has rank N . Its values at the crossings do not affect any Brillouin-zone integral.
+Since V is real, H−k = Hk : the system has time-reversal symmetry. The passage to linear response is
+justified in Proposition 4.1.
+
+2.5   Conductivity
+In the following, O(f (ε, t)) denotes a quantity bounded by Cf (ε, t), where C may depend on the
+potential, the Fermi level and the fixed directions, but not on t or ε. A subscript T allows the
+constant to depend on a fixed time horizon T . We write oT (ε) for a remainder whose quotient by ε
+tends uniformly to zero on that interval.
+
+Theorem 2.4. Under Assumption 2.3, the iterated limit exists and
+                                  ˆ 
+                                1 T
+                                                     
+                                              jε (t)        M
+                       σ = lim            lim          dt =    eα · e β .
+                          T →∞ T 0       ε→0+ ε             16
+
+   The value of the conductivity is universal: it does not depend on the characteristics of the Hamil-
+tonian, but only on the number of conical crossings. The conductivity tensor is isotropic and each
+conical intersection contributes 1/16.
+
+
+
+
+                                                             6
+3    Bloch decomposition and regularity of the current
+In this section, we prove Proposition 2.2. We first point out an alternative interpretation of the gauge
+change. Formally, γε (t) satisfies
+                                       i∂t γε = [H, γε ] − ε[xβ , γε ].
+The commutator [xβ , γε ] is R-periodic, with fibers i∂β γε,k . Therefore the fibers satisfy
+
+                                i∂t γε,k + iε∂β γε,k = [Hk , γε,k ] = LHk γε,k ,
+
+where LHk = [Hk , ·] is the Liouvillian associated with Hk (see Section 4.1). The left-hand side is a
+linear advection equation, which suggests the method of characteristics: setting
+
+                                           γ
+                                           eε,k (t) = γε,k+εteβ (t),                                (30)
+
+we obtain
+                                      i∂t γ
+                                          eε,k (t) = [Hk+εteβ , γ
+                                                                eε,k (t)].
+The gauge transform G−εteβ , equivalent to the change of variable (30), makes these remarks rigorous.
+We now prove Proposition 2.2.
+   Proof of the first assertion. The essential self-adjointness of Hε follows from the Faris–Lavine
+theorem [1, Theorem X.38], applied to 2Hε = −∆ + 2V − 2εxβ . Let C = Cc∞ (R2 ; C). We have
+
+                                       −2εx · eβ ≥ −|x|2 − ε2 |eβ |2 .
+
+In two dimensions, V ∈ L2per is infinitesimally bounded with respect to −∆ [2, Theorem XIII.96],
+hence also with respect to the harmonic oscillator −∆ + 2|x|2 . The linear potential −2εxβ is likewise
+infinitesimally bounded with respect to this oscillator. The Kato–Rellich theorem therefore gives the
+essential self-adjointness of −∆ + 2V − 2εxβ + 2|x|2 on the core C. Also, the infinitesimal form bound
+for V gives that −a∆ + 2V is bounded below for every a > 0. Since C is invariant under multiplication
+by coordinates and differentiation, all the hypotheses of the Faris–Lavine theorem are satisfied. Thus
+Hε is essentially self-adjoint on C, and its propagator is the unitary group (e−itHε )t∈R .
+    Proof of the second assertion. The self-adjointness of
+
+                                        e ε (t) = 1 (p + εteβ )2 + V
+                                        H
+                                                  2
+on H 2 (R2 ; C) follows from the Kato–Rellich theorem. To show the well-posedness of the dynamics, it
+suffices to study its fibers Hk+εteβ . For t ∈ [0, T ], write Hk+εteβ = H0 + H1 (t), with H0 = − 12 ∆ and
+
+                                                         1
+                               H1 (t) = (k + εteβ ) · p + |k + εteβ |2 + V.
+                                                         2
+The perturbation H1 (t) is infinitesimally H0 -bounded, uniformly when k, ε and t range over bounded
+sets. Hence the Hamiltonians have common domain Hper         2 and graph norms uniformly equivalent to
+
+the Hper2 -norm. Their dependence on t is continuously differentiable as operators from H 2 to L2 ;
+                                                                                             per      per
+indeed,
+                                                                 ε2
+                              Hk+εteβ − Hk+εseβ = ε(t − s)∂β Hk + (t2 − s2 )|eβ |2 .
+                                                                  2
+After adding a fixed scalar to the Hamiltonians to make them invertible, these facts verify the resolvent
+and difference-quotient hypotheses of the common-domain propagator theorem [1, Theorem X.70]. It
+gives a unique unitary propagator Uε,k (t, s) whose trajectories from Hper 2 belong to C([0, T ]; H 2 ) ∩
+                                                                                                   per
+C 1 ([0, T ]; L2per ). The graph-norm estimate in that theorem also gives
+
+                   ∥Uε,k (t, s)∥L(Hper
+                                   2 ) ≤ CT ,      k ∈ B,     0 ≤ s ≤ t ≤ T,       0 ≤ ε ≤ 1.       (31)
+
+                                e ε (t) on L2 (R2 ; C), and its propagator is the direct integral of the
+    The same theorem applies to H
+fiber propagators. Undoing the gauge change (19) in the Schrödinger equation, tested against Cc∞
+
+                                                       7
+functions, identifies it with (20) by uniqueness for the self-adjoint generator Hε . This proves the
+second assertion.
+Proof of the third assertion. We first compute the fibers of γε (t). Using (18), we have
+                                                            
+                  γε,k (t) = G∗−εteβ Uε (t)γ0 Uε (t)∗ G−εteβ                                    (32)
+                                                             k
+                                                              ∗
+                         = Uε,k−εteβ (t)Pk−εteβ Uε,k−εteβ (t)                                         (33)
+                                X
+                         =                |Uε,k−εteβ (t)un,k−εteβ ⟩⟨Uε,k−εteβ (t)un,k−εteβ |,
+                            n: λn,k−εteβ ≤µF
+
+                                  2 , we deduce that
+for almost every k. Since un,k ∈ Hper
+                                          (Jγε (t))k = ∂α Hk γε,k (t)
+is trace-class and finite-rank, with a uniform bound for k ∈ B. The current is therefore well-defined.
+Since k 7→ Tr(∂α Hk γε,k (t)) is R∗ -periodic,
+                                            ˆ
+                                         1
+                                jε (t) = 2     Tr(∂α Hk γε,k (t)) dk
+                                        4π B
+                                            ˆ
+                                         1                                
+                                       = 2     Tr ∂α Hk+εteβ γε,k+εteβ (t) dk,
+                                        4π B
+which gives (25).
+
+
+4     Linear response
+4.1   The Liouvillian and its partial inverse
+In order to formulate and interpret our results, it is convenient to make use of the Liouvillian formalism.
+For each k ∈ / S, the Liouvillian Lk associated with Hk is the commutator
+                                               Lk A = [Hk , A].                                       (34)
+The operator Lk is to density matrices what the Hamiltonian Hk is to pure states: its evolution is
+                                          e−itLk A = e−itHk AeitHk .                                  (35)
+More precisely, Lk is the self-adjoint generator of this strongly-continuous unitary group on the
+Hilbert–Schmidt operators. Its action is easily understood in the eigenbasis of Hk :
+                               Lk |un,k ⟩⟨um,k | = (λn,k − λm,k )|un,k ⟩⟨um,k |.
+The operator Lk is not invertible. However, it is invertible on the block off-diagonal operators, i.e.
+operators A such that Pk APk = (1 − Pk )A(1 − Pk ) = 0. Its partial inverse L+  k is given by
+                          X ⟨um,k , Aun,k ⟩|um,k ⟩⟨un,k | − ⟨un,k , Aum,k ⟩|un,k ⟩⟨um,k |
+                L+
+                 kA=                                                                      .      (36)
+                                                    λm,k − λn,k
+                         n≤N <m
+
+The gap and the finite number of occupied states ensure convergence in Hilbert–Schmidt norm for
+bounded A. We extend L+   k to all bounded operators by setting it to zero on the diagonal blocks. In
+                +
+particular, Lk Lk A = A for off-diagonal A.
+
+4.2   Spectral derivatives
+For k ∈
+      / S, the contour formula                  ˛
+                                             1
+                                        Pk =       (z − Hk )−1 dz,                                    (37)
+                                            2πi C
+where C encloses the occupied eigenvalues, gives a locally analytic projector. Differentiating [Hk , Pk ] =
+0, we get
+                                        Lk ∂β Pk = [Pk , ∂β Hk ].
+Both sides are off-diagonal (for ∂β Pk , differentiate Pk2 = Pk ). Hence
+                                           ∂β Pk = L+
+                                                    k [Pk , ∂β Hk ].                                  (38)
+
+                                                      8
+4.3   Linear response
+We now aim at obtaining an expansion of the current to first order in ε for a given t. This is a classical
+computation in response theory, sometimes known as the Kubo formula. We only need differentiability
+at ε = 0 on bounded time intervals; the estimates below do not require a lower bound on the gap.
+
+Proposition 4.1. For every T > 0, uniformly for k ∈   / S and 0 ≤ t ≤ T ,
+
+          Tr ∂α Hk+εteβ Uε,k (t)Pk Uε,k (t)∗ = ∂α Tr(Hk Pk ) + εt∂α ∂β Tr(Hk Pk )
+                                            
+
+                                                     − iε Tr ∂α Hk (e−itLk − 1)L+
+                                                                                          
+                                                                                k ∂ β P k   + oT (ε).   (39)
+
+The current may be differentiated at ε = 0 under the Bloch integral. The limit defining j LR (t) exists
+and may also be passed under any integral over a bounded time interval.
+
+Proof. We first justify differentiation with the unbounded current observable. Fix T > 0 and 0 ≤ ε ≤ 1.
+By (31), the propagators are uniformly bounded on Hper    2 for 0 ≤ s ≤ t ≤ T and k ∈ B. The occupied
+
+unit vectors also have uniformly bounded Hper   2 norms, since their energies are bounded.
+
+   For such a vector u, set ψε (t) = Uε,k (t)u and ψ0 (t) = e−itHk u. Since
+
+                                                                      ε2 s2 |eβ |2
+                                     Hk+εseβ − Hk = εs∂β Hk +                      ,
+                                                                           2
+Duhamel’s formula gives
+                                           ˆ t
+                                                                ε2 s2 |eβ |2
+                                                                            
+                                                 −i(t−s)Hk
+                   ψε (t) − ψ0 (t) = −i     e         εs∂β Hk +                ψε (s) ds.     (40)
+                                          0                          2
+                                                  2 , hence O (√ε) in H 1 by interpolation. Divid-
+The difference is OT (ε) in L2per and bounded in Hper          T              per
+ing (40) by ε therefore gives, in L2per ,
+                                                     ˆ t
+                             ψε (t) − ψ0 (t)
+                                             −→ −i         s e−i(t−s)Hk ∂β Hk e−isHk u ds.
+                                    ε                 0
+
+All these bounds and the convergence are uniform in k, in occupied unit vectors u, and in 0 ≤ t ≤ T .
+    Put w = ψε − ψ0 . The identity
+
+                   ⟨ψε , ∂α Hk ψε ⟩ − ⟨ψ0 , ∂α Hk ψ0 ⟩ = 2 Re⟨w, ∂α Hk ψ0 ⟩ + ⟨w, ∂α Hk w⟩
+
+has last term OT (ε3/2 ). Thus the current expectations are differentiable, with a uniform oT (ε) re-
+mainder. Summing over the N occupied vectors gives the density-matrix derivative
+                                                ˆ t
+                            d
+                              γ
+                              eε,k (t)     = −i     s e−i(t−s)Lk [∂β Hk , Pk ] ds.               (41)
+                           dε          ε=0       0
+
+This formula also holds when paired with ∂α Hk : ∂β Hk u ∈ Hper   1 , and the free propagator preserves
+
+this form domain.
+    We now use (38). Since [∂β Hk , Pk ] = −Lk ∂β Pk and ∂β Pk is off-diagonal, integration by parts gives
+                        ˆ t
+                   −i         s e−i(t−s)Lk [∂β Hk , Pk ] ds = t∂β Pk − i(e−itLk − 1)L+
+                                                                                     k ∂β Pk .
+                         0
+
+By the Hellmann–Feynman theorem,
+
+                                    ∂α Tr(Hk Pk ) = Tr(∂α Hk Pk ),
+                                 ∂α ∂β Tr(Hk Pk ) = N eα · eβ + Tr(∂α Hk ∂β Pk ).
+
+Together with ∂α Hk+εteβ = ∂α Hk + εteα · eβ , these identities prove (39). The uniform bounds justify
+the stated limit interchanges, and Proposition 2.1 removes the equilibrium current.
+
+                                                           9
+5     Proof of the conductivity formula
+We prove here Theorem 2.4. We first take the limit ε → 0+ in Proposition 4.1, and cancel the term
+proportional to t. After averaging in time, only the two crossing bands near each Dirac point contribute
+to the limit. We construct their reduced Hamiltonian and compare it with the Dirac Hamiltonian, for
+which we can explicitly compute the limiting current.
+
+5.1   Cancellation of the term linear in time
+For n ≤ N < m, write
+
+                             ∆nm,k = λm,k − λn,k ,
+                              znm,k = ⟨un,k , ∂β Hk um,k ⟩⟨um,k , ∂α Hk un,k ⟩.                         (42)
+
+The finite number of occupied states, the uniform bounds on ∂α Hk un,k and ∂β Hk un,k , and Cauchy–
+Schwarz give                              X
+                                                |znm,k | ≤ C.                                  (43)
+                                           n≤N <m
+
+This controls the infinitely many unoccupied bands. Sums over complete eigenspaces are independent
+of the choice of basis at internal band crossings.
+    Let F (k) = Tr(Hk Pk ). The spectral derivative (38) and the eigenbasis representation (36) give
+                                                             X       Re znm,k
+                              ∂α ∂β F (k) = N eα · eβ − 2                     .
+                                                                      ∆nm,k
+                                                            n≤N <m
+
+The gap is bounded below away from the crossings and is comparable to |k − ki | near ki . Thus
+this derivative is integrable. Applying Stokes formula on the momentum torus with disks of radius r
+removed gives                            ˆ
+                                               ∂α ∂β F (k) dk = 0.                                      (44)
+                                           B
+Indeed, ∂α F (k) = Tr(∂α Hk Pk ) is bounded, so the extra boundary integrals are O(r) and vanish as
+r → 0.
+   For the remaining term of (39), we use
+
+                               Tr ∂α Hk (e−itLk − 1)L+
+                                                              
+                                                      k ∂β Pk
+                                        X                    znm,k
+                                     =       (eit∆nm,k − 1) 2      − c.c.
+                                                            ∆nm,k
+                                       n≤N <m
+
+Time reversal leaves the gaps unchanged and conjugates the products znm,k . Their imaginary part
+therefore integrates to zero. Using (44), we obtain
+                                          ˆ
+                             LR       1       X              sin(t∆nm,k )
+                            j (t) = 2               Re znm,k              dk.               (45)
+                                     2π B                       ∆2nm,k
+                                               n≤N <m
+
+The preceding decompositions are legitimate: | sin(t∆)|/∆2 ≤ t/∆ and |1 − cos(t∆)|/∆2 ≤ t2 /2, so
+every term is integrable by (43) and the conical gap bound.
+
+5.2   Time averaging and reduction to two bands
+We can now average in time. By Fubini’s theorem,
+         ˆ                   ˆ
+       1 T LR             1      X                                                     1 − cos(T ∆)
+             j (t) dt = 2              Re znm,k KT (∆nm,k ) dk,             KT (∆) =                .   (46)
+       T 0               2π B                                                              T ∆3
+                                  n≤N <m
+
+This formula makes the large-time behavior explicit: a gap bounded away from zero contributes
+O(T −1 ), while near a Dirac point the relevant momenta have size T −1 .
+
+                                                     10
+   We introduce a small parameter δ > 0 controlling the size of the neighborhood of the Dirac points,
+which is independent of T . We decompose B as the disjoint union
+                                     δ
+                                B = Bout ∪ (∪M    δ
+                                             i=1 Bi ),                  Biδ = B(ki , δ),
+
+with all sets understood modulo the reciprocal lattice. The radius is chosen small enough that the
+balls are disjoint and the two crossing bands are separated from the other bands in each ball. We keep
+δ fixed throughout the proof.
+          δ , the energy differences ∆
+    On Bout                              nm,k are bounded away from zero for each fixed δ. Since
+|KT (∆)| ≤ 2/(T ∆ ), the bound (43) shows that the contribution of this region to (46) is Oδ (T −1 ).
+                    3
+
+Here Oδ permits a constant depending on the fixed δ.
+    When n ̸= N or m ̸= N + 1, the denominators in (46) are bounded from below in the balls,
+independently of δ. These transitions also contribute O(T −1 ). Putting the two regions together, we
+obtain
+                                ˆ                    M
+                             1 T LR              1 X R
+                                    j (t) dt = 2       Ii (δ, T ) + Oδ (T −1 ),                   (47)
+                             T 0               2π
+                                                              i=1
+
+where                                      ˆ
+                                                                   1 − cos(T ∆N,N +1,k )
+                           IiR (δ, T ) =         Re zN,N +1,k                            dk.               (48)
+                                           Biδ                         T ∆3N,N +1,k
+At this stage of the proof, only two modes are involved in the formula giving the current, namely the
+two modes that cross at the Fermi level. Everything happens as for a two-band model that we now
+study.
+
+5.3     The local two-band model
+We now are interested in the computation of IiR (δ, T ). In the following, we drop the index i and
+assume without loss of generality that ki = 0. We write v = vi .
+    Hypothesis (26) implies that, for k small enough, the Bloch Hamiltonian Hk has exactly two
+eigenvalues (counting multiplicities) close to µF . Consider an arbitrary orthonormal basis (v0 , w0 ) of
+Ran(PN +1,0 − PN −1,0 ). For all k small enough, we can construct an orthonormal basis (vk , wk ) of
+Ran(PN +1,k − PN −1,k ) by Löwdin orthonormalization of ((PN +1,k − PN −1,k )v0 , (PN +1,k − PN −1,k )w0 ),
+and set                                                                          
+                         R          ∗                 ⟨vk , Hk vk ⟩ ⟨vk , Hk wk ⟩
+                      Hk = [vk |wk ] Hk [vk |wk ] =                                 .
+                                                      ⟨wk , Hk vk ⟩ ⟨wk , Hk wk ⟩
+It follows that the reduced Hamiltonian
+
+                                                 Hk
+                                                      Ran(PN +1,k −PN −1,k )
+
+is equivalent through a unitary transform that depends analytically on k to the reduced 2 × 2 Hamil-
+tonian
+                                                            3
+                                                            X
+                                                  HkR =           bp (k)σp ,                               (49)
+                                                            p=0
+
+where                                                                                             
+                                           0 1                         0 −i                     1 0
+                  σ0 = IdC2 , σ1 =                        , σ2 =                   , σ3 =
+                                           1 0                         i 0                      0 −1
+are the Pauli matrices, and (bp )p=0,1,2,3 are real-valued analytic functions of k in a neighborhood of 0.
+    The matrix HkR has eigenvalues
+                                                         v
+                                                         u 3
+                                                 0
+                                                         uX
+                                      λ± (k) = b (k) ± t      bp (k)2 .
+                                                                       p=1
+
+
+
+                                                             11
+It follows that
+
+                    b0 (k) = µF + O(|k|2 ),       bp (k) = v⟨q p , k⟩ + O(|k|2 ),     p = 1, 2, 3,
+
+where the (q p )p=1,2,3 are the rows of a 3 × 2 matrix Q with orthonormal columns, so that
+
+                                        HkR = µF + v(Qk) · σ + O(|k|2 ).                                      (50)
+
+Let R ∈ SO(3) be a rotation matrix that maps Ran(Q) to Span(e01 , e02 ), where (e01 , e02 , e03 ) is the
+canonical basis of R3 . Write R as a rotation through an angle θ about a unit vector n. The unitary
+matrix
+                                  U = cos(θ/2)Id2 − i sin(θ/2)n · σ
+satisfies, by the Pauli matrix identities,
+                                                      1
+                                             Rpq =      Tr(σp U σq U ∗ ).
+                                                      2
+It follows that
+                                               3
+                                               X
+                           Tr σ3 U HkR U ∗ = v   (Qk)q Tr(σ3 U σq U ∗ ) + O(|k|2 )
+                                          
+                                                 q=1
+
+                                              = 2v⟨e03 , RQk⟩ + O(|k|2 )
+                                                       2
+                                              = O(|k| ).
+
+Up to a unitary transform, we can therefore assume Q to be a 2 × 2 matrix in (50).
+
+5.4   Reduction to the Dirac Hamiltonian
+Reduction to HkR For k ̸= 0, let λR                                               R
+                                    ±,k be the larger and smaller eigenvalues of Hk respectively, and
+ R                                           2             R            R
+u±,k associated orthonormal eigenvectors in C . We have λ−,k = λN,k , λ+,k = λN +1,k , and
+
+                        [vk |wk ]uR
+                                  +,k = e
+                                         iθ+ (k)
+                                                 uN +1,k ,      [vk |wk ]uR
+                                                                          −,k = e
+                                                                                 iθ− (k)
+                                                                                         uN,k
+
+for some phases θ± (k) ∈ R. We have
+
+             ∂α HkR = [vk |wk ]∗ ∂α Hk [vk |wk ] + ∂α [vk |wk ]∗ [vk |wk ]HkR + HkR [vk |wk ]∗ ∂α [vk |wk ]
+                     = [vk |wk ]∗ ∂α Hk [vk |wk ] + O(|k|)
+                                                                                               ∗
+where we have used for the first line that Hk commutes
+                                                               − PN −1,k = [vk |wk ][vk |wk ] , and
+                                                       with PN +1,k
+for the second that HkR = µF Id2 + O(|k|) and ∂α [vk |wk ]∗ [vk |wk ] = ∂α Id2 = 0. We therefore obtain
+
+                                             −i(θ+ (k)−θ− (k))
+                    ⟨uR         R R
+                      +,k , ∂α Hk u−,k ⟩ = e                   ⟨uN +1,k , ∂α Hk uN,k ⟩ + O(|k|)
+                    ⟨uR         R R
+                      −,k , ∂β Hk u+,k ⟩ = e
+                                             +i(θ+ (k)−θ− (k))
+                                                               ⟨uN,k , ∂β Hk uN +1,k ⟩ + O(|k|).
+
+The phases cancel in zN,N +1,k . Replacing the physical velocities by the derivatives of HkR therefore
+changes this product by O(|k|).
+
+Reduction to HkD By standard results of perturbation theory [2, Chapter XII] applied to HkR =
+µF + v(Qk) · σ + O(|k|2 ), with gap greater than a constant multiple of |k|,
+                                       Q                                   Q
+                          λR                      2
+                           ±,k = µF + λ±,k + O(|k| ),              uR
+                                                                    ±,k = u±,k + O(|k|),
+
+where the superscript Q refers to eigenvalues and appropriately chosen orthonormal eigenvectors of
+the Hamiltonian
+                                          HkQ = v(Qk) · σ.
+
+                                                          12
+Write ∆(k) = ∆N,N +1,k , z(k) = zN,N +1,k , and set
+                                                     Q Q       Q         Q Q
+                               z Q (k) = ⟨uQ
+                                           −,k , ∂β Hk u+,k ⟩⟨u+,k , ∂α Hk u−,k ⟩.
+
+The preceding estimates give, uniformly in direction,
+                            ∆(k) = 2v|k| + O(|k|2 ),            z(k) = z Q (k) + O(|k|).
+The function z Q depends only on the direction of k.
+   We now make the change of variables k = q/T in (48):
+                                  ˆ
+                       R                                    1 − cos(T ∆(q/T ))
+                      I (δ, T ) =     1{|q|<T δ} Re z(q/T )                    dq.                        (51)
+                                   R2                          (T ∆(q/T ))3
+For each q ̸= 0, T ∆(q/T ) → 2v|q| and z(q/T ) → z Q (q). Moreover, on the support of the integrand,
+c|q| ≤ T ∆(q/T ) ≤ C|q| and |z(q/T )| ≤ C. Using 1−cos s ≤ min(s2 /2, 2), its absolute value is bounded
+by
+                                         C min{|q|−1 , |q|−3 },
+which is integrable on R2 . Dominated convergence therefore gives
+                                                 ˆ
+                                                                 1 − cos(2v|q|)
+                            R          Q
+                      lim I (δ, T ) = I ,    Q
+                                            I =       Re z Q (q)                dq.                       (52)
+                     T →∞                          R2               (2v|q|)3
+This change of scale handles the nonlinear gap inside the oscillatory factor directly.
+   We perform the change of variable q ′ = Qq (recall that Q is orthogonal) and obtain
+                                           I Q = (Qeβ )T I D (Qeα ),
+where the coefficients of the 2 × 2 matrix I D are
+                       ˆ
+                  D                         D D       D          D D
+                                                                          1 − cos(2v|k|)
+                Iij =      Re ⟨uD−,k , ∂ki Hk u+,k ⟩⟨u+,k , ∂kj Hk u−,k ⟩                 dk,
+                        R2                                                    (2v|k|)3
+and the superscript D refers to the Dirac Hamiltonian
+                                                 HkD = vk · σ.
+
+The Dirac Hamiltonian HkD          We finish by computing I D explicitly. Let k = r(cos θ, sin θ). We
+have
+                                                                           1 −e−iθ
+                                                                                  
+                     D                  D       1     1            D
+                    λ±,k = ±vr,        u+,k = √       iθ ,        u−,k = √              .
+                                                 2 e                        2    1
+By an explicit calculation, we obtain
+                      ˆ 2π
+                                            D D       D          D D             2
+                           Re ⟨uD
+                                                                         
+                                 −,k , ∂ki Hk u+,k ⟩⟨u+,k , ∂kj Hk u−,k ⟩ dθ = πv δij .
+                        0
+It follows that
+                                                     ˆ ∞
+                                                      1 − cos(2vr)
+                                   IijD = πv 2 δij                 r dr
+                                                 0       (2vr)3
+                                              ˆ ∞
+                                         π          1 − cos s      π2
+                                       = δij                  ds =    δij .
+                                         4     0        s2          8
+                                           ´∞
+For the last integral, the identity s−2 = 0 ae−as da and Tonelli’s theorem give
+                            ˆ ∞                  ˆ ∞                 
+                                 1 − cos s                 1     a          π
+                                      2
+                                           ds =       a      − 2        da = .
+                             0       s            0        a a +1           2
+Since Q is orthogonal, each crossing contributes π 2 (eα ·eβ )/8 to the limit of IiR . We finally get from (47)
+                                 ˆ
+                               1 T LR              1 M π2                 M
+                          lim        j (t) dt = 2              eα · e β =    eα · eβ ,
+                         T →∞ T 0                2π       8               16
+which proves the result.
+
+                                                           13
+References
+[1] Michael C. Reed and Barry Simon. Methods of Modern Mathematical Physics. II. Fourier analysis,
+    self-adjointness. Academic Press, New York, 1975.
+
+[2] Michael C. Reed and Barry Simon. Methods of Modern Mathematical Physics. IV. Analysis of
+    operators. Academic Press, New York, 1978.
+
+
+
+
+                                               14
+

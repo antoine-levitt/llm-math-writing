@@ -1,0 +1,3 @@
+Write a paper stating and proving the theorem in these notes. Do not look up anything online, just rely on your knowledge. You can look up and cite standard results from Reed-Simon (available in this directory). 
+
+The goal is to produce a very well written paper. Don't just stop at the first draft. Work with multiple subagents doing reviews, and iterate with them until you are satisfied the manuscript is as good as it can be. Use as much computational budget as you see fit to achieve the result. 

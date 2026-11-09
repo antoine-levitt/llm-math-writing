@@ -1,0 +1,26 @@
+{
+  "graphene_statement.tex": {
+    "sha256": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+    "bytes": 2853
+  },
+  "graphene_statement.pdf": {
+    "sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+    "bytes": 182863
+  },
+  "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": {
+    "sha256": "a9eb38970c669d4c315cba20580bc996eb024623af036c6c6d51bab1fdba9e36",
+    "bytes": 4106888
+  },
+  "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": {
+    "sha256": "2df55972e909cf69623a23b0d5759b7aec9faac518d940d1f7605ae7fbb00f5d",
+    "bytes": 3414705
+  },
+  "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": {
+    "sha256": "47e47a11d12b6baadfba7c7c78389513ecafedf3af361934ae9dbcab04e45d1c",
+    "bytes": 7191748
+  },
+  "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": {
+    "sha256": "f62435c15f171971f74a8ccae13cdec64d18c57c652215d093d9f1adb44edf69",
+    "bytes": 8668864
+  }
+}

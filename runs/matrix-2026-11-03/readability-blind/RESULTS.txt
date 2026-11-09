@@ -1,0 +1,53 @@
+Rough blind readability assessment
+=================================
+
+Primary result: one fresh, isolated GPT-6-Astra/max grader. Five manuscripts
+were randomized as A–E; only their PDFs/text extracts, the theorem statement,
+and the common grading rubric were supplied. The condition mapping was not
+given to the grader. The assessment concerns readability, not mathematical
+correctness. No manuscript was changed.
+
+Rank  Condition                 Label  Score / 10
+----  ------------------------  -----  ----------
+1=    Explicit writing + review   A         9
+1=    Explicit writing            E         9
+3     Iterative review            C         8
+4     Original prompt             D         7
+5     Adapted baseline            B         6
+
+The grader preferred A and E for making the central mechanism visible early
+and linking estimates to their purpose. A's momentum-transport roadmap and
+E's explanation of the filled-band cancellation were particular strengths.
+C was clear and careful but required more bookkeeping. D devoted more of
+the main narrative to operator preliminaries before revealing their payoff.
+B's oscillator example earned its space, but the grader found its notation
+and quantitative remainder estimates demanding and its final oscillatory
+approximation disproportionately compressed.
+
+Confidence was moderate. The leading pair was effectively tied; the C/D
+ordering depended more on the reader's preference for technical detail.
+These are coarse judgments from one isolated grading pass, not precise
+measurements of quality or evidence of a mathematical error.
+
+READABILITY_REVIEW_BLIND.txt is the grader's unchanged report, with two
+located examples per manuscript. private-mapping.json records the labels,
+source paths and source PDF hashes. anonymous-inputs/ retains the exact
+anonymous papers/text supplied. isolated/ retains the exact prompt,
+configuration, startup dump, sandbox test, native trace, usage and output.
+verification.json records the final isolation/input checks.
+
+Why there are two recorded passes
+--------------------------------
+The first attempt used a subagent requested with fork_turns="none". Inspection
+showed that its startup still included the personal/project AGENTS.md text,
+including the commissioner's name. It had no condition mapping, but was
+not fully isolated from that profile. Its report and trace are retained in
+subagent-pass/; it is not the primary result above.
+
+The primary pass used a separate CLI execution, private Codex state, disabled
+memories/project instructions, and a restricted neutral directory. The same
+rubric and A–E labels were retained. The previous review and private mapping
+were blocked by the sandbox, and the actual native startup was verified to
+contain only the environment user message and the exact grading prompt.
+Standard Codex system/developer instructions remained. Both passes happened
+to give the same ordering, with different score calibration.

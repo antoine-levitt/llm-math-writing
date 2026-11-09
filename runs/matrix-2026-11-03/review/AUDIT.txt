@@ -1,0 +1,30 @@
+Execution audit: review-only condition
+
+Completed with exit code 0 in 1271.8 seconds (21.2 minutes). The unedited
+deliverable is output/graphene_conductivity.tex and its 11-page PDF. Final
+LaTeX logs contain no warnings or errors. The initial inputs are unchanged.
+
+The root and all three subagents used GPT-6-Astra/max. The traces show an
+initial round of proof work, followed by two manuscript-review rounds with
+all three subagents. Every started turn completed. There were no detected
+online-access calls, CLI failure events, or usage-accounting discrepancies.
+
+Aggregate usage, including all subagents: 8,759,984 input tokens, of which
+8,457,600 cached; 109,001 output tokens, of which 51,497 reasoning tokens.
+There are 144 unique response-level usage records. Cached and reasoning
+counts are subsets, not additional tokens.
+
+The nine tool calls with failure indicators were inspected. A reviewer
+initially submitted a malformed file patch and then wrote its review
+successfully. The first LaTeX build failed on an undefined mathscr command;
+the model fixed it and rebuilt successfully. Other failures were searches
+with no matches, Git status outside a repository, a reviewer looking for
+PDF/log files in the root instead of build/, and an early attempt to read
+review files before their authors had finished. Later successful commands,
+saved reviews, and clean final build logs establish recovery.
+
+No supervisor advice or edits were supplied to the tested session. Its
+temporary authentication copy was removed after archival. This audit checks
+execution and artifacts; it is not an independent mathematical referee report.
+Detailed evidence is in audit.json, usage.json, events*.jsonl, stderr.log,
+native/, output/reviews/, and output/review*.md.

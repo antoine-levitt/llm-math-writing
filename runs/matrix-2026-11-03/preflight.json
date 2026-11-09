@@ -1,0 +1,10 @@
+{
+  "passed_at": "2026-11-03T10:01:32.248757+00:00",
+  "normalized_context_sha256": "87e447d1831c4ee05dde8bae9a0453633c6e989546971e9a873e4274fb66bca0",
+  "cases": [
+    "plain",
+    "explicit",
+    "review",
+    "explicit_review"
+  ]
+}

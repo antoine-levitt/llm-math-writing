@@ -1,0 +1,1391 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{esint}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{dsfont}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\newcommand{\Schatten}{{\mathfrak S}}
+\newcommand{\per}{\mathrm{per}}
+\newcommand{\Ran}{\mathrm{Ran}}
+\newcommand{\Trper}{\underline{\Tr}}
+\newcommand{\BZ}{\mathcal{B}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{hyp}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{notation}{Notation}
+\newtheorem{example}[theorem]{Example}
+\renewcommand{\vec}[1]{#1}
+\usepackage{tikz-cd}
+
+\makeatletter
+\tikzset{
+  column sep/.code=\def\pgfmatrixcolumnsep{\pgf@matrix@xscale*(#1)},
+  row sep/.code   =\def\pgfmatrixrowsep{\pgf@matrix@yscale*(#1)},
+  matrix xscale/.code=
+    \pgfmathsetmacro\pgf@matrix@xscale{\pgf@matrix@xscale*(#1)},
+  matrix yscale/.code=
+    \pgfmathsetmacro\pgf@matrix@yscale{\pgf@matrix@yscale*(#1)},
+  matrix scale/.style={/tikz/matrix xscale={#1},/tikz/matrix yscale={#1}}}
+\def\pgf@matrix@xscale{1}
+\def\pgf@matrix@yscale{1}
+\makeatother
+
+
+\usepackage[margin=2.0cm]{geometry}
+
+
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\eps{{\varepsilon}}
+
+\def\cB{{\mathcal B}}
+\def\cC{{\mathcal C}}
+\def\cH{{\mathcal H}}
+\def\cL{{\mathcal L}}
+\def\cN{{\mathcal N}}
+\def\cR{{\mathcal R}}
+
+
+\def\1{{\mathds 1}}
+
+\def\dps{\displaystyle }
+
+
+\newcommand{\sub}[1]{_{\mathrm{#1}}}
+\newcommand{\su}[1]{^{\mathrm{#1}}}
+
+
+\title{Conductivity at conical crossings}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We consider independent electrons in a periodic crystal in their ground
+state, and turn on a uniform electric field at some prescribed time.
+We rigorously define the current per unit area and study the static
+conductivity of a two-dimensional semimetal. The conductivity tensor is isotropic and each
+conical intersection contributes as $\frac{1}{16}$ to the total conductivity.
+\end{abstract}
+\tableofcontents
+\section{Introduction}
+
+We consider a two-dimensional perfect crystal with periodic lattice
+$\cR\subset\R^2$. We use atomic units and a spinless model, with Hamiltonian
+\begin{equation}\label{eq:periodic_Hamiltonian}
+H=-\frac12\Delta+V\quad\hbox{on }L^2(\R^2;\C),
+\end{equation}
+where $V\in H^1_{\rm per}(\Omega;\R)$ and $\Omega$ is a unit cell of $\cR$.
+At zero temperature, the ground-state density matrix is given by
+\begin{equation}\label{eq:GSDM}
+\gamma_0=\mathds 1(H\le\mu_{\rm F}),
+\end{equation}
+where $\mu_{\rm F}\in\R$ is the Fermi level.
+
+The purpose of this article is to analyze mathematically the behavior
+of the current appearing in the crystal when a uniform external field
+is turned on instantaneously at the initial time $t=0$.
+Fix $e_\beta,e_\alpha\in\R^2$ once and for all, for the field and observation
+directions respectively. They need not be normalized, linearly independent,
+or orthogonal. Put $x_\beta=x\cdot e_\beta$ and $p=-i\nabla$. For $\eps\ge0$,
+\begin{align}\label{def:Heps}
+H_\eps=H-\eps x_\beta,
+\end{align}
+where $H_\eps$ denotes the self-adjoint closure of its restriction to
+$C_c^\infty(\R^2;\C)$ (see Proposition~\ref{prop:setting}). The state at
+$t\ge0$ is
+\begin{equation}\label{def:gammaeps}
+\gamma_\eps(t)=e^{-itH_\eps}\gamma_0e^{itH_\eps}.
+\end{equation}
+The current is defined as
+\begin{equation}\label{eq:current}
+j_\eps(t)=\Trper(J\gamma_\eps(t)),
+\end{equation}
+where $\Trper$ is the trace per unit area, defined in
+Section~\ref{sec:notation}, and
+\begin{equation}\label{def:J}
+J=p\cdot e_\alpha.
+\end{equation}
+
+
+For time-reversible 2D semimetals such as graphene, the time-averaged conductivity
+\begin{align}\label{def:conductivity}
+\sigma = \lim_{t\to\infty}\frac1t\int_0^t
+\lim_{\eps\to0^+}\frac{j_\eps(t')}{\eps}\,dt'
+\end{align}
+has a finite value equal to $\frac1{16}e_\alpha\cdot e_\beta$ times
+the number of Dirac points in the Brillouin zone.
+
+
+Note that our results use an averaging in time, and we are unable to
+conclude anything about what would be the naive definition of the
+conductivity
+\begin{align}
+  \label{eq:conductivity_naive}
+  \lim_{t \to  \infty} \lim_{\eps \to 0^+} \frac{j_\eps(t)}{\eps}.
+\end{align}
+A form of averaging of time fluctuations is always necessary to infer
+zero-frequency behavior from step responses in non-dissipative
+systems, even in the linear case. The easiest way to see this is by
+the very simple model for the relationship between an input $I(t)$ and
+an output $O(t)$:
+  \begin{equation} \label{eq:toymodel}
+    i \dot O(t) = \omega O(t) + I(t).
+  \end{equation}
+  This simplified model describes a forced oscillator with eigenfrequency $\omega$, and arises from the linear response of the time-dependent Schr\"odinger equation of a two-level system. For a
+  constant input~$I_{0}$, there is a steady state solution
+  $O_0 = \widehat R_0 I_{0}$, where $\widehat R_0 = -\frac 1 \omega$ is
+  the zero-frequency transfer function of the system. However, since
+  this system is oscillatory, this steady state may never be reached:
+  if $I$ is brutally switched on at time $0$ with $I(t) = O(t) = 0,$
+  if $t \leq 0$, $I(t) = I_{0}$ if $t > 0$, then
+  $ O(t) = O_0(1- {\rm e}^{-i\omega t}) = \widehat{R}_0 I_{0} (1- {\rm
+    e}^{-i\omega t})$ and we cannot define $\widehat R_0$ as the limit
+  of $O(t)/I_{0}$ when $t$ goes to infinity. However, by averaging we
+  obtain
+  \begin{align*}
+     \lim_{t\to\infty}\frac 1 t  \int_{0}^{t} \frac{O(t')}{I_{0}} \, dt' = \widehat R_0.
+   \end{align*}
+
+In our results in the linear response regime, we consider the quantity
+\begin{align*}
+  j^{\rm LR}(t) = \lim_{\eps \to 0^+} \frac {j_\eps(t)}{\eps}.
+\end{align*}
+and then compute the conductivity in the limit $t \to \infty$. This
+order of limits is necessary to ensure that the electronic state never
+deviates significantly from its equilibrium. Considering the opposite
+limit, i.e. the infinite-time dynamics of
+$j_\eps(t)$ at $\eps$ fixed, is an extremely
+hard problem, as it is for any dynamics of non-dissipative systems.
+Our method of proof is based on the standard gauge change
+$\widetilde\psi(x,t)=e^{-i\eps t x_\beta}\psi(x,t)$
+that transforms the constant in time but non-spatially-periodic
+Hamiltonian $H_\eps$ into the time-dependent Hamiltonian
+$\widetilde H_\eps(t)=\frac12(p+\eps t e_\beta)^2+V$.
+This Hamiltonian is spatially periodic, and the study of its dynamics
+can be reduced via Bloch--Floquet theory to that of its fibers
+$H_{k+\eps t e_\beta}$ acting on periodic functions
+(Section~\ref{sec:preliminaries}). Fiber by fiber, this time-dependent
+Hamiltonian can then be treated using the tools of time-dependent
+perturbation theory (Section~\ref{sec:linear-response}). For each fixed $t$,
+we use linear response to expand $j_\eps(t)$ to first order in $\eps$
+(Proposition~\ref{prop:Dyson}).
+
+
+The structure of the paper is as follows. We describe our results in
+Section~\ref{sec:results}: we define the current in
+Proposition~\ref{prop:setting}, and state Theorem~\ref{theo:semi-metal}.
+We devote Section~\ref{sec:preliminaries} to preliminaries about the
+regularity and Bloch decomposition of the current.
+Section~\ref{sec:linear-response} states and proves the linear response result.
+Section~\ref{sec:semimet} is devoted to the proof of the conductivity
+formula. Finally two short Appendices are devoted to technical issues.
+
+\section{Main results: electrical current in periodic materials}\label{sec:results}
+
+
+\subsection{Notation}
+\label{sec:notation}
+We denote by $\cR^*$ the dual lattice
+\[
+\cR^*=\{K\in\R^2:K\cdot R\in2\pi\Z\hbox{ for all }R\in\cR\},
+\]
+by $\Omega$ a unit cell in physical space, and by $\cB$ a unit cell in
+reciprocal space, called the Brillouin zone. We write
+$\partial_\alpha=e_\alpha\cdot\nabla_k$ and
+$\partial_\beta=e_\beta\cdot\nabla_k$ for the two fixed directional derivatives.
+
+
+
+The {\it $\cR$-periodic Lebesgue and
+Sobolev spaces} are denoted by
+\begin{align*}
+L^p_{\rm per}&:=\left\{ u \in L^p_{\rm loc}(\R^2;\C) \; | \; u \mbox{ $\cR$-periodic} \right\}, \\
+H_{\rm per}^{s}&:=\left\{ u \in H_{\rm loc}^{s}(\R^2;\C) \; | \; u \mbox{ $\cR$-periodic} \right\}.
+\end{align*}
+The space of bounded linear operators on a Hilbert space~$\mathcal{H}$ is denoted by ${\mathcal L}(\mathcal{H})$, and the {Schatten class} of bounded operators~$A \in {\mathcal L}(\mathcal{H})$ such that $\Tr(|A|^p) < \infty$ by $\Schatten_{p}(\mathcal{H})$.
+For $R \in \cR$, we denote by~$\tau_R$ the {translation operator} formally defined by $\tau_R \phi = \phi(\cdot - R)$. Depending on the context, $\tau_R$ will be seen as a unitary operator on $L^2(\R^2;\C)$, or as a linear operator on some $\cR$-translation invariant subspace of ${\mathcal D}'(\R^2;\C)$.
+A bounded operator on $L^2(\R^2;\C)$ is called $\cR$-periodic if it commutes with~$\tau_R$ for all $R \in \cR$. An unbounded self-adjoint operator on $L^2(\R^2;\C)$ is called $\cR$-periodic if its resolvent is $\cR$-periodic. A bounded $\cR$-periodic operator $A \in {\mathcal L}(L^2(\R^2;\C))$ is called locally trace-class if $\chi A \chi \in \Schatten_{1}(L^2(\R^2;\C))$ for any compactly supported function $\chi \in L^\infty(\R^2;\C)$. For $p \ge 1$, we denote by $\Schatten_{p,\per}$ the space of $\cR$-periodic operators $A \in {\mathcal L}(L^2(\R^2;\C))$ such that $|A|^p$ is locally trace class. Any operator $A \in \Schatten_{1,\per}$ has a density $\rho_A \in L^1_{\rm per}$ characterized by
+$$
+\forall \chi \in C^\infty_{\rm c}(\R^2;\C), \quad \Tr(A\chi) = \int_{\R^2} \rho_A \chi.
+$$
+The trace per unit area of an operator $A \in \Schatten_{1,\per}$ is defined as
+$$
+\Trper(A) = \frac{1}{|\Omega|} \Tr_{L^2(\R^2;\C)}(\1_\Omega A \1_\Omega) =
+\fint_{\Omega}  \rho_A,
+$$
+where $\1_\Omega$ is the characteristic function of the unit cell
+$\Omega$, and $\fint_\Omega$ is a shorthand notation for $\frac 1
+{|\Omega|} \int_{\Omega}$. This formula is independent of the choice
+of the unit cell $\Omega$.
+
+
+\medskip
+
+Since we are dealing here with periodic materials, we will use the {Bloch transform} (also
+called Bloch-Floquet transform) \cite{ReedSimon4}. For $K \in \cR^\ast$, let $T_K$ be the unitary multiplication operator on $L^2_{\rm per}$ defined by
+$$
+\forall v \in L^2_{\rm per}, \quad (T_Kv)(x) = {\rm e}^{-iK\cdot x} v(x) \quad \mbox{ for a.a. } x \in \R^2,
+$$
+and
+\begin{align*}
+&L^2_{\rm qp}(L^2_{\rm per})\\
+&:=\left\{ \R^2 \ni k \mapsto u_k \in L^2_{\rm per} \; | \; \int_\cB \|u_k\|_{L^2_{\rm per}}^2 \, dk < \infty, \; u_{k+K}=T_K u_k \mbox{ for all } K \in \cR^\ast \mbox{ and a.a. } k \in \R^2 \right\},
+\end{align*}
+the Hilbert space of $\cR^\ast$-quasi-periodic $L^2_{\rm per}$-valued functions on $\R^2$ endowed with the inner product
+$$
+\langle u,v\rangle_{L^2_{\rm qp}(L^2_{\rm per})}= \fint_\cB \langle u_k,v_k\rangle_{L^2_{\rm per}} \, dk.
+$$
+Here and below, the subscript qp refers to the quasi-periodicity property.
+The Bloch transform then is the unitary map from $L^2(\R^2;\C)$ to $L^2_{\rm qp}(L^2_{\rm per})$ defined for $u \in C^\infty_{\rm c}(\R^2;\C)$ by
+\begin{equation}\label{eq:Bloch_transform}
+\forall k \in \R^2, \quad \forall x \in \R^2, \quad u_k(x) = \sum_{R \in \cR} u(x+R) \, {\rm e}^{-ik \cdot (x+R)}.
+\end{equation}
+Its inverse is given by
+\begin{equation}\label{eq:inverse_Bloch_transform}
+u(x) =\fint_\cB {\rm e}^{ik\cdot x} u_{k}(x) \, dk, \quad \mbox{for a.a. } x \in \R^2.
+\end{equation}
+Any $\cR$-periodic
+operator $A \in {\mathcal L}(L^2(\R^2;\C))$ is decomposed by the Bloch
+transform in the sense that there exists a function
+$k \mapsto A_k$ in $L^\infty_{\rm qp}({\mathcal L}(L^2_{\rm per}))$ such that for any
+$u \in L^2(\R^2;\C)$ and almost all $k \in \R^2$, $(Au)_k = A_ku_k$, and
+\begin{equation}\label{eq:qpBloch}
+A_{k+K} = T_K A_k T_K^\ast, \quad \mbox{ for all } K \in \cR^\ast \mbox{ and a.a. } k \in \R^2.
+\end{equation}
+The $A_{k}$'s are called the fibers of the operator $A$.
+If $A \in \Schatten_{1,\per}$, then the function $k \mapsto A_{k}$ is
+in $L^1_{\rm qp}(\Schatten_{1}(L^2_{\rm per}))$, the function $k
+\mapsto \Tr(A_k)$ is in $L^1_{\rm loc}(\R^2)$, $\cR^{*}$-periodic, and we have
+$$
+\Trper(A) =(2\pi)^{-2} \int_\cB \Tr(A_k) \, dk.
+$$
+The Bloch decomposition theorem can be extended to unbounded
+$\cR$-periodic self-adjoint operators using the resolvent \cite{ReedSimon4}.
+
+\medskip
+
+
+In the case of the periodic Hamiltonian operator $H$ given by \eqref{eq:periodic_Hamiltonian}, we have
+  \begin{align} \label{eq:Hk}
+    H_k = \frac 1 2 (-i\nabla+k)^2 + V.
+  \end{align}
+  For each $k \in \R^2$, $H_k$ is a bounded below self-adjoint operator on $L^{2}_{\per}$ with domain $H_{\per}^{2}$ and compact resolvent.
+  Let $(\lambda_{n,k})_{n \in \N^\ast}$ be the non-decreasing sequence of eigenvalues of $H_k$ counting multiplicities
+  $$
+  \lambda_{1,k}\leq \lambda_{2,k}\leq \lambda_{3,k} \leq \cdots , \quad \lim_{n \to \infty} \lambda_{n,k}=+\infty,
+  $$
+  and we use the convention $\lambda_{0,k} = -\infty$. We denote by
+  $(u_{n,k})_{n \in \N^\ast} \in (H_{\per}^{2})^{\mathbb N^{*}}$ an $L^2_{\rm per}$-orthonormal basis of associated eigenfunctions:
+  \begin{align*}
+    H_k u_{n,k} = \lambda_{n,k} u_{n,k}, \quad \langle u_{m,k},u_{n,k}\rangle_{L^2_{\rm per}}=\delta_{m,n}.
+  \end{align*}
+For $n\ge1$ and $k\in\R^2$, set
+\[
+P_{n,k}=\mathds 1(H_k\le\lambda_{n,k}),\qquad P_{0,k}=0.
+\]
+Whenever $\lambda_{n,k}<\lambda_{n+1,k}$, $P_{n,k}$ is the spectral
+projector associated with the lowest $n$ eigenvalues, counting multiplicities:
+\begin{equation}\label{eq:def_PNk}
+P_{n,k}=\sum_{m=1}^n|u_{m,k}\rangle\langle u_{m,k}|.
+\end{equation}
+
+  Since $H_k$ is quasi-periodic, so is $P_{n,k}$, and the eigenvalues $\lambda_{n,k}$ are
+  ${\mathcal R}^\ast$-periodic functions of $k$. By a min-max argument
+  (see e.g. \cite{ReedSimon4}), there exists
+  $\underline{C_1}, \overline{C_1} \in \R$, and
+  $\underline{C_2},\overline{C_2}>0$ such that
+  \begin{align}
+    \label{eq:asymptotics_eigenvalues}
+ \underline{C_1}+ \underline{C_2} n  \leq \lambda_{n,k} \leq  \overline{C_1}+ \overline{C_2} n.
+\end{align}
+The ground-state density matrix $\gamma_0$ has Bloch fibers
+\begin{equation}\label{eq:gk0}
+P_k=\mathds 1(H_k\le\mu_{\rm F}).
+\end{equation}
+Their ranks are uniformly bounded by the eigenvalue estimate above.
+The current operator $J$ is also $\cR$-periodic, with fibers
+\[
+J_k=(p+k)\cdot e_\alpha=\partial_\alpha H_k.
+\]
+
+
+Lastly, for each $q \in \R^2$, we denote by $G_q$ the unitary multiplication operator on $L^2(\R^2;\C)$ defined by
+\begin{equation}\label{eq:defGq}
+\forall u \in L^2(\R^2;\C), \quad (G_qu)(x) = {\rm e}^{iq\cdot x} u(x) \quad \mbox{ for a.a. } x \in \R^2.
+\end{equation}
+The operator $G_q$ is not $\cR$-periodic, except
+when $q \in \cR^\ast$ (in which case~$G_{q}$ is fibered, with
+$G_{q,k} = T_{-q}$ for all $k$). However, for any $\cR$-periodic
+operator $A \in {\mathcal L}(L^2(\R^2;\C))$ and any $q \in \R^2$,
+the operator $G_qAG_q^\ast$ is $\cR$-periodic and its Bloch
+decomposition is given by
+\begin{equation}\label{eq:fibers_eiqx}
+(G_qAG_q^\ast)_k = A_{k-q}, \quad \mbox{ for a.a. } k \in \R^2.
+\end{equation}
+
+
+\subsection{The Bloch theorem}
+Before attacking the well-posedness of the current
+$j_\eps(t) = \underline {\rm Tr}(J
+\gamma_\eps(t))$ for $\eps, t \neq 0$, we first study an easier special case.
+\begin{proposition}[Bloch theorem]\label{prop:null_current} The current satisfies
+\begin{align*}
+& j_0(t) = 0, \quad \forall t \ge 0 \;\;\; \mbox{(no current in the absence of external field)}, \\
+& j_\eps(0)=0, \quad \forall \eps \ge 0 \;\;\;  \mbox{(continuity of the current at $t=0$).}
+\end{align*}
+\end{proposition}
+\begin{proof}
+We have
+\[
+j_0(t)=j_\eps(0)=\frac1{4\pi^2}\int_\mathcal B
+\Tr(\partial_\alpha H_kP_k)\,dk.
+\]
+Since $V$ is real, $H_{-k}=\overline{H_k}$ and $P_{-k}=\overline{P_k}$,
+where the bar denotes complex conjugation. Moreover,
+$\partial_\alpha H_{-k}=-\overline{\partial_\alpha H_k}$.
+Thus the real-valued, $\cR^*$-periodic function
+$k\mapsto\Tr(\partial_\alpha H_kP_k)$ is odd, and its integral vanishes.
+\end{proof}
+
+
+\subsection{Definition of the current}
+For $\eps>0$, the operator $H_\eps=H-\eps x_\beta$ is not
+$\cR$-periodic, and we would naively expect that the density matrix
+$\gamma_\eps(t)$ is not either. Yet, this operator is in fact
+$\cR$-periodic. Physically, this is due to the fact that although
+$-\eps x\cdot e_\beta$ is not periodic, its negative gradient is constant,
+hence periodic. The proof relies on the standard gauge transform
+\begin{align}\label{eq:gauge_change}
+\widetilde\psi(x,t)=G_{-\eps t e_\beta}\psi(x,t)
+=e^{-i\eps t x_\beta}\psi(x,t),
+\end{align}
+where $G_q$ was defined in~\eqref{eq:defGq}, and the gauge-transformed operators
+\begin{align}\label{gauge_u}
+U_\eps(t,t')=G_{-\eps t e_\beta}
+ e^{-i(t-t')H_\eps}G_{-\eps t'e_\beta}^*,
+\end{align}
+and
+\begin{equation}\label{gauge}
+\widetilde\gamma_\eps(t)=G_{-\eps t e_\beta}\gamma_\eps(t)G_{-\eps t e_\beta}^*
+=U_\eps(t)\gamma_0U_\eps(t)^*,
+\end{equation}
+where $U_\eps(t)=U_\eps(t,0)$. Through this change of gauge, the dynamics
+induced by $H_\eps$ is equivalent to that induced by the time-dependent
+periodic Hamiltonian
+\begin{align}\label{widetilde_H}
+\widetilde H_\eps(t)=G_{-\eps t e_\beta}H_\eps G_{-\eps t e_\beta}^*
++\eps x_\beta=\frac12(p+\eps t e_\beta)^2+V.
+\end{align}
+Its Bloch fibers are
+\begin{align}\label{widetilde_H_k}
+\widetilde H_{\eps,k}(t)=\frac12(p+k+\eps t e_\beta)^2+V=H_{k+\eps t e_\beta}.
+\end{align}
+We sum up these arguments in the proposition below, together with elements
+that we shall use for defining the current.
+
+\begin{proposition}\label{prop:setting}
+Let $V\in H^1_{\rm per}(\Omega;\R)$.
+\begin{enumerate}
+\item For every $\eps\in\R$, $H_\eps$ is essentially self-adjoint on
+$C_c^\infty(\R^2;\C)$ and therefore generates a unitary group on $L^2(\R^2;\C)$.
+\item The operator $\widetilde H_\eps(t)$ is self-adjoint with domain
+$H^2(\R^2;\C)$ and $\cR$-periodic. The propagator $U_\eps(t,t')$ is
+$\cR$-periodic, with fibers $U_{\eps,k}(t,t')$ solving
+\begin{equation}\label{eq:propagator2}
+i\partial_tU_{\eps,k}(t,t')=H_{k+\eps te_\beta}U_{\eps,k}(t,t'),
+\qquad U_{\eps,k}(t',t')=\mathrm{Id}.
+\end{equation}
+\item For $t\ge0$, $J\gamma_\eps(t)\in\Schatten_{1,\rm per}$, and
+\begin{align}\label{eq:current-k}
+j_\eps(t)&=\frac1{4\pi^2}\int_\cB
+\Tr\left(\partial_\alpha H_{k+\eps te_\beta}\widetilde\gamma_{\eps,k}(t)\right)\,dk\\
+&=\frac1{4\pi^2}\int_\cB\Tr\left(\partial_\alpha H_{k+\eps te_\beta}
+U_{\eps,k}(t)P_kU_{\eps,k}(t)^*\right)\,dk.\nonumber
+\end{align}
+\end{enumerate}
+\end{proposition}
+The results of Proposition~\ref{prop:setting} are proved in
+Section~\ref{sec:preliminaries} for completeness. The situation can be
+summed up in the commutative diagrams of Figure~\ref{fig:diagram}.
+\begin{figure}[h!]
+\centering
+\begin{tikzcd}[column sep=large,row sep=large]
+\gamma_0\arrow{r}{e^{-itH_\eps}}\arrow{d}{\mathrm{Id}}&
+\gamma_\eps(t)\arrow{d}{G_{-\eps te_\beta}}\\
+\gamma_0\arrow{r}{U_\eps(t)}&\widetilde\gamma_\eps(t)
+\end{tikzcd}
+\medskip
+
+\begin{tikzcd}[column sep=large,row sep=large]
+\{P_k\}_k\arrow{r}{}\arrow{d}{\mathrm{Id}}&
+\{\gamma_{\eps,k}(t)\}_k\arrow{d}{k\mapsto k+\eps te_\beta}\\
+\{P_k\}_k\arrow{r}{\{U_{\eps,k}(t)\}_k}&
+\{\widetilde\gamma_{\eps,k}(t)\}_k
+\end{tikzcd}
+\caption{Relations between the density matrices and their Bloch fibers.
+An arrow labelled by a unitary $U$ denotes conjugation by $U$.
+The right lower arrow means
+$\widetilde\gamma_{\eps,k}(t)=\gamma_{\eps,k+\eps te_\beta}(t)$.}
+\label{fig:diagram}
+\end{figure}
+
+
+\subsection{Semimetals}\label{sec:semimetal-assumptions}
+The position of the Fermi level in the band diagram is key to determining
+the electronic properties of the medium. We assume the following.
+\begin{assumption}[semimetal]\label{ass:semimetal}
+There are $N,M\ge1$ and distinct points $k_1,\ldots,k_M$ modulo $\cR^*$ such that
+\[
+\lambda_{N,k}<\mu_{\rm F}<\lambda_{N+1,k}\qquad
+(k\notin\{k_1,\ldots,k_M\}\bmod\cR^*).
+\]
+For each $i=1,\ldots,M$, the two bands meet at an isolated conical crossing:
+\begin{align}
+\lambda_{N-1,k_i}<\lambda_{N,k_i}=\mu_{\rm F}
+=\lambda_{N+1,k_i}<\lambda_{N+2,k_i},\label{hyp:semimetals_1}\\
+\lambda_{N,k}=\mu_{\rm F}-v_i|k-k_i|+O(|k-k_i|^2),\label{hyp:semimetals_2}\\
+\lambda_{N+1,k}=\mu_{\rm F}+v_i|k-k_i|+O(|k-k_i|^2),\label{hyp:semimetals_3}
+\end{align}
+where $v_i>0$.
+\end{assumption}
+The Fermi surface is the finite set
+\begin{equation}\label{eq:Fermi_surface}
+\mathcal S=\{k_1,\ldots,k_M\}\bmod\cR^*.
+\end{equation}
+For $k\notin\mathcal S$, $P_k=P_{N,k}$ has rank $N$. Its values at the
+crossings do not affect any Brillouin-zone integral. Since $V$ is real,
+$H_{-k}=\overline{H_k}$: the system has time-reversal symmetry.
+The regularity assumption $V\in H^1_{\rm per}$ will be used to prove the
+Dyson expansion in Proposition~\ref{prop:Dyson}.
+
+
+\subsection{Conductivity}
+In the following, $O(f(\eps,t))$ denotes a quantity bounded by $Cf(\eps,t)$,
+where $C$ may depend on the potential, the Fermi level and the fixed
+directions, but not on $t$ or $\eps$.
+\begin{theorem}\label{theo:semi-metal}
+Under Assumption~\ref{ass:semimetal}, the iterated limit exists and
+\[
+\sigma=\lim_{T\to\infty}\frac1T\int_0^T
+\left(\lim_{\eps\to0^+}\frac{j_\eps(t)}{\eps}\right)\,dt
+=\frac{M}{16}\,e_\alpha\cdot e_\beta.
+\]
+\end{theorem}
+The value of the conductivity is universal: it does not depend on the
+characteristics of the Hamiltonian, but only on the number of conical
+crossings. The conductivity tensor is isotropic and each conical
+intersection contributes $1/16$.
+
+
+\section{Bloch decomposition and regularity of the current}\label{sec:preliminaries}
+In this section, we prove Proposition~\ref{prop:setting}. We first
+point out an alternative interpretation of the gauge change.
+Formally, $\gamma_\eps(t)$ satisfies
+\[
+i\partial_t\gamma_\eps=[H,\gamma_\eps]-\eps[x_\beta,\gamma_\eps].
+\]
+The commutator $[x_\beta,\gamma_\eps]$ is $\cR$-periodic, with fibers
+$i\partial_\beta\gamma_{\eps,k}$. Therefore the fibers satisfy
+\[
+i\partial_t\gamma_{\eps,k}+i\eps\partial_\beta\gamma_{\eps,k}
+=[H_k,\gamma_{\eps,k}]=L_{H_k}\gamma_{\eps,k},
+\]
+where $L_{H_k}=[H_k,\cdot]$ is the Liouvillian associated with $H_k$
+(see Section~\ref{sec:louvillian_intro}). The left-hand side is a linear
+advection equation, which suggests the method of characteristics: setting
+\begin{equation}\label{eq:change_of_variable}
+\widetilde\gamma_{\eps,k}(t)=\gamma_{\eps,k+\eps te_\beta}(t),
+\end{equation}
+we obtain
+\[
+i\partial_t\widetilde\gamma_{\eps,k}(t)
+=[H_{k+\eps te_\beta},\widetilde\gamma_{\eps,k}(t)].
+\]
+The gauge transform $G_{-\eps te_\beta}$, equivalent to the change of
+variable~\eqref{eq:change_of_variable}, makes these remarks rigorous.
+We now prove Proposition~\ref{prop:setting}.
+
+
+{\bf Proof of the first assertion.}
+The essential self-adjointness of $H_\eps$ follows from an extension of the Faris-Lavine theorem~\cite[Theorem~X.38]{ReedSimon2}.  Let $\mathcal{C} = C^\infty_{\rm c}(\R^2;\C)$ be the set of infinitely differentiable, compactly supported functions.
+\begin{lemma}[Faris-Lavine criterion]
+\label{FarisLavine}
+Let $V$ and $W$ be real-valued measurable functions on $\R^2$,
+with $W\in L^2_{\rm loc}(\R^2;\R)$. Suppose that
+\begin{enumerate}
+\item there exist $c>0$ and $f\ge0$ such that
+$W(x) \geq - c|x|^2 - f$, for a.a. $x\in \R^2$;
+\item
+$-\frac12\Delta + V + W +2c|x|^2$ is essentially self-adjoint on $\mathcal{C}$;
+\item for some $a<1$, $-\frac a2\Delta + V$ is bounded below on $\mathcal{C}$.
+\end{enumerate}
+Then $-\frac12\Delta + V + W$ is essentially self-adjoint on $\mathcal{C}$.
+\end{lemma}
+The proof of the above lemma is postponed until Appendix~\ref{sec:FL_lemma}.
+\medskip
+
+
+We apply Lemma~\ref{FarisLavine} with $W=-\eps x_\beta$ and $c=1$,
+noting that
+\[
+-\eps x\cdot e_\beta\ge-|x|^2-\frac{\eps^2|e_\beta|^2}{4}.
+\]
+In two dimensions, $V\in L^2_{\rm per}$ is infinitesimally bounded with
+respect to $-\Delta$, hence also with respect to the harmonic oscillator
+$-\frac12\Delta+2|x|^2$. The linear potential $-\eps x_\beta$ is likewise
+infinitesimally bounded with respect to this oscillator. The Kato--Rellich
+theorem therefore gives the essential self-adjointness of
+$-\frac12\Delta+V-\eps x_\beta+2|x|^2$ on the core $\mathcal C$.
+Also, $-\frac a2\Delta+V$ is bounded below for every $a>0$.
+Lemma~\ref{FarisLavine} gives that $H_\eps$ is essentially self-adjoint on
+$\mathcal C$, and its propagator is the unitary group
+$(e^{-itH_\eps})_{t\in\R}$.
+
+\medskip
+
+{\bf Proof of the second assertion.}
+The self-adjointness of
+\[
+\widetilde H_\eps(t)=\frac12(p+\eps te_\beta)^2+V
+\]
+on $H^2(\R^2;\C)$ follows from the Kato--Rellich theorem.
+To show the well-posedness of the dynamics, it suffices to study its
+fibers $H_{k+\eps te_\beta}$. We use the following lemma on time-dependent
+perturbations of the free-particle Hamiltonian on $L^2_{\rm per}$.
+
+
+\begin{lemma}
+\label{lemmaUnitaryPropagator} Let $H_{0}:=-\frac 12\Delta$ be the free-particle Hamiltonian on $L^2_{\rm per}$, and a $C^1$ map $H_{1}:[0,T]\to\mathcal L(H_{\rm per}^{2},L^2_{\rm per})$,
+taking its values in the set of $H_{0}$-bounded self-adjoint operators on $L^2_{\rm per}$ with relative bound lower than $1$, that is: there exist $0<a<1$ and $b>0$ such that
+\begin{align}
+  \label{eq:hyp_lap_bounded}
+\forall t \in [0,T],\quad \forall \phi \in H_{\rm per}^{2}, \quad \|H_{1}(t)\phi\|_{L^2_{\rm per}} \leq a \|H_{0} \phi \|_{L^2_{\rm per}} + b \|\phi\|_{L^2_{\rm per}}.
+\end{align}
+Then, for all $t \in [0,T]$, the operator defined by
+ $H(t) = H_{0} + H_{1}(t)$
+ is self-adjoint on $L^2_{\rm per}$ with domain $H_{\rm per}^{2}$, and there exists a unique unitary propagator $(\mathcal{U}(t))_{t\in[0,T]}$ on $L^2_{\rm per}$ such that for $t \in [0,T]$, and $\phi_0 \in H_{\rm per}^{2}$, $\phi: t \mapsto \mathcal{U}(t)\phi_0$ is in $C([0,T];H_{\rm per}^{2})\cap C^1([0,T];L^2_{\rm per})$, and solves the time-dependent Schr\"odinger equation
+\[i \partial_t \phi(t) = H(t) \phi (t), \qquad \phi(0) = \phi_0.\]
+\end{lemma}
+The proof of the above lemma is postponed to Appendix~\ref{sec:unitaryprop}.
+
+\medskip
+
+For $t\in[0,T]$, write $H_{k+\eps te_\beta}=H_0+H_1(t)$, with
+\[
+H_1(t)=(k+\eps te_\beta)\cdot p+\frac12|k+\eps te_\beta|^2+V.
+\]
+The Sobolev embedding $H^2_{\rm per}\subset L^\infty_{\rm per}$ and
+$V\in L^2_{\rm per}$ imply the conditions of
+Lemma~\ref{lemmaUnitaryPropagator}; the result follows.
+
+
+\noindent
+{\bf Proof of the third assertion.} We first compute the fibers of
+$\gamma_\eps(t)$. Using~\eqref{eq:fibers_eiqx}, we have
+\begin{align}
+\gamma_{\eps,k}(t)
+&=\left(G_{-\eps te_\beta}^*U_\eps(t)\gamma_0U_\eps(t)^*G_{-\eps te_\beta}\right)_k\\
+&=U_{\eps,k-\eps te_\beta}(t)P_{k-\eps te_\beta}
+ U_{\eps,k-\eps te_\beta}(t)^*\label{eq:gebkt}\\
+&=\sum_{n:\,\lambda_{n,k-\eps te_\beta}\le\mu_{\rm F}}
+ |U_{\eps,k-\eps te_\beta}(t)u_{n,k-\eps te_\beta}\rangle
+ \langle U_{\eps,k-\eps te_\beta}(t)u_{n,k-\eps te_\beta}|,\nonumber
+\end{align}
+for almost every $k$. Since $u_{n,k}\in H^2_{\rm per}$, we deduce that
+\[
+(J\gamma_\eps(t))_k=\partial_\alpha H_k\gamma_{\eps,k}(t)
+\]
+is trace-class and finite-rank, with a uniform bound for $k\in\cB$.
+The current is therefore well-defined. Since
+$k\mapsto\Tr(\partial_\alpha H_k\gamma_{\eps,k}(t))$ is $\cR^*$-periodic,
+\begin{align*}
+j_\eps(t)
+&=\frac1{4\pi^2}\int_\cB\Tr(\partial_\alpha H_k\gamma_{\eps,k}(t))\,dk\\
+&=\frac1{4\pi^2}\int_\cB\Tr(\partial_\alpha H_{k+\eps te_\beta}
+\gamma_{\eps,k+\eps te_\beta}(t))\,dk,
+\end{align*}
+which gives~\eqref{eq:current-k}.
+
+
+\section{Linear response}\label{sec:linear-response}
+
+\subsection{The Liouvillian and its partial inverse}
+\label{sec:louvillian_intro}
+In order to formulate and interpret our results, it is convenient to make use of the Liouvillian formalism. Recall that if $h$ is a bounded self-adjoint operator on a Hilbert
+space ${\mathcal H}_{\rm f}$, the Liouvillian $L_h$ associated with
+$h$ is the bounded linear operator on
+${\mathcal L}({\mathcal H}_{\rm f})$ (such a mathematical object is
+sometimes called a superoperator in the physics literature) defined by
+\begin{equation}\label{eq:Liouvillian}
+\forall A \in {\mathcal L}(\cH_{\rm f}), \quad L_h A = [h,A].
+\end{equation}
+Note that if $A$ is self-adjoint, then $L_{h} A$ is anti-self-adjoint
+($iL_hA=i[h,A]$ is self-adjoint). The restriction of $L_h$ to the
+space $\Schatten_2(\cH_{\rm f})$ of Hilbert-Schmidt operators on $\cH_{\rm f}$ is self-adjoint: for all $A,B \in \Schatten_2(\cH_{\rm f})$,
+\begin{equation}\label{eq:LhAB}
+(L_hA,B)_{\Schatten_2} = \Tr\left( [h,A]^\ast  B\right)  = \Tr\left(  (A^\ast h-hA^\ast) B\right) =  \Tr\left( A^\ast (hB-Bh) \right) = (A,L_hB)_{\Schatten_2}.
+\end{equation}
+The operator $L_h$ is to density matrices what the Hamiltonian $h$ is
+to pure states: it is the infinitesimal generator of the
+norm-continuous unitary group $({\mathfrak U}_h(t))_{t \in \R}$ on
+$\mathcal L(\mathcal H_{\rm f})$ defined by
+\begin{equation}\label{eq:Liouvillian2}
+\forall A \in \mathcal L(\cH_{\rm f}), \quad {\mathfrak U}_h(t) A = e^{-ith}Ae^{ith}.
+\end{equation}
+
+In the  case when $h$ is an unbounded self-adjoint operator,
+\eqref{eq:Liouvillian} does not make sense for all $A \in {\mathcal
+  L}(\cH_{\rm f})$, but it is still possible to define the Liouvillian
+$L_h$ as the self-adjoint generator of the strongly-continuous
+unitary group $({\mathfrak U}_h(t))_{t\in\R}$ on
+$\Schatten_2(\mathcal H_{\rm f})$ defined by~\eqref{eq:Liouvillian2}.
+The conjugation formula also acts on bounded operators in the strong
+operator topology.
+
+\medskip
+
+If $\mathcal H_{f}$ is of  finite-dimension~{$N_{f}$}, the action of $L_{h}$ is
+easily understood in an orthonormal eigenbasis $(e_{n})_{1\leq n\leq N_{f}}$ of $h$ with associated
+ eigenvalues {$\lambda_{1}\leq\cdots\leq \lambda_{N_f}$}. Then,
+\[
+L_{h} |e_{n}\rangle\langle e_{m}| = (\lambda_{n} - \lambda_{m})
+|e_{n}\rangle\langle e_{m}|.
+\]
+The operator $L_{h}$ is not invertible (for instance,
+$L_{h} |e_{n} \rangle\langle e_{n}| = 0$). However, it is invertible
+when restricted to the subspace of block off-diagonal matrices, i.e.
+matrices $A$ such that $A_{nn'} = A_{mm'} = 0$ for $n,n' \le N < m,m'$
+for a given $N$ such that $\lambda_{N+1} > \lambda_{N}$. Its partial
+inverse $L_{h,N}^{+}$ is given by
+\begin{align}\nonumber
+  L_{h,N}^{+}\Bigl( \sum_{1 \le n \le N,\, N<
+    m  \le N_f} A_{mn} |e_{m}\rangle\langle e_{n}| &+ A_{nm}
+  |e_{n}\rangle\langle e_{m}| \Bigr) \\
+    \label{eq:explicit_inverse_liouvillian}
+  &= \Bigl( \sum_{1 \le n \le N, \,N<
+    m \le N_f} \frac{A_{mn} |e_{m}\rangle\langle e_{n}| - A_{nm}
+  |e_{n}\rangle\langle e_{m}|}{\lambda_{m} - \lambda_{n}} \Bigr)
+\end{align}
+and $L_{h,N}^{+}$ is bounded in operator norm by $\frac{1}{\lambda_{N+1}-\lambda_{N}}$.
+
+\medskip
+
+More generally, if $h$ is an unbounded self-adjoint operator, let $I$ be a closed bounded interval of~$\R$,
+and assume that
+$$
+g := \min\left( 1,{\rm dist}\left(I,\sigma(h) \setminus (\sigma(h) \cap I) \right) \right) > 0.
+$$
+The associated spectral projector is
+\begin{equation}
+  P_{h,I}:={\mathds 1}_I(h)= \frac{1}{2\pi i} \oint_{\mathcal C} (z-h)^{-1} \, dz, \label{eq:int_rep}
+\end{equation}
+where $\mathcal C$ is a Cauchy contour in the complex plane such that
+$\sigma(h) \cap I$ is inside $\mathcal C$ and $\sigma(h) \setminus
+(\sigma(h) \cap I)$ is outside ${\mathcal C}$.
+Generalizing the terminology of the finite-dimensional case, we call
+off-diagonal operators (with respect to the splitting of
+$\mathcal H_{f}$ induced by $P_{h,I}$) the elements of the closed
+subspace
+$$
+\mathcal L^{\rm OD}_{h,I}:=\left\{ A \in \mathcal L(\cH_{\rm f}) \; | \; P_{h,I}AP_{h,I}=(1-P_{h,I})A(1-P_{h,I})=0 \right\}
+$$
+of $\mathcal L(\cH_{\rm f})$. This defines a
+$\Schatten_{2}$-orthogonal splitting of operators into their diagonal
+and off-diagonal parts. It is easily seen that
+$\mathcal L^{\rm OD}_{h,I}$ is $L_h$-stable, and that $L_h$ is
+invertible on $\mathcal L^{\rm OD}_{h,I}$ with a bounded inverse. We denote its partial
+inverse by $L_{h,I}^{+}$, extended to all of
+$\mathcal L(\cH_{f})$ by imposing that it vanishes on diagonal
+operators. We then have
+\begin{align*}
+  L_{h,I} L_{h,I}^{+} A = L_{h,I}^{+} L_{h,I} A = P_{h,I} A (1-P_{h,I}) + (1-P_{h,I}) A P_{h,I}
+\end{align*}
+for all $A \in \mathcal L(\cH_{f})$.
+
+It is easy to check that $L_{h,I}^{+}$ has an explicit contour integral
+representation:
+\begin{align}
+&L_{h,I}^{+} A=  \frac{1}{2\pi i} \oint_{\mathcal C} (z-h)^{-1} [P_{h,I},A]  (z-h)^{-1} \, dz,  \quad \forall A \in {\cal L}(\mathcal H_{\rm f}),  \label{eq:inv_Liouvillian}
+\end{align}
+where $\mathcal C$ is a contour as above. From~\eqref{eq:inv_Liouvillian}, we see that, when $P_{h,I}$ is of finite rank~$\cal N$, $L_{h,I}^+A$ is of rank of most $2{\cal N}$.
+
+
+\subsection{Spectral derivatives and propagation bounds}
+For a differentiable family $H(s)$ with a common domain and a locally
+isolated spectral group, the contour formula~\eqref{eq:int_rep} gives
+a differentiable spectral projector $P(s)$. Then
+\begin{align}\label{eq:Pprime}
+\dot P(s)=L_{H(s),I}^{+}[P(s),\dot H(s)].
+\end{align}
+
+  Differentiating $L_{H(s)} P(s) = 0$, we get
+\[
+  L_{H(s)} \dot{P}(s) = [P(s), \dot{H}(s)].
+\]
+Since both $[P(s), \dot{H}(s)]$ and $\dot{P}(s)$ are
+off-diagonal operators (the first by direct calculation, the second by
+differentiating the relationship $P(s)^{2} = P(s)$), we deduce~\eqref{eq:Pprime}.
+
+
+We also need propagation bounds that do not require a spectral gap.
+Let $(H(s))_{s\in[0,T)}$ be a family with common domain $D$, with
+$H(s)\ge1$, and set
+$\alpha_1=\sup_s\|\dot H(s)H(s)^{-1}\|<\infty$.
+Let $U^\eps(t,t')$ solve
+\begin{align}\label{eq:Uepstt'}
+i\partial_t U^\eps(t,t')=H(\eps t)U^\eps(t,t'),
+\qquad U^\eps(t',t')={\rm Id}.
+\end{align}
+Then
+\begin{align}
+\|H(\eps t)U^\eps(t,t')H(\eps t')^{-1}\|
+ &\le e^{\alpha_1\eps(t-t')},\label{eq:boundHUH-1}\\
+\|H(\eps t)^{1/2}U^\eps(t,t')H(\eps t')^{-1/2}\|
+ &\le e^{\alpha_1\eps(t-t')/2}.\label{eq:boundHUH-1/2}
+\end{align}
+\begin{proof}
+
+Let us now prove \eqref{eq:boundHUH-1}. Let $\psi \in D$. For all $t \in [t',\eps^{-1}T)$, we set $\psi_\eps  (t) = U^\eps(t,t') \psi$ and $\phi_\eps(t)=H(\eps t) \psi_\eps(t)$. We have
+$$
+i \frac{d\phi_\eps}{dt} (t) = i \frac{d}{dt} \left( H(\eps t) \psi_\eps(t)  \right) =  H(\eps t) \phi_\eps(t) + i \eps \dot H(\eps t) H(\eps t)^{-1} \phi_\eps(t),
+$$
+from which we obtain
+$$
+\phi_\eps(t) = U^\eps(t,t') H(\eps t') \psi + \eps \int_{t'}^t U^\eps(t,t'')\dot H(\eps t'') H(\eps t'')^{-1} \phi_\eps(t'') \, dt'',
+$$
+and finally
+$$
+\|\phi_\eps(t)\|_{\cH_{\rm f}} \le \|H(\eps t') \psi\|_{\cH_{\rm f}} + \alpha_1 \eps \int_{t'}^t \|\phi_\eps(t'')\|_{\cH_{\rm f}} \, dt''.
+$$
+By the Gr\"onwall lemma,
+$$
+\| H(\eps t) U^\eps(t,t') \psi \|_{\cH_{\rm f}} =  \|\phi_\eps(t)\|_{\cH_{\rm f}} \le \|H(\eps t') \psi\|_{\cH_{\rm f}} e^{\alpha_1 \eps (t-t')}.
+$$
+Applying this inequality to $\psi=H(\eps t')^{-1}\phi$ for all $\phi
+\in \cH_{\rm f}$ gives \eqref{eq:boundHUH-1}. We obtain \eqref{eq:boundHUH-1/2} by interpolation (see e.g. \cite[Section IX.4, Proposition 9]{ReedSimon2}).
+\end{proof}
+
+
+For $H(s)=H_{k+se_\beta}+\mu$ we choose
+$\mu=1-\min\sigma(H)$, so that $H(s)\ge1$, and write
+\[
+\eta=\sup_{k\in\R^2}
+\|\partial_\beta H_k(H_k+\mu)^{-1}\|<\infty.
+\]
+Since the occupied projectors have uniformly bounded rank and energy,
+the preceding estimate also gives
+\begin{equation}\label{eq:first_bound}
+\left|\Tr\left(\partial_\alpha H_{k+\eps te_\beta}
+U_{\eps,k}(t)P_k
+U_{\eps,k}(t)^*\right)\right|
+\le C e^{\eta\eps t}.
+\end{equation}
+For $k\notin\mathcal S$, we abbreviate $L_k=L_{H_k}$ and
+$L_k^+=L_{H_k,[\lambda_{1,k},\lambda_{N,k}]}^+$.
+
+\subsection{Linear response}
+\label{subsec:lr}
+
+We now aim at obtaining an expansion of the current to first order in
+$\eps$ for a given $t$, based on a Dyson expansion.
+This is a classical computation in response theory, sometimes known
+as the Kubo formula. This gives
+a remainder that does not depend on a gap, and will therefore be
+useful for the study of semimetals near Dirac points.
+\begin{proposition}\label{prop:Dyson}  Let $H$ be the periodic Hamiltonian defined in~\eqref{eq:periodic_Hamiltonian}. With $V\in H^1_{\rm per}$, there exists a constant $C \in \R_+$ such that for all $k \in \R^2$ such that $\lambda_{N+1,k}-\lambda_{N,k} > 0$, we have for all $\eps,t \in \R_+$,
+\begin{align}
+ {\rm Tr} \left(\partial_\alpha H_{k+\eps e_\beta t}U_{\eps,k}(t)\, P_k\, U_{\eps,k}(t)^*\right) =& \partial_\alpha {\rm Tr} \left(H_k P_k\right) + \eps t  {\partial_\alpha\partial_\beta} \left( \Tr (H_k P_k) \right) \nonumber  \\ & - i \eps \Tr(\partial_\alpha H_k (e^{-i t L_k} - 1) L_{k}^{+}  \partial_\beta P_k) + \rho^\eps_k(t),
+\end{align}
+with, when $\eps t \le 1$,
+\begin{equation}\label{eq:boundrho}
+|\rho^\eps_k(t)| \le C \eps^2 t^3 (1+ t^3 ).
+\end{equation}
+\end{proposition}
+
+\begin{proof}[Proof]  Let $k$ be such that $\lambda_{N+1,k}-\lambda_{N,k} > 0$. Since $k' \mapsto {\rm Tr} \left(H_{k'} P_{k'}\right)$ is real-analytic in a neighborhood of $k$, we have by Hellmann-Feynman theorem
+\begin{align*}
+ \partial_\alpha {\rm Tr} \left(H_k P_k\right) =  {\rm Tr} \left(\partial_\alpha H_k P_k\right) \quad \mbox{and} \quad
+  {\partial_\alpha\partial_\beta} {\rm Tr} \left(H_k P_k\right) =  {\rm Tr}
+\left(  {\partial_\alpha\partial_\beta}
+ H_k P_k\right) +  {\rm Tr} \left(\partial_\alpha H_k \partial_\beta P_k\right).
+\end{align*}
+We also have $\partial_\alpha H_{k+\eps e_\beta t} =
+\partial_\alpha H_k + \eps t e_\alpha \cdot e_\beta$. It follows that
+\begin{align*}
+\rho^\eps_k(t)=&{\rm Tr} \left(\partial_\alpha H_kU_{\eps,k}(t)\, P_k\, U_{\eps,k}(t)^*\right) - {\rm Tr} \left(\partial_\alpha H_k P_k\right) - \eps t  {\rm Tr} \left(\partial_\alpha H_k \partial_\beta P_k\right) \\ & + i \eps \Tr(\partial_\alpha H_k (e^{-i t L_k} - 1) L_{k}^{+}  \partial_\beta P_k).
+\end{align*}
+We now expand the first term in the right-hand side of this equation. We set $\mu := 1 - \min \sigma(H)$,
+$$H(s):=H_{k+se_\beta}+\mu,\quad A=\partial_\alpha H_k, \quad
+I_{0}=[0,\frac 12(\lambda_{N,k}+\lambda_{N+1,k})+\mu],\quad P(s)=\1_{I_{0}}(H(s)).$$
+It holds
+$$H(s)=h_0+sh_1+\frac{s^2 |e_\beta|^{2}}2$$
+ with $h_0=H_k+\mu$ and $h_1=\partial_\beta H_k$. The operators $h_0$, $h_1$ and $A$ are self-adjoint on $L^2_{\rm per}$ and we have $h_0 \ge 1$ and $h_1h_0^{-1/2}$ and $Ah_0^{-1/2}$ bounded.
+  For $s$ in a neighborhood of zero, $P(s)= P_{k+se_\beta}$, so that $\dot{P}(0)=\partial_\beta P_k$.  Let $(U^\eps(t,t'))_{t,t' \in \R}$ be the propagator associated with the family $(H(\eps t))_{t \in \R}$ and $U^\eps(t):=U^\eps(t,0)$.
+We have $U^\eps(t,t')=e^{-i\mu(t-t')} U_{\eps,k}(t,t')$ and $U^\eps(t)=e^{-i\mu t} U_{\eps,k}(t)$.
+With these notations, we have
+$$
+\rho^\eps_k(t)={\rm Tr} \left(A U^\eps(t)\, P(0) U^\eps(t)^*\right) - {\rm Tr} \left(AP(0) \right) - \eps t  {\rm Tr} \left(A  \dot{P}(0) \right) + i \eps \Tr(A (e^{-i t L_0} - 1) L_0^{+}  \dot{P}(0)),
+$$
+where $L_0=L_{h_0,I_{0}}$ and $L_0^+=L_{h_0,I_{0}}^+$, and we focus on expanding the operator $U^\eps(t)\, P(0) U^\eps(t)^*$ close to $t=0$.
+
+\begin{lemma}\label{lem:Dyson+}
+We have
+\begin{equation}\label{eq:Dyson+}
+U^\eps(t)\, P(0) U^\eps(t)^* = P(0) +  \eps \left(t \dot{P}(0) - i \left( e^{-itL_0}-1 \right) (L_0^+\dot{P}(0))\right) + \Pi^\eps_2(t)
+\end{equation}
+with $\rho^\eps_k(t) = {\rm Tr} \left(A \Pi_2^\eps(t) \right)$.
+Moreover, when $\eps t\le1$, we have the bound~\eqref{eq:boundrho}
+\begin{align*}
+  |\rho^\eps_k(t)| \le C \eps^2 t^3 (1+ t^3 ).
+\end{align*}
+
+\end{lemma}
+
+Lemma~\ref{lem:Dyson+} closes the proof of Proposition~\ref{prop:Dyson}.
+\end{proof}
+
+
+\begin{proof}[Proof of Lemma~\ref{lem:Dyson+}]
+We deduce from the Dyson expansion that
+$$
+U^\eps(t)=U^0(t)+V^\eps(t)+W^\eps(t),
+$$
+where $c=|e_\beta|^2$, {$U^0(t)=e^{-ith_0}$} and
+\begin{align*}
+V^\eps(t) &= - i\eps \int_0^t U^0(t-t')  t' h_1 U^0(t') \, dt', \\
+W^\eps(t) &=\eps^2\left(-i\frac{ct^3}{6}U^0(t)
+-\int_0^t\int_0^{t'}U^\eps(t,t')t'(h_1+\eps ct'/2)
+U^0(t'-t'')t''(h_1+\eps ct''/2)U^0(t'')\,dt''\,dt'\right).
+\end{align*}
+This induces $U^\eps(t)\, P(0) U^\eps(t)^* = P(0) + \Pi^\eps_1(t)+\Pi^\eps_2(t)$
+where
+\begin{align*}
+\Pi^\eps_1(t)&=V^\eps(t)P(0)U^0(t)^* + {\rm h.c.} = - i\eps \int_0^t t' U^0(t-t')  [h_1,P(0)] U^0(t-t')^* \, dt', \\
+\Pi^\eps_2(t)&=V^\eps(t)P(0)V^\eps(t)^* + \left( W^\eps(t) P(0) (U^0(t)+V^\eps(t))^* + {\rm h.c.} \right) + W^\eps(t)P(0)W^\eps(t)^*.
+\end{align*}
+
+\medskip
+
+We first analyze $\Pi^\eps_1(t)$ by computing
+\begin{align*}
+  U^0(t-t') [h_1,P(0)] U^0(t-t')^* &= - e^{-i(t-t') L_{0}} L_{0} \dot P(0)\\
+  &= i\frac{d}{dt'} e^{-i(t-t') L_{0}} \dot P(0)\\
+  &= \frac{d^{2}}{dt'^{2}} e^{-i(t-t') L_{0}} L_{0}^{+}\dot P(0),
+\end{align*}
+where we have used $\dot P(0) = L_{0}^{+}[P(0),h_{1}]$ and
+$\dot P(0) = L_{0}^{+} L_{0} \dot P(0)$. Using integration by parts, we obtain
+\begin{align*}
+  \Pi^{\eps}_{1}(t) = \eps \left(t \dot{P}(0) - i \left( e^{-itL_0}-1 \right) (L_0^+\dot{P}(0))\right)
+\end{align*}
+and \eqref{eq:Dyson+} follows.
+
+
+We now work on the bound~\eqref{eq:boundrho}. For that purpose, we introduce the following
+quantities, which are independent of $k, \eps$ and $t$:
+\begin{align*}
+\nu_0 &= \max_{|e|\le\max(|e_\alpha|,|e_\beta|)} \| (p\cdot e) (H+\mu)^{-1/2}\|_{\cL(L^2(\R^2;\C))}, \\
+\nu_1&=  \max_{|e|\le\max(|e_\alpha|,|e_\beta|)} \|(H+\mu)^{1/2} (p\cdot e) (H+\mu)^{-1} \|_{\cL(L^2(\R^2;\C))}, \\
+\nu_2&=  \max_{|e|\le\max(|e_\alpha|,|e_\beta|)} \|(H+\mu) (p\cdot e) (H+\mu)^{-2}\|_{\cL(L^2(\R^2;\C))},
+\\ \lambda&=\max_{k \in \R^2,|k-k'| \le |e_\beta|}\|(H_k+\mu)^{1/2}(H_{k'}+\mu)^{-1/2}\|_{\cL(L^2_{\rm per})}.
+\end{align*}
+Note that $V\in H^1_{\rm per}$ ensures that
+the quantities $\nu_0$, $\nu_1$ and $\lambda$ are finite. Writing $p_\beta=p\cdot e_\beta$, since
+$\|h_0h_1h_0^{-2}\| \le \|(H+\mu)p_\beta (H+\mu)^{-2}\|$ and
+\begin{align*}
+(H+\mu)p_\beta (H+\mu)^{-2}
+= p_\beta (H+\mu)^{-1}+i(e_\beta\cdot\nabla V)(H+\mu)^{-2}.
+\end{align*}
+we deduce from $V\in H_{\rm per}^{1}$ that $ \|(H+\mu)p_\beta (H+\mu)^{-2}\| < \infty$, hence that $\nu_2 < \infty$.
+
+\medskip
+
+We now aim at controlling $\rho_k(t)$ thanks to $\nu_0$, $\nu_1$, $\nu_2$ and $\lambda$.
+Using the relations
+$P(0)=P(0)^2$ and $P(0)=h_0^{-m} h_0^mP(0)$
+ with
+ $$\|h_0^mP(0)\|\le (\mu_{\rm F}+\mu)^m, \;\;\|h_0^{-1}\| \le \|h_0^{-1/2}\| \le 1\;\;
+ \mbox{ and}\;\; \mbox{Rank}(P(0))=N,$$
+  we deduce
+\begin{align*}
+|\rho^\eps_k(t)|& \le  N  \biggl( (\mu_{\rm F}+\mu)^2 \|AV^\eps(t)h_0^{-1}\| \, \|V^\eps(t)h_0^{-1}\| +  2 (\mu_{\rm F}+\mu)^3 \|AW^\eps(t)h_0^{-2}\| \,  (\|h_0^{-1}\|+\|V^\eps(t)h_0^{-1}\| )
+\\ & \qquad\qquad\qquad\qquad +  (\mu_{\rm F}+\mu)^3  \|AW^\eps(t)h_0^{-2}\| \|W^\eps(t)h_0^{-1}\|   \biggr) \\
+& \le  N \nu_0 \biggl(   (\mu_{\rm F}+\mu)^2  \|h_0^{1/2}V^\eps(t)h_0^{-1}\|^2 +  (\mu_{\rm F}+\mu)^3  \|h_0^{1/2}W^\eps(t)h_0^{-2}\|  (2+ 2\|V^\eps(t)h_0^{-1}\|\\
+&\qquad\qquad\qquad\qquad
++  \|W^\eps(t)h_0^{-1}\|) \bigg).
+\end{align*}
+Next, we get
+\begin{align*}
+\|V^\eps(t)h_0^{-1}\| &\le \frac{\eps t^2}2 \|h_1 h_0^{-1}\| \le \frac{\eps t^2}2 \nu_0, \;\;\;\;
+\|h_0^{1/2}V^\eps(t)h_0^{-1}\|  \le \frac{\eps t^2}2 \nu_1, \\
+\|W^\eps(t)h_0^{-1}\| & \le \eps^2 t^3 \bigg( \frac{c}6 + \nu_0\nu_1 \frac{t}8 + (\eps t) t c\left( \frac{\nu_0}{30}+\frac{\nu_1}{20} \right) + (\eps t)^2 t \frac{c^2}{72}   \bigg), \\
+\|h_0^{1/2}W^\eps(t)h_0^{-2}\| & \le \eps^2 t^3 \lambda e^{\eta \eps t/2} \bigg( \frac{c}6 + \nu_1\nu_2 \frac{t}8 + (\eps t) t c\left( \frac {\nu_1}{30}+\frac{\nu_2}{20} \right) + (\eps t)^2 t \frac{c^2}{72} \bigg).
+\end{align*}
+ It follows that there exists a constant $C$ depending only on $V$, $\mu_{\rm F}$ and the fixed directions, such that
+$$
+|\rho^\eps_k(t)| \le C \eps^2 t^3 \left( t+e^{\eta \eps t/2} \left(1 + t (1+(\eps t)^2) + (\eps t) t^2 (1+(\eps t)^3) + (\eps t)^4 t^3 (1+(\eps t)^2) \right)  \right),
+$$
+which leads to \eqref{eq:boundrho} when $\eps t \le 1$.
+\end{proof}
+
+
+\section{Proof of the conductivity formula}\label{sec:semimet}
+
+
+We prove here Theorem \ref{theo:semi-metal}. We decompose the integral
+defining~$j_\eps(t)$ into several parts depending
+whether one integrates far from the Dirac points or not.
+
+
+\medskip
+
+Throughout the proof we assume $\eps t\le1$, as is sufficient for the
+limit $\eps\to0^+$ at fixed $t$. We introduce a small parameter $\delta>0$ controlling the size of the
+neighborhood of the Dirac points, which is independent of
+$t,\eps$. We decompose $\mathcal B$ as the disjoint union
+\begin{align*}
+  \mathcal B=\mathcal B_{\rm out}^{\delta}\; \cup  \, (\cup_{i=1}^M \mathcal B_{i}^{\delta})
+\end{align*}
+with
+\[ \mathcal B_i^\delta= B(k_{i}, \delta),\]
+where $\delta > 0$ is small enough so that
+\[\mathcal B_{\rm out}^{\delta}\subset \{k\in\mathcal B,\;
+  \lambda_{N,k} \leq \mu_F-c\delta\}\]
+  for some constant $c>0$.
+Note that this decomposition is time-reversal
+symmetric in the sense that
+\[
+  -\mathcal B_{\rm out}^{\delta} = \mathcal
+B_{\rm out}^{\delta}\;\; \mbox{and}\;\;
+  - (\cup_{i=1}^M \mathcal B_{i}^{\delta}) = (\cup_{i=1}^M \mathcal B_{i}^{\delta}).
+\]
+We first let $\eps\to0^+$ with $t$ and $\delta$ fixed, then
+let $t\to\infty$, and finally let $\delta\to0$.
+Write $\mathcal B_{\rm in}^\delta=\cup_{i=1}^M\mathcal B_i^\delta$.
+On $\partial\mathcal B_i^\delta$, the vector surface element $ds$ points
+into the ball (out of $\mathcal B_{\rm out}^\delta$).
+
+\medskip
+
+In the following analysis, we first treat the regions
+$\mathcal B_{\rm out}^{\delta}$, where the linear response formula
+has a non-zero gap larger than a constant times $\delta$. In the sets
+$\mathcal B_{i}^{\delta}$, where the gap closes, we study the structure of the Taylor expansion of the Hamiltonian~$H_k$ close to the Dirac points  and construct  two-band reduced Hamiltonians~$H_{i,k}^{R}$. Then, we use the linear
+response Proposition \ref{prop:Dyson}, reducing successively from the
+Hamiltonian $H$ to the reduced Hamiltonian
+$H_{i,k}^{R}$,
+ and finally to the
+Dirac Hamiltonian
+\[H_k^{D} = v\begin{pmatrix} 0 & k_1-ik_2 \\ k_1+ik_2 & 0\end{pmatrix},\qquad v>0,\]
+for which we can explicitly
+compute the current. Adding the contributions, we will obtain
+\begin{align*}
+\sigma:=  \lim_{t \to \infty} \lim_{\eps \to 0^+}\frac 1 {\eps t} \int_{0}^{t} j_\eps(t') dt' = \frac {M} {16}e_\alpha \cdot e_\beta  + O(\delta)
+\end{align*}
+Finally, we will pass to the limit $\delta \to 0$.
+
+
+\subsection{Far from the Dirac points}
+We set
+\[
+j_\eps^{\rm out}(t):=
+\frac1{4\pi^2}\int_{\mathcal B_{\rm out}^\delta}
+\Tr\left(\partial_\alpha H_{k+\eps te_\beta}
+U_{\eps,k}(t)P_k
+U_{\eps,k}(t)^*\right)\,dk.
+\]
+Using the linear response Proposition~\ref{prop:Dyson}, we have
+\begin{align*}
+\Tr\left(\partial_\alpha H_{k+\eps te_\beta}
+U_{\eps,k}(t)P_k
+U_{\eps,k}(t)^*\right)
+={}&\partial_\alpha\Tr(H_kP_k)
++\eps t\partial_\alpha\partial_\beta\Tr(H_kP_k)\\
+&-i\eps\Tr\left(\partial_\alpha H_k(e^{-itL_k}-1)
+L_k^+\partial_\beta P_k\right)
++O(\eps^2t^3(1+t^3)).
+\end{align*}
+We treat each term separately.
+\begin{itemize}
+\item By time-reversal symmetry, the first term vanishes when
+integrated on $\mathcal B_{\rm out}^\delta$.
+\item Using Stokes formula for the second term, we get
+\begin{equation}\label{secondslot}
+\int_{\mathcal B_{\rm out}^\delta}
+\eps t\partial_\alpha\partial_\beta\Tr(H_kP_k)\,dk
+=\eps t\sum_{n\le N}\int_{\partial\mathcal B_{\rm in}^\delta}
+\partial_\alpha\lambda_{n,k}(ds\cdot e_\beta).
+\end{equation}
+\item For the third term, the constant part vanishes when integrated
+on the time-reversal symmetric set $\mathcal B_{\rm out}^\delta$.
+Indeed, complex conjugation relates $k$ and $-k$; the trace
+$\Tr(\partial_\alpha H_kL_k^+\partial_\beta P_k)$
+is purely imaginary and odd. For the oscillatory part we use
+\[
+\frac1t\int_0^t e^{-i\omega t'}\,dt'
+=\frac{e^{-i\omega t}-1}{-i\omega t}.
+\]
+In the eigenbasis representation~\eqref{eq:explicit_inverse_liouvillian},
+only pairs $n\le N<m$ occur. On
+$\mathcal B_{\rm out}^\delta$ their energy differences are bounded
+away from zero for each fixed $\delta$. The finite number of occupied
+states, the uniform bounds on $\partial_\alpha H_ku_{n,k}$ and
+$\partial_\beta H_ku_{n,k}$, and Cauchy--Schwarz give absolute
+summability of the products of matrix elements. Thus the time average
+of the oscillatory part is $O_\delta(\eps/t)$.
+\end{itemize}
+We are left with
+\begin{align}\label{Bout}
+\frac1t\int_0^t j_\eps^{\rm out}(t')\,dt'
+={}&\frac{\eps t}{8\pi^2}\sum_{n\le N}
+\int_{\partial\mathcal B_{\rm in}^\delta}
+\partial_\alpha\lambda_{n,k}(ds\cdot e_\beta)\\
+&+O_\delta(\eps/t)+O(\eps^2t^3(1+t^3)).\nonumber
+\end{align}
+Here $O_\delta$ permits a constant depending on the fixed $\delta$.
+
+
+\subsection{Close to Dirac points: reduction to the 2-band case}
+\label{sec:dirac_reduc}
+
+
+We set
+\begin{equation} \label{eq:jepsin}
+j_\eps^{\rm in}(t):= \frac1{4\pi^2} \sum_{i=1}^M \int_{\mathcal B^\delta_i}{\rm Tr} \left(\partial_\alpha H_{k+\eps te_\beta}U_{\eps,k}(t)\, P_k\, U_{\eps,k}(t)^*\right) \, dk.
+\end{equation}
+Using the linear response Proposition \ref{prop:Dyson}, we have for almost all  $k\in \mathcal B^\delta_{\rm in}$ and all $\eps,t \ge 0$ with $\eps t\le1$,
+\begin{align*}
+  {\rm Tr} \left(\partial_\alpha H_{k+\eps e_\beta t}U_{\eps,k}(t)\, P_k\, U_{\eps,k}(t)^*\right) =
+  &\partial_\alpha {\rm Tr} \left(H_k P_k\right)
+  + \eps t  { \partial_\alpha\partial_\beta} \left( \Tr (H_k P_k) \right)\\
+  & - i \eps \Tr(\partial_\alpha H_k (e^{-i t L_k} - 1) L_{k}^{+} \partial_\beta P_k) + O(\eps^{2} {t}^{3}(1+t^3)).
+\end{align*}
+Using~\eqref{eq:first_bound},  the equality
+${\rm Tr} \left(H_k P_k\right) = \sum_{n=1}^{N}
+\lambda_{n,k}$ and Assumption~\ref{ass:semimetal}, it is easily seen that the
+left-hand side, as well as the first and fourth terms of the right-hand side of that equation,
+are bounded uniformly in $k$ and therefore integrable on
+$\mathcal B_{i}^{\delta}$. Besides, for $k\in\mathcal B^\delta_{\rm in}$, the second term is bounded by a constant
+multiple of $(1/|k-k_{i}|)$ as $k \to k_{i}$, and is therefore
+integrable. It follows that the third term is also integrable on
+$\mathcal B_{i}^{\delta}$.
+
+\medskip
+
+We treat the three leading terms of the right-hand side in sequence.
+\begin{itemize}
+\item The first term vanishes when integrated on the time-reversal symmetric
+set $\cup_{i=1}^M \mathcal B_{i}^{\delta}$.
+\item For the second, using Stokes formula, we get
+\begin{align*}
+  \int_{\mathcal B_{i}^{\delta}} \eps t \partial_\alpha\partial_\beta \left( \Tr (H_k P_k) \right) dk = -\eps t \sum_{ n\leq N} \int_{\partial{\mathcal B}_{i}^{\delta}}\partial_\alpha \lambda_{n,k} (ds\cdot e_\beta),
+\end{align*}
+so that the corresponding term in \eqref{eq:jepsin} cancels the contribution~\eqref{Bout} from
+$\mathcal B_{\rm out}^{\delta}$.
+\item For the third term, we use
+  \begin{align*}
+  &  \Tr(\partial_\alpha H_k (e^{-i t L_{k}} - 1) L_{k}^{+} \partial_\beta P_k) = \Tr(\partial_\alpha H_k (e^{-i t L_{k}} - 1) (L_{k}^{+})^{2} [P_k, \partial_\beta H_k])\\
+    &= \sum_{n \le N}\sum_{m > N} (e^{-i t (\lambda_{n,k} - \lambda_{m,k})} - 1)\frac{\langle u_{n,k}, \partial_\beta H_k u_{m,k} \rangle\langle u_{m,k}, \partial_\alpha H_k u_{n,k}\rangle}{(\lambda_{m,k} - \lambda_{n,k})^{2}} - \rm c.c.
+  \end{align*}
+  with the sum converging from the asymptotics \eqref{eq:asymptotics_eigenvalues}.
+
+  When $n \neq N$ or $m \neq N+1$, the denominators
+  in that equation are bounded from below independently of $\delta$.
+  The constant term vanishes when integrated over the time-reversal
+  symmetric set $\cup_{i=1}^M \mathcal B_{i}^{\delta}$, and
+  the oscillatory term can be treated using the formula
+  \begin{align*}
+    \frac 1 t \int_{0}^{t} e^{-i\omega t'} dt' = \frac{e^{-i\omega t} - 1}{-i\omega t}
+  \end{align*}
+  with $\omega = \lambda_{n,k} - \lambda_{m,k}$ bounded away from zero
+  independently of $\delta$.
+\end{itemize}
+
+
+Putting all the results of the previous two sections together, we get that
+\begin{align*}
+  \frac 1 t \int_{0}^{t} j_\eps(t')dt' &=  \frac 1 t \int_{0}^{t} j_\eps^{\rm out}(t')dt' +  \frac 1 t \int_{0}^{t} j_\eps^{\rm in}(t')dt' \\
+  &=-\frac {i\eps }{4\pi^2 t}\Bigg(\sum_{i=1}^M \int_{0}^{t} dt'\int_{\mathcal B_{i}^{\delta}} (e^{-i t' (\lambda_{N,k} - \lambda_{N+1,k})} - 1)\\
+  &\qquad\qquad \qquad\qquad \times \frac{\langle u_{N,k}, \partial_\beta H_k u_{N+1,k} \rangle\langle u_{N+1,k},\partial_\alpha H_ku_{N,k}\rangle}{(\lambda_{N+1,k} - \lambda_{N,k})^{2}}dk - \mathrm{c.c.}\Bigg)\\
+  & \qquad\qquad  + O_\delta(\eps t^{-1})+O(\eps^2t^3(1+t^3)).
+\end{align*}
+At this stage of the proof, only two modes are involved in the formula giving the current, namely the two modes that cross at the Fermi level. Everything happens as for a two-band model that we now study. We write for short
+ \[
+ \frac 1 t \int_{0}^{t} \frac{j_\eps(t')}{\eps} \, dt' =  -\frac {i }{4\pi^2 t}\sum_{i=1}^M \int_{0}^{t}  I_i^R(\delta,t') \, dt'+O_\delta(t^{-1})+O(\eps t^3(1+t^3)),
+ \]
+with
+\[ I_i^R(\delta,t)=\int_{\mathcal B_{i}^{\delta}} (e^{-i t (\lambda_{N,k} - \lambda_{N+1,k})} - 1)\frac{\langle u_{N,k}, \partial_\beta H_k u_{N+1,k} \rangle\langle u_{N+1,k},\partial_\alpha H_ku_{N,k}\rangle}{(\lambda_{N+1,k} - \lambda_{N,k})^{2}} \, dk - {\rm c.c.}.
+\]
+
+
+\subsection{Close to the Dirac points: the local model}
+We now are interested in the computation of $I_i^R(\delta,t)$.
+In the following, we drop the index $i$ and assume without loss of
+generality that $k_i=0$. We write $v=v_i$.
+
+Hypothesis \eqref{hyp:semimetals_1} implies that, for $k$ small
+enough, the Bloch Hamiltonian $H_k$ has exactly two eigenvalues
+(counting multiplicities) close to $\mu_{\rm F}$. Consider an
+arbitrary orthonormal basis $(v_0,w_0)$ of
+$\Ran(P_{N+1,0} - P_{N-1,0})$. For all $k$ small
+enough, we can construct an orthonormal basis $(v_k,w_k)$ of
+$\Ran(P_{N+1,k} - P_{N-1,k})$ by L\"owdin
+orthonormalization of
+$((P_{N+1,k} - P_{N-1,k})v_0,(P_{N+1,k} -
+P_{N-1,k})w_0)$, and set
+$$
+H_k^{R} = [v_{k} | w_{k}]^{*}
+H_k[v_{k} | w_{k}] = \left( \begin{array}{cc} \langle v_k, H_k v_k \rangle &  \langle v_k, H_k w_k \rangle \\
+\langle w_k, H_k v_k \rangle &  \langle w_k, H_k w_k \rangle \end{array} \right).
+$$
+It follows that the reduced Hamiltonian
+\begin{align*}
+  H_k\Big|_{\Ran(P_{N+1,k} - P_{N-1,k}) }
+\end{align*}
+is equivalent through a unitary transform that depends analytically on $k$
+to the reduced $2 \times 2$ Hamiltonian
+\begin{align}
+  \label{eq:Hmatk}
+  H_k^{R} = \sum_{p=0}^3 b^{p}(k) \sigma_{p},
+\end{align}
+where $$\sigma_{0} = {\rm Id}_{\C^{2}}, \;\; \sigma_{1}=\left( \begin{array}{cc} 0 & 1 \\ 1 & 0 \end{array} \right), \;\;\sigma_{2}=\left( \begin{array}{cc} 0 & -i \\ i & 0 \end{array} \right), \;\;\sigma_{3}=\left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array} \right)$$
+are the Pauli matrices, and $(b^{p})_{p=0,1,2,3}$ are real-valued
+analytic functions of $k$ in a neighborhood of $0$.
+
+The matrix $H_k^{R}$ has eigenvalues
+$$  \lambda_{\pm}(k) = b^{0}(k) \pm \sqrt{\sum_{p=1}^{3}b^{p}(k)^{2}}.
+$$
+It follows that
+\begin{align*}
+  b^{0}(k) &= \mu_{F} + O(|k|^{2}), \quad
+  b^{p}(k) = v\langle q^{p}, k\rangle + O(|k|^{2}), \quad p=1,2,3,
+\end{align*}
+where the $(q^{p})_{p=1,2,3}$ are the rows of a $3 \times 2$
+matrix $Q$ with orthonormal columns, so that
+\begin{align}\label{def:HR}
+  H_k^{R} = \mu_{F} + v (Q k) \cdot \sigma + O(|k|^{2}).
+\end{align}
+Let $R \in {\rm SO}(3)$ be a rotation matrix that maps
+${\rm Ran}(Q)$ to ${\rm Span}(e^0_{1},e^0_{2})$, where $(e^0_{1},e^0_{2},e^0_{3})$ is the canonical basis of $\R^3$. Write $R$ as a rotation through an angle $\theta$ about a unit vector $n$.
+The unitary matrix
+\[
+U=\cos(\theta/2)\mathrm{Id}_2-i\sin(\theta/2)n\cdot\sigma
+\]
+satisfies, by the Pauli matrix identities,
+\begin{align*}
+  R_{pq} = \frac 1 2 \Tr(\sigma_{p} U \sigma_{q} U^{*}).
+\end{align*}
+It follows that
+\begin{align*}
+  \Tr(\sigma_{3} U H_k^{R} U^{*}) &= v\sum_{q=1}^{3} (Q k)_{q} \Tr(\sigma_{3} U \sigma_{q} U^{*}) + O(|k|^{2})\\
+  &= 2 v\langle e^0_3,RQk\rangle+O(|k|^2)\\
+  &= O(|k|^{2}).
+\end{align*}
+Up to a unitary transform, we can therefore assume $Q$ to be
+a $2\times 2$ matrix in~\eqref{def:HR}.
+
+\subsection{The two-band case: reduction to the Dirac Hamiltonian}
+\paragraph{Reduction to $H_k^{R}$}
+For $k \neq 0$, let $\lambda^{R}_{\pm,k}$ be the larger and smaller
+eigenvalues of $H_k^{R}$ respectively, and $u^{R}_{\pm,k}$
+associated orthonormal eigenvectors in $\C^2$. We have
+$\lambda_{-,k}^{R} = \lambda_{N,k}, \lambda_{+,k}^{R} =
+\lambda_{N+1,k}$, and
+\begin{align*}
+  [v_{k} | w_{k}]
+u_{+,k}^{R} = e^{i\theta_{+}(k)}u_{N + 1,k},\qquad[v_{k} | w_{k}]
+u_{-,k}^{R} = e^{i\theta_{-}(k)}u_{N,k}
+\end{align*}
+for some phases $\theta_{\pm}(k) \in \R$. We have
+\begin{align*}
+  \partial_\alpha H_k^{R}
+  &= [v_{k} | w_{k}]^{*}
+\partial_\alpha H_k[v_{k} | w_{k}]+ \partial_\alpha [v_{k} | w_{k}]^{*} [v_{k} | w_{k}] H_k^{R} + H_k^{R}  [v_{k} | w_{k}]^{*}\partial_\alpha [v_{k} | w_{k}]
+\\
+&= [v_{k} | w_{k}]^{*}
+\partial_\alpha H_k[v_{k} | w_{k}] + O(|k|)
+\end{align*}
+where we have used for the first line that $H_k$ commutes with
+$P_{N+1,k} - P_{N-1,k} = [v_{k} | w_{k}]
+[v_{k} | w_{k}]^{*}$, and for the second that $H_k^{R} = \mu_{F} {\rm Id}_{2} + O(|k|)$ and
+$\partial_\alpha \Big([v_{k} | w_{k}]^{*} [v_{k} | w_{k}] \Big) =
+\partial_\alpha {\rm Id}_{2} = 0$. We therefore obtain
+\begin{align*}
+  \langle u^{R}_{+,k},\partial_\alpha H_k^{R}u^{R}_{-,k}\rangle&= e^{-i(\theta_{+}(k)-\theta_{-}(k))}\langle u_{N+1,k},\partial_\alpha H_ku_{N,k}\rangle + O(|k|)\\
+  \langle u^{R}_{-,k}, \partial_\beta H_k^{R} u^{R}_{+,k} \rangle&= e^{+i(\theta_{+}(k)-\theta_{-}(k))}\langle u_{N,k},\partial_\beta H_ku_{N+1,k}\rangle + O(|k|).
+\end{align*}
+Since $(\lambda^{R}_{+,k} - \lambda^{R}_{-,k})$ is bounded from below
+by a constant multiple of $|k|$, it follows that
+\begin{equation}
+  \label{eq:IRdt}
+  I^{R}(\delta,t) = \int_{B(0,\delta)} (e^{-i t (\lambda^{R}_{-,k} - \lambda^{R}_{+,k})} - 1)\frac{\langle u^{R}_{-,k}, \partial_\beta H_k^{R} u^{R}_{+,k} \rangle\langle u^{R}_{+,k},\partial_\alpha H_k^{R}u^{R}_{-,k}\rangle}{(\lambda^{R}_{+,k} - \lambda^{R}_{-,k})^{2}}dk - {\rm c.c.} + O(\delta).
+\end{equation}
+
+\paragraph{Reduction to $H_k^{D}$}
+By standard results of perturbation theory \cite[Chapter XII]{ReedSimon4} applied to
+$H_k^{R} = \mu_{F} + v (Q k) \cdot \sigma + O(|k|^{2})
+$ with gap greater than a constant multiple of $|k|$,
+\[
+  \lambda^{R}_{\pm,k} = \mu_F+\lambda^{Q}_{\pm,k} +
+  O(|k|^{2})\;\;\mbox{and}\;\;   u^{R}_{\pm,k} = u^{Q}_{\pm,k} + O(|k|)
+\]
+where the superscript $Q$ refers to eigenvalues and appropriately
+chosen orthonormal eigenvectors of the Hamiltonian
+\begin{align*}
+  H_k^{Q} = v(Qk) \cdot \sigma.
+\end{align*}
+It follows that
+\begin{align*}
+  I^{R} (\delta,t) &= I^{Q}(\delta,t) + O(\delta),
+\end{align*}
+where $I^{Q}(\delta,t)$ is defined similarly to
+\eqref{eq:IRdt} as
+\begin{align*}
+  I^{Q}(\delta,t) = \int_{B(0,\delta)}  (e^{-i t (\lambda^{Q}_{-,k} - \lambda^{Q}_{+,k})} - 1)\frac{\langle u^{Q}_{-,k}, \partial_\beta H_k^{Q} u^{Q}_{+,k} \rangle\langle u^{Q}_{+,k},\partial_\alpha H_k^{Q}u^{Q}_{-,k}\rangle}{(\lambda^{Q}_{+,k} - \lambda^{Q}_{-,k})^{2}}dk - {\rm c.c.}.
+\end{align*}
+
+
+We perform the change of variable $k' = Qk$ (recall that $Q$ is orthogonal) and obtain
+\begin{align*}
+I^{Q}(\delta,t) = (Qe_\beta)^T I^{D}(\delta,t)(Qe_\alpha),
+\end{align*}
+where the coefficients $I_{ij}^{D}(\delta,t) $ of the $2\times 2$ matrix  $I^{D}(\delta,t) $ are given by
+\begin{align*}
+  I_{ij}^{D}(\delta,t) = \int_{B(0,\delta)} (e^{-i t (\lambda^{D}_{-,k} - \lambda^{D}_{+,k})} - 1)\frac{\langle u^{D}_{-,k}, \partial_{k_j} H_k^{D} u^{D}_{+,k} \rangle\langle u^{D}_{+,k},\partial_{k_i} H_k^{D}u^{D}_{-,k}\rangle}{(\lambda^{D}_{+,k} - \lambda^{D}_{-,k})^{2}}dk - {\rm c.c.}
+\end{align*}
+and the superscript $D$ refers to the Dirac Hamiltonian
+\begin{align*}
+  H_k^{D} = v k \cdot \sigma.
+\end{align*}
+
+
+\paragraph{The Dirac Hamiltonian $H_k^{D}$}
+We finish by computing $I^{D}(\delta,t)$ explicitly. Let
+$k=r(\cos \theta, \sin \theta)$. We have
+\[  \lambda^{D}_{\pm,k} = \pm v r,\;\;
+  u^{D}_{+,k} = \frac 1 {\sqrt 2}
+  \begin{pmatrix}
+    1\\e^{i\theta}
+  \end{pmatrix}\;\;\mbox{and}\;\;
+  u^{D}_{-,k}= \frac 1 {\sqrt 2}
+  \begin{pmatrix}
+    -e^{-i\theta}\\1
+  \end{pmatrix}.
+  \]
+By an explicit calculation, we obtain
+\begin{align*}
+  \int_{0}^{2\pi}(e^{-i t (\lambda^{D}_{-,k} - \lambda^{D}_{+,k})}-1)\frac{\langle u^{D}_{-,k}, \partial_{k_i} H_k^{D} u^{D}_{+,k} \rangle\langle u^{D}_{+,k},\partial_{k_j} H_k^{D} u^{D}_{-,k}\rangle}{(\lambda^{D}_{+,k} - \lambda^{D}_{-,k})^{2}} \, d\theta - \text{c.c.} &= i\pi \frac 1 {2r^{2}}\sin(2vrt) \delta_{ij}.
+\end{align*}
+It follows that
+\begin{align*}
+  \frac 1 t \int_{0}^{t}I_{ij}^{D}(\delta,t') \, dt' &= \frac {i\pi}{2}\delta_{ij} \frac1t\int_0^t \int_{0}^{\delta}\frac{\sin(2vrt')}{r} \, dr \, dt' = \frac{i\pi}{4 t}\delta_{ij}\int_{0}^{\delta}\frac{1 -  \cos(2vrt)}{vr^{2}} \, dr\\
+  &=\frac{i\pi}{4} \delta_{ij} \int_{0}^{\delta vt}\frac{1-\cos(2r')}{(r')^2} \, dr' = \frac{i \pi^{2}}{4}\delta_{ij} + O\left((\delta t)^{-1}\right).
+\end{align*}
+We finally get by summing all the estimates
+\begin{align*}
+  \frac 1{t} \int_{0}^{t}  \frac{j_\eps(t')}{\eps} \, dt' = \frac {M} {16} e_\alpha \cdot e_\beta   +O(\delta)+O_\delta(t^{-1})+O(\eps t^3(1+t^3)),
+\end{align*}
+hence the result, since $Q$ is orthogonal. The uniform remainder
+in Proposition~\ref{prop:Dyson} also permits the limit $\eps\to0^+$ to
+pass under each integral over a fixed bounded time interval.
+
+
+\appendix
+
+
+\section{Proofs of two technical lemmata}
+
+\subsection{Proof of Lemma~\ref{FarisLavine}}\label{sec:FL_lemma}
+\begin{proof}
+We use the proof of the Faris--Lavine theorem in \cite{ReedSimon2}. It consists in verifying the following two hypotheses of \cite[Theorem X.37]{ReedSimon2}.  Let $A = -\frac12\Delta + W+V$ and $K=A+2c|x|^2 +b$, where $b\in\R$ will be specified below:
+\begin{equation}
+\label{HypX37.1}\textit{there exists $h$, such that for any } \phi \in \mathcal{C},
+\quad \|A\phi\|\leq h \|K\phi\|;
+\end{equation}
+\begin{equation}
+\label{HypX37.2}
+\textit{for some $\ell$, for any }  \phi \in \mathcal{C},\quad |(A\phi,K\phi) - (K\phi,A\phi)| \leq \ell \|K^\frac{1}{2} \phi\|^2.
+\end{equation}
+
+By hypothesis \textit{3} in Lemma~\ref{FarisLavine} and the conditions on $W$, it is possible to choose $b$ so that $K\geq 1$.
+As quadratic forms on $\mathcal{C}$,
+\[K^2 = (A+b)^2 + 4c \sum_{j=1}^2 x_j (A+b+c|x|^2)x_j - 4c.  \]
+Hypotheses \textit{1} and \textit{3} guarantee that $A+b+c|x|^2$ is bounded below.
+Hence, increasing the value of~$b$ if necessary to make this operator positive, we have
+\[ \|(A+b)\phi\|^2_{L^2} \leq \|K\phi \|^2_{L^2} +8c\|\phi \|^2_{L^2},\]
+which proves (\ref{HypX37.1}).
+
+\medskip
+
+For (\ref{HypX37.2}), we observe that
+\[ \pm i [A,K] = \pm 2c(x \cdot (-i\nabla) + (-i\nabla)\cdot x) \leq 2 c \left((-\Delta) +|x|^2\right) \leq \ell K, \]
+where we have used
+\[(-\Delta) + |x|^2 \pm (x\cdot(-i\nabla) + (-i\nabla)\cdot x) = (-i\nabla  \pm x)^2 \geq 0 \]
+and
+\[ K = \left(\frac a 2 (-\Delta) + V\right) + (W+c|x|^2) + \frac{1-a}{2}(-\Delta) + c|x|^2 +b \geq e((-\Delta)+|x|^2), \]
+where $e = \min(c,\frac{1-a}{2})>0$ and where $b$ is chosen so that
+$$b- f +\min \,\sigma\left(\frac a 2 (-\Delta) + V\right) \geq 0.$$
+This proves  (\ref{HypX37.2}).
+Hence $A$ is essentially self-adjoint on $\mathcal{C}$.
+\end{proof}
+
+\subsection{Proof of Lemma~\ref{lemmaUnitaryPropagator}}\label{sec:unitaryprop}
+
+\begin{proof}By the Kato-Rellich theorem, for any $0\leq t\leq T$,
+  $H(t)$ is self-adjoint on $L^2_{\rm per}$ with domain~$H_{\rm per}^{2}$, and
+  bounded below. We will show that there exists $\mu>0$ so that the
+  graph norm of $(H(t)+\mu)$ for any $0\leq t \leq T$ is equivalent to
+  the $H_{\rm per}^{2}$-norm. Together with the assumed $C^1$ dependence
+  on $t$, this verifies the hypotheses of the propagator theorem
+  \cite[Theorem X.70]{ReedSimon2}, and proves
+  Lemma~\ref{lemmaUnitaryPropagator}.
+
+\medskip
+
+We have for any $\mu>0$, $0\leq t\leq T$ and $\phi \in H_{\rm per}^{2}$,
+\[ \|(H(t)+\mu)\phi \|_{L^{2}_{\rm per}} \leq (1+a)\|H_{0} \phi \|_{L^{2}_{\rm per}} + (b+\mu) \|\phi\|_{L^{2}_{\rm per}} \leq (1+a+b+\mu) \|\phi\|_{H_{\rm per}^{2}},\]
+and so the graph norm is controlled by the $H_{\rm per}^{2}$-norm.
+
+\medskip
+
+For the other inequality, we relate the resolvent of $H(t)$ to that of $H_{0}$ by a bounded operator, with bounded inverse.
+Notice that, for any $\mu>0$, since $H_{0}$ is positive,
+\[\forall \; 0\leq t\leq T, \quad (H(t)+\mu) = (1+H_{1}(t)(H_{0}+\mu)^{-1})(H_{0}+\mu).\]
+Furthermore,
+\[\forall \; 0\leq t\leq T, \quad\|H_{1}(t)(H_{0}+\mu)^{-1}\| \leq
+  a\|H_{0}(H_{0}+\mu)^{-1}\| +b\|(H_{0}+\mu)^{-1}\| \leq a
+  +\frac{b}{\mu}.\]
+and so, for $\mu > \frac{b}{1-a}$, the operator
+$1+ H_{1}(t)(H_{0}+\mu)^{-1}$ is bounded and invertible with bounded
+inverse in $L^{2}_{\rm per}$. Therefore $(H(t)+\mu)^{-1}$ is bounded
+from $L^2_{\rm per}$ to $H_{\rm per}^{2}$, which means there exists $C>0$ such
+that, for any $\phi \in H_{\rm per}^{2}$ and $0\leq t\leq T$,
+\[  \|\phi\|_{H_{\rm per}^{2}} = \|(H(t)+\mu)^{-1}(H(t)+\mu)\phi\|_{H_{\rm per}^{2}} \leq C\|(H(t)+\mu)\phi\|_{L^{2}_{\rm per}}, \]
+which concludes the proof.
+\end{proof}
+
+
+\bibliographystyle{plain}
+\bibliography{refs}
+\end{document}

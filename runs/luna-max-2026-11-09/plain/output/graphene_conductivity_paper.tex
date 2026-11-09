@@ -1,0 +1,384 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\RePart}{Re}
+\DeclareMathOperator{\ImPart}{Im}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\BZ}{\mathcal B}
+\newcommand{\Torus}{\mathbb T^*}
+\newcommand{\cH}{\mathcal H}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\e}{\mathrm e}
+\newcommand{\trv}{\operatorname{tr}_{\rm vol}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+
+\title{Residual conductivity at isolated conical crossings}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove a linear-response formula for a two-dimensional periodic Schr\"odinger
+operator whose Fermi level meets the spectrum only at finitely many isolated
+isotropic conical crossings. For a constant electric field switched on at time
+zero, the long-time Ces\`aro mean of the first-order current exists. Each
+crossing contributes one sixteenth of the identity conductivity tensor, in
+atomic units and per spinless cone. The proof reduces the response to a
+Bloch-fiber formula and evaluates its singular part using the two-band
+effective Hamiltonian.
+\end{abstract}
+
+\section{Setting and statement}
+
+Let $\mathcal R\subset\R^2$ be a lattice, let $\Omega$ be a fundamental cell,
+and let
+\[
+ \mathcal R^*=\{K\in\R^2:K\cdot R\in2\pi\mathbb Z\text{ for all }R\in\mathcal R\}
+\]
+be its reciprocal lattice. We identify the Brillouin zone $\BZ$ with a
+fundamental cell of $\R^2/\mathcal R^*$ and write $|\BZ|$ for its area. Thus
+\begin{equation}\label{eq:area}
+ |\Omega|\,|\BZ|=(2\pi)^2.
+\end{equation}
+Let $V\in H^1_{\rm per}(\Omega;\R)$ and consider
+\[
+ H=-\tfrac12\Delta+V\quad\text{on }L^2(\R^2),\qquad
+ H_k=\tfrac12(-i\nabla+k)^2+V\quad\text{on }\cH:=L^2_{\rm per}(\Omega).
+\]
+The fiber operators have compact resolvent and common domain
+$H^2_{\rm per}(\Omega)$. Their eigenvalues, counted with multiplicity, are
+denoted by $\lambda_1(k)\leq\lambda_2(k)\leq\cdots$; set
+$\lambda_0(k)=-\infty$.
+
+Indeed, in two dimensions $V\in H^1(\Omega)\subset L^2(\Omega)$ and
+$H^2(\Omega)\hookrightarrow L^\infty(\Omega)$, so multiplication by $V$ is
+infinitesimally $-\Delta$-bounded on the fiber domain. The Kato--Rellich
+theorem gives the stated self-adjoint realizations (Reed--Simon, Vol.~II,
+Theorem X.12). The field Hamiltonian is taken with the self-adjoint Stark
+closure specified in the hypotheses.
+
+Fix $\mu_{\rm F}\in\R$. We assume that there are an integer $N\geq1$ and
+distinct points $k_1,\ldots,k_M$ of $\R^2/\mathcal R^*$ such that
+\begin{align}
+ \lambda_N(k)&<\mu_{\rm F}<\lambda_{N+1}(k)
+ &&(k\notin\{k_1,\ldots,k_M\}),\label{eq:gap}\\
+ \lambda_{N-1}(k_i)&<\lambda_N(k_i)=\mu_{\rm F}
+ =\lambda_{N+1}(k_i)<\lambda_{N+2}(k_i),\label{eq:cross}
+\end{align}
+and, for each $i$, there is $v_i>0$ for which
+\begin{align}
+ \lambda_N(k_i+q)&=\mu_{\rm F}-v_i|q|+O(|q|^2),\notag\\
+ \lambda_{N+1}(k_i+q)&=\mu_{\rm F}+v_i|q|+O(|q|^2)
+ \qquad(q\longrightarrow0).\label{eq:cone}
+\end{align}
+All points and neighborhoods below are understood on the reciprocal torus.
+
+For real directions $e_\alpha,e_\beta\in\R^2$, let
+\[
+ J_\alpha=(-i\nabla)\cdot e_\alpha,\qquad X_\beta=x\cdot e_\beta,
+ \qquad \gamma_0=\ind_{(-\infty,\mu_{\rm F}]}(H).
+\]
+For $\varepsilon\geq0$, set $H_\varepsilon=H-\varepsilon X_\beta$ (the
+self-adjoint Stark realization) and
+\[
+ \gamma_\varepsilon(t)=\e^{-itH_\varepsilon}\gamma_0\e^{itH_\varepsilon}.
+\]
+The current density is the local trace per unit area
+\[
+ j_\varepsilon(t)=\frac1{|\Omega|}
+ \Tr\bigl(\ind_\Omega J_\alpha\gamma_\varepsilon(t)\ind_\Omega\bigr),
+\]
+understood by the usual local trace interpretation when the field is present.
+The Bloch evolution below shows that this quantity is well defined for finite
+$t$ and that the evolved density remains lattice-periodic.
+
+\begin{theorem}\label{thm:main}
+Under assumptions \eqref{eq:gap}--\eqref{eq:cone}, the iterated limit exists
+and is
+\begin{equation}\label{eq:main}
+ \lim_{T\to\infty}\frac1T\int_0^T
+ \left(\lim_{\varepsilon\downarrow0}
+       \frac{j_\varepsilon(t)}{\varepsilon}\right)dt
+ =\frac{M}{16}\,e_\alpha\cdot e_\beta.
+\end{equation}
+\end{theorem}
+
+The formula is for spinless particles. Each point $k_i$ is counted once, and
+the conductivity tensor contributed by a single crossing is $\frac1{16}I_2$.
+
+\section{Bloch-space linear response}
+
+We use the Bloch transform with fibers $\cH$. In this representation,
+$H$ is multiplication by $H_k$, $J_\alpha$ is multiplication by
+\[
+ J_\alpha(k)=\partial_{e_\alpha}H_k=(-i\nabla+k)\cdot e_\alpha,
+\]
+and $X_\beta$ acts as $i\partial_{e_\beta}$, with the standard reciprocal
+boundary identifications. Since $V$ is real, complex conjugation identifies
+the fibers at $k$ and $-k$.
+
+Write $P(k)=\ind_{(-\infty,\mu_{\rm F}]}(H_k)$. Away from the crossing points,
+$P(k)$ has rank $N$. Its value at the finite exceptional set is immaterial to
+all integrals. For a periodic operator with fiber representative $A(k)$,
+the trace-per-area normalization is
+\begin{equation}\label{eq:blochtrace}
+ \trv(A)=\frac{1}{|\Omega|\,|\BZ|}
+       \int_\BZ\Tr_{\cH}(A(k))\,dk
+       =\frac1{4\pi^2}\int_\BZ\Tr_{\cH}(A(k))\,dk.
+\end{equation}
+
+\begin{lemma}[Linear-response identity]\label{lem:response}
+For each finite $t\geq0$, the right derivative
+\[
+ r_{\alpha\beta}(t):=
+ \lim_{\varepsilon\downarrow0}\frac{j_\varepsilon(t)}{\varepsilon}
+\]
+exists. At points $k$ away from the crossings choose fiber eigenvectors
+$u_{n,k}$ and put, for $n\leq N<m$,
+\[
+ \Delta_{mn}(k)=\lambda_m(k)-\lambda_n(k),\qquad
+ A_{nm}^{\alpha\beta}(k)=
+ \langle u_{n,k},J_\alpha(k)u_{m,k}\rangle
+ \langle u_{m,k},J_\beta(k)u_{n,k}\rangle.
+\]
+Then, with the sum interpreted invariantly over occupied and unoccupied
+spectral subspaces if there are degeneracies away from the Fermi level,
+\begin{equation}\label{eq:response}
+ \begin{aligned}
+ r_{\alpha\beta}(t)=\frac1{4\pi^2}\int_\BZ
+ \sum_{n\leq N<m}\frac{2}{\Delta_{mn}(k)^2}
+ \Bigl[&\RePart A_{nm}^{\alpha\beta}(k)\sin(\Delta_{mn}(k)t)\\
+ &+\ImPart A_{nm}^{\alpha\beta}(k)
+       \bigl(1-\cos(\Delta_{mn}(k)t)\bigr)\Bigr]dk.
+ \end{aligned}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+In Bloch variables the Stark Hamiltonian is $H_k-i\varepsilon
+\partial_{e_\beta}$. Its Liouville equation for the fiber density is
+\[
+ \partial_t\Gamma_\varepsilon(t,k)
+ +\varepsilon\partial_{e_\beta}\Gamma_\varepsilon(t,k)
+ =-i[H_k,\Gamma_\varepsilon(t,k)],\qquad
+ \Gamma_\varepsilon(0,k)=P(k).
+\]
+The characteristic flow in $k$ shows that $\Gamma_\varepsilon(t,\cdot)$ is a
+rank-$N$ fiber density almost everywhere and hence remains periodic in real
+space. At $\varepsilon=0$, $\Gamma_0(t,k)=P(k)$. Differentiating the transport
+equation at zero gives, in the weak sense,
+\[
+ \partial_t D(t,k)+\partial_{e_\beta}P(k)=-i[H_k,D(t,k)],
+ \qquad D(0,k)=0,
+\]
+so
+\begin{equation}\label{eq:D}
+ D(t,k)=-\int_0^t \e^{-i(t-s)H_k}
+       (\partial_{e_\beta}P)(k)\e^{i(t-s)H_k}\,ds.
+\end{equation}
+The first derivative is legitimate after integration over $k$: near a cone
+$P(k_i+q)$ has derivative $O(|q|^{-1})$, which is locally integrable in two
+dimensions, and the finite-time oscillatory factor in \eqref{eq:D} gives the
+same local integrability for the current trace. Equivalently, one may first
+delete disks of radius $\delta$ around the crossings, differentiate on the
+remaining compact set, and then let $\delta\downarrow0$ using these bounds.
+Also, the equilibrium current vanishes: complex conjugation sends the fiber
+at $k$ to that at $-k$, preserves $P$, and changes the sign of $J_\alpha$.
+Thus $j_0(t)=0$, so the derivative just computed is the stated limit of
+$j_\varepsilon(t)/\varepsilon$.
+
+Differentiate $[H_k,P(k)]=0$. If $n$ is occupied, $m$ is unoccupied, and
+$\Delta=\lambda_m-\lambda_n$, then
+\[
+ (\partial_{e_\beta}P)_{mn}
+ =-\frac{(J_\beta)_{mn}}{\Delta},\qquad
+ (\partial_{e_\beta}P)_{nm}
+ =-\frac{(J_\beta)_{nm}}{\Delta}.
+\]
+There are no occupied-to-occupied or unoccupied-to-unoccupied terms in
+$\partial P$. Inserting these expressions into \eqref{eq:D}, taking the fiber
+trace with $J_\alpha(k)$, and integrating the two conjugate terms in $s$
+gives
+\[
+ \frac{2}{\Delta^2}\left(
+ \RePart A_{nm}^{\alpha\beta}\sin(\Delta t)
+ +\ImPart A_{nm}^{\alpha\beta}(1-\cos(\Delta t))\right).
+\]
+Finally use \eqref{eq:blochtrace}. The sums converge locally uniformly away
+from the crossing points; near each crossing only the touching pair is
+singular, and its finite-time contribution is integrable by the same
+$|q|^{-1}$ estimate. This proves the formula.
+\end{proof}
+
+\begin{lemma}[Time-reversal cancellation]\label{lem:TR}
+After integration over $\BZ$, the imaginary parts of the summands in
+\eqref{eq:response} vanish. Consequently,
+\begin{equation}\label{eq:meanresponse}
+ \frac1T\int_0^T r_{\alpha\beta}(t)\,dt
+ =\frac1{4\pi^2}\int_\BZ\sum_{n\leq N<m}
+ 2\RePart A_{nm}^{\alpha\beta}(k)
+ \frac{1-\cos(\Delta_{mn}(k)T)}{\Delta_{mn}(k)^3T}\,dk.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal C$ be complex conjugation on periodic cell functions. It obeys
+$\mathcal C H_k\mathcal C=H_{-k}$ and
+$\mathcal C J_\alpha(k)\mathcal C=-J_\alpha(-k)$. Pairing eigenvectors at
+$k$ and $-k$ therefore gives
+\[
+ \Delta_{mn}(-k)=\Delta_{mn}(k),\qquad
+ A_{nm}^{\alpha\beta}(-k)
+ =\overline{A_{nm}^{\alpha\beta}(k)}.
+\]
+Thus the imaginary part is odd on the reciprocal torus and integrates to zero.
+The average of $\sin(\Delta t)$ over $[0,T]$ is
+$(1-\cos(\Delta T))/(\Delta T)$, which yields
+\eqref{eq:meanresponse}.
+\end{proof}
+
+\section{The contribution of a conical crossing}
+
+\begin{lemma}[Local two-band structure]\label{lem:local}
+Fix one crossing $k_i$ with slope $v=v_i$. In a sufficiently small disk
+$q\mapsto k_i+q$, the touching pair admits a smooth two-dimensional spectral
+subspace and a smooth orthonormal frame in which its effective Hamiltonian is
+\[
+ H_{\rm eff}(q)=\mu_{\rm F}I+v\,Uq\cdot\boldsymbol\sigma+O(|q|^2),
+ \qquad U^TU=I_2.
+\]
+Here $U:\R^2\to\R^3$ is a linear isometric embedding and
+$\boldsymbol\sigma=(\sigma_1,\sigma_2,\sigma_3)$ are the Pauli matrices.
+For the touching valence/conduction pair, uniformly in $\widehat q=q/|q|$,
+\begin{align}
+ \Delta(q)&=2v|q|+O(|q|^2),\label{eq:gaplocal}\\
+ \RePart A^{\alpha\beta}(q)
+ &=v^2\left(e_\alpha\cdot e_\beta
+ -(e_\alpha\cdot\widehat q)(e_\beta\cdot\widehat q)\right)
+ +O(|q|).\label{eq:Alocal}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+The pair is isolated from the other fiber eigenvalues at $q=0$ by
+\eqref{eq:cross}. The fibers form an analytic family in $k$: multiplication
+by $V\in H^1(\Omega)\subset L^2(\Omega)$ is infinitesimally
+$-\Delta$-bounded on $H^2(\Omega)$, and the $k$-dependence is polynomial.
+The standard analytic spectral-projection and finite-dimensional reduction
+theorems therefore give a smooth rank-two spectral projection and frame
+(Reed--Simon, Vol.~IV, Theorems XII.5 and XII.12--13).
+
+Write the linear Taylor part of the reduced Hermitian matrix as
+$a(q)I+d(q)\cdot\boldsymbol\sigma$, with $a$ scalar and $d$ a linear map
+from $\R^2$ to $\R^3$. Its eigenvalues are
+$\mu_{\rm F}+a(q)\pm|d(q)|+O(|q|^2)$. The two expansions
+\eqref{eq:cone} imply $a(q)=0$ and $|d(q)|=v|q|$. Hence
+$d(q)=vUq$ for an isometric embedding $U$, proving the stated form.
+
+Let $n(q)=U\widehat q+O(|q|)$ be the unit vector in the direction of the
+traceless part. Differentiating the effective Hamiltonian in a direction
+$e\in\R^2$ gives $v(Ue)\cdot\boldsymbol\sigma+O(|q|)$. The derivative of
+the moving frame contributes only a commutator with
+$H_{\rm eff}-\mu_{\rm F}I=O(|q|)$, so the physical current matrix has the
+same leading term. For Pauli matrices and eigenvectors of
+$n\cdot\boldsymbol\sigma$, the real part of the product of two interband
+matrix elements of $a\cdot\boldsymbol\sigma$ and $b\cdot\boldsymbol\sigma$
+is $a\cdot b-(a\cdot n)(b\cdot n)$. Taking
+$a=vUe_\alpha$, $b=vUe_\beta$ proves \eqref{eq:Alocal}; the eigenvalue gap
+gives \eqref{eq:gaplocal}.
+\end{proof}
+
+\section{Proof of the theorem}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+By Lemma~\ref{lem:response}, the inner limit in \eqref{eq:main} is
+$r_{\alpha\beta}(t)$. By Lemma~\ref{lem:TR}, its time average is
+\eqref{eq:meanresponse}. We evaluate that expression as $T\to\infty$.
+
+Choose disjoint disks around the $k_i$. On the complement, the direct gap
+$\lambda_{N+1}-\lambda_N$ has a positive lower bound. All occupied/unoccupied
+energy differences are then bounded below. The same is true in each disk for
+every transition except the touching pair, by \eqref{eq:cross}. These regular
+terms vanish as $T\to\infty$: indeed
+\[
+ \left|\frac{1-\cos(\Delta T)}{\Delta^3T}\right|
+ \leq\frac{2}{\Delta^3T},
+\]
+and the current matrix-element sums are integrable uniformly in $k$. To see
+the latter, on any region with $\Delta\geq g>0$, Cauchy--Schwarz gives, for
+each occupied eigenvector,
+\[
+ \sum_{m>N}\frac{|(J_\alpha)_{nm}(J_\beta)_{mn}|}{\Delta_{mn}^3}
+ \leq g^{-3}\|J_\alpha(k)u_{n,k}\|\,
+                    \|J_\beta(k)u_{n,k}\|.
+\]
+There are only $N$ occupied bands and these norms are uniformly bounded on
+the compact Brillouin torus. The same estimate applies to the nonsingular
+transitions within the cone disks.
+
+It remains to compute the touching pair near one $k_i$. Put
+$q=r\widehat q$ and abbreviate
+\[
+ S(\widehat q)=e_\alpha\cdot e_\beta
+ -(e_\alpha\cdot\widehat q)(e_\beta\cdot\widehat q).
+\]
+By Lemma~\ref{lem:local}, its unnormalized contribution to the integral in
+\eqref{eq:meanresponse} is
+\[
+ I_i(T)=\int_{|q|<\delta}
+ 2\RePart A^{\alpha\beta}(q)
+ \frac{1-\cos(\Delta(q)T)}{\Delta(q)^3T}\,d^2q.
+\]
+For fixed $\widehat q$, the function $r\mapsto s=\Delta(r\widehat q)$ is
+strictly increasing for small $r$, with
+$s=2vr+O(r^2)$ and $r\,dr=(s/(4v^2)+O(s^2))\,ds$. Combining this with
+\eqref{eq:Alocal}, the radial integrand becomes
+\[
+ \left(\frac{S(\widehat q)}{2s^2T}+O\!\left(\frac1{sT}\right)\right)
+ (1-\cos(sT))\,ds.
+\]
+The integrated error is $O((\log T)/T)$, uniformly in angle. The elementary
+Dirichlet integral
+\[
+ \lim_{T\to\infty}\frac1T\int_0^{s_0}
+       \frac{1-\cos(sT)}{s^2}\,ds=\frac\pi2
+\]
+therefore gives
+\begin{align*}
+ \lim_{T\to\infty} I_i(T)
+ &=\frac\pi4\int_0^{2\pi}S(\widehat q(\theta))\,d\theta\\
+ &=\frac\pi4\left(2\pi\,e_\alpha\cdot e_\beta
+       -\pi\,e_\alpha\cdot e_\beta\right)
+ =\frac{\pi^2}{4}\,e_\alpha\cdot e_\beta.
+\end{align*}
+Here we used
+$\int_0^{2\pi}\widehat q_a(\theta)\widehat q_b(\theta)\,d\theta
+=\pi\delta_{ab}$. Finally, the trace-per-area factor in
+\eqref{eq:meanresponse} is $1/(4\pi^2)$ by \eqref{eq:area}. Thus one cone
+contributes $(e_\alpha\cdot e_\beta)/16$. Summing the $M$ disjoint cone
+contributions proves \eqref{eq:main}.
+\end{proof}
+
+\begin{thebibliography}{9}
+\bibitem{RS2}
+M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics, Vol.~II:
+Fourier Analysis, Self-Adjointness}, Academic Press, New York, 1975.
+
+\bibitem{RS4}
+M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics, Vol.~IV:
+Analysis of Operators}, Academic Press, New York, 1978.
+\end{thebibliography}
+
+\end{document}

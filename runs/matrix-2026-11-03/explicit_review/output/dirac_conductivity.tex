@@ -1,0 +1,811 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{needspace}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={Residual conductivity at isotropic Dirac points},
+  pdfsubject={A proof of the time-averaged linear-response conductivity}}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{section}{Section}{Sections}
+\crefname{appendix}{Appendix}{Appendices}
+
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\ind}{\mathbf 1}
+\newcommand{\trv}{\underline{\operatorname{Tr}}}
+\newcommand{\per}{\mathrm{per}}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\setlength{\emergencystretch}{2em}
+
+\title{Residual conductivity at isotropic Dirac points}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+
+\begin{abstract}
+We consider spinless, noninteracting electrons in a two-dimensional real
+periodic potential. Suppose that the Fermi energy meets the Bloch spectrum
+only at finitely many isolated, isotropic, two-band conical crossings.
+We prove that the current induced by a suddenly applied constant electric
+field, first linearized in the field strength and then averaged in time,
+has conductivity $M/16$ times the identity, where $M$ is the number of
+inequivalent crossings. The proof explains the independence from the cone
+velocities: time averaging selects momenta on the inverse-time scale
+around each crossing, and a change of scale cancels the velocity factors. The conical
+energy assumptions also determine the required current matrix elements;
+no separate assumption on Bloch eigenvectors is needed.
+\end{abstract}
+
+\section{The result and its mechanism}\label{sec:result}
+
+When the Fermi energy meets the bands only at isolated Dirac points,
+there is no Fermi curve. A weak electric field can still drive transitions
+between occupied and empty states across arbitrarily small gaps.
+We prove that these transitions leave a finite contribution after a long
+time average, and identify why each isotropic cone contributes the same
+constant.
+
+We work in atomic units and count one spin species. The theorem is
+conditional on the band structure specified below; deriving that
+structure from a particular lattice potential is a separate question.
+
+\subsection{Model and assumptions}
+
+Let $\mathcal R\subset\R^2$ be a lattice with fundamental cell $\Omega$.
+Its reciprocal lattice is
+\[
+ \mathcal R^*=
+ \{K\in\R^2:K\cdot R\in2\pi\mathbb Z\text{ for all }R\in\mathcal R\},
+\]
+and $\mathcal B$ denotes a fundamental cell of $\mathcal R^*$.
+Our convention gives $|\Omega|\,|\mathcal B|=(2\pi)^2$.
+For a real potential $V\in H^1_{\per}(\Omega)$, set
+\begin{equation}\label{eq:H}
+ H=-\tfrac12\Delta+V,
+ \qquad
+ H_k=\tfrac12(-i\nabla+k)^2+V.
+\end{equation}
+The fibers act on $L^2_{\per}(\Omega;\C)$, have common domain
+$H^2_{\per}(\Omega;\C)$, and have compact resolvent. Write their eigenvalues,
+with multiplicities, as
+\[
+ \lambda_1(k)\le\lambda_2(k)\le\cdots,
+ \qquad \lambda_0(k)=-\infty.
+\]
+All statements about momentum are understood modulo $\mathcal R^*$.
+
+Fix a Fermi energy $\mu_{\mathrm F}$ and an integer $N\ge1$. Assume that
+there are finitely many distinct momenta $k_1,\ldots,k_M$ such that
+\begin{equation}\label{eq:gap}
+ \lambda_N(k)<\mu_{\mathrm F}<\lambda_{N+1}(k)
+ \qquad\text{if } k\notin\{k_1,\ldots,k_M\},
+\end{equation}
+and that, at every $k_i$,
+\begin{equation}\label{eq:isolated}
+ \lambda_{N-1}(k_i)<\lambda_N(k_i)=\mu_{\mathrm F}
+ =\lambda_{N+1}(k_i)<\lambda_{N+2}(k_i).
+\end{equation}
+Finally, for some $v_i>0$,
+\begin{equation}\label{eq:cones}
+ \begin{aligned}
+  \lambda_N(k_i+q)&=\mu_{\mathrm F}-v_i|q|+O(|q|^2),\\
+  \lambda_{N+1}(k_i+q)&=\mu_{\mathrm F}+v_i|q|+O(|q|^2)
+ \end{aligned}
+ \qquad(q\longrightarrow0).
+\end{equation}
+The slopes may differ between crossings. The remainders are uniform in
+the direction of $q$.
+
+Let $e_\beta,e_\alpha\in\R^2$ be the field and current directions;
+they need not be unit vectors. For $\varepsilon\ge0$, define
+\begin{equation}\label{eq:dynamics}
+ \begin{gathered}
+ \gamma_0=\ind_{(-\infty,\mu_{\mathrm F}]}(H),\qquad
+ H_\varepsilon=H-\varepsilon x\cdot e_\beta,\qquad
+ J_\alpha=(-i\nabla)\cdot e_\alpha,\\
+ \gamma_\varepsilon(t)
+   =e^{-itH_\varepsilon}\gamma_0e^{itH_\varepsilon},\qquad
+ j_\varepsilon(t)=\trv\bigl(J_\alpha\gamma_\varepsilon(t)\bigr).
+ \end{gathered}
+\end{equation}
+Here $H_\varepsilon$ is the self-adjoint closure of its restriction to
+$C_c^\infty(\R^2)$, and the trace per unit area is
+\begin{equation}\label{eq:trace-def}
+ \trv(A)=\frac1{|\Omega|}\Tr(\ind_\Omega A\ind_\Omega)
+\end{equation}
+for periodic, locally trace-class operators. The operator facts needed to
+make these definitions valid at the stated regularity are proved in
+\cref{app:operators}.
+
+\begin{theorem}\label{thm:main}
+Under \eqref{eq:gap}--\eqref{eq:cones}, the current in
+\eqref{eq:dynamics} is well defined for every $\varepsilon\ge0$ and
+$t\ge0$. For every fixed $t$, the linear response
+\[
+ \sigma_{\alpha\beta}(t)
+   =\lim_{\varepsilon\downarrow0}\frac{j_\varepsilon(t)}{\varepsilon}
+\]
+exists, and
+\begin{equation}\label{eq:main}
+ \boxed{\displaystyle
+ \lim_{T\to\infty}\frac1T\int_0^T\sigma_{\alpha\beta}(t)\,dt
+     =\frac{M}{16}\,e_\alpha\cdot e_\beta.}
+\end{equation}
+\end{theorem}
+
+The order of operations is part of the statement: the field strength
+tends to zero at each fixed time, and the resulting response is then
+averaged over time. For two inequivalent cones the spinless coefficient
+is $1/8$. No spin multiplicity is included in $M$.
+
+\subsection{How the proof works}
+
+The field transports crystal momentum. Thus the response is governed by
+the change of the occupied subspace as $k$ moves. Although that subspace
+has no continuous extension through a cone, its first derivative grows
+only as $|k-k_i|^{-1}$, which is integrable in two dimensions. This is
+enough to differentiate the exact evolution and obtain an interband
+formula for the current.
+
+For an occupied--empty pair with energy gap $\Delta>0$, time averaging
+replaces the oscillatory response factor by
+\begin{equation}\label{eq:kernel-preview}
+ \frac1T\int_0^T\frac{\sin(t\Delta)}{\Delta^2}\,dt
+   =\frac{1-\cos(T\Delta)}{T\Delta^3}.
+\end{equation}
+Every uniformly positive gap therefore contributes $O(T^{-1})$.
+Near the $i$th cone, $\Delta\sim2v_i|q|$, so the surviving scale is
+$|q|\sim(v_iT)^{-1}$. The current matrix elements supply a factor $v_i^2$,
+which cancels in this rescaling. What remains is an angular average and
+the scalar integral $\int_0^\infty(1-\cos s)s^{-2}\,ds=\pi/2$.
+
+We first derive the response in \cref{sec:response}, then determine the
+current matrix elements from the conical energies in \cref{sec:geometry}.
+The rescaling that completes the proof occupies \cref{sec:limit}.
+
+\section{The occupied subspace and the finite-time response}
+\label{sec:response}
+
+Use the fiber velocities and directional derivatives
+\[
+ v_\nu(k)=(-i\nabla+k)\cdot e_\nu,
+ \qquad \partial_\nu=e_\nu\cdot\nabla_k
+ \quad(\nu=\alpha,\beta),
+\]
+and write
+\begin{equation}\label{eq:P}
+ P(k)=\ind_{(-\infty,\mu_{\mathrm F}]}(H_k).
+\end{equation}
+Away from the crossings, $P(k)$ has rank $N$. Its value at a crossing
+does not affect a direct integral or any formula below, so we may change
+it there when discussing regularity. We use $\tr$ for the fiber trace
+and $\|\cdot\|_1$ for the trace norm.
+
+With the Bloch normalization used here, a bounded periodic operator with
+integrable fiber trace norm satisfies
+\begin{equation}\label{eq:trace-bloch}
+ \trv(A)=\frac1{(2\pi)^2}\int_{\mathcal B}\tr A(k)\,dk.
+\end{equation}
+The normalization and local trace-class assertion are justified in
+\cref{app:trace}.
+
+\subsection{Regularity across a crossing}
+
+Individual eigenvectors need not be smooth at a degeneracy. An isolated
+group of bands, however, has an analytic spectral projection. Near a
+Dirac point we therefore keep the two touching bands together, choose a
+smooth frame for their joint subspace, and only then distinguish the
+occupied line from the empty one.
+
+\begin{proposition}[Regularity of the occupied subspace]
+\label[proposition]{prop:regularity}
+The projection $P$ is real analytic away from the crossings and has
+integrable weak first derivatives with values in the trace class.
+Near each $k_i$,
+\begin{equation}\label{eq:P-derivative-bound}
+ \|P(k)\|_1\le C,\qquad
+ \|\partial_\beta P(k)\|_1\le \frac{C}{|k-k_i|}.
+\end{equation}
+There is no point-supported term in its weak derivative. Moreover the
+same estimates hold with $P$ and $\partial_\beta P$ replaced by
+$\Lambda P\Lambda$ and $\Lambda(\partial_\beta P)\Lambda$, where
+$\Lambda=1-\Delta_{\per}$.
+\end{proposition}
+
+\begin{proof}
+The fibers form an analytic family on the common domain $H^2_{\per}$.
+The Riesz projection of any isolated finite group of bands is consequently
+analytic, including as a map into this domain; see
+\cite[\S XII.2]{RS4} and \cref{app:setup}.
+This proves the assertion away from the crossings.
+
+Fix one crossing, write $k=k_i+q$, and let $Q(q)$ be the analytic
+rank-two projection onto its touching pair. If $W_0:\C^2\to\Ran Q(0)$
+is an isometry, then, for $q$ small,
+\begin{equation}\label{eq:frame}
+ W(q)=Q(q)W_0\bigl(W_0^*Q(q)W_0\bigr)^{-1/2}
+\end{equation}
+is an analytic orthonormal frame. Its columns and their derivatives lie
+in $H^2_{\per}$. The reduced matrix
+\begin{equation}\label{eq:h}
+ h(q)=W(q)^*H_{k_i+q}W(q)
+\end{equation}
+has precisely the two touching eigenvalues. Write
+\[
+ h(q)=a(q)I+b(q),\qquad \tr b(q)=0,\qquad
+ d(q)=\sqrt{\tfrac12\tr b(q)^2}.
+\]
+Its eigenvalues are $a(q)\pm d(q)$, and \eqref{eq:cones} gives
+$d(q)=v_i|q|+O(|q|^2)$. Since $b(0)=0$ and $b$ is analytic,
+the lower eigenprojection satisfies
+\begin{equation}\label{eq:lower-projection}
+ \pi_-(q)=\tfrac12\bigl(I-b(q)/d(q)\bigr),\qquad
+ \|\partial_\beta\pi_-(q)\|\le C|q|^{-1}.
+\end{equation}
+
+Let $P_<(q)$ be the analytic projection onto the $N-1$ bands below
+the pair (zero if $N=1$). Then
+\begin{equation}\label{eq:P-local}
+ P(k_i+q)=P_<(q)+W(q)\pi_-(q)W(q)^*.
+\end{equation}
+This proves \eqref{eq:P-derivative-bound}. It also proves the weighted
+version: after multiplication by $\Lambda$ on both sides, the formula
+is a finite sum of rank-one operators formed from $H^2$ vectors and
+their derivatives.
+
+Finally, integrate by parts with disks of radius $\rho$ around the
+crossings removed. The boundary terms are $O(\rho)$, because $P$ is
+bounded in the stated norms and each boundary circle has length
+$O(\rho)$. They tend to zero, while $|q|^{-1}$ is locally integrable.
+Thus the derivatives computed off the crossings are the full weak
+derivatives. Reciprocal-cell boundaries are identified by the usual
+Bloch unitaries, so this is also a global statement on the momentum
+torus.
+\end{proof}
+
+The Sobolev weights in the proposition serve one purpose: they allow
+the derivative of the density to be paired with the unbounded velocity.
+The geometric content is the integrable $1/|q|$ singularity.
+
+\subsection{Transport by the electric field}
+
+In Bloch coordinates, multiplication by $x\cdot e_\beta$ becomes
+$i\partial_\beta$. The evolved density remains periodic in space;
+its Bloch fibers $\rho_\varepsilon(t,k)$ satisfy
+\begin{equation}\label{eq:transport}
+ \partial_t\rho_\varepsilon+\varepsilon\partial_\beta\rho_\varepsilon
+    =-i[H_k,\rho_\varepsilon],
+ \qquad \rho_\varepsilon(0,k)=P(k).
+\end{equation}
+The transport term expresses the acceleration of crystal momentum.
+To differentiate in $\varepsilon$, it is useful to integrate this
+equation exactly before taking a limit.
+
+For fixed final time $t$ and momentum $k$, the characteristic is
+\[
+ k_s=k-\varepsilon(t-s)e_\beta,\qquad 0\le s\le t.
+\]
+Let $U_\varepsilon(t,s;k)$ be the propagator from $s$ to $t$ for
+$r\mapsto H_{k_r}$. Transport from the initial momentum gives
+\begin{equation}\label{eq:rho-characteristic}
+ \rho_\varepsilon(t,k)=U_\varepsilon(t,0;k)
+ P(k-\varepsilon t e_\beta)U_\varepsilon(t,0;k)^*.
+\end{equation}
+For almost every final $k$, this segment avoids the crossings, so $P$
+is smooth along it. Since $[H_{k_s},P(k_s)]=0$, differentiation gives
+\[
+ \frac{d}{ds}\bigl(U_\varepsilon(t,s;k)P(k_s)U_\varepsilon(t,s;k)^*\bigr)
+ =\varepsilon U_\varepsilon(t,s;k)(\partial_\beta P)(k_s)
+ U_\varepsilon(t,s;k)^*.
+\]
+Integrating from $0$ to $t$ yields the exact identity
+\begin{equation}\label{eq:source}
+ \frac{\rho_\varepsilon(t,k)-P(k)}{\varepsilon}
+ =-\int_0^t U_\varepsilon(t,s;k)
+ (\partial_\beta P)(k_s)
+ U_\varepsilon(t,s;k)^*\,ds.
+\end{equation}
+This formula separates the two effects of the field: it shifts the
+occupied subspace and propagates the resulting change.
+
+As $\varepsilon\downarrow0$, the propagator tends to
+$e^{-i(t-s)H_k}$, and translations of $\partial_\beta P$ converge in
+$L^1$. The weighted version of \cref{prop:regularity} justifies this
+limit inside the current trace; the estimates are given in
+\cref{app:limit}. Consequently
+\begin{equation}\label{eq:response-projection}
+ \sigma_{\alpha\beta}(t)
+ =-\frac1{(2\pi)^2}\int_{\mathcal B}\int_0^t
+ \tr\!\left(v_\alpha(k)e^{-isH_k}
+       (\partial_\beta P)(k)e^{isH_k}\right)\,ds\,dk.
+\end{equation}
+Here the equilibrium current is zero. Indeed, complex conjugation
+maps $H_k$ to $H_{-k}$ and $v_\alpha(k)$ to $-v_\alpha(-k)$,
+so $\tr(v_\alpha P)$ is odd on the momentum torus.
+
+\subsection{The interband formula}
+
+Choose a measurable orthonormal eigenbasis $u_n(k)$ of $H_k$.
+No smooth choice is needed.
+For an occupied index $m\le N$ and an empty index $n>N$, set
+\begin{equation}\label{eq:gap-weight}
+ \begin{aligned}
+  \Delta_{mn}(k)&=\lambda_n(k)-\lambda_m(k),\\
+  Z_{mn}(k)&=\langle u_m,v_\alpha(k)u_n\rangle
+             \langle u_n,v_\beta(k)u_m\rangle.
+ \end{aligned}
+\end{equation}
+Inner products are conjugate linear in the first argument. The sums
+below are independent of the basis choices within degenerate eigenspaces.
+
+\begin{proposition}[Finite-time response]\label[proposition]{prop:response}
+For every fixed $t\ge0$, the response exists and is
+\begin{equation}\label{eq:response-bands}
+ \sigma_{\alpha\beta}(t)
+ =\frac{2}{(2\pi)^2}\int_{\mathcal B}
+   \sum_{m\le N<n}\Rea Z_{mn}(k)
+     \frac{\sin(t\Delta_{mn}(k))}{\Delta_{mn}(k)^2}\,dk.
+\end{equation}
+The sum and integral are absolutely convergent.
+\end{proposition}
+
+\begin{proof}
+Differentiating $P^2=P$ shows that $\partial_\beta P$ has only
+occupied--empty and empty--occupied blocks. Differentiating
+$[H_k,P(k)]=0$ then gives
+\begin{equation}\label{eq:P-matrix}
+ \langle u_n,(\partial_\beta P)u_m\rangle
+     =-\frac{\langle u_n,v_\beta u_m\rangle}{\Delta_{mn}}
+ \qquad(m\le N<n).
+\end{equation}
+Thus the variation of a completely filled band subspace creates
+interband coherence. There is no diagonal block or additional
+derivative concentrated at a crossing.
+
+Substitution in \eqref{eq:response-projection}, followed by the
+elementary time integral, gives
+\begin{equation}\label{eq:response-complex}
+ \frac{2}{(2\pi)^2}\int_{\mathcal B}\sum_{m\le N<n}
+ \frac{\Rea Z_{mn}\sin(t\Delta_{mn})
+       +\Ima Z_{mn}\bigl(1-\cos(t\Delta_{mn})\bigr)}
+      {\Delta_{mn}^2}\,dk.
+\end{equation}
+Time reversal leaves the gaps unchanged and conjugates $Z_{mn}$:
+both velocity matrix elements change sign, so their product acquires
+no sign. The imaginary part in \eqref{eq:response-complex} therefore
+integrates to zero, proving \eqref{eq:response-bands}. Periodicity
+makes this argument independent of the chosen reciprocal cell.
+
+For convergence, completeness and Cauchy--Schwarz give the uniform
+bound
+\begin{equation}\label{eq:sum-bound}
+ \begin{aligned}
+ \sum_{m\le N<n}|Z_{mn}(k)|
+ &\le
+ \left(\sum_{m\le N}\|v_\alpha(k)u_m\|^2\right)^{1/2}
+ \left(\sum_{m\le N}\|v_\beta(k)u_m\|^2\right)^{1/2}
+ \le C.
+ \end{aligned}
+\end{equation}
+The last inequality follows from the uniform graph bound for the
+occupied states. In particular, no estimate on high-energy
+eigenfunctions is required. The smallest occupied--empty gap is
+bounded below away from the crossings and is comparable to
+$|k-k_i|$ near $k_i$. Since
+\[
+ \frac{|\sin(t\Delta)|}{\Delta^2}\le\frac{t}{\Delta},
+ \qquad
+ \frac{1-\cos(t\Delta)}{\Delta^2}\le\frac{t^2}{2},
+\]
+both \eqref{eq:response-complex} and \eqref{eq:response-bands} are
+absolutely integrable. These bounds also justify the preceding
+spectral expansion and time integration.
+\end{proof}
+
+\section{What an isotropic cone determines}\label{sec:geometry}
+
+The response formula involves eigenvectors through $Z_{mn}$, whereas
+our assumptions specify only eigenvalues. The missing link is the
+geometry of a two-dimensional eigenspace: isotropic conical eigenvalues
+force its linearized Hamiltonian to satisfy a rigid matrix identity.
+
+Fix one crossing $k_i$, put $v=v_i$, and use the frame $W(q)$ and
+reduced matrix $h(q)$ from \eqref{eq:frame}--\eqref{eq:h}.
+For $q=r\omega$, where $r>0$ and $|\omega|=1$, let
+$P_-(q)$ and $P_+(q)$ denote the rank-one projections onto bands
+$N$ and $N+1$ at $k_i+q$.
+
+\begin{lemma}[Current matrix elements at a cone]\label[lemma]{lem:cone}
+As $q=r\omega\to0$, uniformly in $\omega$,
+\begin{equation}\label{eq:cone-weight}
+ \Rea\tr\!\left(P_-(q)v_\alpha(k_i+q)
+                   P_+(q)v_\beta(k_i+q)\right)
+ =v^2\bigl[e_\alpha\cdot e_\beta
+       -(e_\alpha\cdot\omega)(e_\beta\cdot\omega)\bigr]+O(r).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Expand the analytic matrix at the crossing:
+\begin{equation}\label{eq:linear-cone}
+ h(q)=\mu_{\mathrm F}I+A(q)+O(r^2),\qquad
+ A(q)=q_1A_1+q_2A_2.
+\end{equation}
+For every $\omega$, the eigenvalues of $A(\omega)$ are $-v$ and $v$,
+by \eqref{eq:cones}. Homogeneity therefore gives
+\begin{equation}\label{eq:clifford}
+ \tr A(q)=0,\qquad A(q)^2=v^2|q|^2I,
+ \qquad
+ A(a)A(b)+A(b)A(a)=2v^2(a\cdot b)I
+\end{equation}
+for all $a,b\in\R^2$; the last identity follows by polarization.
+In particular the limiting lower and upper projections are
+\begin{equation}\label{eq:limiting-projections}
+ R_\pm(\omega)=\tfrac12\bigl(I\pm A(\omega)/v\bigr),
+ \qquad
+ W(q)^*P_\pm(q)W(q)=R_\pm(\omega)+O(r).
+\end{equation}
+The error estimate also follows directly from
+\eqref{eq:lower-projection}.
+
+The physical velocity has the corresponding leading matrix:
+\begin{equation}\label{eq:compressed-velocity}
+ W(q)^*v_\alpha(k_i+q)W(q)=A(e_\alpha)+O(r).
+\end{equation}
+To see this without assuming a fixed frame, differentiate
+$h=W^*HW$ at $q=0$. The terms differentiating $W$ sum to
+$\mu_{\mathrm F}\partial_\alpha(W^*W)=0$, while the remaining
+term is $W_0^*v_\alpha(k_i)W_0$. This equals
+$\partial_\alpha h(0)=A(e_\alpha)$, and analyticity proves
+\eqref{eq:compressed-velocity}.
+
+It remains to compute a two-by-two trace. For $R=R_-(\omega)$,
+the identities in \eqref{eq:clifford} give
+\[
+ \tr(RA(a))=-v(a\cdot\omega),\qquad
+ \Rea\tr(RA(a)A(b))=v^2(a\cdot b).
+\]
+Since $R$ has rank one,
+\begin{align*}
+ \Rea\tr\bigl(RA(a)(I-R)A(b)\bigr)
+ &=\Rea\tr(RA(a)A(b))
+       -\tr(RA(a))\tr(RA(b))\\
+ &=v^2\bigl[a\cdot b-(a\cdot\omega)(b\cdot\omega)\bigr].
+\end{align*}
+Combining this with \eqref{eq:limiting-projections} and
+\eqref{eq:compressed-velocity} proves \eqref{eq:cone-weight}.
+\end{proof}
+
+The bracket in \eqref{eq:cone-weight} pairs the components of the
+two directions perpendicular to $\omega$. For a longitudinal response,
+it is the squared tangential component of the field direction.
+For the linearized cone, the radial velocity acts within each band,
+while the tangential velocity couples the two bands. This explains
+the angular factor in the final step.
+
+\section{Time averaging and the universal constant}\label{sec:limit}
+
+We now prove \cref{thm:main}. The finite-time assertions follow from
+\cref{prop:response} and \cref{app:operators}. It remains to take the
+time average. Absolute convergence on every bounded time interval gives
+\begin{equation}\label{eq:average}
+ \frac1T\int_0^T\sigma_{\alpha\beta}(t)\,dt
+ =\frac{2}{(2\pi)^2}\int_{\mathcal B}\sum_{m\le N<n}
+ \Rea Z_{mn}(k)
+ \frac{1-\cos(T\Delta_{mn}(k))}{T\Delta_{mn}(k)^3}\,dk.
+\end{equation}
+
+\subsection{Only the touching pair survives}
+
+Choose disjoint small disks around the crossings on the momentum
+torus. Outside these disks, all occupied--empty gaps have a common
+positive lower bound. Inside each disk, the same is true for every
+pair other than $(N,N+1)$, by \eqref{eq:isolated}. Thus
+\eqref{eq:sum-bound} and $|1-\cos s|\le2$ show that the total
+contribution of these transitions is $O(T^{-1})$.
+
+Only the touching pair in each disk remains.
+
+\subsection{One cone}
+
+Suppress its index and write
+\[
+ \Delta(q)=\lambda_{N+1}(k_i+q)-\lambda_N(k_i+q),\qquad
+ w(q)=\Rea Z_{N,N+1}(k_i+q).
+\]
+For $q=r\omega$, \eqref{eq:cones} and \cref{lem:cone} give
+\begin{equation}\label{eq:local-data}
+ \begin{gathered}
+ \Delta(r\omega)=2vr+O(r^2),\qquad
+ w(r\omega)=v^2g(\omega)+O(r),\\
+ g(\omega)=e_\alpha\cdot e_\beta
+       -(e_\alpha\cdot\omega)(e_\beta\cdot\omega).
+ \end{gathered}
+\end{equation}
+Take the disk radius $\delta$ small enough that $cr\le\Delta(r\omega)
+\le Cr$. Its contribution to \eqref{eq:average} is
+\begin{equation}\label{eq:one-cone}
+ I_T=\frac{2}{(2\pi)^2}\int_0^{2\pi}\int_0^\delta
+ w(r\omega)\frac{1-\cos(T\Delta(r\omega))}
+                   {T\Delta(r\omega)^3}\,r\,dr\,d\theta,
+ \qquad \omega=(\cos\theta,\sin\theta).
+\end{equation}
+
+Set $s=2vTr$ and, only for this change of scale, write
+$D_T(s,\omega)=T\Delta(s\omega/(2vT))$. Then
+\begin{equation}\label{eq:scaled-cone}
+ I_T=\frac1{8\pi^2v^2}\int_0^{2\pi}\int_0^{2vT\delta}
+ w\!\left(\frac{s\omega}{2vT}\right)
+ \frac{s\bigl(1-\cos D_T(s,\omega)\bigr)}{D_T(s,\omega)^3}
+ \,ds\,d\theta.
+\end{equation}
+For fixed $s>0$ and $\omega$, $D_T(s,\omega)\to s$ and
+$w(s\omega/(2vT))\to v^2g(\omega)$.
+This is the step at which the velocity cancels: the $v^2$ in the
+transition strength cancels the $v^{-2}$ introduced by the radial
+change of scale.
+
+To justify the limit, extend the integrand in
+\eqref{eq:scaled-cone} by zero beyond $2vT\delta$.
+The gap bounds imply that $D_T$ is comparable to $s$ throughout
+its support. Since $w$ is bounded and
+$1-\cos x\le\min\{x^2/2,2\}$, the absolute value of this
+integrand is bounded by
+\begin{equation}\label{eq:domination}
+ C\min\{1,s^{-2}\}.
+\end{equation}
+This bound is integrable and independent of $T$ and $\omega$.
+Dominated convergence therefore yields
+\begin{equation}\label{eq:cone-limit}
+ \lim_{T\to\infty}I_T
+ =\frac1{8\pi^2}
+ \left(\int_0^{2\pi}g(\omega)\,d\theta\right)
+ \left(\int_0^\infty\frac{1-\cos s}{s^2}\,ds\right).
+\end{equation}
+Thus only the linearized cone contributes to the limit.
+
+The angular integral is
+\[
+ \int_0^{2\pi}g(\omega)\,d\theta=\pi\,e_\alpha\cdot e_\beta.
+\]
+For the radial integral, the positive Laplace representation of $s^{-2}$
+and Tonelli's theorem give the short evaluation
+\[
+ \int_0^\infty\frac{1-\cos s}{s^2}\,ds
+ =\int_0^\infty u\left(\frac1u-\frac{u}{u^2+1}\right)du
+ =\int_0^\infty\frac{du}{1+u^2}=\frac\pi2.
+\]
+Substitution in \eqref{eq:cone-limit} gives
+$\lim_{T\to\infty}I_T=(e_\alpha\cdot e_\beta)/16$.
+Summing over the $M$ disks and adding the vanishing gapped
+contribution proves \eqref{eq:main}.\hfill$\square$
+
+\appendix
+\section{Operator framework and the current limit}\label[appendix]{app:operators}
+
+This appendix verifies the analytic facts used in the main argument
+for $V\in H^1_{\per}(\Omega)$. The only external operator results used
+are the standard self-adjointness, Bloch decomposition, analytic
+perturbation, and common-domain evolution results in Reed--Simon.
+
+\subsection{Self-adjointness, graph bounds, and evolution}
+\label[appendix]{app:setup}
+
+A periodic $L^2$ potential in two dimensions is uniformly locally
+$L^2$ and is infinitesimally bounded relative to $-\Delta$;
+see \cite[Theorem XIII.96]{RS4}. Thus, on the plane and on the
+periodic cell, for every $\eta>0$,
+\begin{equation}\label{eq:V-bound}
+ \|Vu\|_2\le\eta\|\Delta u\|_2+C_\eta\|u\|_2.
+\end{equation}
+The corresponding form bound
+\begin{equation}\label{eq:V-form}
+ \int |V|\,|u|^2\le\eta\|\nabla u\|_2^2+C_\eta\|u\|_2^2
+\end{equation}
+follows from the two-dimensional Sobolev interpolation inequality on
+cells and a partition of unity. Kato--Rellich
+\cite[Theorem X.12]{RS2} gives the domains asserted in
+\eqref{eq:H}; the fiber graph norms are uniformly equivalent to
+the $H^2$ norm when $k$ ranges over a bounded set. Compactness of
+the cell gives compact resolvent. These observations also show that
+$k\mapsto H_k$ is analytic from $H^2_{\per}$ to $L^2_{\per}$ and
+that its resolvents, hence its finite-rank Riesz projections, are
+analytic into $H^2_{\per}$; compare \cite[\S XII.2]{RS4}.
+
+For the Stark operator, apply the Faris--Lavine theorem
+\cite[Theorem X.38]{RS2} to
+\[
+ 2H_\varepsilon=-\Delta+V_1+W,
+ \qquad V_1(x)=-2\varepsilon x\cdot e_\beta,
+ \qquad W(x)=2V(x).
+\]
+Here $V_1\ge-c|x|^2-d$ for suitable $c,d>0$, and
+$-a\Delta+W$ is bounded below for any $a>0$ by
+\eqref{eq:V-form}. The auxiliary operator
+$-\Delta+V_1+W+2c|x|^2$ is essentially self-adjoint on
+$C_c^\infty$: the linear term and $W$ are infinitesimally bounded
+relative to the harmonic oscillator, by \eqref{eq:V-bound} and
+the oscillator graph estimate for $\Delta$. Kato--Rellich applies.
+The space $C_c^\infty$ is invariant under coordinates and
+derivatives, as required in Faris--Lavine. Its conclusion is exactly
+the essential self-adjointness used in \eqref{eq:dynamics}.
+
+For a continuously differentiable momentum path $k(r)$ in a bounded
+set, the Hamiltonians $H_{k(r)}$ have common domain $H^2_{\per}$
+and smoothly varying coefficients as operators from that domain to
+$L^2_{\per}$. The common-domain evolution theorem
+\cite[Theorem X.70]{RS2} therefore supplies their unitary
+propagators and bounded propagation in the common graph norm.
+Indeed, the theorem's resolvent and difference-quotient hypotheses
+follow immediately from
+\begin{equation}\label{eq:H-difference}
+ H_{k+h}-H_k=h\cdot(-i\nabla+k)+\tfrac12|h|^2
+\end{equation}
+and the uniform graph bounds, after a fixed scalar shift of the
+generator. In particular, with $\Lambda=1-\Delta_{\per}$,
+\begin{equation}\label{eq:graph-propagator}
+ \|\Lambda U_\varepsilon(t,s;k)\Lambda^{-1}\|\le C_t
+ \qquad(0\le s\le t, 0\le\varepsilon\le1),
+\end{equation}
+uniformly for $k$ in a fixed reciprocal cell. For arbitrary fixed
+$\varepsilon$ and finite $t$, the analogous bound still holds.
+
+\Needspace{11\baselineskip}
+\subsection{Bloch normalization and local traces}\label[appendix]{app:trace}
+
+On a dense class of functions use the Bloch transform
+\begin{equation}\label{eq:Bloch-transform}
+ (\mathcal U f)(k,x)=\sum_{R\in\mathcal R}
+ e^{-ik\cdot(x+R)}f(x+R),\qquad x\in\Omega,
+\end{equation}
+with direct-integral measure $dk/|\mathcal B|$.
+It is unitary, sends $H$ to the fibers $H_k$, and sends
+$J_\alpha$ to $v_\alpha(k)$; see
+\cite[Theorems XIII.97 and XIII.99]{RS4}.
+The reciprocal identifications are
+\[
+ f(k+K,x)=e^{-iK\cdot x}f(k,x),\qquad
+ H_{k+K}=e^{-iK\cdot x}H_ke^{iK\cdot x}.
+\]
+The projections, velocities, and characteristic propagators obey the
+same covariance. Multiplication by $e^{-iK\cdot x}$ preserves
+$H^2_{\per}$, so the weighted estimates remain valid on every bounded
+enlargement of a cell. We use this extension when translating momentum
+across a cell boundary.
+
+Here is a direct verification of \eqref{eq:trace-bloch}.
+Let $E:L^2(\Omega)\to L^2(\R^2)$ extend by zero. Then
+$(\mathcal U Ef)(k,x)=e^{-ik\cdot x}f(x)$, so for a bounded
+periodic operator $A$ with integrable fiber trace norm,
+\begin{equation}\label{eq:compressed-trace}
+ E^*AE=\frac1{|\mathcal B|}\int_{\mathcal B}
+ e^{ik\cdot x}A(k)e^{-ik\cdot x}\,dk.
+\end{equation}
+The right side is a Bochner integral in the trace class.
+Taking its trace and dividing by $|\Omega|$ gives
+\eqref{eq:trace-bloch}. Blocks between two translated cells have
+the same integral with an additional scalar phase of modulus one,
+and are also trace class. A bounded spatial set meets only finitely
+many cells, so its compression is a finite sum of such blocks.
+This proves local trace class.
+
+The field evolution is also described by \eqref{eq:Bloch-transform}.
+Translation in momentum followed by the fiber propagator defines
+a unitary group for $t\in\R$,
+\[
+ f(k)\longmapsto U_\varepsilon(t,0;k)f(k-\varepsilon t e_\beta).
+\]
+Concatenating the momentum characteristics gives the group law, and
+the continuity of propagators and translations gives strong continuity.
+Differentiating at $t=0$ on Bloch transforms of $C_c^\infty(\R^2)$
+shows that its self-adjoint generator extends
+$H_k-i\varepsilon\partial_\beta$, the transform of $H_\varepsilon$.
+Essential self-adjointness therefore
+identifies this group with $e^{-itH_\varepsilon}$. Conjugating
+the decomposable projection $P$ gives
+\eqref{eq:rho-characteristic}; in particular
+$\gamma_\varepsilon(t)$ is periodic.
+
+On bounded momentum sets, the occupied projection has uniformly
+bounded range in $H^2$.
+Equation \eqref{eq:graph-propagator} shows that, on finite time
+intervals, the same is true of the rank-$N$ projection
+$\rho_\varepsilon(t,k)$. Thus $v_\alpha(k)\rho_\varepsilon(t,k)$
+is bounded and has uniformly bounded trace norm. Consequently
+$J_\alpha\gamma_\varepsilon(t)$ is a bounded, periodic, locally
+trace-class operator, and its current is given by
+\eqref{eq:trace-bloch}.
+
+\subsection{Passing to the derivative inside the current}
+\label[appendix]{app:limit}
+
+We give the estimates behind the passage from \eqref{eq:source}
+to \eqref{eq:response-projection}. For a fiber operator $A$, use
+the weighted trace norm
+\[
+ \|A\|_{1,2}=\|\Lambda A\Lambda\|_1.
+\]
+Products with $\Lambda$ are understood by their bounded extensions;
+equivalently $A=\Lambda^{-1}B\Lambda^{-1}$ for a trace-class operator $B$.
+By \cref{prop:regularity}, $P$ has integrable weak derivatives
+in this norm. Hence, on bounded momentum sets,
+\begin{equation}\label{eq:translation}
+ \int_{\mathcal B}
+ \|(\partial_\beta P)(k-h)-(\partial_\beta P)(k)\|_{1,2}\,dk
+ \longrightarrow0\qquad(h\to0).
+\end{equation}
+The covariant extension of the field is used whenever $k-h$ leaves
+the chosen cell.
+
+Write $U_0(t,s;k)=e^{-i(t-s)H_k}$. Duhamel's formula,
+\eqref{eq:H-difference}, and the graph bounds give
+\begin{equation}\label{eq:U-difference}
+ \|(U_\varepsilon(t,s;k)-U_0(t,s;k))\Lambda^{-1}\|
+     \le C_t\varepsilon.
+\end{equation}
+The same difference is uniformly bounded from $L^2$ to $H^2$
+after right multiplication by $\Lambda^{-1}$, by
+\eqref{eq:graph-propagator}. Interpolation between $L^2$ and
+$H^2$ therefore yields
+\begin{equation}\label{eq:velocity-difference}
+ \|v_\alpha(k)(U_\varepsilon(t,s;k)-U_0(t,s;k))
+          \Lambda^{-1}\|\le C_t\sqrt\varepsilon.
+\end{equation}
+All these bounds are uniform for $0\le s\le t$ and $k\in\mathcal B$.
+
+For $A=\Lambda^{-1}B\Lambda^{-1}$, factor
+\[
+ v_\alpha U_\varepsilon A U_\varepsilon^*
+   =(v_\alpha U_\varepsilon\Lambda^{-1})
+        B(\Lambda^{-1}U_\varepsilon^*).
+\]
+Equations \eqref{eq:graph-propagator}--\eqref{eq:velocity-difference}
+give, in trace norm,
+\begin{equation}\label{eq:current-continuity}
+ \begin{aligned}
+ \|v_\alpha U_\varepsilon A U_\varepsilon^*\|_1
+   &\le C_t\|A\|_{1,2},\\
+ \|v_\alpha(U_\varepsilon A U_\varepsilon^*-U_0 A U_0^*)\|_1
+   &\le C_t\sqrt\varepsilon\,\|A\|_{1,2}.
+ \end{aligned}
+\end{equation}
+Apply the second estimate to $A=(\partial_\beta P)(k)$ and
+the first to the translated difference in \eqref{eq:translation}.
+Integration over $k$ and $s$ proves convergence of the current
+traces in \eqref{eq:source}. This establishes
+\eqref{eq:response-projection} for every fixed $t$, with no
+interchange between the small-field and long-time limits.
+
+\begin{thebibliography}{2}
+
+\bibitem{RS2}
+M. Reed and B. Simon,
+\emph{Methods of Modern Mathematical Physics, II: Fourier Analysis,
+Self-Adjointness}, Academic Press, New York, 1975.
+
+\bibitem{RS4}
+M. Reed and B. Simon,
+\emph{Methods of Modern Mathematical Physics, IV: Analysis of Operators},
+Academic Press, New York, 1978.
+
+\end{thebibliography}
+\end{document}

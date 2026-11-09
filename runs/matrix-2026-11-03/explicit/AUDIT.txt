@@ -1,0 +1,28 @@
+Execution audit: explicit-writing-instructions condition
+
+Completed with exit code 0 in 1026.8 seconds (17.1 minutes). The unedited
+deliverable is output/paper.tex and its nine-page PDF. The final LaTeX log
+contains no warnings or errors. Initial inputs are unchanged, and the
+delivered PDF matches the final build exactly.
+
+The root used GPT-6-Astra/max and chose not to spawn subagents, although the
+same tools and settings were available as in every other condition. Its turn
+completed normally. There were no detected online-access calls, CLI failure
+events, stderr errors, or usage-accounting discrepancies. The manuscript's
+citations and bibliography contain only Reed–Simon I, II and IV.
+
+Usage: 638,929 input tokens, of which 589,696 cached; 34,521 output tokens,
+of which 18,781 reasoning tokens. There are 13 unique response-level usage
+records. Cached and reasoning counts are subsets, not additional tokens.
+
+Three tool calls reported nonzero command exits: probes for the optional
+latexmk and tectonic executables, neither installed in the common setup,
+and a search for instruction files that found no matches. The available
+pdflatex compiler worked successfully, and these probes did not impede the
+run. No configuration or tool installation was changed between conditions.
+
+No supervisor advice or edits were supplied to the tested session. Its
+temporary authentication copy was removed after archival. This audit checks
+execution and artifacts; it is not an independent mathematical referee
+report. Evidence is in audit.json, usage.json, events*.jsonl, stderr.log,
+native/, and output/.paper-work/.

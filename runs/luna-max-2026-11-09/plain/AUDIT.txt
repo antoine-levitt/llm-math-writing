@@ -1,0 +1,20 @@
+Execution audit: PASS
+
+Actual model/effort: gpt-6-luna / max; one completed root turn; no subagents.
+Exact prompt in native trace; all six input hashes unchanged.
+Original Astra runtime instructions preserved; no private/project context.
+No online-access calls, unfinished turns, or usage-accounting warnings.
+All archived SQLite databases pass quick_check; generated memory count is 0.
+Temporary authentication copy removed. Supervisor did not edit the paper.
+
+The model corrected three initial LaTeX errors. Other command failures and
+one blocked scratch-cleanup command were recovered or were harmless probes.
+See audit.json for the full command-level record, including cleanup retries.
+
+The final five-page PDF is readable. A separate two-pass rebuild succeeds
+and produces identical extracted text. Its only notice is expected because
+shell escape was explicitly disabled; there are no document warnings.
+See ../verification.json and ../verification/ for the rebuild evidence.
+
+This audit verifies execution, provenance and artifacts, not mathematical
+correctness or readability. No grade has been assigned.

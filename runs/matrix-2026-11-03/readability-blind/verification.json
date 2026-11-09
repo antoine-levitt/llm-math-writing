@@ -1,0 +1,25 @@
+{
+  "primary_pass": "isolated",
+  "initial_user_messages": 2,
+  "exact_grading_prompt_in_native_trace": true,
+  "same_rubric_as_preliminary_pass": true,
+  "personal_project_context_absent": true,
+  "input_files_unchanged": true,
+  "credentials_removed": true,
+  "model_effort": [
+    [
+      "gpt-6-astra",
+      "max"
+    ]
+  ],
+  "elapsed_wall_seconds": 312.44616200914606,
+  "usage": {
+    "input_tokens": 696599,
+    "cached_input_tokens": 625408,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7610,
+    "reasoning_output_tokens": 4052,
+    "total_tokens": 704209
+  },
+  "usage_warnings": []
+}

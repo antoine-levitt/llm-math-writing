@@ -1,0 +1,56 @@
+                                      Graphene conductivity
+
+The goal is to establish the residual conductivity of graphene, within linear response, in a non-
+interacting model.
+Setting. Spinless electrons, atomic units. Let R ⊂ R2 be a lattice, Ω a unit cell, and B a unit
+cell of
+                        R∗ = {K ∈ R2 : K · R ∈ 2πZ for every R ∈ R}.
+              1 (Ω), set
+For real V ∈ Hper
+
+           H = − 12 ∆ + V          on L2 (R2 ; C),        Hk = 21 (−i∇ + k)2 + V                  on L2per (Ω; C).
+
+Hk is self-adjoint with domain Hper 2 (Ω; C). Write its eigenvalues, with multiplicities, as λ (k) ≤
+                                                                                              1
+λ2 (k) ≤ · · · , and set λ0 (k) = −∞.
+Band assumptions. Fix µF ∈ R, and assume that the system is semi-metallic: there are
+distinct points k1 , . . . , kM modulo R∗ and a number of bands N such that
+
+                       λN (k) < µF < λN +1 (k)                 / {k1 , . . . , kM } mod R∗ ),
+                                                            (k ∈
+
+and, for each i = 1, . . . , M ,
+
+                           λN −1 (ki ) < λN (ki ) = µF = λN +1 (ki ) < λN +2 (ki ).
+
+There are vi > 0 such that, as q → 0,
+
+            λN (ki + q) = µF − vi |q| + O(|q|2 ),               λN +1 (ki + q) = µF + vi |q| + O(|q|2 ).
+
+Current. Fix eβ , eα ∈ R2 , with eβ the field direction and eα the current direction. For all ε ≥ 0
+and t ≥ 0, define
+
+                   γ0 = 1(−∞,µF ] (H),           Hε = H − εx · eβ ,                Jα = (−i∇) · eα ,
+                             γε (t) = e−itHε γ0 eitHε ,
+                                                                                              
+                                                                    jε (t) = Tr Jα γε (t) ,
+
+where Hε denotes the self-adjoint closure of its restriction to Cc∞ (R2 ; C), and
+                                                          1
+                                            Tr(A) =          Tr(1Ω A1Ω )
+                                                         |Ω|
+
+for locally trace-class periodic A.
+
+Theorem. Under the above assumptions, the iterated limit exists and
+                                            Z T
+                                     1                     jε (t)              M
+                                                                    
+                                 lim                  lim               dt =      eα · eβ .
+                               T →+∞ T       0       ε→0 +   ε                 16
+
+
+
+
+                                                            1
+

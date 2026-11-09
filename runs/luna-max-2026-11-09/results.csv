@@ -1,0 +1,2 @@
+condition,explicit_instruction,review_instruction,elapsed_seconds,reviewers,input_tokens,cached_input_tokens,uncached_input_tokens,output_tokens,reasoning_output_tokens,total_tokens,exit_code
+plain,False,False,942.453,0,2454323,2348928,105395,45230,34597,2499553,0

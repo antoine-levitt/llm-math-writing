@@ -1,0 +1,496 @@
+        Residual conductivity from isotropic Dirac crossings
+
+
+                                               Abstract
+          We consider independent, spinless electrons in a two-dimensional periodic Schrödinger
+      potential. Suppose that the Fermi energy meets the spectrum only at finitely many
+      isolated, isotropic crossings of two bands. We prove that each crossing contributes 1/16
+      to the longitudinal conductivity, in atomic units, when a constant electric field is switched
+      on, linear response is taken first, and the resulting current is averaged over long times.
+      The proof separates three mechanisms: cancellation of the acceleration term by the filled
+      bands, determination of the leading transition currents from the conical energies alone,
+      and concentration of the averaged response near the crossings. In particular, the cone
+      velocities cancel from the answer. Operator domains, local traces, and the passage to
+      linear response are justified for real periodic H 1 potentials.
+
+
+1    The result and its mechanism
+A completely filled collection of bands cannot sustain a net acceleration current: translating
+the crystal momentum merely rearranges the occupied states. At a band crossing, however,
+an arbitrarily weak field can couple occupied and unoccupied states with arbitrarily small
+energy separation. The theorem below quantifies the current that survives this competition.
+It is conditional on the band geometry; no particular lattice symmetry is required once that
+geometry is assumed.
+     Let R ⊂ R2 be a full-rank lattice, with a fundamental cell Ω, and let B be a fundamental
+cell of
+                         R∗ = {K ∈ R2 : K · R ∈ 2πZ for all R ∈ R}.
+Thus |Ω| |B| = (2π)2 . We use atomic units and omit spin. For a real potential V ∈ Hper
+                                                                                    1 (Ω),
+
+set
+                   H = 12 p2 + V,    Hk = 12 (p + k)2 + V,    p = −i∇.                (1.1)
+The first operator acts on L2 (R2 ); the fibers act on L2per (Ω) with common domain Hper  2 (Ω).
+
+Write their eigenvalues, with multiplicity, as λ1 (k) ≤ λ2 (k) ≤ · · · , and put λ0 = −∞.
+   Fix a Fermi energy µF and an integer N ≥ 1. Our assumptions are that there are distinct
+points k1 , . . . , kM on the momentum torus R2 /R∗ such that
+
+                        λN (k) < µF < λN +1 (k)        away from k1 , . . . , kM ,                    (1.2)
+
+and, at every ki ,
+                       λN −1 (ki ) < λN (ki ) = µF = λN +1 (ki ) < λN +2 (ki ).                       (1.3)
+Each crossing is isotropic and untilted: for some vi > 0,
+
+                                  λN (ki + q) = µF − vi |q| + O(|q|2 ),
+                                                                                                      (1.4)
+                               λN +1 (ki + q) = µF + vi |q| + O(|q|2 ).
+
+The remainders here are uniform in the direction of q.
+
+
+                                                   1
+    Let eβ , eα ∈ R2 specify the field and current directions; they need not be unit vectors.
+A field of strength ε ≥ 0 is switched on at time zero. The initial density matrix and its
+evolution are
+                            γ0 = 1(−∞,µF ] (H),    Hε = H − εx · eβ ,
+                                                                                        (1.5)
+                      γε (t) = e−itHε γ0 eitHε ,
+                                                                            
+                                                 jε (t) = Tr (p · eα )γε (t) .
+Here Hε is the self-adjoint closure of its restriction to Cc∞ (R2 ), and the trace per unit area of
+a periodic, locally trace-class operator is
+                                                1
+                                    Tr(A) =        Tr(1Ω A1Ω ).                               (1.6)
+                                               |Ω|
+
+Although the field Hamiltonian is not periodic, its density matrix is: a lattice translation
+changes Hε only by a scalar.
+
+Theorem 1. Under (1.2)–(1.4), the current in (1.5) is well defined. For every fixed t ≥ 0,
+the linear response
+                                                 jε (t)
+                                σαβ (t) := lim
+                                           ε→0+ ε
+
+exists, and
+                               1 T                 M
+                                 Z
+                         lim         σαβ (t) dt =       eα · e β .                   (1.7)
+                        T →∞ T 0                   16
+     The order of operations matters: this is a statement about the long-time average of the
+linear response, with the field strength sent to zero at each fixed time. It does not assert a
+long-time limit at a fixed nonzero field. For two crossings the spinless coefficient is 1/8; two
+identical spin species would double it.
+     The proof follows the physical separation described above. In Section 2, we derive the
+response and show that the apparent term proportional to t cancels after integration over the
+filled bands. The remaining time average contains the nonnegative scalar kernel
+
+                                            1 − cos(T ∆)
+                                                         ,
+                                                T ∆3
+where ∆ is an occupied-to-unoccupied energy gap. Gaps bounded away from zero contribute
+O(T −1 ). Near a crossing, the relevant momenta have size T −1 . The only additional in-
+formation needed there is the transition current, which Section 3 derives from the conical
+energies themselves. A rescaling then gives the universal constant in Section 4. The analytic
+foundations are collected in Appendix A so that they do not obscure these mechanisms.
+
+
+2     From the switched field to interband transitions
+Let
+                 P (k) = 1(−∞,µF ] (Hk ),       Jη (k) = (p + k) · eη   (η = α, β).
+Away from the crossings, P (k) has rank N and is a smooth spectral projection. Its values at
+the finitely many crossings do not affect any direct integral. Throughout the proof, statements
+involving its rank or an occupied-to-unoccupied gap are understood away from those points.
+    Choose a measurable orthonormal eigenbasis un (k) of Hk and set, for n ≤ N < m,
+
+                     ∆mn (k) = λm (k) − λn (k),
+                                                                                              (2.1)
+                      Znm (k) = ⟨un (k), Jα (k)um (k)⟩⟨um (k), Jβ (k)un (k)⟩.
+
+
+                                                  2
+Inner products are antilinear in the first argument. No differentiable choice of eigenvectors is
+needed. Every sum below is unchanged by a change of basis within a degenerate eigenspace.
+   We will repeatedly use one uniform bound. The occupied eigenvalues are bounded on
+the momentum torus, and the fiber graph norms are uniformly equivalent to the H 2 norm.
+Consequently        X                                 X
+                         ∥Jη (k)un (k)∥2 ≤ Cη ,            |Znm (k)| ≤ C.                  (2.2)
+                          n≤N                                         n≤N <m
+The second inequality is Cauchy–Schwarz and completeness of the eigenbasis. These bounds
+control the infinitely many unoccupied bands. The domain and graph-norm assertions used
+here are justified in Section A.1.
+Proposition 2 (Interband response). The equilibrium current is zero. The fixed-time response
+is
+                                                   sin(t∆mn (k)) dk
+                              Z    X
+                  σαβ (t) = 2           Re Znm (k)                     .                (2.3)
+                               B n≤N <m               ∆mn (k)2 (2π)2
+Its time average is therefore
+                         Z T
+                     1                                                            1 − cos(T ∆mn (k)) dk
+                                                      Z    X
+      σ αβ (T ) :=             σαβ (t) dt = 2                     Re Znm (k)                              .        (2.4)
+                     T    0                            B n≤N <m                       T ∆mn (k)3    (2π)2
+
+Both integrals are absolutely convergent for finite t and T > 0.
+
+2.1    An accelerating gauge
+Multiplication by Gε (t) = eiεtx·eβ removes the linear potential. In this gauge the Bloch fibers
+evolve under Hk+εteβ . More precisely, let
+                               i∂t Uε (k, t) = Hk+εteβ Uε (k, t),             Uε (k, 0) = I,                       (2.5)
+and write Rε (k, t) = Uε (k, t)P (k)Uε (k, t)∗ . The current becomes
+                                                                                            dk
+                                         Z
+                                                                                    
+                              jε (t) =       Tr Jα (k) + εt eα · eβ Rε (k, t)                   .                  (2.6)
+                                         B                                                (2π)2
+The term proportional to εt is the explicit acceleration of the current observable. The change
+in Rε will cancel its secular contribution.
+    Since
+                            Hk+εseβ = Hk + εsJβ (k) + 12 ε2 s2 |eβ |2 ,
+Duhamel’s formula gives the first variation of the density matrix as
+                                             Z t
+                          D(k, t) = −i                s e−i(t−s)Hk [Jβ (k), P (k)]ei(t−s)Hk ds.                    (2.7)
+                                              0
+
+For fixed time, differentiating (2.6) is legitimate uniformly in k; see Section A.3. Denote the
+resulting derivative at ε = 0 temporarily by Lαβ (t). Evaluating (2.7) in the eigenbasis gives
+            Z (
+Lαβ (t) =        tN eα · eβ
+             B
+                                                                                                            )
+                                                      sin(t∆mn )    t                      1 − cos(t∆mn )          dk
+                          X                                                 
+                  +2                   Re Znm              2
+                                                                 −                + Im Znm                             .
+                         n≤N <m
+                                                         ∆mn       ∆mn                          ∆2mn             (2π)2
+                                                                                                                   (2.8)
+
+For example, the sine term follows from 0t s sin((t − s)∆) ds = t/∆ − sin(t∆)/∆2 . Only
+                                                             R
+
+occupied-to-unoccupied matrix elements occur, because of the commutator with P .
+
+                                                                 3
+2.2   Why the filled bands cancel the acceleration term
+Consider the total occupied energy at a fixed momentum,
+                                                     N
+                                                     X
+                                        E(k) =             λn (k).
+                                                     n=1
+
+This is continuous and periodic everywhere, and equals Tr(Hk P (k)) away from the crossings.
+There it is smooth even if occupied bands cross one another. Differentiating the spectral
+projection gives
+                                                                       X    Re Znm
+                ∂α E = Tr(P Jα ),       ∂β ∂α E = N eα · eβ − 2                    ,      (2.9)
+                                                                     n≤N <m
+                                                                             ∆mn
+
+where ∂η = eη · ∇k . Indeed, P (∂β P )P = (1 − P )(∂β P )(1 − P ) = 0, and differentiating
+[Hk , P (k)] = 0 yields
+                                              ⟨um , Jβ un ⟩
+                        ⟨um , ∂β P un ⟩ = −                      (n ≤ N < m).
+                                                 ∆mn
+This proves (2.9) without assumptions on degeneracies inside the occupied or unoccupied
+groups.
+     There is no boundary term hidden at a conical crossing. By (2.2), ∇E is bounded off
+the crossings. The smallest occupied-to-unoccupied gap is bounded below by c|k − ki | near
+ki , so the right-hand side of (2.9) is locally integrable in two dimensions. Integrate on the
+momentum torus with disks of radius ρ removed. Each circular boundary has length O(ρ)
+and carries a bounded gradient; its flux tends to zero. We obtain the filled-band sum rule
+                                                         Re Znm (k)
+                        Z                        Z       X
+                              N eα · eβ dk = 2                      dk.                  (2.10)
+                          B                      B n≤N <m ∆mn (k)
+
+Thus the coefficient of t in (2.8) vanishes. This is precisely where the absence of a Fermi
+curve enters: isolated points leave no flux in this integration by parts.
+                                                    R
+   The same argument applied to E itself gives B ∂α E dk = 0 and hence j0 = 0. Here E is
+bounded and continuous at the crossings, so its boundary integrals also vanish. Consequently
+Lαβ (t) is the linear response σαβ (t) in the theorem.
+
+2.3   Time reversal removes the antisymmetric term
+Complex conjugation C satisfies
+                            CHk C = H−k ,            CJη (k)C = −Jη (−k),
+because V is real. Time-reversed eigenbases therefore have the same gaps and conjugate
+transition products:
+                       ∆mn (−k) = ∆mn (k),                 Znm (−k) = Znm (k).
+These identities may equivalently be read after summing over degenerate eigenspaces. The
+term containing Im Znm in (2.8) integrates to zero on the momentum torus. Together with
+(2.10), this proves (2.3).
+    For completeness, the estimates
+                           | sin(t∆)|    t      1 − cos(T ∆)     T
+                                 2
+                                      ≤ ,               3
+                                                              ≤
+                               ∆         ∆          T∆          2∆
+and (2.2) show absolute integrability: the only possible singularity is |k − ki |−1 . They also
+justify the time integration in (2.4), completing the proof of Proposition 2.
+
+                                                     4
+3    What an isotropic cone says about current
+The hypotheses describe energies, whereas the response also involves matrix elements of
+current. The bridge between them is the linear part of the Hamiltonian on the two-dimensional
+crossing subspace. Isotropy forces its two directional derivatives to satisfy fixed algebraic
+relations. These determine the transition strength without choosing phases for the two
+eigenvectors.
+Proposition 3 (Transition current at a cone). Fix a crossing ki , write v = vi , and let q = rω
+with r > 0 and ω ∈ S 1 . As r → 0,
+
+                  Re ZN,N +1 (ki + rω) = v 2 [eα · eβ − (eα · ω)(eβ · ω)] + O(r),                (3.1)
+
+uniformly in ω.
+
+Proof. Let Q(q) be the spectral projection onto the two bands near µF . The separation from
+the remaining spectrum in (1.3) makes its contour-resolvent formula real analytic across q = 0,
+also as a map from L2 to H 2 ; see [3, Section XII.2]. Projecting a fixed basis of Ran Q(0) and
+orthonormalizing gives an analytic frame U (q) : C2 → Ran Q(q) with values in Hper     2 . The
+                                    ∗
+reduced Hamiltonian h(q) = U (q) Hki +q U (q) is an analytic Hermitian 2 × 2 matrix, with
+expansion
+               h(q) = µF I + Aq + O(|q|2 ),      Aη = η1 A1 + η2 A2 (η ∈ R2 ).             (3.2)
+Writing U0 = U (0) and differentiating at the crossing gives
+
+                                     Aη = U0∗ (p + ki ) · η U0 .
+                                                             
+                                                                                                 (3.3)
+
+The derivatives of the frame cancel here because Hki U0 = µF U0 and U (q)∗ U (q) = I.
+    For every η, the two eigenvalues of Aη are ±v|η|, by (1.4) and (3.2). Consequently
+tr Aη = 0 and A2η = v 2 |η|2 I. Polarization yields the decisive relation
+
+                           Aη Aζ + Aζ Aη = 2v 2 (η · ζ)I         (η, ζ ∈ R2 ).                   (3.4)
+
+Thus the energy slopes already fix the symmetric products of the leading current matrices.
+   Let p± (q) be the two eigenprojections of h(q). The gap is 2vr + O(r2 ), so (3.2) gives
+
+                      p± (rω) = π± (ω) + O(r),          π± (ω) = 21 (I ± Aω /v),                 (3.5)
+
+uniformly in ω. For example, this follows directly by dividing h(q) − 12 tr(h(q))I by half its
+eigenvalue gap. Also,
+
+                        U (q)∗ Jη (ki + q)U (q) = Aeη + O(r)        (η = α, β).
+
+The transition product in (2.1) is therefore
+                                                                        
+                      ZN,N +1 (ki + rω) = tr π− (ω)Aeα π+ (ω)Aeβ + O(r).
+
+To evaluate its real part, use that π− has rank one and that (3.4) implies
+
+                   Re tr(π− Aeα Aeβ ) = v 2 eα · eβ ,      tr(π− Aeη ) = −v eη · ω.
+
+Substituting π+ = I − π− now gives (3.1).
+
+    In particular, for a single direction e, the leading transition strength is v 2 (|e|2 − (e · ω)2 ).
+It is the part of the current transverse to the radial momentum that couples the two bands.
+This geometric factor will become isotropic after angular integration.
+
+                                                   5
+4    Long-time averaging selects the crossings
+We now prove Theorem 1. Choose disjoint disks of a fixed small radius ρ around the crossings
+on the momentum torus. Every occupied-to-unoccupied gap has a uniform positive lower
+bound, except for the pair n = N , m = N +1 inside these disks. This follows from compactness
+outside the disks and from (1.3) inside.
+   It follows from (2.2) and |1 − cos s| ≤ 2 that all these transitions together contribute
+O(T −1 ) to (2.4). Only the crossing pair in each disk remains. Fix one disk and abbreviate
+
+         ∆(q) = λN +1 (ki + q) − λN (ki + q),                      Z(q) = ZN,N +1 (ki + q),       v = vi .
+
+Its contribution is
+                                          2                          1 − cos(T ∆(q))
+                                                 Z
+                            Ii (T ) =                      Re Z(q)                   dq.                          (4.1)
+                                        (2π)2     |q|<ρ                  T ∆(q)3
+
+    The substitution y = T q identifies the surviving scale:
+                                  2                                  1 − cos(T ∆(y/T ))
+                                           Z
+                      Ii (T ) =                        Re Z(y/T )                       dy.                       (4.2)
+                                (2π)2       |y|<T ρ                     (T ∆(y/T ))3
+For every y ̸= 0,
+                                                                                                           y
+       T ∆(y/T ) −→ 2v|y|,               Re Z(y/T ) −→ v 2 [eα · eβ − (eα · yb)(eβ · yb)] ,        yb =       .
+                                                                                                          |y|
+These pointwise limits also determine the limit of the integral. Indeed, ∆(q) is bounded
+above and below by positive multiples of |q|, and Z(q) is bounded. Extending the integrand
+by zero outside its disk, its absolute value is bounded by
+
+                                                C min{|y|−1 , |y|−3 },                                            (4.3)
+
+using 1 − cos s ≤ min{s2 /2, 2}. This bound is integrable on R2 , both at the origin and at
+infinity. Dominated convergence, followed by polar coordinates y = rω, gives
+                                        2
+                                                      Z
+                        lim Ii (T ) =                     [eα · eβ − (eα · ω)(eβ · ω)] dω
+                       T →∞           (2π)2            S1
+                                                      Z ∞ 2                                                       (4.4)
+                                                           v r(1 − cos(2vr))
+                                                 ×                                   dr.
+                                                       0            (2vr)3
+The angular integral is πeα · eβ . In the radial integral, the change of variable s = 2vr cancels
+the velocity entirely:
+                       Z ∞ 2                                        Z ∞
+                          v r(1 − cos(2vr))                     1          1 − cos s     π
+                                                           dr =                      ds = .                       (4.5)
+                        0               (2vr)3                  4     0       s2         8
+                                                                          R∞
+One direct evaluation of the last integral uses s−2 =                     0    ae−as da: Tonelli’s theorem gives
+                         Z ∞                              Z ∞ 
+                                 1 − cos s                       1     a                    π
+                                                                                 
+                                           ds =                a   − 2               da =     .
+                            0       s2                     0     a a +1                     2
+Combining (4.4) and (4.5),
+                                                       2           π  1
+                                lim Ii (T ) =              πeα · eβ =    eα · eβ .
+                                T →∞                 (2π)2         8  16
+Summing over the M crossings, with the O(T −1 ) remainder already estimated, proves
+(1.7).
+
+                                                               6
+A      Analytic foundations
+This appendix justifies the operator statements used in the proof, including the fixed-time
+differentiation before any gap estimates are invoked. The latter point is useful: the closing
+gap does not obstruct linear response at a fixed time.
+
+A.1    Domains and time evolution
+In two dimensions a periodic H 1 potential is uniformly locally Lp for every finite p. Local
+Sobolev estimates and a partition into enlarged lattice cells give, for every a > 0,
+
+               ∥V f ∥2 ≤ a∥∆f ∥2 + Ca ∥f ∥2 ,          |⟨f, V f ⟩| ≤ a∥∇f ∥22 + Ca ∥f ∥22 .   (A.1)
+
+The first inequality is also the uniformly local perturbation bound of [3, Theorem XIII.96].
+Both hold on R2 and on the periodic cell. By the Kato–Rellich theorem [2, Theorem X.12],
+H and Hk are self-adjoint on their H 2 domains. Their form domains are H 1 , and their
+graph norms are equivalent to H 2 , uniformly for k in a bounded set. The fiber resolvents are
+compact, and k 7→ Hk is analytic on the common domain. These observations also justify
+the smooth spectral projections used in the main text.
+   For the Stark operator, use the comparison operator
+
+                                        N = H + |x|2 + c,
+
+with c sufficiently large. The harmonic-oscillator graph estimate and (A.1) show that N is
+self-adjoint on H 2 (R2 ) ∩ {f : |x|2 f ∈ L2 }, with core Cc∞ (R2 ). Increasing c if necessary gives
+
+                                    ⟨f, N f ⟩ ≥ c0 ∥pf ∥2 + ∥xf ∥2 + ∥f ∥2 .
+                                                                                
+                       N ≥ 1,
+
+Its graph norm controls ∥Hε f ∥. On the core, the potential drops out of the commutator, and
+in the quadratic-form sense
+
+                                i[Hε , N ] = p · x + x · p + εp · eβ .
+
+Thus
+                ∥Hε f ∥ ≤ Cε ∥N f ∥,     |⟨Hε f, N f ⟩ − ⟨N f, Hε f ⟩| ≤ Cε ⟨f, N f ⟩.
+The commutator theorem [2, Theorem X.37] proves essential self-adjointness of Hε on Cc∞ .
+    The time-dependent operators Hk+εteβ have the same domain Hper      2 , and their dependence
+
+on time is continuously differentiable as maps from that domain to L2 . The common-domain
+propagator theorem [2, Theorem X.70] therefore supplies (2.5), with preservation of H 2 . Its
+graph-norm bound is uniform on compact time intervals, for k in a fundamental cell and ε in a
+bounded interval. The same theorem applies to 12 (p + εteβ )2 + V on L2 (R2 ); its propagator is
+the direct integral of the fiber propagators. Multiplying it by Gε (t) gives e−itHε . This identity
+can be verified in the Schrödinger equation against Cc∞ test functions and then extended by
+uniqueness for the self-adjoint generator. No domain assumption on xγ0 is involved.
+
+A.2    Local traces and normalization
+Use the Bloch transform
+
+                                             e−ik·(x+R) f (x + R),
+                                       X
+                       (Uf )(k, x) =                                      x ∈ Ω,
+                                       R∈R
+
+
+
+                                                   7
+with direct-integral measure dk/|B| and the usual L2 (Ω) inner product in each fiber. It is
+unitary and transforms p into p + k and H into Hk ; see [3, Theorems XIII.97–XIII.99].
+   Here is the trace identity in the form needed above. For a periodic operator B with
+square-integrable Hilbert–Schmidt fiber norms, Parseval’s identity in the lattice variable gives
+                                                        1
+                                                             Z
+                                ∥1Ω B∥2HS =                          ∥B(k)∥2HS dk.                (A.2)
+                                                       |B|       B
+
+The corresponding right-localized identity follows by taking adjoints. If R is a periodic
+orthogonal projection with finite-rank fibers and finite fiber kinetic energy, both R1Ω and
+1Ω (p · eα )R are Hilbert–Schmidt. Their product
+                                                                                    
+                             1Ω (p · eα )R1Ω = 1Ω (p · eα )R R1Ω
+is trace class. The Hilbert–Schmidt pairing, or polarization of (A.2), yields
+                       1                                                                dk
+                                                                 Z
+                                            
+                          Tr 1Ω (p · eα )R1Ω =                       Tr(Jα (k)R(k))         .     (A.3)
+                      |Ω|                                        B                    (2π)2
+We use only the standard Hilbert–Schmidt and trace-class identities here; see [1, Section
+VI.6].
+    For Rε (t) in the accelerating gauge, the fiber ranks are N almost everywhere. The H 2
+propagator bounds and the uniform H 2 bounds on occupied eigenvectors give finite fiber
+kinetic energy, uniformly on bounded time intervals. Moreover, Gε (t) commutes with 1Ω and
+                            Gε (t)∗ (p · eα )Gε (t) = p · eα + εt eα · eβ .
+Thus the same factorization proves local trace class for the physical current and gives exactly
+(2.6).
+
+A.3    Differentiating the current at fixed time
+Fix t0 < ∞ and 0 ≤ ε ≤ 1. All estimates in this subsection are uniform in k ∈ B and
+                      2 , write
+0 ≤ t ≤ t0 . For u ∈ Hper
+
+                            ψε (t) = Uε (k, t)u,                     ψ0 (t) = e−itHk u.
+The propagator bounds give supt ∥ψε (t)∥H 2 ≤ Ct0 ∥u∥H 2 . Duhamel’s formula reads
+                                     Z t                                                     
+              ψε (t) − ψ0 (t) = −i         e−i(t−s)Hk εsJβ (k) + 12 ε2 s2 |eβ |2 ψε (s) ds.       (A.4)
+                                      0
+
+It follows that the difference is O(ε) in L2 . Interpolating with its uniform H 2 bound shows
+that it tends to zero in H 1 . Dividing (A.4) by ε therefore gives convergence in L2 to the first
+variation                              Z         t
+                         ψ (1) (t) = −i              s e−i(t−s)Hk Jβ (k)e−isHk u ds.              (A.5)
+                                             0
+The convergence and its bounds are uniform for u in a bounded subset of H 2 . In particular,
+they are uniform for all normalized occupied eigenvectors.
+   This is sufficient to differentiate a current expectation, despite the unbounded observable.
+Put dε = ψε − ψ0 . Then
+                         ⟨ψε , Jα ψε ⟩ − ⟨ψ0 , Jα ψ0 ⟩          dε
+                                                                                         
+                                                       = 2 Re       , Jα ψ0
+                                       ε                         ε
+                                                                                                  (A.6)
+                                                              dε
+                                                                        
+                                                         +       , Jα dε .
+                                                              ε
+
+                                                             8
+The last term tends to zero because dε /ε is bounded in L2 and dε → 0 in H 1 . The first term
+converges by (A.5). Summing over the N occupied vectors and using the uniform bounds
+permits differentiation under the Bloch integral in (2.6).
+    Finally, the group e−isHk preserves H 1 , its form domain, uniformly for k in the cell. Since
+Jβ u ∈ H 1 for u ∈ H 2 , the first variations above also belong to H 1 . Thus their current pairings
+agree with the trace expression (2.7). Expansion in an eigenbasis is justified by (2.2); the
+subsequent separation of terms containing inverse gaps is justified by the integrable conical
+bound used in Section 2. This proves all the fixed-time claims without imposing a uniform
+spectral gap.
+
+
+References
+[1] M. Reed and B. Simon, Methods of Modern Mathematical Physics, I: Functional Analysis,
+    revised and enlarged edition, Academic Press, 1980.
+
+[2] M. Reed and B. Simon, Methods of Modern Mathematical Physics, II: Fourier Analysis,
+    Self-Adjointness, Academic Press, 1975.
+
+[3] M. Reed and B. Simon, Methods of Modern Mathematical Physics, IV: Analysis of
+    Operators, Academic Press, 1978.
+
+
+
+
+                                                 9
+

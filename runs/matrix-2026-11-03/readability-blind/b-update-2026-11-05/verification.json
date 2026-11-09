@@ -1,0 +1,52 @@
+{
+  "primary_pass": "isolated B-only reassessment",
+  "initial_user_messages": 2,
+  "exact_grading_prompt_in_native_trace": true,
+  "personal_project_context_absent": true,
+  "fresh_thread_without_parent": true,
+  "fixed_configuration_matches_original": true,
+  "model_effort": [
+    [
+      "gpt-6-astra",
+      "max"
+    ]
+  ],
+  "input_files_unchanged": true,
+  "problem_files_identical_to_previous_pass": true,
+  "previous_artifacts_verified_unchanged": 50,
+  "credentials_removed": true,
+  "credentials_not_archived": true,
+  "whole_manuscript_read_in_contiguous_text_ranges": [
+    [
+      1,
+      300
+    ],
+    [
+      301,
+      600
+    ],
+    [
+      601,
+      920
+    ]
+  ],
+  "manuscript_text_line_count": 889,
+  "pdf_pages_visually_checked": [
+    12,
+    13
+  ],
+  "tool_calls_inspected": 7,
+  "shell_commands_succeeded": 8,
+  "trace_audit": "Only supplied inputs and derived page images were read; no provenance/metadata inspection, outside-source access, internet calls or delegation. No failed commands, aborted turns, stderr, or usage-accounting warnings.",
+  "elapsed_wall_seconds": 137.41077381605282,
+  "usage": {
+    "input_tokens": 187640,
+    "cached_input_tokens": 156928,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2721,
+    "reasoning_output_tokens": 1296,
+    "total_tokens": 190361
+  },
+  "usage_warnings": [],
+  "scope_note": "B alone was assessed with the same rubric. A/C/D/E keep their previous scores. This is not a fresh five-way comparison."
+}

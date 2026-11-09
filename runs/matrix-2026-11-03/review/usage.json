@@ -1,0 +1,310 @@
+{
+  "root_thread_id": "01a1a0dc-8a27-7ec2-b427-16e931f77ec1",
+  "method": "Sum token_usage_record.payload.usage once per unique upstream response_id; attribute by payload.thread_id.",
+  "duplicate_response_records_ignored": 0,
+  "total_usage": {
+    "input_tokens": 8759984,
+    "cached_input_tokens": 8457600,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 109001,
+    "reasoning_output_tokens": 51497,
+    "total_tokens": 8868985
+  },
+  "reviewer_thread_count": 3,
+  "threads": [
+    {
+      "thread_id": "01a1a0dc-8a27-7ec2-b427-16e931f77ec1",
+      "parent_thread_id": null,
+      "agent_path": null,
+      "kind": "root",
+      "history_mode": "paginated",
+      "history_start_ordinal": null,
+      "trace_files": [
+        "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-02-50-01a1a0dc-8a27-7ec2-b427-16e931f77ec1.jsonl"
+      ],
+      "model_effort_pairs": [
+        [
+          "gpt-6-astra",
+          "max"
+        ]
+      ],
+      "responses": 65,
+      "usage": {
+        "input_tokens": 4530776,
+        "cached_input_tokens": 4431232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 42915,
+        "reasoning_output_tokens": 19107,
+        "total_tokens": 4573691
+      },
+      "last_thread_usage_counter": {
+        "input_tokens": 4530776,
+        "cached_input_tokens": 4431232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 42915,
+        "reasoning_output_tokens": 19107,
+        "total_tokens": 4573691
+      },
+      "token_count_snapshot_for_comparison_only": {
+        "input_tokens": 4530776,
+        "cached_input_tokens": 4431232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 42915,
+        "reasoning_output_tokens": 19107,
+        "total_tokens": 4573691
+      },
+      "completed_turns": [
+        {
+          "turn_id": "01a1a0dc-8c66-7191-9cef-86ea5175c3f3",
+          "started_at": 1793700170,
+          "completed_at": 1793701441,
+          "duration_ms": 1270509,
+          "time_to_first_token_ms": 2509
+        }
+      ],
+      "summed_turn_duration_ms": 1270509,
+      "aborted_turn_ids": [],
+      "own_response_item_types": {
+        "additional_tools": 1,
+        "message": 12,
+        "custom_tool_call": 27,
+        "custom_tool_call_output": 27,
+        "reasoning": 51,
+        "function_call": 14,
+        "function_call_output": 14,
+        "agent_message": 34
+      }
+    },
+    {
+      "thread_id": "01a1a0dc-ec47-7930-925b-80a65c9c1166",
+      "parent_thread_id": "01a1a0dc-8a27-7ec2-b427-16e931f77ec1",
+      "agent_path": "/root/response_proof",
+      "kind": "subagent",
+      "history_mode": "paginated",
+      "history_start_ordinal": 22,
+      "trace_files": [
+        "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-15-01a1a0dc-ec47-7930-925b-80a65c9c1166.jsonl"
+      ],
+      "model_effort_pairs": [
+        [
+          "gpt-6-astra",
+          "max"
+        ]
+      ],
+      "responses": 22,
+      "usage": {
+        "input_tokens": 1067107,
+        "cached_input_tokens": 990464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21260,
+        "reasoning_output_tokens": 11848,
+        "total_tokens": 1088367
+      },
+      "last_thread_usage_counter": {
+        "input_tokens": 1067107,
+        "cached_input_tokens": 990464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21260,
+        "reasoning_output_tokens": 11848,
+        "total_tokens": 1088367
+      },
+      "token_count_snapshot_for_comparison_only": {
+        "input_tokens": 1067107,
+        "cached_input_tokens": 990464,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21260,
+        "reasoning_output_tokens": 11848,
+        "total_tokens": 1088367
+      },
+      "completed_turns": [
+        {
+          "turn_id": "01a1a0dc-ec59-7430-a422-60e78c664d21",
+          "started_at": 1793700195,
+          "completed_at": 1793700472,
+          "duration_ms": 277489,
+          "time_to_first_token_ms": 2774
+        },
+        {
+          "turn_id": "01a1a0e6-70db-7503-9577-72dbb61a4cc0",
+          "started_at": 1793700819,
+          "completed_at": 1793701070,
+          "duration_ms": 251641,
+          "time_to_first_token_ms": 1733
+        },
+        {
+          "turn_id": "01a1a0eb-534c-78d3-802d-428f8acd1b3c",
+          "started_at": 1793701139,
+          "completed_at": 1793701308,
+          "duration_ms": 168742,
+          "time_to_first_token_ms": 1921
+        }
+      ],
+      "summed_turn_duration_ms": 697872,
+      "aborted_turn_ids": [],
+      "own_response_item_types": {
+        "message": 5,
+        "agent_message": 6,
+        "custom_tool_call": 11,
+        "custom_tool_call_output": 11,
+        "reasoning": 29,
+        "function_call": 7,
+        "function_call_output": 7
+      }
+    },
+    {
+      "thread_id": "01a1a0dd-0c0b-7f60-b716-ff9804431680",
+      "parent_thread_id": "01a1a0dc-8a27-7ec2-b427-16e931f77ec1",
+      "agent_path": "/root/operator_foundations",
+      "kind": "subagent",
+      "history_mode": "paginated",
+      "history_start_ordinal": 25,
+      "trace_files": [
+        "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-23-01a1a0dd-0c0b-7f60-b716-ff9804431680.jsonl"
+      ],
+      "model_effort_pairs": [
+        [
+          "gpt-6-astra",
+          "max"
+        ]
+      ],
+      "responses": 27,
+      "usage": {
+        "input_tokens": 1626150,
+        "cached_input_tokens": 1553024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21456,
+        "reasoning_output_tokens": 10215,
+        "total_tokens": 1647606
+      },
+      "last_thread_usage_counter": {
+        "input_tokens": 1626150,
+        "cached_input_tokens": 1553024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21456,
+        "reasoning_output_tokens": 10215,
+        "total_tokens": 1647606
+      },
+      "token_count_snapshot_for_comparison_only": {
+        "input_tokens": 1626150,
+        "cached_input_tokens": 1553024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 21456,
+        "reasoning_output_tokens": 10215,
+        "total_tokens": 1647606
+      },
+      "completed_turns": [
+        {
+          "turn_id": "01a1a0dd-0c1c-7c02-8cb3-ec08140271e7",
+          "started_at": 1793700203,
+          "completed_at": 1793700554,
+          "duration_ms": 351308,
+          "time_to_first_token_ms": 3229
+        },
+        {
+          "turn_id": "01a1a0e6-8648-7840-9a8f-7b8117dc0ee1",
+          "started_at": 1793700824,
+          "completed_at": 1793701058,
+          "duration_ms": 234319,
+          "time_to_first_token_ms": 2299
+        },
+        {
+          "turn_id": "01a1a0eb-67b7-71f2-8827-4c458f66f903",
+          "started_at": 1793701144,
+          "completed_at": 1793701227,
+          "duration_ms": 83136,
+          "time_to_first_token_ms": 2540
+        }
+      ],
+      "summed_turn_duration_ms": 668763,
+      "aborted_turn_ids": [],
+      "own_response_item_types": {
+        "message": 5,
+        "agent_message": 5,
+        "custom_tool_call": 15,
+        "custom_tool_call_output": 15,
+        "reasoning": 30,
+        "function_call": 8,
+        "function_call_output": 8
+      }
+    },
+    {
+      "thread_id": "01a1a0dd-25f6-7892-b03d-6549a0ef25c1",
+      "parent_thread_id": "01a1a0dc-8a27-7ec2-b427-16e931f77ec1",
+      "agent_path": "/root/cone_review",
+      "kind": "subagent",
+      "history_mode": "paginated",
+      "history_start_ordinal": 28,
+      "trace_files": [
+        "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-30-01a1a0dd-25f6-7892-b03d-6549a0ef25c1.jsonl"
+      ],
+      "model_effort_pairs": [
+        [
+          "gpt-6-astra",
+          "max"
+        ]
+      ],
+      "responses": 30,
+      "usage": {
+        "input_tokens": 1535951,
+        "cached_input_tokens": 1482880,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23370,
+        "reasoning_output_tokens": 10327,
+        "total_tokens": 1559321
+      },
+      "last_thread_usage_counter": {
+        "input_tokens": 1535951,
+        "cached_input_tokens": 1482880,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23370,
+        "reasoning_output_tokens": 10327,
+        "total_tokens": 1559321
+      },
+      "token_count_snapshot_for_comparison_only": {
+        "input_tokens": 1535951,
+        "cached_input_tokens": 1482880,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 23370,
+        "reasoning_output_tokens": 10327,
+        "total_tokens": 1559321
+      },
+      "completed_turns": [
+        {
+          "turn_id": "01a1a0dd-2607-7e31-8519-d2602ad84b41",
+          "started_at": 1793700210,
+          "completed_at": 1793700523,
+          "duration_ms": 313054,
+          "time_to_first_token_ms": 2489
+        },
+        {
+          "turn_id": "01a1a0e6-9a40-7173-aaec-86917dc4f5c5",
+          "started_at": 1793700829,
+          "completed_at": 1793701087,
+          "duration_ms": 257807,
+          "time_to_first_token_ms": 3386
+        },
+        {
+          "turn_id": "01a1a0eb-7a6d-76f2-972e-13fd0e3fde9d",
+          "started_at": 1793701149,
+          "completed_at": 1793701325,
+          "duration_ms": 175899,
+          "time_to_first_token_ms": 4540
+        }
+      ],
+      "summed_turn_duration_ms": 746760,
+      "aborted_turn_ids": [],
+      "own_response_item_types": {
+        "message": 5,
+        "agent_message": 5,
+        "custom_tool_call": 15,
+        "custom_tool_call_output": 15,
+        "reasoning": 34,
+        "function_call": 12,
+        "function_call_output": 12
+      }
+    }
+  ],
+  "warnings": [],
+  "timing_note": "Agent turn durations include tools/waits and can overlap. Measure launch-to-exit wall time separately; these records do not expose GPU compute time.",
+  "token_note": "Cached input is part of input_tokens; reasoning output is part of output_tokens. Do not add either subset to its total again."
+}

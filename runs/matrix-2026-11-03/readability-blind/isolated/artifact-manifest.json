@@ -1,0 +1,20 @@
+{
+  "root_thread_id": "01a1a154-24cd-7c83-97b8-536766a1cd26",
+  "inputs_unchanged": {
+    "Manuscript_D.pdf": true,
+    "Manuscript_B.txt": true,
+    "Problem.pdf": true,
+    "Manuscript_B.pdf": true,
+    "Manuscript_A.txt": true,
+    "Manuscript_A.pdf": true,
+    "Manuscript_C.txt": true,
+    "Manuscript_E.txt": true,
+    "Manuscript_E.pdf": true,
+    "Manuscript_C.pdf": true,
+    "Manuscript_D.txt": true,
+    "Problem.txt": true
+  },
+  "output_hashes": {
+    "READABILITY_REVIEW.txt": "539eda97e52616f70d0ac9c9d742f379077aa54e1a0ff3d8a11426daeb6625fa"
+  }
+}

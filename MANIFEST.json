@@ -1,0 +1,1691 @@
+{
+  "description": "Curated export; source paths are relative to the original blog-post workspace.",
+  "files": [
+    {
+      "path": "COMMENTS_ANTOINE.md",
+      "sha256": "0a6f88946ec3d0614394eb3b0db3dc20912412c7daca2db0fed296cba746f334",
+      "bytes": 1756,
+      "source": "COMMENTS_ANTOINE.md",
+      "source_sha256": "0a6f88946ec3d0614394eb3b0db3dc20912412c7daca2db0fed296cba746f334",
+      "transformation": "none"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f31d16120191933af02f0ad3cb02d046062d2aab8c3e36fea9ad5d0e35c0499b",
+      "bytes": 6747,
+      "transformation": "Repository documentation or export tooling."
+    },
+    {
+      "path": "baseline/comparison-version/build.sh",
+      "sha256": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+      "bytes": 844,
+      "source": "baseline/comparison-version/build.sh",
+      "source_sha256": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/comparison-version/main.pdf",
+      "sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274",
+      "bytes": 292989,
+      "source": "baseline/comparison-version/main.pdf",
+      "source_sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/comparison-version/main.tex",
+      "sha256": "2a91acda9bb25fd41483d4e878489093bff5cfdccd2da39f67c0551099e6915b",
+      "bytes": 46320,
+      "source": "baseline/comparison-version/main.tex",
+      "source_sha256": "2a91acda9bb25fd41483d4e878489093bff5cfdccd2da39f67c0551099e6915b",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/comparison-version/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "source": "baseline/comparison-version/refs.bib",
+      "source_sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/provenance/comparison-version-NOTES.txt",
+      "sha256": "79a1393b1f9b1875eb71cacaf1fe26dc471a29c9da884014b8a77dc90a3387eb",
+      "bytes": 10132,
+      "source": "baseline/provenance/comparison-version-NOTES.txt",
+      "source_sha256": "79a1393b1f9b1875eb71cacaf1fe26dc471a29c9da884014b8a77dc90a3387eb",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/provenance/comparison-version-changes.diff",
+      "sha256": "3556161e952505a971c65984358bdcd262bd4c62602fc6453e9d2a498f99fd2a",
+      "bytes": 46779,
+      "source": "baseline/provenance/comparison-version-changes.diff",
+      "source_sha256": "3556161e952505a971c65984358bdcd262bd4c62602fc6453e9d2a498f99fd2a",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/provenance/comparison-version-fa-changes.diff",
+      "sha256": "56d78abe72060d29743656da0f8077f5a8c91b09650d002d83447c6337ba3a68",
+      "bytes": 14308,
+      "source": "baseline/provenance/comparison-version-fa-changes.diff",
+      "source_sha256": "56d78abe72060d29743656da0f8077f5a8c91b09650d002d83447c6337ba3a68",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/provenance/comparison-version-fa-parent-hashes.json",
+      "sha256": "8e1dced34c4936689d362e163ba0f21a5d0ddce50f3cd9357be1b0b4a0e0205c",
+      "bytes": 2346,
+      "source": "baseline/provenance/comparison-version-fa-parent-hashes.json",
+      "source_sha256": "8e1dced34c4936689d362e163ba0f21a5d0ddce50f3cd9357be1b0b4a0e0205c",
+      "transformation": "none"
+    },
+    {
+      "path": "baseline/provenance/comparison-version-parent-hashes.json",
+      "sha256": "11656ca49887b7630d12967bf37a52b6adf776eaeaa1da4c1f48be5fec8bb0d0",
+      "bytes": 1681,
+      "source": "baseline/provenance/comparison-version-parent-hashes.json",
+      "source_sha256": "11656ca49887b7630d12967bf37a52b6adf776eaeaa1da4c1f48be5fec8bb0d0",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/comparison-version-before-fa/build.sh",
+      "sha256": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+      "bytes": 844,
+      "source": "old/baseline/comparison-version-before-fa/build.sh",
+      "source_sha256": "b014a4b2b34dc50add2dacfdfe87853e2b4d00a48d4c2914ee838d3e0c96faa9",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/comparison-version-before-fa/main.pdf",
+      "sha256": "d51a7eacd5279740fa251bb0827d1cb12fbe5c8c29bd2f9e499ac8fb32b0ae82",
+      "bytes": 304995,
+      "source": "old/baseline/comparison-version-before-fa/main.pdf",
+      "source_sha256": "d51a7eacd5279740fa251bb0827d1cb12fbe5c8c29bd2f9e499ac8fb32b0ae82",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/comparison-version-before-fa/main.tex",
+      "sha256": "f4c8103367ea6a7c63e32288c6212223ebc5b76030fe4f68746dd81929c74557",
+      "bytes": 51213,
+      "source": "old/baseline/comparison-version-before-fa/main.tex",
+      "source_sha256": "f4c8103367ea6a7c63e32288c6212223ebc5b76030fe4f68746dd81929c74557",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/comparison-version-before-fa/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "source": "old/baseline/comparison-version-before-fa/refs.bib",
+      "source_sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/comparison-version-before-fa-NOTES.txt",
+      "sha256": "2c231819d5916ca108ee50d9fcbff75da4bc80d072c58b0ad23dc760542e9853",
+      "bytes": 7442,
+      "source": "old/baseline/comparison-version-before-fa-NOTES.txt",
+      "source_sha256": "2c231819d5916ca108ee50d9fcbff75da4bc80d072c58b0ad23dc760542e9853",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version/build.sh",
+      "sha256": "348095877d9ca142d0f807070705aeb89c1a7abab92c05d62c17cfe0eea20202",
+      "bytes": 840,
+      "source": "old/baseline/prompt-version/build.sh",
+      "source_sha256": "348095877d9ca142d0f807070705aeb89c1a7abab92c05d62c17cfe0eea20202",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version/main.pdf",
+      "sha256": "660f3880819e1c79d0810b86e1380b9166a7b3a270a77c887695416a8d0da97a",
+      "bytes": 326235,
+      "source": "old/baseline/prompt-version/main.pdf",
+      "source_sha256": "660f3880819e1c79d0810b86e1380b9166a7b3a270a77c887695416a8d0da97a",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version/main.tex",
+      "sha256": "23fa85e7e71d4203b892bfc74929bdc525350d5cd34e07364f54127867c2da41",
+      "bytes": 59139,
+      "source": "old/baseline/prompt-version/main.tex",
+      "source_sha256": "23fa85e7e71d4203b892bfc74929bdc525350d5cd34e07364f54127867c2da41",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "source": "old/baseline/prompt-version/refs.bib",
+      "source_sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version-NOTES.txt",
+      "sha256": "8da78cbffa0c9f2d9a1e7806d988600b4c8637ff87c226cc380474701eb8f082",
+      "bytes": 5830,
+      "source": "old/baseline/prompt-version-NOTES.txt",
+      "source_sha256": "8da78cbffa0c9f2d9a1e7806d988600b4c8637ff87c226cc380474701eb8f082",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version-changes.diff",
+      "sha256": "22049602679c6d83582aff5b8bfd8cf555513c986ba9dd64d2bfac58a0235e6d",
+      "bytes": 37083,
+      "source": "old/baseline/prompt-version-changes.diff",
+      "source_sha256": "22049602679c6d83582aff5b8bfd8cf555513c986ba9dd64d2bfac58a0235e6d",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/prompt-version-parent-hashes.json",
+      "sha256": "d473ae1b226ec04aa3bef68b423554005f8800ef049bd27542ea22a1e0f40392",
+      "bytes": 722,
+      "source": "old/baseline/prompt-version-parent-hashes.json",
+      "source_sha256": "d473ae1b226ec04aa3bef68b423554005f8800ef049bd27542ea22a1e0f40392",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/statement-version/build.sh",
+      "sha256": "021fefbc5c96f0e2d12b45ca819e5ecc9f4ea632583ea2a0c0a8df8bea77cf92",
+      "bytes": 843,
+      "source": "old/baseline/statement-version/build.sh",
+      "source_sha256": "021fefbc5c96f0e2d12b45ca819e5ecc9f4ea632583ea2a0c0a8df8bea77cf92",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/statement-version/main.pdf",
+      "sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "bytes": 337835,
+      "source": "old/baseline/statement-version/main.pdf",
+      "source_sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/statement-version/main.tex",
+      "sha256": "8f3145892e36a00ed3489442f7ba44e2bf03868769ea504d728ca258a45ecd69",
+      "bytes": 65332,
+      "source": "old/baseline/statement-version/main.tex",
+      "source_sha256": "8f3145892e36a00ed3489442f7ba44e2bf03868769ea504d728ca258a45ecd69",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/statement-version/refs.bib",
+      "sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "bytes": 474,
+      "source": "old/baseline/statement-version/refs.bib",
+      "source_sha256": "cdc09a5308d785f688cf0a4c9ef036eb9c4a12e12b3940b1b52fb7bde9807fe9",
+      "transformation": "none"
+    },
+    {
+      "path": "old/baseline/statement-version-NOTES.txt",
+      "sha256": "9b3fc249819b9c6041a3031a856ae832637f496ef81650e2f52e321619211dc2",
+      "bytes": 5585,
+      "source": "old/baseline/statement-version-NOTES.txt",
+      "source_sha256": "9b3fc249819b9c6041a3031a856ae832637f496ef81650e2f52e321619211dc2",
+      "transformation": "none"
+    },
+    {
+      "path": "old/manifest-2026-11-05.json",
+      "sha256": "603bf905b76cdfb1a851c79109398f0c655e3ddb8ff005707d7096b50ccd63e9",
+      "bytes": 36975,
+      "source": "old/manifest-2026-11-05.json",
+      "source_sha256": "603bf905b76cdfb1a851c79109398f0c655e3ddb8ff005707d7096b50ccd63e9",
+      "transformation": "none"
+    },
+    {
+      "path": "prompt",
+      "sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "bytes": 213,
+      "source": "prompt",
+      "source_sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "transformation": "none"
+    },
+    {
+      "path": "prompt_explicit_instruction",
+      "sha256": "76ebb5aa06b815f02d761c34e7fedb299a170c932726e6b7701028d3e51773f6",
+      "bytes": 1025,
+      "source": "prompt_explicit_instruction",
+      "source_sha256": "76ebb5aa06b815f02d761c34e7fedb299a170c932726e6b7701028d3e51773f6",
+      "transformation": "none"
+    },
+    {
+      "path": "prompt_explicit_instruction_plus_tokenmaxing",
+      "sha256": "a166e77d777d5c09708bdb353c7c9850d6066a2426b319066e1593eeca4b32a8",
+      "bytes": 1314,
+      "source": "prompt_explicit_instruction_plus_tokenmaxing",
+      "source_sha256": "a166e77d777d5c09708bdb353c7c9850d6066a2426b319066e1593eeca4b32a8",
+      "transformation": "none"
+    },
+    {
+      "path": "prompt_tokenmaxing",
+      "sha256": "732977a2a291d26c8e9c4278937ec014da5de96097106e84decc56956dc6ca74",
+      "bytes": 502,
+      "source": "prompt_tokenmaxing",
+      "source_sha256": "732977a2a291d26c8e9c4278937ec014da5de96097106e84decc56956dc6ca74",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/PROTOCOL.txt",
+      "sha256": "5eb438e88a88d6ec7d4ab9be0e6f9b3bbae6fc3cc0522ebdec3cb579419ad7d1",
+      "bytes": 3556,
+      "source": "runs/luna-max-2026-11-09/PROTOCOL.txt",
+      "source_sha256": "5eb438e88a88d6ec7d4ab9be0e6f9b3bbae6fc3cc0522ebdec3cb579419ad7d1",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/RESULTS.txt",
+      "sha256": "891a11da7d8d795ca658c3e47baf44db449689fa4497f227e728f52ff13e1f39",
+      "bytes": 3495,
+      "source": "runs/luna-max-2026-11-09/RESULTS.txt",
+      "source_sha256": "891a11da7d8d795ca658c3e47baf44db449689fa4497f227e728f52ff13e1f39",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/audit-summary.json",
+      "sha256": "a72796350aa995a9c3bf5b3c63362e5bf58006b8acba9b168be2867998ecc45f",
+      "bytes": 18065,
+      "source": "runs/luna-max-2026-11-09/audit-summary.json",
+      "source_sha256": "a72796350aa995a9c3bf5b3c63362e5bf58006b8acba9b168be2867998ecc45f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/audit.py",
+      "sha256": "08aa63eb8c39937ddf89d0627c359fed419c894287014e76defc20f5e1dc2bd3",
+      "bytes": 13167,
+      "source": "runs/luna-max-2026-11-09/audit.py",
+      "source_sha256": "08aa63eb8c39937ddf89d0627c359fed419c894287014e76defc20f5e1dc2bd3",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/common-config.json",
+      "sha256": "892d5e0f07aa3b75102d957c4c0d5aeaddad643bad84c0908a337dfb4abd9d32",
+      "bytes": 1010,
+      "source": "runs/luna-max-2026-11-09/common-config.json",
+      "source_sha256": "892d5e0f07aa3b75102d957c4c0d5aeaddad643bad84c0908a337dfb4abd9d32",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/experiment.json",
+      "sha256": "cb1cce6b377d31d5468048f892dc142ea23f3991485691907c88f157b4ade0be",
+      "bytes": 4652,
+      "source": "runs/luna-max-2026-11-09/experiment.json",
+      "source_sha256": "cb1cce6b377d31d5468048f892dc142ea23f3991485691907c88f157b4ade0be",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/finished.json",
+      "sha256": "6a8920b74d5114cce79d9e9ff452197e71dd662f8ab7554e18b2c84f70e755dc",
+      "bytes": 175,
+      "source": "runs/luna-max-2026-11-09/finished.json",
+      "source_sha256": "6a8920b74d5114cce79d9e9ff452197e71dd662f8ab7554e18b2c84f70e755dc",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/inputs/graphene_statement.pdf",
+      "sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "bytes": 182863,
+      "source": "runs/luna-max-2026-11-09/inputs/graphene_statement.pdf",
+      "source_sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/inputs/graphene_statement.tex",
+      "sha256": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+      "bytes": 2853,
+      "source": "runs/luna-max-2026-11-09/inputs/graphene_statement.tex",
+      "source_sha256": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/inputs-manifest.json",
+      "sha256": "b4b3a3db3ab52e8cc31e3c44100818d8aeb4a7bd9774414ae4dbe6ef59f71be8",
+      "bytes": 1188,
+      "source": "runs/luna-max-2026-11-09/inputs-manifest.json",
+      "source_sha256": "b4b3a3db3ab52e8cc31e3c44100818d8aeb4a7bd9774414ae4dbe6ef59f71be8",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/AUDIT.txt",
+      "sha256": "3b2a9c82f0887f4d5174b6f7f146f359afaa17878cf538d880ce61d67c24c153",
+      "bytes": 1113,
+      "source": "runs/luna-max-2026-11-09/plain/AUDIT.txt",
+      "source_sha256": "3b2a9c82f0887f4d5174b6f7f146f359afaa17878cf538d880ce61d67c24c153",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/activity.md",
+      "sha256": "c89f3761b2b2f6f6106ba75e19f813c8de30f36f6699b158652d0518b66c8b3a",
+      "bytes": 9713,
+      "sources": {
+        "runs/luna-max-2026-11-09/plain/events.jsonl": "d5828b9cbf575b16f9ef87ec34a0214b27f8c52b5dde6bc76e6109837ec896b5"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/argv.json",
+      "sha256": "36d47f30b0aed3f8879aa9ff3e9749e76d15574f0b23a760c066ec48f5ec10a0",
+      "bytes": 2386,
+      "source": "runs/luna-max-2026-11-09/plain/argv.json",
+      "source_sha256": "36d47f30b0aed3f8879aa9ff3e9749e76d15574f0b23a760c066ec48f5ec10a0",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/artifact-manifest.json",
+      "sha256": "401de866516f89fc14846cc5283cc23fe95d93c2a6acdce52232b2654c7d56f1",
+      "bytes": 1218,
+      "source": "runs/luna-max-2026-11-09/plain/artifact-manifest.json",
+      "source_sha256": "401de866516f89fc14846cc5283cc23fe95d93c2a6acdce52232b2654c7d56f1",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/audit.json",
+      "sha256": "7bdb6df3f66a4f334aec22f6d4f1ef479f21390887d1fe741752d9687ec3df50",
+      "bytes": 17729,
+      "source": "runs/luna-max-2026-11-09/plain/audit.json",
+      "source_sha256": "7bdb6df3f66a4f334aec22f6d4f1ef479f21390887d1fe741752d9687ec3df50",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/config.json",
+      "sha256": "8827964c9a75065ff40a7aaa255f589dbd0821994693dfdb88fca8f8c0ba015f",
+      "bytes": 1815,
+      "source": "runs/luna-max-2026-11-09/plain/config.json",
+      "source_sha256": "8827964c9a75065ff40a7aaa255f589dbd0821994693dfdb88fca8f8c0ba015f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/final-response.txt",
+      "sha256": "fa1911c5d1ac7363595a8d66de8bab1059cf7b28336dc11cb0d748d2db935bf2",
+      "bytes": 477,
+      "source": "runs/luna-max-2026-11-09/plain/final-response.txt",
+      "source_sha256": "fa1911c5d1ac7363595a8d66de8bab1059cf7b28336dc11cb0d748d2db935bf2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/output/graphene_conductivity_paper.pdf",
+      "sha256": "2fccf72e8a43f02f451450ad0f5064f617738f655eebb84b47f829d0b06bc41b",
+      "bytes": 255445,
+      "source": "runs/luna-max-2026-11-09/plain/output/graphene_conductivity_paper.pdf",
+      "source_sha256": "2fccf72e8a43f02f451450ad0f5064f617738f655eebb84b47f829d0b06bc41b",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/output/graphene_conductivity_paper.tex",
+      "sha256": "4a847b17eba3df04c4d8a19bebff509e242fe5bc57cc4f22f52d5dec3e88da3c",
+      "bytes": 15190,
+      "source": "runs/luna-max-2026-11-09/plain/output/graphene_conductivity_paper.tex",
+      "source_sha256": "4a847b17eba3df04c4d8a19bebff509e242fe5bc57cc4f22f52d5dec3e88da3c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/prompt.txt",
+      "sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "bytes": 213,
+      "source": "runs/luna-max-2026-11-09/plain/prompt.txt",
+      "source_sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/response-usage.jsonl",
+      "sha256": "268700b7fee15f9a1b1807408baf7e7c6d52a9708e2e2e4703e3c82bacbc76dc",
+      "bytes": 12622,
+      "sources": {
+        "runs/luna-max-2026-11-09/plain/native/sessions/2026/11/09/rollout-2026-11-09T09-54-22-01a1bf84-0247-72e2-8f7d-59a95d574434.jsonl": "46784264a2e176e6e7233fd6b6fa98b69233b5688c2642e695c7c95fe4bdf682"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/status.json",
+      "sha256": "9e330d5c21e429b6a12ebee417d8842de66e0c69be016378b757a06e9f26f9a2",
+      "bytes": 96,
+      "source": "runs/luna-max-2026-11-09/plain/status.json",
+      "source_sha256": "9e330d5c21e429b6a12ebee417d8842de66e0c69be016378b757a06e9f26f9a2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/timing.json",
+      "sha256": "913529783aa100bcedef4a59f90415b7dee29cd2bcdccc8d2ea89c5a08996c24",
+      "bytes": 426,
+      "source": "runs/luna-max-2026-11-09/plain/timing.json",
+      "source_sha256": "913529783aa100bcedef4a59f90415b7dee29cd2bcdccc8d2ea89c5a08996c24",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/plain/usage.json",
+      "sha256": "c9aecd3f4756264df7f47cd80707f3b18d6e496e6e48bb90beab3e0c2eeb8870",
+      "bytes": 2712,
+      "source": "runs/luna-max-2026-11-09/plain/usage.json",
+      "source_sha256": "c9aecd3f4756264df7f47cd80707f3b18d6e496e6e48bb90beab3e0c2eeb8870",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/preflight.json",
+      "sha256": "a0d2cf93a606d95ad26b9eb79dfe6c7f1d23054bf147e74546d62a979c41aacf",
+      "bytes": 357,
+      "source": "runs/luna-max-2026-11-09/preflight.json",
+      "source_sha256": "a0d2cf93a606d95ad26b9eb79dfe6c7f1d23054bf147e74546d62a979c41aacf",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/results.csv",
+      "sha256": "1d409675493f132a40da925601a48d7c4534759d6c36f0418858e0dcf2382836",
+      "bytes": 267,
+      "source": "runs/luna-max-2026-11-09/results.csv",
+      "source_sha256": "1d409675493f132a40da925601a48d7c4534759d6c36f0418858e0dcf2382836",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/run.py",
+      "sha256": "29c7cc23659a3c5194b8cccda84f705964f02bfabb4376558b52be4ae41280c0",
+      "bytes": 11268,
+      "source": "runs/luna-max-2026-11-09/run.py",
+      "source_sha256": "29c7cc23659a3c5194b8cccda84f705964f02bfabb4376558b52be4ae41280c0",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/luna-max-2026-11-09/verification.json",
+      "sha256": "7056890ab863139bfdfe7e2a9f3bc288b46c30413db24dbdc83c0cf2d5f851b1",
+      "bytes": 776,
+      "source": "runs/luna-max-2026-11-09/verification.json",
+      "source_sha256": "7056890ab863139bfdfe7e2a9f3bc288b46c30413db24dbdc83c0cf2d5f851b1",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/INDEPENDENT_AUDIT.txt",
+      "sha256": "5d68728a7f87f2cbba3fa2cbc618011fe9524b9eef7d7e6df1ed924ea98ac003",
+      "bytes": 2036,
+      "source": "runs/matrix-2026-11-03/INDEPENDENT_AUDIT.txt",
+      "source_sha256": "5d68728a7f87f2cbba3fa2cbc618011fe9524b9eef7d7e6df1ed924ea98ac003",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/PROTOCOL.txt",
+      "sha256": "9571148ea8fc7d8e34cec3e5be0a7b66ede3b44e58fffa5cc831151008d5f525",
+      "bytes": 3171,
+      "source": "runs/matrix-2026-11-03/PROTOCOL.txt",
+      "source_sha256": "9571148ea8fc7d8e34cec3e5be0a7b66ede3b44e58fffa5cc831151008d5f525",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/RESULTS.txt",
+      "sha256": "a8d5b86313a99ff0986d900f1c757c02071df3e7a7a1d43ddf92508e72987335",
+      "bytes": 5162,
+      "source": "runs/matrix-2026-11-03/RESULTS.txt",
+      "source_sha256": "a8d5b86313a99ff0986d900f1c757c02071df3e7a7a1d43ddf92508e72987335",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/TRACE_ACCOUNTING.txt",
+      "sha256": "7adbe03667e6f7804f393bcf22df3aa9bf9c44765a4b5b4a94799f1ff8f8f48a",
+      "bytes": 4248,
+      "source": "runs/matrix-2026-11-03/TRACE_ACCOUNTING.txt",
+      "source_sha256": "7adbe03667e6f7804f393bcf22df3aa9bf9c44765a4b5b4a94799f1ff8f8f48a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/api-pricing.json",
+      "sha256": "98b587493050f45d1cd210b60d3b95abbbbcc09d73078e982a70c6fda021b304",
+      "bytes": 7396,
+      "source": "runs/matrix-2026-11-03/api-pricing.json",
+      "source_sha256": "98b587493050f45d1cd210b60d3b95abbbbcc09d73078e982a70c6fda021b304",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/audit-summary.json",
+      "sha256": "77d5b16d40693e64db5ad4b5f629d146cfad1096c5c180b8f60aefa0e0b156c2",
+      "bytes": 147287,
+      "source": "runs/matrix-2026-11-03/audit-summary.json",
+      "source_sha256": "77d5b16d40693e64db5ad4b5f629d146cfad1096c5c180b8f60aefa0e0b156c2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/audit.py",
+      "sha256": "707a2ce8ea0ce95c10594c6ff84442b4e62970a7cd44db2e435f8341a5e6c2dc",
+      "bytes": 13168,
+      "source": "runs/matrix-2026-11-03/audit.py",
+      "source_sha256": "707a2ce8ea0ce95c10594c6ff84442b4e62970a7cd44db2e435f8341a5e6c2dc",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/common-config.json",
+      "sha256": "713c0035fcdf95be669a00421fddab00d5addb9322f6b846055dd8d572b4783d",
+      "bytes": 1012,
+      "source": "runs/matrix-2026-11-03/common-config.json",
+      "source_sha256": "713c0035fcdf95be669a00421fddab00d5addb9322f6b846055dd8d572b4783d",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/experiment.json",
+      "sha256": "28d265284597830c87b05053b8da07df1aeb36085a056efc0a7abd3e23aaddfc",
+      "bytes": 3285,
+      "source": "runs/matrix-2026-11-03/experiment.json",
+      "source_sha256": "28d265284597830c87b05053b8da07df1aeb36085a056efc0a7abd3e23aaddfc",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/experiment.py",
+      "sha256": "c8cdf7bd09716c71bfcb896252ca139faa94656b1f359ab474ced5c6f2a4e6a3",
+      "bytes": 19183,
+      "source": "runs/matrix-2026-11-03/experiment.py",
+      "source_sha256": "c8cdf7bd09716c71bfcb896252ca139faa94656b1f359ab474ced5c6f2a4e6a3",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/AUDIT.txt",
+      "sha256": "9e1a0460ff878a185c5eb3331479471b53821106c96c9cebc714e91821c42ebd",
+      "bytes": 1618,
+      "source": "runs/matrix-2026-11-03/explicit/AUDIT.txt",
+      "source_sha256": "9e1a0460ff878a185c5eb3331479471b53821106c96c9cebc714e91821c42ebd",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/activity.md",
+      "sha256": "0e33415926edf46603fce9fdbed312b0e8574acd326f8048a88ba5532b593cac",
+      "bytes": 9014,
+      "sources": {
+        "runs/matrix-2026-11-03/explicit/events.jsonl": "d2f635b4aed59b9f937533474b6f388442ce8eaa98eaa3ddd0a5a38a0d6c49ca"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/argv.json",
+      "sha256": "0f25ff045babe31c97dc12900561fab0d5748d2838285a9883199fe03f78891d",
+      "bytes": 2285,
+      "source": "runs/matrix-2026-11-03/explicit/argv.json",
+      "source_sha256": "0f25ff045babe31c97dc12900561fab0d5748d2838285a9883199fe03f78891d",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/artifact-manifest.json",
+      "sha256": "db8b4c9944b22e90fd4711cdc2ca59660f98e939807c1304b569f874b054b37c",
+      "bytes": 2962,
+      "source": "runs/matrix-2026-11-03/explicit/artifact-manifest.json",
+      "source_sha256": "db8b4c9944b22e90fd4711cdc2ca59660f98e939807c1304b569f874b054b37c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/audit.json",
+      "sha256": "fc930bb6341655c72b05c7f1d6fe2c3a7c2aaa22a83847c03d18d6c1b31f1d3c",
+      "bytes": 11066,
+      "source": "runs/matrix-2026-11-03/explicit/audit.json",
+      "source_sha256": "fc930bb6341655c72b05c7f1d6fe2c3a7c2aaa22a83847c03d18d6c1b31f1d3c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/config.json",
+      "sha256": "2e965befe33310172999915eea9aecba6ed80834404b71d82d8e7776fc0b1a82",
+      "bytes": 1723,
+      "source": "runs/matrix-2026-11-03/explicit/config.json",
+      "source_sha256": "2e965befe33310172999915eea9aecba6ed80834404b71d82d8e7776fc0b1a82",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/final-response.txt",
+      "sha256": "5d955d885e507d09833c3f6c93d7a391bc930f87898835dd1de68d5120e5a6f7",
+      "bytes": 336,
+      "source": "runs/matrix-2026-11-03/explicit/final-response.txt",
+      "source_sha256": "5d955d885e507d09833c3f6c93d7a391bc930f87898835dd1de68d5120e5a6f7",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/output/paper.pdf",
+      "sha256": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+      "bytes": 300742,
+      "source": "runs/matrix-2026-11-03/explicit/output/paper.pdf",
+      "source_sha256": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/output/paper.tex",
+      "sha256": "aa5c5e944d283c3479a8c391877ace07cdaf41f8fdc318f2deb717e7b911c9c9",
+      "bytes": 29504,
+      "source": "runs/matrix-2026-11-03/explicit/output/paper.tex",
+      "source_sha256": "aa5c5e944d283c3479a8c391877ace07cdaf41f8fdc318f2deb717e7b911c9c9",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/prompt.txt",
+      "sha256": "76ebb5aa06b815f02d761c34e7fedb299a170c932726e6b7701028d3e51773f6",
+      "bytes": 1025,
+      "source": "runs/matrix-2026-11-03/explicit/prompt.txt",
+      "source_sha256": "76ebb5aa06b815f02d761c34e7fedb299a170c932726e6b7701028d3e51773f6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/response-usage.jsonl",
+      "sha256": "66ee4198940b1cd18de03782b18312b03b5709b2909ae3fa85eafbc98de99b53",
+      "bytes": 4570,
+      "sources": {
+        "runs/matrix-2026-11-03/explicit/native/sessions/2026/11/03/rollout-2026-11-03T11-37-31-01a1a0fc-4b3b-7e93-b2e9-6b887026c635.jsonl": "2603fa86a7b95fcde8cbecfe5149660437410396a16b257b108991a64eb1fc1a"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/status.json",
+      "sha256": "0ff6117785187b84e4b80a84b60fa9c946bf66ad0a938371636207ee5e398ef4",
+      "bytes": 96,
+      "source": "runs/matrix-2026-11-03/explicit/status.json",
+      "source_sha256": "0ff6117785187b84e4b80a84b60fa9c946bf66ad0a938371636207ee5e398ef4",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/timing.json",
+      "sha256": "b4ceeb421db545e12140fe0591f8d7e0bdd152b3be0bdbc632493c1ddb7f014f",
+      "bytes": 447,
+      "source": "runs/matrix-2026-11-03/explicit/timing.json",
+      "source_sha256": "b4ceeb421db545e12140fe0591f8d7e0bdd152b3be0bdbc632493c1ddb7f014f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit/usage.json",
+      "sha256": "50c5dcaa25cdec6b27237522ac459c82c0db532e4e284013bbe2355c9cd706f4",
+      "bytes": 2704,
+      "source": "runs/matrix-2026-11-03/explicit/usage.json",
+      "source_sha256": "50c5dcaa25cdec6b27237522ac459c82c0db532e4e284013bbe2355c9cd706f4",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/AUDIT.txt",
+      "sha256": "15d27d2b668a22d32d1185754a5fd121c0d6f6ce69ac5e3b29001ac9b22171f6",
+      "bytes": 1852,
+      "source": "runs/matrix-2026-11-03/explicit_review/AUDIT.txt",
+      "source_sha256": "15d27d2b668a22d32d1185754a5fd121c0d6f6ce69ac5e3b29001ac9b22171f6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/activity.md",
+      "sha256": "06fcd130f5785813fd41c03e5eb84339cb2b6774800a0986092aeea9754df51b",
+      "bytes": 10074,
+      "sources": {
+        "runs/matrix-2026-11-03/explicit_review/events.jsonl": "bbd9441f57ddfe3027dac0abe9256c16a710c95a827b184ce241cf1473810eda"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/argv.json",
+      "sha256": "46083ad4388b9f6e9af488f0227d300a552ed30a13fef3562b3e603af1d8c0ef",
+      "bytes": 2285,
+      "source": "runs/matrix-2026-11-03/explicit_review/argv.json",
+      "source_sha256": "46083ad4388b9f6e9af488f0227d300a552ed30a13fef3562b3e603af1d8c0ef",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/artifact-manifest.json",
+      "sha256": "f028f39931b31b24f93384848def9bdcc8d9591388edf8fbca5d63aab094e74a",
+      "bytes": 7028,
+      "source": "runs/matrix-2026-11-03/explicit_review/artifact-manifest.json",
+      "source_sha256": "f028f39931b31b24f93384848def9bdcc8d9591388edf8fbca5d63aab094e74a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/audit.json",
+      "sha256": "d8fc36402d56def9a3e3717e529631cd99ab7411fe46bc7a386e1ac2d95d6488",
+      "bytes": 54044,
+      "source": "runs/matrix-2026-11-03/explicit_review/audit.json",
+      "source_sha256": "d8fc36402d56def9a3e3717e529631cd99ab7411fe46bc7a386e1ac2d95d6488",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/config.json",
+      "sha256": "ea7a4fbf5825f83f0838abca08c0c21eb798aa2e360f5a0bcb3431d268eaa355",
+      "bytes": 1723,
+      "source": "runs/matrix-2026-11-03/explicit_review/config.json",
+      "source_sha256": "ea7a4fbf5825f83f0838abca08c0c21eb798aa2e360f5a0bcb3431d268eaa355",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/final-response.txt",
+      "sha256": "f3335a005a5c5d3663641e6a39c13e2c105a17f090cde0084c37393b5be02660",
+      "bytes": 379,
+      "source": "runs/matrix-2026-11-03/explicit_review/final-response.txt",
+      "source_sha256": "f3335a005a5c5d3663641e6a39c13e2c105a17f090cde0084c37393b5be02660",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/README.md",
+      "sha256": "7191714ca5c212eca2b5dc3016000d85b6ec6c613030ca3d40c04dbd18b4c6c6",
+      "bytes": 1092,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/README.md",
+      "source_sha256": "7191714ca5c212eca2b5dc3016000d85b6ec6c613030ca3d40c04dbd18b4c6c6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.pdf",
+      "sha256": "53ca3b4c5488ee5a5819f25599a8233e69bd35935dff8a07b3db35615de09671",
+      "bytes": 291991,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.pdf",
+      "source_sha256": "53ca3b4c5488ee5a5819f25599a8233e69bd35935dff8a07b3db35615de09671",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.tex",
+      "sha256": "2d9c900ff802b14d068f88b5ab4827a481d9d38df3c68ab0cb1db2b44d6f3159",
+      "bytes": 32321,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.tex",
+      "source_sha256": "2d9c900ff802b14d068f88b5ab4827a481d9d38df3c68ab0cb1db2b44d6f3159",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones.md",
+      "sha256": "eab6a545d5b8d44290d15c75dca46d840f437d6cceb7aa2b643d7b82363464f4",
+      "bytes": 9087,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones.md",
+      "source_sha256": "eab6a545d5b8d44290d15c75dca46d840f437d6cceb7aa2b643d7b82363464f4",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones_round1.md",
+      "sha256": "813701af24b3fb7dc1b1332c66877134a435b9b51e3efdbacf02bb07a50fb080",
+      "bytes": 7514,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones_round1.md",
+      "source_sha256": "813701af24b3fb7dc1b1332c66877134a435b9b51e3efdbacf02bb07a50fb080",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones_round2.md",
+      "sha256": "40098fbd906274f318c43f4c067783bc23500b97f859f3923b34357e3fcfa51c",
+      "bytes": 2379,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_cones_round2.md",
+      "source_sha256": "40098fbd906274f318c43f4c067783bc23500b97f859f3923b34357e3fcfa51c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design.md",
+      "sha256": "42672d4ba18a6669f7550551045ab448114f9aa7e415166379930b27922a9162",
+      "bytes": 10057,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design.md",
+      "source_sha256": "42672d4ba18a6669f7550551045ab448114f9aa7e415166379930b27922a9162",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design_round1.md",
+      "sha256": "a769e562fdf13c33b4d58c3d604421277cd0eceac48a18c2808afbc8fac445d5",
+      "bytes": 9864,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design_round1.md",
+      "source_sha256": "a769e562fdf13c33b4d58c3d604421277cd0eceac48a18c2808afbc8fac445d5",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design_round2.md",
+      "sha256": "135b26fde36bbe799f17507d4e684a3112717b871e5370393bf3e8acba0e6c19",
+      "bytes": 2901,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_design_round2.md",
+      "source_sha256": "135b26fde36bbe799f17507d4e684a3112717b871e5370393bf3e8acba0e6c19",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response.md",
+      "sha256": "d63d6a10017c1037cc1c2cab6ff160628a68a4aaf1af9e6d6dfffdd0f960b862",
+      "bytes": 11568,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response.md",
+      "source_sha256": "d63d6a10017c1037cc1c2cab6ff160628a68a4aaf1af9e6d6dfffdd0f960b862",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response_round1.md",
+      "sha256": "33e2d01a842fd087a491fced4f7b381ec68e087a210f6f6ad61691cd44ea652f",
+      "bytes": 10695,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response_round1.md",
+      "source_sha256": "33e2d01a842fd087a491fced4f7b381ec68e087a210f6f6ad61691cd44ea652f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response_round2.md",
+      "sha256": "3c7d23785f8475097d8c276ed65ce945b77a89f4424715219fa9b1029d117f9f",
+      "bytes": 2477,
+      "source": "runs/matrix-2026-11-03/explicit_review/output/paper_work/reviews/review_response_round2.md",
+      "source_sha256": "3c7d23785f8475097d8c276ed65ce945b77a89f4424715219fa9b1029d117f9f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/prompt.txt",
+      "sha256": "a166e77d777d5c09708bdb353c7c9850d6066a2426b319066e1593eeca4b32a8",
+      "bytes": 1314,
+      "source": "runs/matrix-2026-11-03/explicit_review/prompt.txt",
+      "source_sha256": "a166e77d777d5c09708bdb353c7c9850d6066a2426b319066e1593eeca4b32a8",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/response-usage.jsonl",
+      "sha256": "830dc93b2f9c46d233c8170343d6d0440bd7ada77180a86f854b9190c4fd1e9d",
+      "bytes": 48036,
+      "sources": {
+        "runs/matrix-2026-11-03/explicit_review/native/sessions/2026/11/03/rollout-2026-11-03T11-54-38-01a1a10b-f642-7f71-be6a-1f51f1fbda7c.jsonl": "4f3291ac721b91cbbd2b3d5d52c2433bec184c9085bea6f0d8ddbcf19ee9c0c6",
+        "runs/matrix-2026-11-03/explicit_review/native/sessions/2026/11/03/rollout-2026-11-03T11-55-02-01a1a10c-53be-7c33-8b40-3fc68233146e.jsonl": "00b4249ad2cf6e59d36361c3c4fafd28abd35947693fd09b2d963bcc4f6f1be6",
+        "runs/matrix-2026-11-03/explicit_review/native/sessions/2026/11/03/rollout-2026-11-03T11-55-09-01a1a10c-7195-7020-9d8b-cfe8f22957c2.jsonl": "e7b08dd41b6f8054e2444612b4952cde427b512cb2efcde67a8294d535988d8a",
+        "runs/matrix-2026-11-03/explicit_review/native/sessions/2026/11/03/rollout-2026-11-03T11-55-19-01a1a10c-968c-7211-9673-0c3de608827a.jsonl": "c64dfc27d9b5875e85db7728f1820d24aa9579b1109d848e1fc455f7097c28ea"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/status.json",
+      "sha256": "4c46d9e9f41bb734e43615c04db90965b2acc865b51d6fbb123795aad6229952",
+      "bytes": 96,
+      "source": "runs/matrix-2026-11-03/explicit_review/status.json",
+      "source_sha256": "4c46d9e9f41bb734e43615c04db90965b2acc865b51d6fbb123795aad6229952",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/timing.json",
+      "sha256": "aefcb95c8a639fef301bd9e390e9ddfe5d18220214312afe2ff503f781b4e028",
+      "bytes": 430,
+      "source": "runs/matrix-2026-11-03/explicit_review/timing.json",
+      "source_sha256": "aefcb95c8a639fef301bd9e390e9ddfe5d18220214312afe2ff503f781b4e028",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/explicit_review/usage.json",
+      "sha256": "eb953f38fdc4b6735ddb1c02ee6e907509a5417c8f57fd64fab86c66ba95a057",
+      "bytes": 10203,
+      "source": "runs/matrix-2026-11-03/explicit_review/usage.json",
+      "source_sha256": "eb953f38fdc4b6735ddb1c02ee6e907509a5417c8f57fd64fab86c66ba95a057",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/finished.json",
+      "sha256": "5bc956c1e3cae7d4165b0dc7a989d39bee7e7c28acef166bc74ae18bae278ea3",
+      "bytes": 139,
+      "source": "runs/matrix-2026-11-03/finished.json",
+      "source_sha256": "5bc956c1e3cae7d4165b0dc7a989d39bee7e7c28acef166bc74ae18bae278ea3",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/inputs/graphene_statement.pdf",
+      "sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "bytes": 182863,
+      "source": "runs/matrix-2026-11-03/inputs/graphene_statement.pdf",
+      "source_sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/inputs/graphene_statement.tex",
+      "sha256": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+      "bytes": 2853,
+      "source": "runs/matrix-2026-11-03/inputs/graphene_statement.tex",
+      "source_sha256": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/inputs-manifest.json",
+      "sha256": "b4b3a3db3ab52e8cc31e3c44100818d8aeb4a7bd9774414ae4dbe6ef59f71be8",
+      "bytes": 1188,
+      "source": "runs/matrix-2026-11-03/inputs-manifest.json",
+      "source_sha256": "b4b3a3db3ab52e8cc31e3c44100818d8aeb4a7bd9774414ae4dbe6ef59f71be8",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/AUDIT.txt",
+      "sha256": "c73cbd81c6cd50320fef89cc070996612447ba718f481a62613455580b202084",
+      "bytes": 1216,
+      "source": "runs/matrix-2026-11-03/plain/AUDIT.txt",
+      "source_sha256": "c73cbd81c6cd50320fef89cc070996612447ba718f481a62613455580b202084",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/activity.md",
+      "sha256": "5e2e34d9726db8b939deae95d1a027590f836c8f1bc543bb36f8aebd9e6d23b7",
+      "bytes": 9165,
+      "sources": {
+        "runs/matrix-2026-11-03/plain/events.jsonl": "5d28e0b2a8237e4b55d858c45c06de39ba659cd2fdc4ff683ea74e7c8f078d80"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/argv.json",
+      "sha256": "61566e98eb7caa1754ce559eb6a9d935381bf906f6fa05902d1ebaedd432f601",
+      "bytes": 2285,
+      "source": "runs/matrix-2026-11-03/plain/argv.json",
+      "source_sha256": "61566e98eb7caa1754ce559eb6a9d935381bf906f6fa05902d1ebaedd432f601",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/artifact-manifest.json",
+      "sha256": "40f964c6c8a65b9e15ca62828ebb9af951c71209b46ae42b48855ce16a088e4b",
+      "bytes": 2703,
+      "source": "runs/matrix-2026-11-03/plain/artifact-manifest.json",
+      "source_sha256": "40f964c6c8a65b9e15ca62828ebb9af951c71209b46ae42b48855ce16a088e4b",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/audit.json",
+      "sha256": "efbe1166a886b493453c087b4fbc8ad797d6ed032084c3c9d6334ec5974c49ca",
+      "bytes": 3933,
+      "source": "runs/matrix-2026-11-03/plain/audit.json",
+      "source_sha256": "efbe1166a886b493453c087b4fbc8ad797d6ed032084c3c9d6334ec5974c49ca",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/config.json",
+      "sha256": "0822807113c13f34a4fb7b80837ac8e0e089a348d2d3e2592d8c723c7b0e0fbd",
+      "bytes": 1723,
+      "source": "runs/matrix-2026-11-03/plain/config.json",
+      "source_sha256": "0822807113c13f34a4fb7b80837ac8e0e089a348d2d3e2592d8c723c7b0e0fbd",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/final-response.txt",
+      "sha256": "54c206a695f5b13b89829c48712556f41bee1b40f8d2920fb23e71eefc9e28b4",
+      "bytes": 285,
+      "source": "runs/matrix-2026-11-03/plain/final-response.txt",
+      "source_sha256": "54c206a695f5b13b89829c48712556f41bee1b40f8d2920fb23e71eefc9e28b4",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/output/graphene_conductivity.pdf",
+      "sha256": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+      "bytes": 311614,
+      "source": "runs/matrix-2026-11-03/plain/output/graphene_conductivity.pdf",
+      "source_sha256": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex",
+      "sha256": "8867378c07f93cb0559799cf90b409af0f30a36dde0d287e5d507870e1af064c",
+      "bytes": 33783,
+      "source": "runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex",
+      "source_sha256": "8867378c07f93cb0559799cf90b409af0f30a36dde0d287e5d507870e1af064c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/prompt.txt",
+      "sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "bytes": 213,
+      "source": "runs/matrix-2026-11-03/plain/prompt.txt",
+      "source_sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/response-usage.jsonl",
+      "sha256": "e2a0af3acc402397cc2477c1eb6342fb88a52435e8fcbae711605e0fffc88240",
+      "bytes": 4912,
+      "sources": {
+        "runs/matrix-2026-11-03/plain/native/sessions/2026/11/03/rollout-2026-11-03T11-24-02-01a1a0ef-f2be-7723-887f-4fffd7568fe7.jsonl": "8b2cc1accaae026f76dfd86fdcbda6a0f8efc085f8b9c204655d6755fb07b6ae"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/status.json",
+      "sha256": "752ba18323cfd8740ce417cfefd1174c926040b09dabf417a137eabcdcdd7c6f",
+      "bytes": 96,
+      "source": "runs/matrix-2026-11-03/plain/status.json",
+      "source_sha256": "752ba18323cfd8740ce417cfefd1174c926040b09dabf417a137eabcdcdd7c6f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/timing.json",
+      "sha256": "e1365d521cbe95d0806b60cb4fc9f07f146984a3f1541a845fc20dffd0c3e7b5",
+      "bytes": 436,
+      "source": "runs/matrix-2026-11-03/plain/timing.json",
+      "source_sha256": "e1365d521cbe95d0806b60cb4fc9f07f146984a3f1541a845fc20dffd0c3e7b5",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/plain/usage.json",
+      "sha256": "1f1643ad9f2c230f00aa58497d4a819873121be9bb369436df159700086939ec",
+      "bytes": 2699,
+      "source": "runs/matrix-2026-11-03/plain/usage.json",
+      "source_sha256": "1f1643ad9f2c230f00aa58497d4a819873121be9bb369436df159700086939ec",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/preflight.json",
+      "sha256": "548894dedc12adf2b11995a2b67f41a586fb85aae20bb845304c8e8c9fc680b1",
+      "bytes": 236,
+      "source": "runs/matrix-2026-11-03/preflight.json",
+      "source_sha256": "548894dedc12adf2b11995a2b67f41a586fb85aae20bb845304c8e8c9fc680b1",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/READABILITY_REVIEW_BLIND.txt",
+      "sha256": "539eda97e52616f70d0ac9c9d742f379077aa54e1a0ff3d8a11426daeb6625fa",
+      "bytes": 6678,
+      "source": "runs/matrix-2026-11-03/readability-blind/READABILITY_REVIEW_BLIND.txt",
+      "source_sha256": "539eda97e52616f70d0ac9c9d742f379077aa54e1a0ff3d8a11426daeb6625fa",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/READABILITY_REVIEW_UPDATED.txt",
+      "sha256": "9f6552baad2b4955402d76cbf4b50924475d58d6606d9c482900b2273607d6c5",
+      "bytes": 7491,
+      "source": "runs/matrix-2026-11-03/readability-blind/READABILITY_REVIEW_UPDATED.txt",
+      "source_sha256": "9f6552baad2b4955402d76cbf4b50924475d58d6606d9c482900b2273607d6c5",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/RESULTS.txt",
+      "sha256": "b6c20b94ac32df6f17a3b75ea0461dfea66afd726c0e52aaf1d6d52b6917ad3c",
+      "bytes": 2956,
+      "source": "runs/matrix-2026-11-03/readability-blind/RESULTS.txt",
+      "source_sha256": "b6c20b94ac32df6f17a3b75ea0461dfea66afd726c0e52aaf1d6d52b6917ad3c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/RESULTS_UPDATED.txt",
+      "sha256": "fbdc340e07120add53073a1a21b5f797ac58e336867f5cfb85faaaa0928728a6",
+      "bytes": 2245,
+      "source": "runs/matrix-2026-11-03/readability-blind/RESULTS_UPDATED.txt",
+      "source_sha256": "fbdc340e07120add53073a1a21b5f797ac58e336867f5cfb85faaaa0928728a6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_A.pdf",
+      "sha256": "53ca3b4c5488ee5a5819f25599a8233e69bd35935dff8a07b3db35615de09671",
+      "bytes": 291991,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_A.pdf",
+      "source_sha256": "53ca3b4c5488ee5a5819f25599a8233e69bd35935dff8a07b3db35615de09671",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_A.txt",
+      "sha256": "ae686a08254d4e4e198926998fdacf090a63a1c0492970e2e78eaf129af1ea4b",
+      "bytes": 33051,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_A.txt",
+      "source_sha256": "ae686a08254d4e4e198926998fdacf090a63a1c0492970e2e78eaf129af1ea4b",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_B.pdf",
+      "sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "bytes": 337835,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_B.pdf",
+      "source_sha256": "5fc6a2678267ba3b0ada7416a4ee05370a7a2ea52cdc29699fe4e1c9ecfe75bf",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_B.txt",
+      "sha256": "53513e760349699926e8a366fac7a6237784003a503b53ffd61e961fa5936586",
+      "bytes": 81676,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_B.txt",
+      "source_sha256": "53513e760349699926e8a366fac7a6237784003a503b53ffd61e961fa5936586",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_C.pdf",
+      "sha256": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+      "bytes": 332334,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_C.pdf",
+      "source_sha256": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_C.txt",
+      "sha256": "55d5aafa5a3ab9d1c119a1a6357503972b3ec24a9570dd97632ce9c559c1ca61",
+      "bytes": 38336,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_C.txt",
+      "source_sha256": "55d5aafa5a3ab9d1c119a1a6357503972b3ec24a9570dd97632ce9c559c1ca61",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_D.pdf",
+      "sha256": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+      "bytes": 311614,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_D.pdf",
+      "source_sha256": "659a286b4fd98525800cd11d7507f9c6ab6e2f1f8c3eaa2aafed5b7b606927be",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_D.txt",
+      "sha256": "dcbb107fb2231b5681e07efc1b9048eff42ebb4aefc197fddc8cd9a03c8042e5",
+      "bytes": 36723,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_D.txt",
+      "source_sha256": "dcbb107fb2231b5681e07efc1b9048eff42ebb4aefc197fddc8cd9a03c8042e5",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_E.pdf",
+      "sha256": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+      "bytes": 300742,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_E.pdf",
+      "source_sha256": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_E.txt",
+      "sha256": "114d9dcfeba25419da981b16f8d3bd21cf0065a5a99de0c81c1f7fd22b3513fb",
+      "bytes": 31325,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Manuscript_E.txt",
+      "source_sha256": "114d9dcfeba25419da981b16f8d3bd21cf0065a5a99de0c81c1f7fd22b3513fb",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Problem.pdf",
+      "sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "bytes": 182863,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Problem.pdf",
+      "source_sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Problem.txt",
+      "sha256": "b0eeae87fb43c1e34b8ee53922b2713393cab52210e55fc085913a8fef52c9f2",
+      "bytes": 2753,
+      "source": "runs/matrix-2026-11-03/readability-blind/anonymous-inputs/Problem.txt",
+      "source_sha256": "b0eeae87fb43c1e34b8ee53922b2713393cab52210e55fc085913a8fef52c9f2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/PROTOCOL.txt",
+      "sha256": "f98728150b8856c38d103be1ba59be59d0612680cbc842912eae669651127b37",
+      "bytes": 2896,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/PROTOCOL.txt",
+      "source_sha256": "f98728150b8856c38d103be1ba59be59d0612680cbc842912eae669651127b37",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/READABILITY_REVIEW_BLIND.txt",
+      "sha256": "731ccabacd4cefe7c8145688a8e673ac51b16cea305214628bbdc342bd792d78",
+      "bytes": 2487,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/READABILITY_REVIEW_BLIND.txt",
+      "source_sha256": "731ccabacd4cefe7c8145688a8e673ac51b16cea305214628bbdc342bd792d78",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Manuscript_B.pdf",
+      "sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274",
+      "bytes": 292989,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Manuscript_B.pdf",
+      "source_sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Manuscript_B.txt",
+      "sha256": "c40f12bf55092e25d52e3e0a49a567d7ad4d42d38e65de816b2e6ed867abbdae",
+      "bytes": 55559,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Manuscript_B.txt",
+      "source_sha256": "c40f12bf55092e25d52e3e0a49a567d7ad4d42d38e65de816b2e6ed867abbdae",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Problem.pdf",
+      "sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "bytes": 182863,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Problem.pdf",
+      "source_sha256": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Problem.txt",
+      "sha256": "b0eeae87fb43c1e34b8ee53922b2713393cab52210e55fc085913a8fef52c9f2",
+      "bytes": 2753,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/anonymous-inputs/Problem.txt",
+      "source_sha256": "b0eeae87fb43c1e34b8ee53922b2713393cab52210e55fc085913a8fef52c9f2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/grader-prompt.txt",
+      "sha256": "06e73a344ac4efa044ab1992f320e17a8a30a48b6a7d880961ed391c71d9aff9",
+      "bytes": 2226,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/grader-prompt.txt",
+      "source_sha256": "06e73a344ac4efa044ab1992f320e17a8a30a48b6a7d880961ed391c71d9aff9",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/activity.md",
+      "sha256": "a6019ed2bdb77bd7ece342c9d2163ef3c1c8192805c1cfcb22f6fd02567f02d0",
+      "bytes": 2067,
+      "sources": {
+        "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/events.jsonl": "b700c8bb58977bcea1a96b86ffaf07c063dfccb90cd1a30aa20bf3bae3e2d8fd"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/argv.json",
+      "sha256": "781f09453693a80015c6b56862066d8a457e728841a403a41ffecca9d61e5917",
+      "bytes": 2231,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/argv.json",
+      "source_sha256": "781f09453693a80015c6b56862066d8a457e728841a403a41ffecca9d61e5917",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/artifact-manifest.json",
+      "sha256": "84a5cfa4da376531f64a05fec1dbe56828b8f521f7063f9d4072c09e4060f70a",
+      "bytes": 324,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/artifact-manifest.json",
+      "source_sha256": "84a5cfa4da376531f64a05fec1dbe56828b8f521f7063f9d4072c09e4060f70a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/config.json",
+      "sha256": "f5c1b677c378b87b91ef2c9fdbbc37e9f17abec440d7348a284465bc1be1e2eb",
+      "bytes": 1665,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/config.json",
+      "source_sha256": "f5c1b677c378b87b91ef2c9fdbbc37e9f17abec440d7348a284465bc1be1e2eb",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/final-response.txt",
+      "sha256": "38506f84bfbaca54a94ac7923995046ae3477405d5f72d877614ddba2df06676",
+      "bytes": 223,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/final-response.txt",
+      "source_sha256": "38506f84bfbaca54a94ac7923995046ae3477405d5f72d877614ddba2df06676",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/output/READABILITY_REVIEW.txt",
+      "sha256": "731ccabacd4cefe7c8145688a8e673ac51b16cea305214628bbdc342bd792d78",
+      "bytes": 2487,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/output/READABILITY_REVIEW.txt",
+      "source_sha256": "731ccabacd4cefe7c8145688a8e673ac51b16cea305214628bbdc342bd792d78",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/prompt.txt",
+      "sha256": "a445be4abb9df2cce37297364dc00a4bcbe5d184ba94375ac2d9909b4c9f5a94",
+      "bytes": 2248,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/prompt.txt",
+      "source_sha256": "a445be4abb9df2cce37297364dc00a4bcbe5d184ba94375ac2d9909b4c9f5a94",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/response-usage.jsonl",
+      "sha256": "00ad4e7e7fcfe020735e31b77f119df5c509867bb5c504d8c84c1bd9b4cbb455",
+      "bytes": 2797,
+      "sources": {
+        "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/native/sessions/2026/11/05/rollout-2026-11-05T13-55-46-01a1abc7-96ef-7872-921d-d396b16904f7.jsonl": "1457c7269eb3f4cd98227371d6581f488cfb5408798960d0aab274383167e124"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/timing.json",
+      "sha256": "caa0860ca0f27d1efa34aff9d0058d5673fa27ff6a7293cea1d0e271eff3d2ed",
+      "bytes": 169,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/timing.json",
+      "source_sha256": "caa0860ca0f27d1efa34aff9d0058d5673fa27ff6a7293cea1d0e271eff3d2ed",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/usage.json",
+      "sha256": "f09ca5c4eaaed241fd4a58c8e6f264f26df8efadc7767f3b881db5446cc0f89f",
+      "bytes": 2727,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/isolated/usage.json",
+      "source_sha256": "f09ca5c4eaaed241fd4a58c8e6f264f26df8efadc7767f3b881db5446cc0f89f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/private-mapping.json",
+      "sha256": "b82e050594bf56449f27f0aa4270c64f183781b2eb7f224b62f66dfc31a7bb2e",
+      "bytes": 358,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/private-mapping.json",
+      "source_sha256": "b82e050594bf56449f27f0aa4270c64f183781b2eb7f224b62f66dfc31a7bb2e",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/prompt-changes.diff",
+      "sha256": "d146f12a8e5928225bbde03d923c3025fc5fd681ad6cad8a57e6211339cf9009",
+      "bytes": 4479,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/prompt-changes.diff",
+      "source_sha256": "d146f12a8e5928225bbde03d923c3025fc5fd681ad6cad8a57e6211339cf9009",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/run_isolated.py",
+      "sha256": "9f36d0c498b3c5395f254618c1c6bbd19607da880a3857b89e40e8c4412f6766",
+      "bytes": 8891,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/run_isolated.py",
+      "source_sha256": "9f36d0c498b3c5395f254618c1c6bbd19607da880a3857b89e40e8c4412f6766",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/runner-changes.diff",
+      "sha256": "6dd6f5a71632769747fc5b3b1201153a986e34cc196d0bc05a6bfeb2bff181cf",
+      "bytes": 2015,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/runner-changes.diff",
+      "source_sha256": "6dd6f5a71632769747fc5b3b1201153a986e34cc196d0bc05a6bfeb2bff181cf",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/verification.json",
+      "sha256": "c0f14450c0b9012fa46af8f86b81ac703493f606f85e6daa8a82e692a07af823",
+      "bytes": 1495,
+      "source": "runs/matrix-2026-11-03/readability-blind/b-update-2026-11-05/verification.json",
+      "source_sha256": "c0f14450c0b9012fa46af8f86b81ac703493f606f85e6daa8a82e692a07af823",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/grader-prompt.txt",
+      "sha256": "59839af80026d0705406f940bd01438271509d695055cf332aac014e7267ac4a",
+      "bytes": 2408,
+      "source": "runs/matrix-2026-11-03/readability-blind/grader-prompt.txt",
+      "source_sha256": "59839af80026d0705406f940bd01438271509d695055cf332aac014e7267ac4a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/activity.md",
+      "sha256": "d8cca1e4573d55227aef600a972601ddaf2cb7bb00d68395220296677a352052",
+      "bytes": 5713,
+      "sources": {
+        "runs/matrix-2026-11-03/readability-blind/isolated/events.jsonl": "eec8c80c2ae448247baddd413b0d462acdf696d0ef8d64fdd4db77a366048bb0"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/argv.json",
+      "sha256": "933b1ded6cd4995f2bcca26b28595b290b85db3f1cc53d8a38d8e67b3790c036",
+      "bytes": 2231,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/argv.json",
+      "source_sha256": "933b1ded6cd4995f2bcca26b28595b290b85db3f1cc53d8a38d8e67b3790c036",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/artifact-manifest.json",
+      "sha256": "c1608d5e139915408873b995ca45a4cdd1eebf61b475afd571a73ed03da6b0ed",
+      "bytes": 564,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/artifact-manifest.json",
+      "source_sha256": "c1608d5e139915408873b995ca45a4cdd1eebf61b475afd571a73ed03da6b0ed",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/config.json",
+      "sha256": "fb1bc7dce23d6b99518b3e9bfa9ede722b4594c9a8c247308f75d6f74a0ecd2a",
+      "bytes": 1665,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/config.json",
+      "source_sha256": "fb1bc7dce23d6b99518b3e9bfa9ede722b4594c9a8c247308f75d6f74a0ecd2a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/final-response.txt",
+      "sha256": "1ebce6cfce736ef6db3f163c35dae8399801749b2802b887ceaa1b735603f81b",
+      "bytes": 329,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/final-response.txt",
+      "source_sha256": "1ebce6cfce736ef6db3f163c35dae8399801749b2802b887ceaa1b735603f81b",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/output/READABILITY_REVIEW.txt",
+      "sha256": "539eda97e52616f70d0ac9c9d742f379077aa54e1a0ff3d8a11426daeb6625fa",
+      "bytes": 6678,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/output/READABILITY_REVIEW.txt",
+      "source_sha256": "539eda97e52616f70d0ac9c9d742f379077aa54e1a0ff3d8a11426daeb6625fa",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/prompt.txt",
+      "sha256": "18fac8fffb02678b952b6b7beaceffe5eac37151e1dbb72b57b6305601d1d04d",
+      "bytes": 2430,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/prompt.txt",
+      "source_sha256": "18fac8fffb02678b952b6b7beaceffe5eac37151e1dbb72b57b6305601d1d04d",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/response-usage.jsonl",
+      "sha256": "f4aca303e157761df9c938f3eaab6f21a789cb5a69228c8bc7954d72228d592b",
+      "bytes": 4903,
+      "sources": {
+        "runs/matrix-2026-11-03/readability-blind/isolated/native/sessions/2026/11/03/rollout-2026-11-03T13-13-28-01a1a154-24cd-7c83-97b8-536766a1cd26.jsonl": "74677f47813663a7b1e5e4f1330cb380764f6bb1b28d26fa83d6fb53e57edf6e"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/timing.json",
+      "sha256": "7f47472dfcccc357718d6297f11c84b1f425df6067e882d79c8a98efc3fe5f81",
+      "bytes": 169,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/timing.json",
+      "source_sha256": "7f47472dfcccc357718d6297f11c84b1f425df6067e882d79c8a98efc3fe5f81",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/isolated/usage.json",
+      "sha256": "22935129543e3594976f892f789e661a2698cdced8cab0ad66fa65526795b83c",
+      "bytes": 2712,
+      "source": "runs/matrix-2026-11-03/readability-blind/isolated/usage.json",
+      "source_sha256": "22935129543e3594976f892f789e661a2698cdced8cab0ad66fa65526795b83c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/private-mapping.json",
+      "sha256": "de01dc53a15c65c991cd1d0c15c09bc2a64ddbd69d5d2e4da535e6d4616c426e",
+      "bytes": 1374,
+      "source": "runs/matrix-2026-11-03/readability-blind/private-mapping.json",
+      "source_sha256": "de01dc53a15c65c991cd1d0c15c09bc2a64ddbd69d5d2e4da535e6d4616c426e",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/run_isolated.py",
+      "sha256": "4bf4b591a9e9a5617fe8691d172c6737c6b4f5f428ed77b2c28cfa939775c091",
+      "bytes": 8409,
+      "source": "runs/matrix-2026-11-03/readability-blind/run_isolated.py",
+      "source_sha256": "4bf4b591a9e9a5617fe8691d172c6737c6b4f5f428ed77b2c28cfa939775c091",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/readability-blind/verification.json",
+      "sha256": "480b9778fd471c9526422a48d77bd6e2ca36f5183316a35e02b4630366f9bb4a",
+      "bytes": 608,
+      "source": "runs/matrix-2026-11-03/readability-blind/verification.json",
+      "source_sha256": "480b9778fd471c9526422a48d77bd6e2ca36f5183316a35e02b4630366f9bb4a",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/results.csv",
+      "sha256": "814615ff4493194a78e1dcd11df0b3c79f5201ea2507100011d8dc96871ca09f",
+      "bytes": 496,
+      "source": "runs/matrix-2026-11-03/results.csv",
+      "source_sha256": "814615ff4493194a78e1dcd11df0b3c79f5201ea2507100011d8dc96871ca09f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/AUDIT.txt",
+      "sha256": "28725c8e1148cb10652f9a48ada12accaa9c8232dc8731ab3916ca6e0bf45d2f",
+      "bytes": 1757,
+      "source": "runs/matrix-2026-11-03/review/AUDIT.txt",
+      "source_sha256": "28725c8e1148cb10652f9a48ada12accaa9c8232dc8731ab3916ca6e0bf45d2f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/activity.md",
+      "sha256": "a8a62c509703b1cfb2efb9d1a26b713f4cde20182a65fe4161e04cfaed5f3f9d",
+      "bytes": 13462,
+      "sources": {
+        "runs/matrix-2026-11-03/review/events.jsonl": "a0da7bd8c7cd9121e74a9b9bb8a05beda04718ba58488f49d68e31730fd9b0ce"
+      },
+      "transformation": "Completed assistant messages and command/file-change metadata; tool output and file diffs omitted."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/argv.json",
+      "sha256": "15d2f1aa9cf03b1203bddfd4adfc923ad904d2ec574a1950a20817cecf9e14f9",
+      "bytes": 2285,
+      "source": "runs/matrix-2026-11-03/review/argv.json",
+      "source_sha256": "15d2f1aa9cf03b1203bddfd4adfc923ad904d2ec574a1950a20817cecf9e14f9",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/artifact-manifest.json",
+      "sha256": "6f5b05dee9f09c4433f2ab38345373677f1e2448bf1cee186bff6785c9372b3c",
+      "bytes": 3889,
+      "source": "runs/matrix-2026-11-03/review/artifact-manifest.json",
+      "source_sha256": "6f5b05dee9f09c4433f2ab38345373677f1e2448bf1cee186bff6785c9372b3c",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/audit.json",
+      "sha256": "4aad8fafe22f5e3e3bce5e21f90b314713ab083cde640dc6f7f5bb6cc8b8037e",
+      "bytes": 75343,
+      "source": "runs/matrix-2026-11-03/review/audit.json",
+      "source_sha256": "4aad8fafe22f5e3e3bce5e21f90b314713ab083cde640dc6f7f5bb6cc8b8037e",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/config.json",
+      "sha256": "d192300ff13176fd27cc66c3a895eed4c90599b700256b63f5776d81d990a69f",
+      "bytes": 1723,
+      "source": "runs/matrix-2026-11-03/review/config.json",
+      "source_sha256": "d192300ff13176fd27cc66c3a895eed4c90599b700256b63f5776d81d990a69f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/final-response.txt",
+      "sha256": "bad90f78e0c3027cf3a9992c44759ff8ea16d5fd507b07ad3bfecd24af878b8d",
+      "bytes": 391,
+      "source": "runs/matrix-2026-11-03/review/final-response.txt",
+      "source_sha256": "bad90f78e0c3027cf3a9992c44759ff8ea16d5fd507b07ad3bfecd24af878b8d",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/README.md",
+      "sha256": "4683c38691d81c5a001d8f6ea6688446f07f8fade1c2c14ce76c2d23bf938bd1",
+      "bytes": 1125,
+      "source": "runs/matrix-2026-11-03/review/output/README.md",
+      "source_sha256": "4683c38691d81c5a001d8f6ea6688446f07f8fade1c2c14ce76c2d23bf938bd1",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/graphene_conductivity.pdf",
+      "sha256": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+      "bytes": 332334,
+      "source": "runs/matrix-2026-11-03/review/output/graphene_conductivity.pdf",
+      "source_sha256": "e75a550b3e477b50e02867c2857456233555b548fbbe8d2daf08fd2811cbacfe",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/graphene_conductivity.tex",
+      "sha256": "f1a17015725ee7fa7a230cb474c0dccb4761b537adc01e1a2db1449ef561cd78",
+      "bytes": 36959,
+      "source": "runs/matrix-2026-11-03/review/output/graphene_conductivity.tex",
+      "source_sha256": "f1a17015725ee7fa7a230cb474c0dccb4761b537adc01e1a2db1449ef561cd78",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/README.md",
+      "sha256": "2edc8018d1bd0aa5e6a6f349975d503e20318a48e02ba23f10cf546b5c9a3fda",
+      "bytes": 2518,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/README.md",
+      "source_sha256": "2edc8018d1bd0aa5e6a6f349975d503e20318a48e02ba23f10cf546b5c9a3fda",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_cones.md",
+      "sha256": "d512d1ed1a12c394d4243eaf48dc8b1d00650664ec12c07fdd707d8989188515",
+      "bytes": 9585,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_cones.md",
+      "source_sha256": "d512d1ed1a12c394d4243eaf48dc8b1d00650664ec12c07fdd707d8989188515",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_foundations.md",
+      "sha256": "f0ff82889f658481806e260fdb3a1a0d2fe2b7d679a12ed638f32eb1e45f5172",
+      "bytes": 11351,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_foundations.md",
+      "source_sha256": "f0ff82889f658481806e260fdb3a1a0d2fe2b7d679a12ed638f32eb1e45f5172",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_response.md",
+      "sha256": "e4e52ebaed4b1e75bb67ebb69c371957733228926a728be5dc4308fb4b15deac",
+      "bytes": 10500,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_response.md",
+      "source_sha256": "e4e52ebaed4b1e75bb67ebb69c371957733228926a728be5dc4308fb4b15deac",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round1_cones_editorial.md",
+      "sha256": "e3259de4c70cd95ab0c528a75096c123685401e5ff83165b91a0ae5c5a255aa2",
+      "bytes": 7116,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round1_cones_editorial.md",
+      "source_sha256": "e3259de4c70cd95ab0c528a75096c123685401e5ff83165b91a0ae5c5a255aa2",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round1_foundations.md",
+      "sha256": "2c13935e3299c6674e79bfc29f702211e81cf0392c16e8709e2bbb47db7a3259",
+      "bytes": 10016,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round1_foundations.md",
+      "source_sha256": "2c13935e3299c6674e79bfc29f702211e81cf0392c16e8709e2bbb47db7a3259",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round1_response.md",
+      "sha256": "149d0aadc5f1b81972053589a86debcf17f49caa291b52034e152a16f45e5af4",
+      "bytes": 9440,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round1_response.md",
+      "source_sha256": "149d0aadc5f1b81972053589a86debcf17f49caa291b52034e152a16f45e5af4",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round2_cones_editorial.md",
+      "sha256": "69c17ae6c4d4724dc38d335d74adb5d8040c74d3f9236e74da2d793a5f4717f9",
+      "bytes": 4505,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round2_cones_editorial.md",
+      "source_sha256": "69c17ae6c4d4724dc38d335d74adb5d8040c74d3f9236e74da2d793a5f4717f9",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round2_foundations.md",
+      "sha256": "c41ae5ba01453654e29cf3fcfac4cb73924ad495e9cdddff193fd2f82187b487",
+      "bytes": 4819,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round2_foundations.md",
+      "source_sha256": "c41ae5ba01453654e29cf3fcfac4cb73924ad495e9cdddff193fd2f82187b487",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/output/reviews/review_round2_response.md",
+      "sha256": "36b974db79c8e8ce1a3630d6cf734bca7d190f0ef197a28314a6b660382260ed",
+      "bytes": 5425,
+      "source": "runs/matrix-2026-11-03/review/output/reviews/review_round2_response.md",
+      "source_sha256": "36b974db79c8e8ce1a3630d6cf734bca7d190f0ef197a28314a6b660382260ed",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/prompt.txt",
+      "sha256": "732977a2a291d26c8e9c4278937ec014da5de96097106e84decc56956dc6ca74",
+      "bytes": 502,
+      "source": "runs/matrix-2026-11-03/review/prompt.txt",
+      "source_sha256": "732977a2a291d26c8e9c4278937ec014da5de96097106e84decc56956dc6ca74",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/response-usage.jsonl",
+      "sha256": "0ec65c4796cf5989ddac6dabfc8dc34b7fd3128ad38afe4b519842848b7db111",
+      "bytes": 50512,
+      "sources": {
+        "runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-02-50-01a1a0dc-8a27-7ec2-b427-16e931f77ec1.jsonl": "c289d2f5f2002a47fddcd1d912964a35bb87cb8f1d087152dd27c497db69aac3",
+        "runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-15-01a1a0dc-ec47-7930-925b-80a65c9c1166.jsonl": "1c8115b4cde265b4051e19f71a2809a482828b6b5cea969914a0dd31538417d7",
+        "runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-23-01a1a0dd-0c0b-7f60-b716-ff9804431680.jsonl": "cd6dc8717f7ba8f8a8ba84f135c0dfb3867ee39c4135e13dfcd128284c3dc628",
+        "runs/matrix-2026-11-03/review/native/sessions/2026/11/03/rollout-2026-11-03T11-03-30-01a1a0dd-25f6-7892-b03d-6549a0ef25c1.jsonl": "3580b89ac059374910544709f969cf1ba544981a10f51fdd7a74e9c5daf62f8d"
+      },
+      "transformation": "Response-level token records only; deduplicated by response_id. No conversation content or account identifiers."
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/status.json",
+      "sha256": "016e312d905559903848d2dd8906979fa3140e7269c9c46881bceab56acc7f7f",
+      "bytes": 96,
+      "source": "runs/matrix-2026-11-03/review/status.json",
+      "source_sha256": "016e312d905559903848d2dd8906979fa3140e7269c9c46881bceab56acc7f7f",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/timing.json",
+      "sha256": "06119e66edb6312e0e67f28b3993d78b8e9356cc359074a4143f91cd99621d65",
+      "bytes": 430,
+      "source": "runs/matrix-2026-11-03/review/timing.json",
+      "source_sha256": "06119e66edb6312e0e67f28b3993d78b8e9356cc359074a4143f91cd99621d65",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/review/usage.json",
+      "sha256": "c7e20dffb1c620e524ef127339193c9642335284eb567a69cf615fa0202b26c6",
+      "bytes": 10184,
+      "source": "runs/matrix-2026-11-03/review/usage.json",
+      "source_sha256": "c7e20dffb1c620e524ef127339193c9642335284eb567a69cf615fa0202b26c6",
+      "transformation": "none"
+    },
+    {
+      "path": "runs/matrix-2026-11-03/summarize_traces.py",
+      "sha256": "c486507c33ca08a24d4b2687f11c058f33e1114dfd7a83635815b4c3f332a585",
+      "bytes": 8335,
+      "source": "runs/matrix-2026-11-03/summarize_traces.py",
+      "source_sha256": "c486507c33ca08a24d4b2687f11c058f33e1114dfd7a83635815b4c3f332a585",
+      "transformation": "none"
+    },
+    {
+      "path": "tools/export_from_workspace.py",
+      "sha256": "b22bfec07c50ba388d43396eeda136e5e9b41800c32045c40eb855f41d389141",
+      "bytes": 9512,
+      "transformation": "Repository documentation or export tooling."
+    },
+    {
+      "path": "tools/verify_archive.py",
+      "sha256": "d574e89ea00cf2f20aaa61091fda0dd426d64c53dbe84c9df6c5590bd3c0486e",
+      "bytes": 3723,
+      "transformation": "Repository documentation or export tooling."
+    }
+  ]
+}

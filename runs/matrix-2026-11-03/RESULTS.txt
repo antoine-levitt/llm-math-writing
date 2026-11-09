@@ -1,0 +1,100 @@
+Four-condition Astra/max writing experiment — results
+===================================================
+
+All four fresh runs completed successfully. The earlier pilot is excluded.
+The four user prompts were submitted verbatim and are recorded per case.
+All used GPT-6-Astra/max, Codex 0.166.0, the same inputs and configuration,
+and three available concurrent subagent slots. The runs were sequential
+in the recorded shuffled order: review, plain, explicit, explicit_review.
+
+Condition          Minutes  Pages  Subagents   Input tokens   Cached input   Output tokens
+-----------------  -------  -----  ---------  -------------  -------------  -------------
+Original             13.48     10          0        786,494        718,464         31,487
+Explicit writing     17.11      9          0        638,929        589,696         34,521
+Iterative review     21.20     11          3      8,759,984      8,457,600        109,001
+Both additions       23.32     10          3      7,891,159      7,551,872        100,067
+
+Total observed run time: 75.11 minutes.
+Total tokens: 18,076,566 input (17,317,632 cached),
+275,076 output (137,403 reasoning).
+Uncached input: 758,934 tokens.
+
+Cached input and reasoning output are subsets of the corresponding totals.
+Usage sums unique response records across root and descendant threads;
+copied parent histories are deduplicated. Both review conditions used
+three subagents for initial proof work and two manuscript-review rounds.
+The other conditions chose not to use subagents. All actual threads were
+Astra/max. results.csv also gives reasoning, uncached input and total tokens.
+
+Minutes are monotonic launch-to-exit wall time, including agent/tool waits,
+excluding preparation and archival. Provider GPU time is not exposed.
+Per-agent turn durations and local child-process CPU diagnostics are retained
+in usage.json/timing.json; they should not be interpreted as GPU time.
+
+Execution audit
+---------------
+All root and reviewer turns completed; no abandoned turns or CLI failure
+events were found. Response sums match native cumulative counters. Final
+manuscript PDFs are readable, their build logs have no LaTeX warnings or
+errors, and the delivered PDF copies match their final builds.
+All four bibliographies contain only Reed–Simon references.
+
+Exact prompt text is present in every native root trace. Input hashes and
+the CLI hash are unchanged. Configurations match after substituting each
+neutral workspace/state path, including paths used as filesystem-rule keys.
+Offline startup-context checks matched after removing the task prompt and
+transient identifiers. Private memory stores have zero generated entries,
+database consistency checks pass, and temporary authentication copies were
+removed. No online-access calls or accesses to the original paper or other
+conditions were detected. The recorded sandbox preflights block those paths.
+
+Recovered failures are retained: a malformed reviewer patch and an initial
+LaTeX error in review; an unmatched revision patch in explicit_review;
+and assorted searches with no matches, absent optional-tool probes, Git
+status outside a repository, premature file reads, and incorrect lookup
+paths. Subsequent successful commands/builds and completed reviews verify
+recovery. See each case’s AUDIT.txt and audit.json for details.
+
+No supervisor hints or edits were supplied to the experiment sessions.
+The audit concerns execution, isolation, accounting and artifacts; it is
+not a full independent mathematical correctness or writing-quality score.
+
+A separate read-only cross-check confirmed all 308 unique responses across
+ten threads against native counters, SQLite totals and root CLI usage.
+It found no consequential discrepancy. See INDEPENDENT_AUDIT.txt.
+
+Files
+-----
+Original:
+  plain/output/graphene_conductivity.pdf
+  plain/output/graphene_conductivity.tex
+  plain/AUDIT.txt
+Explicit writing:
+  explicit/output/paper.pdf
+  explicit/output/paper.tex
+  explicit/AUDIT.txt
+Iterative review:
+  review/output/graphene_conductivity.pdf
+  review/output/graphene_conductivity.tex
+  review/AUDIT.txt
+Both additions:
+  explicit_review/output/dirac_conductivity.pdf
+  explicit_review/output/dirac_conductivity.tex
+  explicit_review/AUDIT.txt
+
+Each case also retains prompt.txt, argv.json, config.json, startup dumps,
+timestamped CLI events, stderr, native root/descendant rollouts, SQLite
+snapshots, final response, timing, usage, and artifact hashes. Model review
+notes and intermediate build artifacts are retained in output/. Common
+input snapshots are in inputs/. PROTOCOL.txt documents the setup.
+
+The separately adapted human-source baseline is outside this experiment:
+  ../../baseline/statement-version/main.pdf (19 pages)
+  ../../baseline/statement-version/main.tex
+Its provenance is outside the grading bundle:
+  ../../baseline/statement-version-NOTES.txt
+
+The supervisor remained active during the experiment and, at the user’s
+request, delegated the separate baseline adaptation while later runs were
+in progress. Its files were inaccessible to the isolated sessions, and its
+usage is excluded from their token counts. No run configuration was changed.

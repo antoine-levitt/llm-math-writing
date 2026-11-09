@@ -1,0 +1,40 @@
+B-only blind readability update — 5 November 2026
+================================================
+
+B received 8/10, compared with 6/10 for its earlier version. The other
+scores remain unchanged: A = E = 9, B = C = 8, D = 7. These scores combine
+one fresh standalone assessment with the earlier comparative assessment;
+the four other manuscripts were not reassessed or shown to the new grader.
+
+The new grader praised B's visible proof strategy, Section 5 structure,
+explanation of the time-averaged kernel, and justified conical scaling.
+Its main obstacle was notation and compressed explanation in the local
+two-band comparison, especially Q's changing dimensions and the roles of
+H^R, H^Q and H^D. The grader expressed reasonably high confidence in this
+coarse readability judgment and made no claim of a mathematical audit.
+
+READABILITY_REVIEW_UPDATED.txt assembles the unchanged A/C/D/E assessments
+with the new B assessment. The new grader's raw report is
+b-update-2026-11-05/READABILITY_REVIEW_BLIND.txt. All original reports and
+inputs remain unchanged; 50 original artifacts were checked by hash.
+
+Run: GPT-6-Astra, max reasoning, pinned CLI 0.166.0.
+Wall time: 137.411 seconds.
+Input tokens: 187,640, including 156,928 cached.
+Output tokens: 2,721, including 1,296 reasoning.
+Total tokens: 190,361.
+Wall time includes tool use and waits; GPU computation time is not exposed.
+
+The startup and native trace were checked. Only the neutral environment
+and exact grading prompt appeared as initial user messages. Project
+instructions, memories, source files, mapping and previous reviews were
+excluded. The grader read the complete text and inspected PDF pages 12–13.
+All commands succeeded; there were no aborted turns, stderr, or accounting
+warnings. Logs, native traces, exact inputs and usage are retained under
+b-update-2026-11-05/isolated/. Temporary authentication was removed.
+
+The same rubric and grader configuration were retained, with the prompt
+scope narrowed to B alone as requested. A change in score is not a paired
+measurement of revision quality: it also includes ordinary grader variation
+and the absence of the other manuscripts. See b-update-2026-11-05/PROTOCOL.txt
+and its prompt/runner diffs for the exact setup.

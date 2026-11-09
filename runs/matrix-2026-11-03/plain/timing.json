@@ -1,0 +1,10 @@
+{
+  "started_at": "2026-11-03T10:24:02.099963+00:00",
+  "ended_at": "2026-11-03T10:37:31.101459+00:00",
+  "elapsed_wall_seconds": 809.0015179710463,
+  "exit_code": 0,
+  "local_child_user_cpu_seconds": 6.947669999999999,
+  "local_child_system_cpu_seconds": 2.961022,
+  "server_compute_seconds": null,
+  "note": "Wall time covers CLI launch through process exit, excluding setup and archival. Provider GPU/compute time is not exposed."
+}

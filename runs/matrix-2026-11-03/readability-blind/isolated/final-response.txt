@@ -1,0 +1,5 @@
+Ranking: **A = E (9/10) > C (8/10) > D (7/10) > B (6/10)**.
+
+A and E explain the central mechanisms most clearly. C is careful but requires more bookkeeping; D frontloads technical foundations; B has the heaviest notation burden and uneven detail.
+
+[Read the report](/tmp/manuscript-grader-p_vz5gyt/work/READABILITY_REVIEW.txt).

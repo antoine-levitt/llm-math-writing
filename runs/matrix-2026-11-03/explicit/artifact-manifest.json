@@ -1,0 +1,46 @@
+{
+  "archived_at": "2026-11-03T10:54:38.025265+00:00",
+  "inputs_unchanged": {
+    "graphene_statement.tex": true,
+    "graphene_statement.pdf": true,
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": true,
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": true
+  },
+  "output_hashes": {
+    "paper.pdf": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+    "paper.tex": "aa5c5e944d283c3479a8c391877ace07cdaf41f8fdc318f2deb717e7b911c9c9",
+    ".paper-work/page-6.png": "d7c62bf72bda8855c80fb03e204ab0658ddce5a5b5f3093dcc2172e7dbc958e1",
+    ".paper-work/build-7.txt": "cbd518aa33569b91d5ca7709494dc5e89aa3524fd6afafbb24f48106b03ba991",
+    ".paper-work/build-6.txt": "1af94f6dee82ad95f1537a1901c0782ac065b9f33615a4d3b725242210f056ce",
+    ".paper-work/build-5.txt": "0592188501f04388ae51a20e3c5c1ba3cd7dc949451c56f082d802ce93bf0b24",
+    ".paper-work/build-4.txt": "73a8228f8d89be0447382c15f67016a7135d14bd87d388f5a1a37bb52ea93dfe",
+    ".paper-work/page-9.png": "f47b58cc98782420282043787353d27b5540c345642c373f5faba203bd8c30c5",
+    ".paper-work/page-5.png": "280a98682d96d3206a3143deeae2befab453d04ef752aae1fe40a6fc3b6e40bc",
+    ".paper-work/page-3.png": "22184bc1bc96835a2900bdbd7862f94be15ded450e89ad4682d2509c80339712",
+    ".paper-work/paper-layout.txt": "114d9dcfeba25419da981b16f8d3bd21cf0065a5a99de0c81c1f7fd22b3513fb",
+    ".paper-work/build-3.txt": "5dbc6f867446df5d80af2d2b9a9e877254ca5b141ee1b3a29f4d0bab65fcbe1a",
+    ".paper-work/build-2.txt": "5dbc6f867446df5d80af2d2b9a9e877254ca5b141ee1b3a29f4d0bab65fcbe1a",
+    ".paper-work/paper.pdf": "0f55f53419b2f94cf63805c8214f0e6518fbae2b588034e06233f8f78b5a1fba",
+    ".paper-work/paper.out": "cd4d5d3227fc56603a4dd3c6001d063c21f054a1d49affaf7b43f2c003713542",
+    ".paper-work/paper.aux": "821eadd25ec834fcc2df292aea68ffa31559ed450bdadf7a42f3bdcb57518a94",
+    ".paper-work/paper.log": "e39bb58fdbfb7a5f0eaeee6e38bff2cd3fd6232952ce5028d8c11f803ae0c7ba",
+    ".paper-work/reed_simon_4.txt": "4c1af53adbe6a649f77cda49b9fa6cd3b5baadcfcccaaf9d37ed589d56c143a5",
+    ".paper-work/reed_simon_2.txt": "072e5dbc57a71163bfff31761dbbf96e4f0fbf74913772bb53554c713d27388a",
+    ".paper-work/reed_simon_1.txt": "778bc8f58bd79c2618de30324bc010fa82357b96387b8618f6e5a43a3ab518b3"
+  },
+  "root_thread_ids": [
+    "01a1a0fc-4b3b-7e93-b2e9-6b887026c635"
+  ],
+  "cli_turn_usage": [
+    {
+      "input_tokens": 638929,
+      "cached_input_tokens": 589696,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 34521,
+      "reasoning_output_tokens": 18781
+    }
+  ],
+  "parent_edited_output": false
+}

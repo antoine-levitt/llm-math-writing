@@ -1,0 +1,69 @@
+{
+  "prepared_at": "2026-11-03T09:57:43.672428+00:00",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "max",
+  "cli": "/home/antoine/.codex/packages/standalone/releases/0.166.0-x86_64-unknown-linux-musl/bin/codex",
+  "cli_sha256": "b8a11fedf24b2dfb59a70c9e52b030f9a508dcd49cd2dd0d41956f4c785156b8",
+  "cli_version": "0.166.0",
+  "catalog_sha256": "1f4aca0d670135f9280f841b95c72243dc878d726d57aaa68373e549061dc4d5",
+  "execution": "sequential",
+  "order_seed": 2565794526019098814,
+  "order": [
+    "review",
+    "plain",
+    "explicit",
+    "explicit_review"
+  ],
+  "input_source": "/home/antoine/Nextcloud/blog/src/2026-10-graphene",
+  "inputs": {
+    "graphene_statement.tex": "1102fa6a562f0c8f706b900ab2ad033dcc07cccb4946a897ca8217d3c8e11dc6",
+    "graphene_statement.pdf": "b841ae8001833d89567d73fa29e73aa8f57850b6b13de5a5c6ddfc22158ced85",
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": "a9eb38970c669d4c315cba20580bc996eb024623af036c6c6d51bab1fdba9e36",
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": "2df55972e909cf69623a23b0d5759b7aec9faac518d940d1f7605ae7fbb00f5d",
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": "47e47a11d12b6baadfba7c7c78389513ecafedf3af361934ae9dbcab04e45d1c",
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": "f62435c15f171971f74a8ccae13cdec64d18c57c652215d093d9f1adb44edf69"
+  },
+  "shared_tools": "/tmp/graphene-tools-3jx6bz92",
+  "conditions": {
+    "plain": {
+      "prompt_file": "prompt",
+      "prompt_sha256": "df3a007f3a0236fd98aab738c5e428f8164753eafb58ad0e0d01cb5ea8e60bdd",
+      "explicit_instruction": false,
+      "review_instruction": false,
+      "workspace": "/tmp/graphene-run-1boxls7r/work"
+    },
+    "explicit": {
+      "prompt_file": "prompt_explicit_instruction",
+      "prompt_sha256": "76ebb5aa06b815f02d761c34e7fedb299a170c932726e6b7701028d3e51773f6",
+      "explicit_instruction": true,
+      "review_instruction": false,
+      "workspace": "/tmp/graphene-run-y4ogwbm3/work"
+    },
+    "review": {
+      "prompt_file": "prompt_tokenmaxing",
+      "prompt_sha256": "732977a2a291d26c8e9c4278937ec014da5de96097106e84decc56956dc6ca74",
+      "explicit_instruction": false,
+      "review_instruction": true,
+      "workspace": "/tmp/graphene-run-45est42r/work"
+    },
+    "explicit_review": {
+      "prompt_file": "prompt_explicit_instruction_plus_tokenmaxing",
+      "prompt_sha256": "a166e77d777d5c09708bdb353c7c9850d6066a2426b319066e1593eeca4b32a8",
+      "explicit_instruction": true,
+      "review_instruction": true,
+      "workspace": "/tmp/graphene-run-6mx0ao4y/work"
+    }
+  },
+  "launcher_sha256": "c8cdf7bd09716c71bfcb896252ca139faa94656b1f359ab474ced5c6f2a4e6a3",
+  "usage_parser_sha256": "c486507c33ca08a24d4b2687f11c058f33e1114dfd7a83635815b4c3f332a585",
+  "preflight": {
+    "passed_at": "2026-11-03T10:01:32.248757+00:00",
+    "normalized_context_sha256": "87e447d1831c4ee05dde8bae9a0453633c6e989546971e9a873e4274fb66bca0",
+    "cases": [
+      "plain",
+      "explicit",
+      "review",
+      "explicit_review"
+    ]
+  }
+}

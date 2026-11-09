@@ -1,0 +1,10 @@
+{
+  "passed_at": "2026-11-09T08:54:04.918859+00:00",
+  "cases": [
+    "plain"
+  ],
+  "config_matches_original_except_models_neutral_paths_and_instruction_override": true,
+  "original_runtime_instructions_preserved": true,
+  "startup_matches_original_after_date_and_terminal_whitespace_normalization": true,
+  "startup_diff": "plain/startup-vs-astra.diff"
+}

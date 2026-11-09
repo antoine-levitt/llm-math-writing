@@ -1,0 +1,187 @@
+Purpose and provenance
+======================
+
+Prepared on 5 November 2026 at the user's request. The purpose is to
+compare writing while bringing the mathematical route closer to those
+used by the generated papers. The user explicitly authorized changing
+proof strategy, then specified that the replacement arguments should
+come from the generated manuscripts and that Liouvillian notation should
+be retained. The detailed setup and well-posedness arguments remain.
+
+This is an AI-assisted adaptation combining the published paper's text
+and structure with arguments from the generated papers. It is not an
+untouched human manuscript or an independently generated response to the
+benchmark prompt. It was prepared after the initial readability grading;
+no new readability grade has been requested for it.
+
+The source manuscript is “Coherent electronic transport in periodic
+crystals”, by Eric Cancès, Clotilde Fermanian Kammerer, Antoine Levitt
+and Sami Siraj-Dine:
+  https://arxiv.org/abs/2002.01990v2
+  https://doi.org/10.1007/s00023-021-01026-3
+
+The immediate editing source is prompt-version/main.tex. Its earlier
+adaptations, sign conventions and provenance are documented in
+NOTES.txt, statement-version-NOTES.txt and prompt-version-NOTES.txt.
+All earlier baseline versions and benchmark outputs are preserved.
+comparison-version-parent-hashes.json records the input hashes.
+The initial 16-page comparison version is also preserved in
+comparison-version-before-fa/, with its original notes in
+comparison-version-before-fa-NOTES.txt. The subsequent revision of the
+functional analysis and Section 5 structure was explicitly requested by
+the user. comparison-version-fa-parent-hashes.json records its inputs,
+and comparison-version-fa-changes.diff isolates those changes.
+
+The reading bundle comparison-version/ contains only main.tex, main.pdf,
+refs.bib and build.sh. These notes and the source diff are outside that
+bundle. The manuscript cites only Reed–Simon, and has no explicit source
+attribution or identifying PDF metadata. Its retained prose can of course
+still be recognizable.
+
+Sources of the replacement arguments
+====================================
+
+Paths below are relative to the benchmark project directory.
+
+1. Finite-time current differentiation:
+   runs/matrix-2026-11-03/explicit/output/paper.tex,
+   Appendix A.3, “Differentiating the current at fixed time”.
+
+   The proof uses the uniform H² propagator bound, Duhamel's formula with
+   the free propagator on the left, the L² difference O(ε), interpolation
+   to obtain an H¹ difference O(√ε), and the exact quadratic expansion of
+   the current expectation. This justifies a uniform o(ε) remainder.
+   The resulting first density variation is written with the retained
+   Lₖ and Lₖ⁺. The original integration by parts and Hellmann–Feynman
+   identities recover the baseline's response formula.
+
+   The same general differentiation argument appears in
+   runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex, §4.
+   Its §2.2 explicitly supplies the locally uniform H² propagator bound.
+   The new version does not use the independently considered exact
+   density-Duhamel proof; that approach was abandoned on user instruction.
+
+2. Cancellation over the whole momentum torus:
+   runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex, §3,
+   “A band sum rule at the Fermi energy”.
+
+   The uniform sum of absolute transition matrix elements controls the
+   infinitely many empty bands. The conical lower bound on the gap makes
+   the filled-band Hessian integrable. Stokes' formula on the punctured
+   torus, with O(r) boundary terms, cancels its full integral. This replaces
+   the separate exterior/interior secular terms of the previous baseline.
+   Time reversal removes the imaginary transition products, as in the
+   generated papers and the previous baseline.
+
+3. Time averaging and the conical limit:
+   runs/matrix-2026-11-03/plain/output/graphene_conductivity.tex, §6,
+   “The long-time Cesàro limit”.
+
+   Time averaging produces K_T(Δ)=(1−cos(TΔ))/(TΔ³). All transitions
+   with a uniformly positive gap contribute O(1/T). Near each node,
+   k−kᵢ=q/T gives an integrand dominated by
+   C min(|q|⁻¹,|q|⁻³), integrable in two dimensions. Dominated convergence
+   reduces to the linear cone with the cutoff δ kept fixed. This replaces
+   the uniform-in-time Iᴿ−Iᑫ estimate and the subsequent δ→0 limit.
+
+   The original analytic frame, Pauli decomposition, orthogonal matrix Q,
+   and explicit Dirac eigenvectors are retained to evaluate that limit.
+   The elementary Laplace/Tonelli evaluation of the radial integral also
+   comes from the generated paper's §6.
+
+4. Direct applications of the operator theorems:
+   runs/matrix-2026-11-03/explicit_review/output/dirac_conductivity.tex,
+   Appendix A.1, “Self-adjointness, graph bounds, and evolution”.
+
+   With no magnetic vector potential, Reed–Simon II, Theorem X.38
+   applies directly to 2Hε. The retained oscillator perturbation and
+   lower-bound checks verify its hypotheses; the separate generalized
+   Faris–Lavine lemma and its appendix proof have been removed. The
+   precise statement of X.38 was checked in the supplied Reed–Simon
+   text, including the invariant-core condition.
+
+   The common-domain evolution theorem, Reed–Simon II, Theorem X.70,
+   is also applied directly to the fiber Hamiltonians. The common H²
+   domain, uniform graph norms, time dependence, and scalar shift are
+   checked in the proof of Proposition 2.2, and the uniform H² propagator
+   bound is stated there for later use in linear response. This replaces
+   the abstract propagator lemma and its appendix proof. X.70 and its
+   graph-norm estimate were checked in the supplied book text.
+
+   The identification of the whole-space propagator with the gauge
+   transform, using the Schrödinger equation against compactly supported
+   smooth test functions, follows explicit/output/paper.tex, Appendix A.1.
+   All replacement arguments come from these generated manuscripts.
+
+What is retained
+================
+
+The introduction and its oscillator example, the detailed setting and
+main statement, the compact Liouvillian discussion, the spectral-projector
+derivative identity, and the local two-band construction are retained.
+Section 3 still verifies well-posedness and the Bloch current formula;
+its first two assertions now use the direct applications described above.
+The two technical appendix proofs are no longer needed. Cross-references
+and short scope/notation sentences in Sections 1–2 were updated.
+The local-model subsection changes the argument t of Iᵢᴿ to the averaging
+horizon T, and has a shorter heading. The physical signs, normalization,
+arbitrary fixed directions, and theorem are unchanged.
+
+The principal new text is the finite-time differentiation proof, the
+global cancellation and averaging, the conical rescaling, and the direct
+operator-theorem applications. Section 5 now has a short introductory
+paragraph followed by four subsections: cancellation of the term linear
+in time; time averaging and reduction to two bands; the local two-band
+model; reduction to the Dirac Hamiltonian. The former short subsections
+on the exterior and the gapped transitions are combined with the time
+averaging. The complete difference against prompt-version/main.tex is in
+comparison-version-changes.diff.
+
+Notation and scope changes
+===========================
+
+• Lₖ, Lₖ⁺ and ∂βPₖ=Lₖ⁺[Pₖ,∂βHₖ] retain their previous meanings.
+• The current remainder is now uniform o_T(ε), rather than C_Tε².
+  No second-order Dyson expansion or quantitative long-time field
+  remainder is asserted.
+• Δₙₘ,ₖ=λₘ,ₖ−λₙ,ₖ and zₙₘ,ₖ abbreviate the original denominator
+  and velocity product. The generated sources' product Z is the complex
+  conjugate of z. Real parts agree; the Liouvillian formula retains the
+  baseline's convention throughout.
+• Iᵢᴿ(δ,T) now denotes the real, already time-averaged cone integral,
+  with K_T inside it. Accordingly Iᴰ=π² Id/8 and the external prefactor
+  is 1/(2π²), giving 1/16 per node. These symbols no longer denote the
+  old instantaneous, purely imaginary integrals.
+• δ is fixed and sufficiently small. The final limit uses only T→∞,
+  after the previously established ε→0 limit.
+
+Build and checks
+================
+
+Run bash baseline/comparison-version/build.sh from the project directory,
+or bash build.sh inside comparison-version/. Build scratch files are kept
+in comparison-version-build/, outside the reading bundle.
+
+The PDF is 14 pages, compared with 16 before the functional-analysis
+revision, 18 in prompt-version/ and 19 in statement-version/.
+The detailed setup remains; well-posedness is checked by direct theorem
+applications, and the response and conductivity proofs use the shorter
+arguments described above.
+LaTeX and BibTeX succeed. References resolve, with no duplicate labels
+or overfull boxes. The inherited epstopdf warning notes that shell escape
+is disabled; LaTeX also adjusts the retained !h float placement to !ht.
+PDF author, title, subject and keywords metadata are empty.
+
+A separate review of the initial comparison version checked the
+translation against the selected generated sources: the unbounded
+current differentiation, Liouvillian signs, global cancellation,
+averaging and fixed-δ scaling are consistent. Its wording correction
+was incorporated: one differentiates under the Bloch integral; the
+un-subtracted equilibrium fiber current need not vanish pointwise.
+The subsequent functional-analysis revision was checked against the
+selected generated sources and the Reed–Simon theorem statements.
+Exact source comparisons confirm that the detailed setting, Liouvillian
+discussion and spectral derivatives are unchanged from the 16-page
+version. Its local model and two-band proof are also unchanged apart
+from subsection titles. All previously recorded baseline and generated
+source hashes still match. No references to the removed lemmas remain.

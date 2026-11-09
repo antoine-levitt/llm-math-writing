@@ -1,0 +1,7 @@
+{
+  "B": {
+    "source": "/home/antoine/Nextcloud/blog/src/2026-10-llm-writing/baseline/comparison-version/main.pdf",
+    "sha256": "512c7a07d0250499413350f4b7876e3c195cdbf32f426390e14e679bf7840274"
+  },
+  "scope": "Only B is reassessed; A, C, D and E keep their original grades. The grader is not given previous assessments or manuscripts A, C, D and E."
+}

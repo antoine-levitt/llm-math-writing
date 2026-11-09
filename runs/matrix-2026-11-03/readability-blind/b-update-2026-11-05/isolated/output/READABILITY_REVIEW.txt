@@ -1,0 +1,13 @@
+B: 8/10. B is very clear overall for the intended graduate reader: its main reductions and limiting mechanism are explained, although the local matrix comparison requires concentrated attention.
+
+B's strongest readability feature is its visible proof strategy. The introduction motivates time averaging with a forced oscillator and explains how the gauge change enables Bloch decomposition. The contents, descriptive subsection titles, and opening roadmap of Section 5 make the progression from well-defined current to linear response to conductivity easy to navigate. Most estimates come with an explanation of their purpose.
+
+B's main obstacle is the accumulated notation in the local two-band argument. Readers must track changing bases, eigenvector phases, matrix dimensions, and several related Hamiltonians. The balance of detail is generally helpful, including the justification of differentiation with an unbounded current observable, but the substantial preliminary operator setup contrasts with compressed explanations of some local perturbation steps.
+
+Two concrete examples:
+
+1. PDF pp. 10–11, Sections 5.1–5.2, and p. 13, equation (51): B explains the cancellation of the term linear in time, introduces the averaged kernel K_T, and explicitly identifies why gapped transitions vanish and momenta of size T^{-1} matter. The later substitution k=q/T and displayed integrable majorant make the central limiting argument understandable. This is useful technical detail that supports the mechanism rather than interrupting it.
+
+2. PDF pp. 11–13, Sections 5.3–5.4: Q begins as a 3-by-2 matrix, becomes a 2-by-2 matrix after a unitary rotation, and is subsequently used as an orthogonal change of momentum coordinates. Meanwhile H^R, H^Q, and H^D and their eigenvectors enter in close succession. The heading “Reduction to H^D” initially introduces H^Q. A brief explanation of these three models' roles, and an explicit reminder that the redefined Q is orthogonal, would reduce backtracking. The eigenvector comparison attributed to “standard results of perturbation theory” would also benefit from one sentence connecting the quadratic remainder and linear gap to the stated error.
+
+Confidence is reasonably high for a coarse readability assessment: all of B was read against the supplied theorem, with the densest final pages checked in the PDF. These concerns identify expository compression, not verified mathematical errors; this was not a correctness audit.

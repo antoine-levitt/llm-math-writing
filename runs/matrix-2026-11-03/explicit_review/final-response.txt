@@ -1,0 +1,3 @@
+Completed the ten-page paper: [PDF](/tmp/graphene-run-6mx0ao4y/work/dirac_conductivity.pdf) · [LaTeX source](/tmp/graphene-run-6mx0ao4y/work/dirac_conductivity.tex).
+
+It includes the full proof and an operator-theoretic appendix, revised through two review rounds with three subagents. Citations were checked against the local Reed–Simon volumes; no online sources were used.

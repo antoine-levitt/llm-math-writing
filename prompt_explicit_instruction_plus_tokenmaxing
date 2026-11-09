@@ -1,0 +1,14 @@
+Write a paper stating and proving the theorem in these notes. Do not look up anything online, just rely on your knowledge. You can look up and cite standard results from Reed-Simon (available in this directory). 
+
+Make an effort to maximize readability. The goal is a paper for humans to understand and get insight from, not just an artifact showing the result. Pay particular attention to the following aspects: structure, storytelling, emphasis, and notation
+
+For instance, typical failure modes of your writing are:
+- Ad-hoc lemmas that collect what happen to be necessary for a proof, without self-consistent semantic meaning, or that leave out important facts that are then reproved later
+- Elementary details that get several paragraphs, with the key point hidden in a turn of phrase.
+- Locally understandable steps without a comprehensible strategy
+- Notations that exceed human's working memory
+- Constructions introduced without motivation
+- Lack of context in results
+- Rambling text that needs a good editing pass
+
+The goal is to produce a very well written paper. Don't just stop at the first draft. Work with multiple subagents doing reviews, and iterate with them until you are satisfied the manuscript is as good as it can be. Use as much computational budget as you see fit to achieve the result. 

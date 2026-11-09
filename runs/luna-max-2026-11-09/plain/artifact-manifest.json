@@ -1,0 +1,28 @@
+{
+  "archived_at": "2026-11-09T09:10:04.386351+00:00",
+  "inputs_unchanged": {
+    "graphene_statement.tex": true,
+    "graphene_statement.pdf": true,
+    "Reed_simon/Reed M., Simon B. Vol 1. Methods of mathematical physics. Functional analysis (AP, 1980)(K)(T)(ISBN 0125850506)(412s).djvu": true,
+    "Reed_simon/Reed M., Simon B. Vol 2. Methods of mathematical physics. Fourier analysis, self-adjointness (AP, 1975)(K)(T)(ISBN 0125850026)(370s).djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.3.Scattering.Theory.djvu": true,
+    "Reed_simon/Reed.Simon.Methods.of.Mathematical.Physics.Vol.4.Analysis.of.Operators.djvu": true
+  },
+  "output_hashes": {
+    "graphene_conductivity_paper.pdf": "2fccf72e8a43f02f451450ad0f5064f617738f655eebb84b47f829d0b06bc41b",
+    "graphene_conductivity_paper.tex": "4a847b17eba3df04c4d8a19bebff509e242fe5bc57cc4f22f52d5dec3e88da3c"
+  },
+  "root_thread_ids": [
+    "01a1bf84-0247-72e2-8f7d-59a95d574434"
+  ],
+  "cli_turn_usage": [
+    {
+      "input_tokens": 2454323,
+      "cached_input_tokens": 2348928,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 45230,
+      "reasoning_output_tokens": 34597
+    }
+  ],
+  "parent_edited_output": false
+}

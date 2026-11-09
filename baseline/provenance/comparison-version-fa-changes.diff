@@ -1,0 +1,301 @@
+--- baseline/comparison-version-before-fa/main.tex
++++ baseline/comparison-version/main.tex
+@@ -200,7 +200,7 @@
+ regularity and Bloch decomposition of the current.
+ Section~\ref{sec:linear-response} states and proves the linear response result.
+ Section~\ref{sec:semimet} is devoted to the proof of the conductivity
+-formula. Finally two short Appendices are devoted to technical issues.
++formula.
+ 
+ \section{Main results: electrical current in periodic materials}\label{sec:results}
+ 
+@@ -531,38 +531,26 @@
+ 
+ 
+ {\bf Proof of the first assertion.}
+-The essential self-adjointness of $H_\eps$ follows from an extension of the Faris-Lavine theorem~\cite[Theorem~X.38]{ReedSimon2}.  Let $\mathcal{C} = C^\infty_{\rm c}(\R^2;\C)$ be the set of infinitely differentiable, compactly supported functions.
+-\begin{lemma}[Faris-Lavine criterion]
+-\label{FarisLavine}
+-Let $V$ and $W$ be real-valued measurable functions on $\R^2$,
+-with $W\in L^2_{\rm loc}(\R^2;\R)$. Suppose that
+-\begin{enumerate}
+-\item there exist $c>0$ and $f\ge0$ such that
+-$W(x) \geq - c|x|^2 - f$, for a.a. $x\in \R^2$;
+-\item
+-$-\frac12\Delta + V + W +2c|x|^2$ is essentially self-adjoint on $\mathcal{C}$;
+-\item for some $a<1$, $-\frac a2\Delta + V$ is bounded below on $\mathcal{C}$.
+-\end{enumerate}
+-Then $-\frac12\Delta + V + W$ is essentially self-adjoint on $\mathcal{C}$.
+-\end{lemma}
+-The proof of the above lemma is postponed until Appendix~\ref{sec:FL_lemma}.
+-\medskip
+-
+-
+-We apply Lemma~\ref{FarisLavine} with $W=-\eps x_\beta$ and $c=1$,
+-noting that
+-\[
+--\eps x\cdot e_\beta\ge-|x|^2-\frac{\eps^2|e_\beta|^2}{4}.
++The essential self-adjointness of $H_\eps$ follows from the
++Faris--Lavine theorem~\cite[Theorem~X.38]{ReedSimon2}, applied to
++$2H_\eps=-\Delta+2V-2\eps x_\beta$. Let
++$\mathcal C=C_c^\infty(\R^2;\C)$. We have
++\[
++-2\eps x\cdot e_\beta\ge-|x|^2-\eps^2|e_\beta|^2.
+ \]
+ In two dimensions, $V\in L^2_{\rm per}$ is infinitesimally bounded with
+-respect to $-\Delta$, hence also with respect to the harmonic oscillator
+-$-\frac12\Delta+2|x|^2$. The linear potential $-\eps x_\beta$ is likewise
++respect to $-\Delta$~\cite[Theorem~XIII.96]{ReedSimon4}, hence also with
++respect to the harmonic oscillator $-\Delta+2|x|^2$.
++The linear potential $-2\eps x_\beta$ is likewise
+ infinitesimally bounded with respect to this oscillator. The Kato--Rellich
+ theorem therefore gives the essential self-adjointness of
+-$-\frac12\Delta+V-\eps x_\beta+2|x|^2$ on the core $\mathcal C$.
+-Also, $-\frac a2\Delta+V$ is bounded below for every $a>0$.
+-Lemma~\ref{FarisLavine} gives that $H_\eps$ is essentially self-adjoint on
+-$\mathcal C$, and its propagator is the unitary group
++$-\Delta+2V-2\eps x_\beta+2|x|^2$ on the core $\mathcal C$.
++Also, the infinitesimal form bound for $V$ gives that $-a\Delta+2V$
++is bounded below for every $a>0$. Since $\mathcal C$ is invariant
++under multiplication by coordinates and differentiation, all the
++hypotheses of the Faris--Lavine theorem are satisfied.
++Thus $H_\eps$ is essentially self-adjoint on $\mathcal C$, and its
++propagator is the unitary group
+ $(e^{-itH_\eps})_{t\in\R}$.
+ 
+ \medskip
+@@ -574,33 +562,40 @@
+ \]
+ on $H^2(\R^2;\C)$ follows from the Kato--Rellich theorem.
+ To show the well-posedness of the dynamics, it suffices to study its
+-fibers $H_{k+\eps te_\beta}$. We use the following lemma on time-dependent
+-perturbations of the free-particle Hamiltonian on $L^2_{\rm per}$.
+-
+-
+-\begin{lemma}
+-\label{lemmaUnitaryPropagator} Let $H_{0}:=-\frac 12\Delta$ be the free-particle Hamiltonian on $L^2_{\rm per}$, and a $C^1$ map $H_{1}:[0,T]\to\mathcal L(H_{\rm per}^{2},L^2_{\rm per})$,
+-taking its values in the set of $H_{0}$-bounded self-adjoint operators on $L^2_{\rm per}$ with relative bound lower than $1$, that is: there exist $0<a<1$ and $b>0$ such that
+-\begin{align}
+-  \label{eq:hyp_lap_bounded}
+-\forall t \in [0,T],\quad \forall \phi \in H_{\rm per}^{2}, \quad \|H_{1}(t)\phi\|_{L^2_{\rm per}} \leq a \|H_{0} \phi \|_{L^2_{\rm per}} + b \|\phi\|_{L^2_{\rm per}}.
+-\end{align}
+-Then, for all $t \in [0,T]$, the operator defined by
+- $H(t) = H_{0} + H_{1}(t)$
+- is self-adjoint on $L^2_{\rm per}$ with domain $H_{\rm per}^{2}$, and there exists a unique unitary propagator $(\mathcal{U}(t))_{t\in[0,T]}$ on $L^2_{\rm per}$ such that for $t \in [0,T]$, and $\phi_0 \in H_{\rm per}^{2}$, $\phi: t \mapsto \mathcal{U}(t)\phi_0$ is in $C([0,T];H_{\rm per}^{2})\cap C^1([0,T];L^2_{\rm per})$, and solves the time-dependent Schr\"odinger equation
+-\[i \partial_t \phi(t) = H(t) \phi (t), \qquad \phi(0) = \phi_0.\]
+-\end{lemma}
+-The proof of the above lemma is postponed to Appendix~\ref{sec:unitaryprop}.
+-
+-\medskip
+-
+-For $t\in[0,T]$, write $H_{k+\eps te_\beta}=H_0+H_1(t)$, with
++fibers $H_{k+\eps te_\beta}$. For $t\in[0,T]$, write
++$H_{k+\eps te_\beta}=H_0+H_1(t)$, with $H_0=-\frac12\Delta$ and
+ \[
+ H_1(t)=(k+\eps te_\beta)\cdot p+\frac12|k+\eps te_\beta|^2+V.
+ \]
+-The Sobolev embedding $H^2_{\rm per}\subset L^\infty_{\rm per}$ and
+-$V\in L^2_{\rm per}$ imply the conditions of
+-Lemma~\ref{lemmaUnitaryPropagator}; the result follows.
++The perturbation $H_1(t)$ is infinitesimally $H_0$-bounded, uniformly
++when $k$, $\eps$ and $t$ range over bounded sets. Hence the Hamiltonians
++have common domain $H^2_{\rm per}$ and graph norms uniformly equivalent
++to the $H^2_{\rm per}$-norm. Their dependence on $t$ is continuously
++differentiable as operators from $H^2_{\rm per}$ to $L^2_{\rm per}$;
++indeed,
++\[
++H_{k+\eps te_\beta}-H_{k+\eps se_\beta}
++=\eps(t-s)\partial_\beta H_k
+++\frac{\eps^2}{2}(t^2-s^2)|e_\beta|^2.
++\]
++After adding a fixed scalar to the Hamiltonians to make them invertible,
++these facts verify the resolvent and difference-quotient hypotheses of
++the common-domain propagator theorem~\cite[Theorem~X.70]{ReedSimon2}.
++It gives a unique unitary propagator $U_{\eps,k}(t,s)$ whose trajectories
++from $H^2_{\rm per}$ belong to
++$C([0,T];H^2_{\rm per})\cap C^1([0,T];L^2_{\rm per})$.
++The graph-norm estimate in that theorem also gives
++\begin{equation}\label{eq:propagator_H2}
++\|U_{\eps,k}(t,s)\|_{\mathcal L(H^2_{\rm per})}\le C_T,
++\qquad k\in\mathcal B,\quad 0\le s\le t\le T,\quad 0\le\eps\le1.
++\end{equation}
++
++The same theorem applies to $\widetilde H_\eps(t)$ on
++$L^2(\R^2;\C)$, and its propagator is the direct integral of the fiber
++propagators. Undoing the gauge change~\eqref{eq:gauge_change} in the
++Schr\"odinger equation, tested against $C_c^\infty$ functions, identifies
++it with~\eqref{gauge_u} by uniqueness for the self-adjoint generator
++$H_\eps$. This proves the second assertion.
+ 
+ 
+ \noindent
+@@ -710,11 +705,9 @@
+ 
+ \begin{proof}
+ We first justify differentiation with the unbounded current observable.
+-Fix $T>0$ and $0\le\eps\le1$. The common-domain propagator theorem used
+-in Lemma~\ref{lemmaUnitaryPropagator} gives a uniform bound on
+-$U_{\eps,k}(t,s)$ as an operator on $H^2_{\rm per}$ for
+-$0\le s\le t\le T$ and $k\in\mathcal B$: on this compact parameter
+-set, the graph norms and the $C^1$ bounds of the Hamiltonians are uniform.
++Fix $T>0$ and $0\le\eps\le1$. By~\eqref{eq:propagator_H2}, the
++propagators are uniformly bounded on $H^2_{\rm per}$ for
++$0\le s\le t\le T$ and $k\in\mathcal B$.
+ The occupied unit vectors also have uniformly bounded $H^2_{\rm per}$
+ norms, since their energies are bounded.
+ 
+@@ -789,8 +782,13 @@
+ 
+ We prove here Theorem~\ref{theo:semi-metal}. We first take the limit
+ $\eps\to0^+$ in Proposition~\ref{prop:response}, and cancel the term
+-proportional to $t$ before separating the regions near and far from the
+-Dirac points.
++proportional to $t$. After averaging in time, only the two crossing
++bands near each Dirac point contribute to the limit. We construct
++their reduced Hamiltonian and compare it with the Dirac Hamiltonian,
++for which we can explicitly compute the limiting current.
++
++\subsection{Cancellation of the term linear in time}
++\label{sec:band_cancellation}
+ 
+ For $n\le N<m$, write
+ \begin{align}\label{eq:transition_data}
+@@ -844,6 +842,9 @@
+ $|1-\cos(t\Delta)|/\Delta^2\le t^2/2$, so every term is integrable
+ by~\eqref{eq:transition_bound} and the conical gap bound.
+ 
++\subsection{Time averaging and reduction to two bands}
++\label{sec:dirac_reduc}
++
+ We can now average in time. By Fubini's theorem,
+ \begin{equation}\label{eq:averaged_response}
+ \frac1T\int_0^Tj^{\rm LR}(t)\,dt
+@@ -870,28 +871,12 @@
+ bands are separated from the other bands in each ball.
+ We keep $\delta$ fixed throughout the proof.
+ 
+-In the following analysis, we first treat the region
+-$\mathcal B_{\rm out}^{\delta}$, where the gap is bounded below.
+-In the sets $\mathcal B_i^\delta$, we study the structure of the Taylor
+-expansion of $H_k$ close to the Dirac points and construct two-band
+-reduced Hamiltonians $H_{i,k}^R$. We reduce successively from $H$ to
+-$H_{i,k}^R$, and finally to the Dirac Hamiltonian
+-\[
+-H_k^D=v\begin{pmatrix}0&k_1-ik_2\\k_1+ik_2&0\end{pmatrix},\qquad v>0,
+-\]
+-for which we can explicitly compute the limiting current.
+-
+-\subsection{Far from the Dirac points}
+-
+ On $\mathcal B_{\rm out}^\delta$, the energy differences
+ $\Delta_{nm,k}$ are bounded away from zero for each fixed $\delta$.
+ Since $|K_T(\Delta)|\le2/(T\Delta^3)$, the bound
+ \eqref{eq:transition_bound} shows that the contribution of this region
+ to~\eqref{eq:averaged_response} is $O_\delta(T^{-1})$.
+ Here $O_\delta$ permits a constant depending on the fixed $\delta$.
+-
+-\subsection{Close to Dirac points: reduction to the 2-band case}
+-\label{sec:dirac_reduc}
+ 
+ When $n\ne N$ or $m\ne N+1$, the denominators in
+ \eqref{eq:averaged_response} are bounded from below in the balls,
+@@ -912,7 +897,7 @@
+ Everything happens as for a two-band model that we now study.
+ 
+ 
+-\subsection{Close to the Dirac points: the local model}
++\subsection{The local two-band model}
+ We now are interested in the computation of $I_i^R(\delta,T)$.
+ In the following, we drop the index $i$ and assume without loss of
+ generality that $k_i=0$. We write $v=v_i$.
+@@ -978,7 +963,7 @@
+ Up to a unitary transform, we can therefore assume $Q$ to be
+ a $2\times 2$ matrix in~\eqref{def:HR}.
+ 
+-\subsection{The two-band case: reduction to the Dirac Hamiltonian}
++\subsection{Reduction to the Dirac Hamiltonian}
+ \paragraph{Reduction to $H_k^{R}$}
+ For $k \neq 0$, let $\lambda^{R}_{\pm,k}$ be the larger and smaller
+ eigenvalues of $H_k^{R}$ respectively, and $u^{R}_{\pm,k}$
+@@ -1118,81 +1103,6 @@
+ which proves the result.
+ 
+ 
+-\appendix
+-
+-
+-\section{Proofs of two technical lemmata}
+-
+-\subsection{Proof of Lemma~\ref{FarisLavine}}\label{sec:FL_lemma}
+-\begin{proof}
+-We use the proof of the Faris--Lavine theorem in \cite{ReedSimon2}. It consists in verifying the following two hypotheses of \cite[Theorem X.37]{ReedSimon2}.  Let $A = -\frac12\Delta + W+V$ and $K=A+2c|x|^2 +b$, where $b\in\R$ will be specified below:
+-\begin{equation}
+-\label{HypX37.1}\textit{there exists $h$, such that for any } \phi \in \mathcal{C},
+-\quad \|A\phi\|\leq h \|K\phi\|;
+-\end{equation}
+-\begin{equation}
+-\label{HypX37.2}
+-\textit{for some $\ell$, for any }  \phi \in \mathcal{C},\quad |(A\phi,K\phi) - (K\phi,A\phi)| \leq \ell \|K^\frac{1}{2} \phi\|^2.
+-\end{equation}
+-
+-By hypothesis \textit{3} in Lemma~\ref{FarisLavine} and the conditions on $W$, it is possible to choose $b$ so that $K\geq 1$.
+-As quadratic forms on $\mathcal{C}$,
+-\[K^2 = (A+b)^2 + 4c \sum_{j=1}^2 x_j (A+b+c|x|^2)x_j - 4c.  \]
+-Hypotheses \textit{1} and \textit{3} guarantee that $A+b+c|x|^2$ is bounded below.
+-Hence, increasing the value of~$b$ if necessary to make this operator positive, we have
+-\[ \|(A+b)\phi\|^2_{L^2} \leq \|K\phi \|^2_{L^2} +8c\|\phi \|^2_{L^2},\]
+-which proves (\ref{HypX37.1}).
+-
+-\medskip
+-
+-For (\ref{HypX37.2}), we observe that
+-\[ \pm i [A,K] = \pm 2c(x \cdot (-i\nabla) + (-i\nabla)\cdot x) \leq 2 c \left((-\Delta) +|x|^2\right) \leq \ell K, \]
+-where we have used
+-\[(-\Delta) + |x|^2 \pm (x\cdot(-i\nabla) + (-i\nabla)\cdot x) = (-i\nabla  \pm x)^2 \geq 0 \]
+-and
+-\[ K = \left(\frac a 2 (-\Delta) + V\right) + (W+c|x|^2) + \frac{1-a}{2}(-\Delta) + c|x|^2 +b \geq e((-\Delta)+|x|^2), \]
+-where $e = \min(c,\frac{1-a}{2})>0$ and where $b$ is chosen so that
+-$$b- f +\min \,\sigma\left(\frac a 2 (-\Delta) + V\right) \geq 0.$$
+-This proves  (\ref{HypX37.2}).
+-Hence $A$ is essentially self-adjoint on $\mathcal{C}$.
+-\end{proof}
+-
+-\subsection{Proof of Lemma~\ref{lemmaUnitaryPropagator}}\label{sec:unitaryprop}
+-
+-\begin{proof}By the Kato-Rellich theorem, for any $0\leq t\leq T$,
+-  $H(t)$ is self-adjoint on $L^2_{\rm per}$ with domain~$H_{\rm per}^{2}$, and
+-  bounded below. We will show that there exists $\mu>0$ so that the
+-  graph norm of $(H(t)+\mu)$ for any $0\leq t \leq T$ is equivalent to
+-  the $H_{\rm per}^{2}$-norm. Together with the assumed $C^1$ dependence
+-  on $t$, this verifies the hypotheses of the propagator theorem
+-  \cite[Theorem X.70]{ReedSimon2}, and proves
+-  Lemma~\ref{lemmaUnitaryPropagator}.
+-
+-\medskip
+-
+-We have for any $\mu>0$, $0\leq t\leq T$ and $\phi \in H_{\rm per}^{2}$,
+-\[ \|(H(t)+\mu)\phi \|_{L^{2}_{\rm per}} \leq (1+a)\|H_{0} \phi \|_{L^{2}_{\rm per}} + (b+\mu) \|\phi\|_{L^{2}_{\rm per}} \leq (1+a+b+\mu) \|\phi\|_{H_{\rm per}^{2}},\]
+-and so the graph norm is controlled by the $H_{\rm per}^{2}$-norm.
+-
+-\medskip
+-
+-For the other inequality, we relate the resolvent of $H(t)$ to that of $H_{0}$ by a bounded operator, with bounded inverse.
+-Notice that, for any $\mu>0$, since $H_{0}$ is positive,
+-\[\forall \; 0\leq t\leq T, \quad (H(t)+\mu) = (1+H_{1}(t)(H_{0}+\mu)^{-1})(H_{0}+\mu).\]
+-Furthermore,
+-\[\forall \; 0\leq t\leq T, \quad\|H_{1}(t)(H_{0}+\mu)^{-1}\| \leq
+-  a\|H_{0}(H_{0}+\mu)^{-1}\| +b\|(H_{0}+\mu)^{-1}\| \leq a
+-  +\frac{b}{\mu}.\]
+-and so, for $\mu > \frac{b}{1-a}$, the operator
+-$1+ H_{1}(t)(H_{0}+\mu)^{-1}$ is bounded and invertible with bounded
+-inverse in $L^{2}_{\rm per}$. Therefore $(H(t)+\mu)^{-1}$ is bounded
+-from $L^2_{\rm per}$ to $H_{\rm per}^{2}$, which means there exists $C>0$ such
+-that, for any $\phi \in H_{\rm per}^{2}$ and $0\leq t\leq T$,
+-\[  \|\phi\|_{H_{\rm per}^{2}} = \|(H(t)+\mu)^{-1}(H(t)+\mu)\phi\|_{H_{\rm per}^{2}} \leq C\|(H(t)+\mu)\phi\|_{L^{2}_{\rm per}}, \]
+-which concludes the proof.
+-\end{proof}
+-
+-
+ \bibliographystyle{plain}
+ \bibliography{refs}
+ \end{document}
