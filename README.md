@@ -1,5 +1,7 @@
 # Can LLMs write math papers? — Experiment materials
 
+THIS IS ALL AI-GENERATED, READ AT YOUR OWN RISK.
+
 Companion to [Antoine Levitt's blog post](https://www.imo.universite-paris-saclay.fr/~antoine.levitt/blog/2026-10-llm-writing/).
 
 Four prompts were used to ask GPT-6-Astra, at maximum reasoning effort, to write a paper proving a theorem about graphene conductivity. The experiment varies explicit writing instructions and instructions to iterate with reviewers. These are single runs, conducted on 3 November 2026. A separate GPT-6-Luna run was added on 9 November.
